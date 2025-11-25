@@ -23,8 +23,8 @@
           <a href="index.html">Home</a>
           <a href="guides.html">Guides</a>
           <a href="wiki.html">Wiki</a>
-          <a href="maps.html">Maps & Tools</a>
           <a href="build-lab.html">Build Lab</a>
+          <a href="maps.html">Maps &amp; Tools</a>
           <a href="updates.html">Updates</a>
           <button
             class="nav-cta"
@@ -41,7 +41,8 @@
         <h1>Build Lab</h1>
         <p>
           Explore curated Soulframe builds by Pact, weapon, and Virtue focus. Pick
-          a preset to see its strengths, weaknesses, and playstyle at a glance.
+          a preset to see its strengths, then swap to Custom mode to tweak stats
+          and experiment.
         </p>
       </header>
 
@@ -51,7 +52,8 @@
           <div class="buildlab-controls">
             <h2 class="section-title">Choose a preset</h2>
             <p class="section-subtitle">
-              Start with a curated build, then tweak Pacts and weapons as you like.
+              Start with a curated build, then adjust Pacts, weapons, and Virtue
+              focus to fit your style.
             </p>
 
             <label class="field-label" for="buildSelect">Build preset</label>
@@ -73,6 +75,33 @@
               </select>
             </div>
 
+            <div class="buildlab-mode">
+              <div class="mini-heading">Mode</div>
+              <div class="buildlab-mode-options">
+                <label>
+                  <input
+                    type="radio"
+                    name="buildMode"
+                    value="preset"
+                    checked
+                  />
+                  Preset
+                </label>
+                <label>
+                  <input
+                    type="radio"
+                    name="buildMode"
+                    value="custom"
+                  />
+                  Custom
+                </label>
+              </div>
+              <p class="buildlab-mode-note">
+                Preset uses curated stats. Custom lets you tweak bars and Virtues
+                yourself without changing the saved builds.
+              </p>
+            </div>
+
             <div class="buildlab-virtues">
               <h3 class="mini-heading">Virtue focus</h3>
               <div class="virtue-row">
@@ -90,6 +119,40 @@
               <p class="virtue-note">
                 Values are relative emphasis, not exact in-game numbers.
               </p>
+
+              <!-- Custom Virtue sliders (shown only in Custom mode) -->
+              <div class="buildlab-custom-virtues" id="customVirtueControls">
+                <label>
+                  Courage
+                  <input
+                    type="range"
+                    id="virtueCourageInput"
+                    min="0"
+                    max="100"
+                    step="5"
+                  />
+                </label>
+                <label>
+                  Grace
+                  <input
+                    type="range"
+                    id="virtueGraceInput"
+                    min="0"
+                    max="100"
+                    step="5"
+                  />
+                </label>
+                <label>
+                  Spirit
+                  <input
+                    type="range"
+                    id="virtueSpiritInput"
+                    min="0"
+                    max="100"
+                    step="5"
+                  />
+                </label>
+              </div>
             </div>
           </div>
 
@@ -101,8 +164,19 @@
               and recommended Virtue focus here.
             </p>
 
-            <div id="buildTags" class="card-tag-row" style="margin-bottom:0.75rem;">
+            <div id="buildTags" class="card-tag-row" style="margin-bottom:0.5rem;">
               <!-- tags -->
+            </div>
+
+            <div class="buildlab-affinities">
+              <div>
+                <span class="stat-label">Pact</span>
+                <span id="pactRoleText" class="buildlab-affinity-text">–</span>
+              </div>
+              <div>
+                <span class="stat-label">Weapon</span>
+                <span id="weaponRoleText" class="buildlab-affinity-text">–</span>
+              </div>
             </div>
 
             <div class="stat-bars">
@@ -132,10 +206,69 @@
               </div>
             </div>
 
+            <!-- Custom stat sliders (shown only in Custom mode) -->
+            <div class="buildlab-custom-metrics" id="customMetricControls">
+              <label>
+                Damage
+                <input
+                  type="range"
+                  id="metricDamageInput"
+                  min="0"
+                  max="5"
+                  step="1"
+                />
+              </label>
+              <label>
+                Defense
+                <input
+                  type="range"
+                  id="metricDefenseInput"
+                  min="0"
+                  max="5"
+                  step="1"
+                />
+              </label>
+              <label>
+                Mobility
+                <input
+                  type="range"
+                  id="metricMobilityInput"
+                  min="0"
+                  max="5"
+                  step="1"
+                />
+              </label>
+              <label>
+                Control
+                <input
+                  type="range"
+                  id="metricControlInput"
+                  min="0"
+                  max="5"
+                  step="1"
+                />
+              </label>
+              <label>
+                Complexity
+                <input
+                  type="range"
+                  id="metricComplexityInput"
+                  min="1"
+                  max="5"
+                  step="1"
+                />
+              </label>
+            </div>
+
             <div class="complexity-row">
               <span class="stat-label">Complexity</span>
               <span id="complexityStars" class="complexity-stars">–</span>
             </div>
+
+            <p class="buildlab-custom-note" id="customNote">
+              Custom mode: sliders update the bars and Virtues locally. Presets
+              remain unchanged.
+            </p>
 
             <div class="buildlab-tips">
               <h3 class="mini-heading">Playstyle tips</h3>
