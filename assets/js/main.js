@@ -350,12 +350,13 @@ async function renderRegions() {
 }
 
 // =====================================================
-// BUILD LAB: simplified, fully-reactive Preset/Custom
+// BUILD LAB: virtues drive derived stats + pact modifiers
 // =====================================================
 
 let buildData = null;
 let activeBuildId = null;
 let buildMode = "preset";
+let currentVirtues = { courage: 0, grace: 0, spirit: 0 };
 
 async function renderBuildLab() {
   const root = document.getElementById("buildLabRoot");
@@ -390,14 +391,7 @@ async function renderBuildLab() {
   const virtueGraceInput = document.getElementById("virtueGraceInput");
   const virtueSpiritInput = document.getElementById("virtueSpiritInput");
 
-  const metricDamageInput = document.getElementById("metricDamageInput");
-  const metricDefenseInput = document.getElementById("metricDefenseInput");
-  const metricMobilityInput = document.getElementById("metricMobilityInput");
-  const metricControlInput = document.getElementById("metricControlInput");
-  const metricComplexityInput = document.getElementById("metricComplexityInput");
-
   const customVirtueControls = document.getElementById("customVirtueControls");
-  const customMetricControls = document.getElementById("customMetricControls");
   const customNote = document.getElementById("customNote");
 
   if (!buildSelect) {
@@ -405,10 +399,14 @@ async function renderBuildLab() {
     return;
   }
 
-  // Helper functions
+  // ---------- helpers ----------
+  function clamp(val, min, max) {
+    return Math.max(min, Math.min(max, val));
+  }
+
   function setBar(el, value) {
     if (!el) return;
-    const v = Math.max(0, Math.min(5, value || 0));
+    const v = clamp(value || 0, 0, 5);
     const pct = (v / 5) * 100;
     el.style.width = pct + "%";
   }
@@ -421,7 +419,7 @@ async function renderBuildLab() {
 
   function setComplexity(value) {
     if (!complexityStars) return;
-    const v = Math.max(1, Math.min(5, value || 1));
+    const v = clamp(value || 1, 1, 5);
     complexityStars.textContent = "★".repeat(v) + "☆".repeat(5 - v);
   }
 
@@ -438,21 +436,128 @@ async function renderBuildLab() {
   }
 
   function updatePactWeaponText() {
+    const p = findPact(pactSelect.value);
+    const w = findWeapon(weaponSelect.value);
+
     if (pactRoleText) {
-      const p = findPact(pactSelect.value);
       pactRoleText.textContent = p ? `${p.name} – ${p.role}` : "–";
     }
     if (weaponRoleText) {
-      const w = findWeapon(weaponSelect.value);
       weaponRoleText.textContent = w ? `${w.name} – ${w.role}` : "–";
     }
+  }
+
+  // Pact modifiers: tweak each stat a bit depending on the pact identity.
+  // If IDs don't match, modifiers default to 0 and nothing breaks.
+  const pactModifiers = {
+    // Defensive / tanky pact: more defense, less mobility, slightly less damage
+    defender: { damage: -0.4, defense: +1.2, mobility: -0.4, control: +0.2 },
+
+    // Aggressive frontline: more damage & mobility, slightly less defense
+    vanguard: { damage: +1.0, defense: -0.5, mobility: +0.5, control: 0 },
+
+    // Spirit-heavy / caster pact: more damage & control, less raw defense
+    mystic: { damage: +0.6, defense: -0.4, mobility: 0, control: +0.8 }
+  };
+
+  function getPactMods(pactId) {
+    return pactModifiers[pactId] || {
+      damage: 0,
+      defense: 0,
+      mobility: 0,
+      control: 0
+    };
+  }
+
+  // Core formula: derive stats from virtues + pact
+  function computeMetricsFromVirtues(virtues, pactId) {
+    const c = virtues.courage || 0; // Courage: physical resilience / aggression
+    const g = virtues.grace || 0;   // Grace: mobility / finesse
+    const s = virtues.spirit || 0;  // Spirit: magic / control
+
+    // Base 0–5 values from 0–100 virtue percentages
+    // (weights chosen to "feel" right rather than perfect math)
+    let damageBase = 0.04 * c + 0.06 * s;          // Courage + strong Spirit
+    let defenseBase = 0.06 * c + 0.02 * g;         // Courage heavy
+    let mobilityBase = 0.055 * g + 0.015 * (100 - c); // Grace + low armor load
+    let controlBase = 0.04 * s + 0.035 * g;        // Spirit + Grace
+
+    // scale down into ~0–5 range
+    const scale = 0.06;
+    let damage = damageBase * scale;
+    let defense = defenseBase * scale;
+    let mobility = mobilityBase * scale;
+    let control = controlBase * scale;
+
+    // Pact modifiers
+    const mods = getPactMods(pactId);
+    damage += mods.damage || 0;
+    defense += mods.defense || 0;
+    mobility += mods.mobility || 0;
+    control += mods.control || 0;
+
+    // Clamp into 0–5 range
+    damage = clamp(damage, 0, 5);
+    defense = clamp(defense, 0, 5);
+    mobility = clamp(mobility, 0, 5);
+    control = clamp(control, 0, 5);
+
+    // Complexity: rough measure of how "spread" the virtues are.
+    // More even spread = higher complexity; extreme focus = simpler.
+    const total = c + g + s || 1;
+    const avg = total / 3;
+    const variance =
+      (Math.abs(c - avg) + Math.abs(g - avg) + Math.abs(s - avg)) / 3;
+    // High variance => simple (1–2), low variance => complex (4–5)
+    let complexity = 5 - Math.round(variance / 20); // crude but readable
+    complexity = clamp(complexity, 1, 5);
+
+    return { damage, defense, mobility, control, complexity };
+  }
+
+  function applyMetricsToUI(metrics) {
+    if (!metrics) return;
+    setBar(barDamage, metrics.damage);
+    setBar(barDefense, metrics.defense);
+    setBar(barMobility, metrics.mobility);
+    setBar(barControl, metrics.control);
+    setComplexity(metrics.complexity);
+  }
+
+  function applyVirtuesToUI(virtues) {
+    currentVirtues = {
+      courage: virtues.courage || 0,
+      grace: virtues.grace || 0,
+      spirit: virtues.spirit || 0
+    };
+
+    setVirtueText(virtueCourageValue, currentVirtues.courage);
+    setVirtueText(virtueGraceValue, currentVirtues.grace);
+    setVirtueText(virtueSpiritValue, currentVirtues.spirit);
+
+    if (virtueCourageInput)
+      virtueCourageInput.value = currentVirtues.courage;
+    if (virtueGraceInput)
+      virtueGraceInput.value = currentVirtues.grace;
+    if (virtueSpiritInput)
+      virtueSpiritInput.value = currentVirtues.spirit;
+  }
+
+  function recalcMetrics() {
+    const pactId =
+      pactSelect.value ||
+      (activeBuildId && findBuild(activeBuildId)?.pactId) ||
+      "";
+
+    const metrics = computeMetricsFromVirtues(currentVirtues, pactId);
+    applyMetricsToUI(metrics);
   }
 
   function applyBuildToUI(build) {
     if (!build) return;
     activeBuildId = build.id;
 
-    // title/summary/tags/tips
+    // text / tags / tips
     buildName.textContent = build.name;
     buildBlurb.textContent = build.summary || "";
 
@@ -469,7 +574,7 @@ async function renderBuildLab() {
         : `<li>No specific tips yet—experiment and adjust as you go.</li>`;
     }
 
-    // selects
+    // pact / weapon selects
     if (build.pactId && findPact(build.pactId)) {
       pactSelect.value = build.pactId;
     }
@@ -478,97 +583,46 @@ async function renderBuildLab() {
     }
     updatePactWeaponText();
 
-    // virtues
-    const v = build.virtues || {};
-    setVirtueText(virtueCourageValue, v.courage);
-    setVirtueText(virtueGraceValue, v.grace);
-    setVirtueText(virtueSpiritValue, v.spirit);
+    // virtues from build JSON (falls back to a sensible default)
+    const virtues = build.virtues || { courage: 40, grace: 30, spirit: 30 };
+    applyVirtuesToUI(virtues);
 
-    if (virtueCourageInput) virtueCourageInput.value = v.courage ?? 0;
-    if (virtueGraceInput) virtueGraceInput.value = v.grace ?? 0;
-    if (virtueSpiritInput) virtueSpiritInput.value = v.spirit ?? 0;
-
-    // metrics
-    const m = build.metrics || {};
-    setBar(barDamage, m.damage);
-    setBar(barDefense, m.defense);
-    setBar(barMobility, m.mobility);
-    setBar(barControl, m.control);
-    setComplexity(m.complexity);
-
-    if (metricDamageInput) metricDamageInput.value = m.damage ?? 0;
-    if (metricDefenseInput) metricDefenseInput.value = m.defense ?? 0;
-    if (metricMobilityInput) metricMobilityInput.value = m.mobility ?? 0;
-    if (metricControlInput) metricControlInput.value = m.control ?? 0;
-    if (metricComplexityInput)
-      metricComplexityInput.value = m.complexity ?? 1;
-  }
-
-  function applyCustomFromInputs() {
-    // virtues -> text only
-    const vC = virtueCourageInput ? Number(virtueCourageInput.value) || 0 : 0;
-    const vG = virtueGraceInput ? Number(virtueGraceInput.value) || 0 : 0;
-    const vS = virtueSpiritInput ? Number(virtueSpiritInput.value) || 0 : 0;
-
-    setVirtueText(virtueCourageValue, vC);
-    setVirtueText(virtueGraceValue, vG);
-    setVirtueText(virtueSpiritValue, vS);
-
-    // metrics sliders directly drive bars
-    const d = metricDamageInput ? Number(metricDamageInput.value) || 0 : 0;
-    const de = metricDefenseInput ? Number(metricDefenseInput.value) || 0 : 0;
-    const mo = metricMobilityInput ? Number(metricMobilityInput.value) || 0 : 0;
-    const c = metricControlInput ? Number(metricControlInput.value) || 0 : 0;
-    const comp = metricComplexityInput
-      ? Number(metricComplexityInput.value) || 1
-      : 1;
-
-    setBar(barDamage, d);
-    setBar(barDefense, de);
-    setBar(barMobility, mo);
-    setBar(barControl, c);
-    setComplexity(comp);
+    // metrics derived purely from virtues + pact
+    recalcMetrics();
   }
 
   function setMode(newMode) {
     buildMode = newMode;
-
-    const enableCustom = newMode === "custom";
+    const isCustom = newMode === "custom";
 
     if (customVirtueControls)
-      customVirtueControls.style.display = enableCustom ? "block" : "none";
-    if (customMetricControls)
-      customMetricControls.style.display = enableCustom ? "block" : "none";
-    if (customNote) customNote.style.display = enableCustom ? "block" : "none";
+      customVirtueControls.style.display = isCustom ? "block" : "none";
+    if (customNote) customNote.style.display = isCustom ? "block" : "none";
 
-    // Enable/disable sliders
+    // Enable / disable virtue sliders
     const sliders = [
       virtueCourageInput,
       virtueGraceInput,
-      virtueSpiritInput,
-      metricDamageInput,
-      metricDefenseInput,
-      metricMobilityInput,
-      metricControlInput,
-      metricComplexityInput
+      virtueSpiritInput
     ];
     sliders.forEach((s) => {
-      if (s) s.disabled = !enableCustom;
+      if (s) s.disabled = !isCustom;
     });
 
-    // When switching back to preset, re-apply the current build from JSON
-    if (newMode === "preset" && activeBuildId && buildData) {
+    // Switching back to preset: reload virtues from build
+    if (!isCustom && activeBuildId && buildData) {
       const b = findBuild(activeBuildId);
       if (b) applyBuildToUI(b);
     }
 
-    // When switching to custom, immediately sync from sliders
-    if (newMode === "custom") {
-      applyCustomFromInputs();
+    // Switching to custom: keep current virtues but allow user to move them
+    if (isCustom) {
+      // Just recalc so bars reflect whatever's there
+      recalcMetrics();
     }
   }
 
-  // Load data
+  // ---------- load data ----------
   try {
     buildData = await loadJSON("data/builds.json");
   } catch (err) {
@@ -635,30 +689,39 @@ async function renderBuildLab() {
   buildSelect.addEventListener("change", () => {
     const b = findBuild(buildSelect.value);
     if (b) applyBuildToUI(b);
-    if (buildMode === "custom") applyCustomFromInputs();
   });
 
-  pactSelect.addEventListener("change", updatePactWeaponText);
-  weaponSelect.addEventListener("change", updatePactWeaponText);
+  pactSelect.addEventListener("change", () => {
+    updatePactWeaponText();
+    recalcMetrics();
+  });
+  weaponSelect.addEventListener("change", () => {
+    updatePactWeaponText();
+    // weapon currently only affects description, but could feed into metrics later
+  });
 
-  // Slider changes (custom mode only)
-  const sliderInputs = [
+  // Virtue slider changes (only affect stats in Custom mode)
+  const virtueSliders = [
     virtueCourageInput,
     virtueGraceInput,
-    virtueSpiritInput,
-    metricDamageInput,
-    metricDefenseInput,
-    metricMobilityInput,
-    metricControlInput,
-    metricComplexityInput
+    virtueSpiritInput
   ];
-  sliderInputs.forEach((s) => {
+  virtueSliders.forEach((s) => {
     if (!s) return;
     s.addEventListener("input", () => {
-      if (buildMode === "custom") applyCustomFromInputs();
+      if (buildMode !== "custom") return;
+
+      currentVirtues = {
+        courage: Number(virtueCourageInput?.value || 0),
+        grace: Number(virtueGraceInput?.value || 0),
+        spirit: Number(virtueSpiritInput?.value || 0)
+      };
+      applyVirtuesToUI(currentVirtues);
+      recalcMetrics();
     });
   });
 }
+
 
 // =====================================================
 // Init
