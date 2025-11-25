@@ -109,7 +109,6 @@ async function renderGuides() {
       })
       .join("");
 
-    // Apply any existing filter/search
     applyGuideFilters();
   } catch (err) {
     console.error(err);
@@ -143,7 +142,7 @@ function applyGuideFilters() {
 
 function setupGuideFilters() {
   const buttons = document.querySelectorAll(".pill-filter");
-  if (!buttons.length) return; // not on guides.html
+  if (!buttons.length) return;
 
   buttons.forEach((btn) => {
     btn.addEventListener("click", () => {
@@ -355,6 +354,9 @@ async function renderRegions() {
 // =====================================================
 
 let buildLabData = null;
+let currentBuildId = null;
+let currentBuildMode = "preset";
+let currentCustomState = null;
 
 async function renderBuildLab() {
   const root = document.getElementById("buildLabRoot");
@@ -396,6 +398,25 @@ async function renderBuildLab() {
   const barControl = document.getElementById("barControl");
   const complexityStars = document.getElementById("complexityStars");
 
+  const pactRoleText = document.getElementById("pactRoleText");
+  const weaponRoleText = document.getElementById("weaponRoleText");
+
+  const customVirtueControls = document.getElementById("customVirtueControls");
+  const customMetricControls = document.getElementById("customMetricControls");
+  const customNote = document.getElementById("customNote");
+
+  const virtueCourageInput = document.getElementById("virtueCourageInput");
+  const virtueGraceInput = document.getElementById("virtueGraceInput");
+  const virtueSpiritInput = document.getElementById("virtueSpiritInput");
+
+  const metricDamageInput = document.getElementById("metricDamageInput");
+  const metricDefenseInput = document.getElementById("metricDefenseInput");
+  const metricMobilityInput = document.getElementById("metricMobilityInput");
+  const metricControlInput = document.getElementById("metricControlInput");
+  const metricComplexityInput = document.getElementById("metricComplexityInput");
+
+  const modeRadios = document.querySelectorAll("input[name='buildMode']");
+
   if (
     !buildSelect ||
     !pactSelect ||
@@ -405,6 +426,207 @@ async function renderBuildLab() {
   ) {
     console.warn("Build Lab elements missing from DOM.");
     return;
+  }
+
+  // Helpers
+  function findPact(id) {
+    return data.pacts.find((p) => p.id === id);
+  }
+
+  function findWeapon(id) {
+    return data.weapons.find((w) => w.id === id);
+  }
+
+  function findBuild(id) {
+    return data.builds.find((b) => b.id === id);
+  }
+
+  function setBar(el, value) {
+    if (!el) return;
+    const clamped = Math.max(0, Math.min(5, value || 0));
+    const pct = (clamped / 5) * 100;
+    el.style.width = pct + "%";
+  }
+
+  function setVirtueText(el, value) {
+    if (!el) return;
+    el.textContent =
+      typeof value === "number" ? `${value}%` : value ? String(value) : "–";
+  }
+
+  function updatePactWeaponMeta() {
+    const pact = findPact(pactSelect.value);
+    const weapon = findWeapon(weaponSelect.value);
+
+    if (pactRoleText) {
+      pactRoleText.textContent = pact ? `${pact.name} – ${pact.role}` : "–";
+    }
+    if (weaponRoleText) {
+      weaponRoleText.textContent = weapon ? `${weapon.name} – ${weapon.role}` : "–";
+    }
+  }
+
+  function applyVirtuesAndMetrics(virtues, metrics) {
+    const v = virtues || {};
+    const m = metrics || {};
+
+    setVirtueText(virtueCourage, v.courage);
+    setVirtueText(virtueGrace, v.grace);
+    setVirtueText(virtueSpirit, v.spirit);
+
+    setBar(barDamage, m.damage);
+    setBar(barDefense, m.defense);
+    setBar(barMobility, m.mobility);
+    setBar(barControl, m.control);
+
+    if (complexityStars) {
+      const comp = Math.max(1, Math.min(5, m.complexity || 1));
+      complexityStars.textContent =
+        "★".repeat(comp) + "☆".repeat(Math.max(0, 5 - comp));
+    }
+  }
+
+  function syncInputsFromState(state) {
+    if (!state) return;
+    const v = state.virtues || {};
+    const m = state.metrics || {};
+
+    if (virtueCourageInput) virtueCourageInput.value = v.courage ?? 0;
+    if (virtueGraceInput) virtueGraceInput.value = v.grace ?? 0;
+    if (virtueSpiritInput) virtueSpiritInput.value = v.spirit ?? 0;
+
+    if (metricDamageInput) metricDamageInput.value = m.damage ?? 0;
+    if (metricDefenseInput) metricDefenseInput.value = m.defense ?? 0;
+    if (metricMobilityInput) metricMobilityInput.value = m.mobility ?? 0;
+    if (metricControlInput) metricControlInput.value = m.control ?? 0;
+    if (metricComplexityInput) metricComplexityInput.value = m.complexity ?? 1;
+  }
+
+  function buildStateFromInputs() {
+    const virtues = {
+      courage: virtueCourageInput ? Number(virtueCourageInput.value) || 0 : 0,
+      grace: virtueGraceInput ? Number(virtueGraceInput.value) || 0 : 0,
+      spirit: virtueSpiritInput ? Number(virtueSpiritInput.value) || 0 : 0
+    };
+    const metrics = {
+      damage: metricDamageInput ? Number(metricDamageInput.value) || 0 : 0,
+      defense: metricDefenseInput ? Number(metricDefenseInput.value) || 0 : 0,
+      mobility: metricMobilityInput ? Number(metricMobilityInput.value) || 0 : 0,
+      control: metricControlInput ? Number(metricControlInput.value) || 0 : 0,
+      complexity: metricComplexityInput
+        ? Number(metricComplexityInput.value) || 1
+        : 1
+    };
+    return { virtues, metrics };
+  }
+
+  function updateCustomFromInputs() {
+    currentCustomState = buildStateFromInputs();
+    applyVirtuesAndMetrics(
+      currentCustomState.virtues,
+      currentCustomState.metrics
+    );
+  }
+
+  function setMode(mode) {
+    currentBuildMode = mode;
+
+    if (customVirtueControls) {
+      customVirtueControls.style.display =
+        mode === "custom" ? "block" : "none";
+    }
+    if (customMetricControls) {
+      customMetricControls.style.display =
+        mode === "custom" ? "block" : "none";
+    }
+    if (customNote) {
+      customNote.style.display = mode === "custom" ? "block" : "none";
+    }
+
+    // When switching to preset, reset custom state from the current build
+    if (mode === "preset" && currentBuildId) {
+      const b = findBuild(currentBuildId);
+      if (b) {
+        currentCustomState = {
+          virtues: { ...(b.virtues || {}) },
+          metrics: { ...(b.metrics || {}) }
+        };
+        syncInputsFromState(currentCustomState);
+        applyVirtuesAndMetrics(b.virtues, b.metrics);
+      }
+    } else if (mode === "custom" && currentBuildId) {
+      // Seed custom state from the current build if none exists yet
+      if (!currentCustomState) {
+        const b = findBuild(currentBuildId);
+        if (b) {
+          currentCustomState = {
+            virtues: { ...(b.virtues || {}) },
+            metrics: { ...(b.metrics || {}) }
+          };
+        }
+      }
+      syncInputsFromState(currentCustomState);
+      applyVirtuesAndMetrics(
+        currentCustomState.virtues,
+        currentCustomState.metrics
+      );
+    }
+  }
+
+  function updateBuildUI(buildId) {
+    const build = findBuild(buildId);
+    if (!build) return;
+
+    currentBuildId = buildId;
+
+    buildName.textContent = build.name;
+    buildBlurb.textContent = build.summary || "";
+
+    if (buildTags) {
+      buildTags.innerHTML = (build.tags || [])
+        .map((t) => `<span class="tag">${t}</span>`)
+        .join("");
+    }
+
+    if (buildTips) {
+      const tips = build.tips || [];
+      if (!tips.length) {
+        buildTips.innerHTML = `<li>No specific tips yet—experiment and adjust as you go.</li>`;
+      } else {
+        buildTips.innerHTML = tips.map((t) => `<li>${t}</li>`).join("");
+      }
+    }
+
+    // Pact & weapon selects
+    if (build.pactId && findPact(build.pactId)) {
+      pactSelect.value = build.pactId;
+    }
+    if (build.weaponId && findWeapon(build.weaponId)) {
+      weaponSelect.value = build.weaponId;
+    }
+    updatePactWeaponMeta();
+
+    if (currentBuildMode === "preset") {
+      currentCustomState = {
+        virtues: { ...(build.virtues || {}) },
+        metrics: { ...(build.metrics || {}) }
+      };
+      syncInputsFromState(currentCustomState);
+      applyVirtuesAndMetrics(build.virtues, build.metrics);
+    } else {
+      // custom mode: seed if needed, otherwise respect current sliders
+      if (!currentCustomState) {
+        currentCustomState = {
+          virtues: { ...(build.virtues || {}) },
+          metrics: { ...(build.metrics || {}) }
+        };
+        syncInputsFromState(currentCustomState);
+      }
+      applyVirtuesAndMetrics(
+        currentCustomState.virtues,
+        currentCustomState.metrics
+      );
+    }
   }
 
   // Populate selects
@@ -433,96 +655,62 @@ async function renderBuildLab() {
     weaponSelect.appendChild(opt);
   });
 
-  function findPact(id) {
-    return data.pacts.find((p) => p.id === id);
-  }
-
-  function findWeapon(id) {
-    return data.weapons.find((w) => w.id === id);
-  }
-
-  function findBuild(id) {
-    return data.builds.find((b) => b.id === id);
-  }
-
-  function setBar(el, value) {
-    if (!el) return;
-    const clamped = Math.max(0, Math.min(5, value || 0));
-    const pct = (clamped / 5) * 100;
-    el.style.width = pct + "%";
-  }
-
-  function setVirtueText(el, value) {
-    if (!el) return;
-    el.textContent = typeof value === "number" ? value + "%" : "–";
-  }
-
-  function updateBuildUI(buildId) {
-    const build = findBuild(buildId);
-    if (!build) return;
-
-    buildName.textContent = build.name;
-    buildBlurb.textContent = build.summary || "";
-
-    // Pact & weapon selects
-    if (build.pactId && findPact(build.pactId)) {
-      pactSelect.value = build.pactId;
-    }
-    if (build.weaponId && findWeapon(build.weaponId)) {
-      weaponSelect.value = build.weaponId;
-    }
-
-    // Tags
-    if (buildTags) {
-      buildTags.innerHTML = (build.tags || [])
-        .map((t) => `<span class="tag">${t}</span>`)
-        .join("");
-    }
-
-    // Virtues
-    const v = build.virtues || {};
-    setVirtueText(virtueCourage, v.courage);
-    setVirtueText(virtueGrace, v.grace);
-    setVirtueText(virtueSpirit, v.spirit);
-
-    // Metrics
-    const m = build.metrics || {};
-    setBar(barDamage, m.damage);
-    setBar(barDefense, m.defense);
-    setBar(barMobility, m.mobility);
-    setBar(barControl, m.control);
-
-    if (complexityStars) {
-      const comp = Math.max(1, Math.min(5, m.complexity || 1));
-      complexityStars.textContent =
-        "★".repeat(comp) + "☆".repeat(Math.max(0, 5 - comp));
-    }
-
-    // Tips
-    if (buildTips) {
-      const tips = build.tips || [];
-      if (!tips.length) {
-        buildTips.innerHTML = `<li>No specific tips yet—experiment and adjust as you go.</li>`;
-      } else {
-        buildTips.innerHTML = tips.map((t) => `<li>${t}</li>`).join("");
-      }
-    }
-  }
-
-  // Initial selection
-  if (data.builds.length > 0) {
-    updateBuildUI(data.builds[0].id);
-  }
-
-  // Events
+  // Event wiring
   buildSelect.addEventListener("change", () => {
     const id = buildSelect.value;
-    if (id) updateBuildUI(id);
+    if (id) {
+      currentCustomState = null; // reset custom when switching builds
+      updateBuildUI(id);
+    }
   });
 
-  // Pact/weapon selects are mostly cosmetic right now: they let users see “what if”
-  // without changing the underlying metrics. In future you could tweak metrics based
-  // on pact/weapon synergy.
+  pactSelect.addEventListener("change", () => {
+    updatePactWeaponMeta();
+  });
+
+  weaponSelect.addEventListener("change", () => {
+    updatePactWeaponMeta();
+  });
+
+  if (modeRadios && modeRadios.length) {
+    modeRadios.forEach((r) => {
+      r.addEventListener("change", () => {
+        if (r.checked) {
+          setMode(r.value);
+        }
+      });
+    });
+  }
+
+  if (virtueCourageInput)
+    virtueCourageInput.addEventListener("input", updateCustomFromInputs);
+  if (virtueGraceInput)
+    virtueGraceInput.addEventListener("input", updateCustomFromInputs);
+  if (virtueSpiritInput)
+    virtueSpiritInput.addEventListener("input", updateCustomFromInputs);
+
+  if (metricDamageInput)
+    metricDamageInput.addEventListener("input", updateCustomFromInputs);
+  if (metricDefenseInput)
+    metricDefenseInput.addEventListener("input", updateCustomFromInputs);
+  if (metricMobilityInput)
+    metricMobilityInput.addEventListener("input", updateCustomFromInputs);
+  if (metricControlInput)
+    metricControlInput.addEventListener("input", updateCustomFromInputs);
+  if (metricComplexityInput)
+    metricComplexityInput.addEventListener("input", updateCustomFromInputs);
+
+  // Initial state: first build, preset mode
+  if (data.builds.length > 0) {
+    currentBuildMode = "preset";
+    if (modeRadios && modeRadios.length) {
+      modeRadios.forEach((r) => {
+        r.checked = r.value === "preset";
+      });
+    }
+    updateBuildUI(data.builds[0].id);
+    setMode("preset");
+  }
 }
 
 // =====================================================
@@ -530,7 +718,6 @@ async function renderBuildLab() {
 // =====================================================
 
 (async function initAtlas() {
-  // Render dynamic content – each renderer no-ops on pages where it's irrelevant
   await Promise.allSettled([
     renderGuides(),
     renderWikiItems(),
@@ -539,7 +726,6 @@ async function renderBuildLab() {
     renderBuildLab()
   ]);
 
-  // Wire up behaviours
   setupGuideFilters();
   setupGuideSearch();
   setupWikiAccordions();
