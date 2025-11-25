@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     name="description"
-    content="Soulframe Atlas – beginner tips, guides, maps, and resources for Digital Extremes' fantasy MMO Soulframe."
+    content="Soulframe Atlas is an unofficial hub for Soulframe players: guides, builds, maps, tools, and a compact wiki."
   />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
@@ -23,204 +23,100 @@
           <a href="index.html">Home</a>
           <a href="guides.html">Guides</a>
           <a href="wiki.html">Wiki</a>
-          <a href="maps.html">Maps & Tools</a>
+          <a href="maps.html">Maps &amp; Tools</a>
+          <a href="build-lab.html">Build Lab</a>
           <a href="updates.html">Updates</a>
           <button
             class="nav-cta"
-            onclick="document.getElementById('getting-started') && document.getElementById('getting-started').scrollIntoView({behavior:'smooth', block:'start'});"
+            onclick="window.location.href='guides.html'"
           >
-            Start as an Envoy
+            View All Guides
           </button>
         </div>
       </nav>
     </header>
 
     <main>
-      <!-- HERO -->
-      <section class="hero" aria-labelledby="hero-heading">
-        <div class="hero-left">
-          <div class="hero-badge">
-            <span class="hero-badge-dot"></span>
-            Preludes Companion · Fan Site
-          </div>
-          <h1 class="hero-title" id="hero-heading">
-            Chart the wilds of <span>Alca</span>.
-          </h1>
-          <p class="hero-subtitle">
-            Soulframe Atlas gathers beginner tips, advanced Envoy tech, resource
-            routes, and wiki-style data into one place – so you can spend less
-            time alt-tabbing and more time saving Omen Beasts.
-          </p>
+      <!-- Hero -->
+      <header class="page-header">
+        <h1>Soulframe Atlas</h1>
+        <p>
+          A compact, spoiler-conscious hub for Soulframe players. Quickly find
+          builds, routes, enemies, items, and maps without wading through a
+          thousand tabs.
+        </p>
+      </header>
 
-          <div class="hero-ctas">
-            <a href="#getting-started" class="btn-primary">
-              🌱 New Envoy Path
-            </a>
-            <a href="wiki.html" class="btn-ghost">
-              📚 Browse Atlas Index
-            </a>
-          </div>
+      <!-- Core feature grid (now includes Build Lab) -->
+      <section class="section">
+        <div class="feature-grid">
+          <a class="feature-card" href="guides.html">
+            <h2>Guides</h2>
+            <p>
+              Practical tutorials for new and returning players: combat basics,
+              Pact choices, progression paths, and more.
+            </p>
+          </a>
 
-          <div class="hero-meta">
-            <div class="hero-meta-item">
-              ⏱️ Optimized for first 20 hours
-            </div>
-            <div class="hero-meta-item">
-              🐾 Resources, maps & farming routes
-            </div>
-            <div class="hero-meta-item">🛡️ Fan-maintained, spoiler-light</div>
-          </div>
+          <a class="feature-card" href="wiki.html">
+            <h2>Mini-Wiki</h2>
+            <p>
+              A curated list of key items, enemies, and concepts with quick
+              summaries and deep-dive links to full wikis.
+            </p>
+          </a>
+
+          <a class="feature-card" href="build-lab.html">
+            <h2>Build Lab</h2>
+            <p>
+              Experiment with curated Pacts, weapons, and Virtue spreads in an
+              interactive sandbox. See strengths and playstyle at a glance.
+            </p>
+          </a>
+
+          <a class="feature-card" href="maps.html">
+            <h2>Maps &amp; Tools</h2>
+            <p>
+              Region overview, farming notes, and emerging tools to help you
+              plan routes and understand where to go next.
+            </p>
+          </a>
         </div>
+      </section>
 
-        <aside class="hero-right">
+      <!-- Quick links / status -->
+      <section class="section">
+        <div class="split">
           <div>
-            <div class="mini-heading">Quick orientation</div>
-            <ul class="hero-checklist">
+            <h2 class="section-title">Where to start</h2>
+            <ul class="list-compact">
               <li>
-                <span class="hero-check"></span>
-                Follow your Sparrow to Faction Tales.
+                New to Soulframe? Begin with
+                <a href="guides.html">Getting Started &amp; Core Combat Tips</a>.
               </li>
               <li>
-                <span class="hero-check"></span>
-                Defog your map at World Trees.
+                Want a forgiving first setup? Try the
+                <a href="build-lab.html">Defender – Sword &amp; Shield build</a>
+                in the Build Lab.
               </li>
               <li>
-                <span class="hero-check"></span>
-                Unlock Combat Arts at the Nightfold.
-              </li>
-              <li>
-                <span class="hero-check"></span>
-                Farm early mats without overlevelling.
-              </li>
-              <li>
-                <span class="hero-check"></span>
-                Use Soul Mode for scouting & pickpocketing.
-              </li>
-              <li>
-                <span class="hero-check"></span>
-                Track Pact Virtues for your build.
+                Curious about enemies and drops? Check the
+                <a href="wiki.html">Mini-Wiki</a> for quick references.
               </li>
             </ul>
           </div>
-
           <div>
-            <div class="mini-heading">Useful links</div>
-            <div class="hero-links">
-              <span class="pill">Official</span>
-              <a href="https://www.soulframe.com" target="_blank" rel="noreferrer">
-                Soulframe.com
-              </a>
-              ·
-              <a
-                href="https://forums.soulframe.com/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Forums
-              </a>
-              ·
-              <a
-                href="https://www.youtube.com/c/PlaySoulframe"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Devstreams
-              </a>
-            </div>
-          </div>
-        </aside>
-      </section>
-
-      <!-- GETTING STARTED -->
-      <section
-        class="section"
-        id="getting-started"
-        aria-labelledby="getting-started-heading"
-      >
-        <div class="section-header">
-          <div>
-            <h2 class="section-title" id="getting-started-heading">
-              Getting Started
-            </h2>
-            <p class="section-subtitle">
-              A spoiler-light route for your first hours in Soulframe. Think of
-              this as your personal Sparrow in text form.
+            <h2 class="section-title">Preludes / pre-alpha note</h2>
+            <p class="muted">
+              Soulframe is still evolving. This site focuses on staying lightweight
+              and accurate for the current Preludes / pre-alpha state and will
+              adapt as new systems and regions are added.
+            </p>
+            <p class="muted">
+              Expect builds, maps, and routes to change as Digital Extremes ships
+              balance passes and new content.
             </p>
           </div>
-        </div>
-
-        <div class="card-grid">
-          <article class="card">
-            <h3>1. Follow your Sparrow</h3>
-            <p>
-              Your Sparrow is your built-in GPS. Call it when you’re unsure
-              where to go – it will lead you toward the nearest Faction Tale or
-              key point of interest, keeping your progression on-track.
-            </p>
-            <div class="card-footer">
-              <span class="badge">Navigation</span>
-            </div>
-          </article>
-
-          <article class="card">
-            <h3>2. Defog with World Trees</h3>
-            <p>
-              Seek out World Trees to reveal large portions of the region map
-              and unlock fast landmarks. Grab nearby materials while you’re
-              there to start building your crafting stockpile.
-            </p>
-            <div class="card-footer">
-              <span class="badge">Exploration</span>
-            </div>
-          </article>
-
-          <article class="card">
-            <h3>3. Stay in low-level zones early</h3>
-            <p>
-              Focus on areas below enemy level 10 at first. You’ll gain Pact
-              ranks, Virtue points, and weapon levels faster without being
-              one-shot by late-game foes that drop similar loot.
-            </p>
-            <div class="card-footer">
-              <span class="badge">Progression</span>
-            </div>
-          </article>
-
-          <article class="card">
-            <h3>4. Visit the Blacksmith & Nightfold</h3>
-            <p>
-              As your weapons level, visit Nightfold shelves to unlock Combat
-              Arts and enhance your style. Use the Blacksmith to improve gear,
-              prioritizing survivability over raw damage.
-            </p>
-            <div class="card-footer">
-              <span class="badge">Upgrades</span>
-            </div>
-          </article>
-
-          <article class="card">
-            <h3>5. Learn Soul Mode habits</h3>
-            <p>
-              Use Soul Mode to scout camps, mark Omen Beasts, and slip behind
-              enemies for stealth attacks or pickpocket attempts. Treat it like
-              a lens that shows you safe routes and hidden interactions.
-            </p>
-            <div class="card-footer">
-              <span class="badge">Utility</span>
-            </div>
-          </article>
-
-          <article class="card">
-            <h3>6. Respect grey health</h3>
-            <p>
-              Grey health represents damage you can “fix” before it becomes
-              permanent. Time your blocks, dodges and partial retreats to avoid
-              having grey health chipped into red.
-            </p>
-            <div class="card-footer">
-              <span class="badge">Survival</span>
-            </div>
-          </article>
         </div>
       </section>
     </main>
