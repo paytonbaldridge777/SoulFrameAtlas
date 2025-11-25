@@ -47,7 +47,6 @@ document.querySelectorAll("a[href^='#']").forEach((link) => {
   links.forEach((link) => {
     const href = link.getAttribute("href");
     if (!href) return;
-
     const linkPath = href.replace(/^\//, "");
 
     if (current === linkPath || (!current && linkPath === "index.html")) {
@@ -57,7 +56,7 @@ document.querySelectorAll("a[href^='#']").forEach((link) => {
 })();
 
 // ------------------------
-// JSON helpers
+// JSON helper
 // ------------------------
 async function loadJSON(path) {
   const res = await fetch(path);
@@ -68,21 +67,25 @@ async function loadJSON(path) {
   return await res.json();
 }
 
-// ------------------------
-// Render Guides from data/guides.json
-// ------------------------
+// =====================================================
+// GUIDES: render + filter + search
+// =====================================================
+
+let currentGuideFilter = "all";
+let currentGuideQuery = "";
+
 async function renderGuides() {
   const container = document.getElementById("guideGrid");
-  if (!container) return; // not on this page
+  if (!container) return; // not on guides.html
 
   try {
     const guides = await loadJSON("data/guides.json");
 
     container.innerHTML = guides
       .map((g) => {
+        const difficulty = g.difficulty || 1;
         const difficultyStars =
-          "★".repeat(g.difficulty || 1) +
-          "☆".repeat(Math.max(0, 3 - (g.difficulty || 1)));
+          "★".repeat(difficulty) + "☆".repeat(Math.max(0, 3 - difficulty));
 
         return `
           <article class="card" data-tags="${(g.tags || []).join(" ")}">
@@ -105,6 +108,9 @@ async function renderGuides() {
         `;
       })
       .join("");
+
+    // After render, apply any existing filter/search once
+    applyGuideFilters();
   } catch (err) {
     console.error(err);
     container.innerHTML = `
@@ -118,9 +124,55 @@ async function renderGuides() {
   }
 }
 
-// ------------------------
-// Render Wiki items from data/items.json
-// ------------------------
+function applyGuideFilters() {
+  const cards = document.querySelectorAll("#guideGrid .card");
+  if (!cards.length) return;
+
+  cards.forEach((card) => {
+    const tags = (card.getAttribute("data-tags") || "").split(/\s+/);
+    const text = (card.textContent || "").toLowerCase();
+
+    const matchesFilter =
+      currentGuideFilter === "all" || tags.includes(currentGuideFilter);
+    const matchesSearch =
+      !currentGuideQuery || text.includes(currentGuideQuery);
+
+    card.style.display = matchesFilter && matchesSearch ? "" : "none";
+  });
+}
+
+function setupGuideFilters() {
+  const buttons = document.querySelectorAll(".pill-filter");
+  if (!buttons.length) return; // not on guides.html
+
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const filter = btn.getAttribute("data-filter") || "all";
+      currentGuideFilter = filter;
+
+      buttons.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      applyGuideFilters();
+    });
+  });
+}
+
+function setupGuideSearch() {
+  const searchInput = document.getElementById("guideSearch");
+  if (!searchInput) return;
+
+  searchInput.addEventListener("input", () => {
+    currentGuideQuery = searchInput.value.toLowerCase().trim();
+    console.log("[Guides] search:", currentGuideQuery); // debug
+    applyGuideFilters();
+  });
+}
+
+// =====================================================
+// WIKI: items + enemies + accordions + search
+// =====================================================
+
 async function renderWikiItems() {
   const container = document.getElementById("wikiItemsContainer");
   if (!container) return;
@@ -167,9 +219,6 @@ async function renderWikiItems() {
   }
 }
 
-// ------------------------
-// Render Wiki enemies from data/enemies.json
-// ------------------------
 async function renderWikiEnemies() {
   const container = document.getElementById("wikiEnemiesContainer");
   if (!container) return;
@@ -219,36 +268,6 @@ async function renderWikiEnemies() {
   }
 }
 
-// ------------------------
-// Guide filters (called after renderGuides)
-// ------------------------
-function setupGuideFilters() {
-  const guideFilterButtons = document.querySelectorAll(".pill-filter");
-  const guideCards = document.querySelectorAll("#guideGrid .card");
-  if (!guideFilterButtons.length || !guideCards.length) return;
-
-  guideFilterButtons.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const filter = btn.getAttribute("data-filter");
-
-      guideFilterButtons.forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
-
-      guideCards.forEach((card) => {
-        const tags = (card.getAttribute("data-tags") || "").split(/\s+/);
-        if (filter === "all" || tags.includes(filter)) {
-          card.style.display = "";
-        } else {
-          card.style.display = "none";
-        }
-      });
-    });
-  });
-}
-
-// ------------------------
-// Wiki accordions (called after wiki render)
-// ------------------------
 function setupWikiAccordions() {
   const wikiItems = document.querySelectorAll(".wiki-item");
   if (!wikiItems.length) return;
@@ -266,18 +285,90 @@ function setupWikiAccordions() {
   });
 }
 
-// ------------------------
-// Init: run everything appropriate for the current page
-// ------------------------
+function setupWikiSearch() {
+  const searchInput = document.getElementById("wikiSearch");
+  if (!searchInput) return;
+
+  searchInput.addEventListener("input", () => {
+    const query = searchInput.value.toLowerCase().trim();
+    console.log("[Wiki] search:", query); // debug
+
+    const allItems = document.querySelectorAll(
+      "#wikiItemsContainer .wiki-item, #wikiEnemiesContainer .wiki-item"
+    );
+
+    allItems.forEach((item) => {
+      const text = (item.textContent || "").toLowerCase();
+      item.style.display = !query || text.includes(query) ? "" : "none";
+    });
+  });
+}
+
+// =====================================================
+// REGIONS: render Region Overview
+// =====================================================
+
+async function renderRegions() {
+  const container = document.getElementById("regionGrid");
+  if (!container) return;
+
+  try {
+    const regions = await loadJSON("data/regions.json");
+    container.innerHTML = regions
+      .map(
+        (r) => `
+        <article class="card">
+          <h3>${r.name}</h3>
+          <p>${r.description}</p>
+          <div class="card-tag-row">
+            <span class="tag">${r.tier || "Region"}</span>
+            <span class="tag">Threat: ${r.threat || "Unknown"}</span>
+            ${
+              r.recommendedLevel
+                ? `<span class="tag">Lv. ${r.recommendedLevel}</span>`
+                : ""
+            }
+          </div>
+          ${
+            r.highlights && r.highlights.length
+              ? `<ul class="list-compact" style="margin-top:0.4rem;">
+                  ${r.highlights.map((h) => `<li>${h}</li>`).join("")}
+                 </ul>`
+              : ""
+          }
+        </article>
+      `
+      )
+      .join("");
+  } catch (err) {
+    console.error(err);
+    container.innerHTML = `
+      <div class="card">
+        <h3>Unable to load regions</h3>
+        <p style="color: var(--muted);">
+          Check <code>data/regions.json</code> exists and is valid JSON.
+        </p>
+      </div>
+    `;
+  }
+}
+
+// =====================================================
+// Init
+// =====================================================
+
 (async function initAtlas() {
-  // Render dynamic content
+  // Render dynamic content (page-safe: each renderer early-returns if its container isn't present)
   await Promise.allSettled([
     renderGuides(),
     renderWikiItems(),
-    renderWikiEnemies()
+    renderWikiEnemies(),
+    renderRegions()
   ]);
 
-  // Then wire up behaviors that depend on that content
+  // Wire up behaviours that depend on rendered content
   setupGuideFilters();
+  setupGuideSearch();
   setupWikiAccordions();
+  setupWikiSearch();
 })();
