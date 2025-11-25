@@ -1,0 +1,41 @@
+[
+  {
+    "id": "greenflower-meadows",
+    "name": "Greenflower Meadows",
+    "tier": "Early",
+    "threat": "Low",
+    "description": "Gentle rolling fields and sparse Sproutfolk patrols. Ideal for learning combat, farming basic materials, and following your Sparrow to early Tales.",
+    "highlights": [
+      "Abundant early crafting plants",
+      "Good place to experiment with Soul Mode safely",
+      "Nearby World Trees for early map reveal"
+    ],
+    "recommendedLevel": "1–5"
+  },
+  {
+    "id": "twilight-thickets",
+    "name": "Twilight Thickets",
+    "tier": "Mid",
+    "threat": "Moderate",
+    "description": "Dense forest pockets where Sproutfolk Raiders and Ode patrols occasionally overlap. Vision is limited, making ambushes common.",
+    "highlights": [
+      "Mixed enemy patrols for learning crowd control",
+      "Stronger resource nodes for upgraded gear",
+      "Great stealth practice with Soul Mode pathing"
+    ],
+    "recommendedLevel": "6–12"
+  },
+  {
+    "id": "emberbreak-ridge",
+    "name": "Emberbreak Ridge",
+    "tier": "Mid-High",
+    "threat": "High",
+    "description": "Rocky escarpments exposed to Ode enforcement. Perfect for testing shield builds, ranged options, and vertical navigation.",
+    "highlights": [
+      "Higher-tier ores and rare materials",
+      "Challenging Ode units ideal for learning counter windows",
+      "Good place to push your current build before a full respec"
+    ],
+    "recommendedLevel": "10–18"
+  }
+]
