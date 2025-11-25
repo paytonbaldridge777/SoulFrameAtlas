@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Soulframe Atlas – Build Lab</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Experiment with Soulframe pacts, weapons, and virtues in an interactive Build Lab."
+  />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <div class="page">
+    <header>
+      <nav class="nav">
+        <div class="nav-brand">
+          <div class="nav-logo">SF</div>
+          <div class="nav-title">Soulframe Atlas</div>
+        </div>
+        <button class="nav-toggle" id="navToggle">Menu ▾</button>
+        <div class="nav-links" id="navLinks">
+          <a href="index.html">Home</a>
+          <a href="guides.html">Guides</a>
+          <a href="wiki.html">Wiki</a>
+          <a href="maps.html">Maps & Tools</a>
+          <a href="build-lab.html">Build Lab</a>
+          <a href="updates.html">Updates</a>
+          <button
+            class="nav-cta"
+            onclick="window.location.href='guides.html'"
+          >
+            View All Guides
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <header class="page-header">
+        <h1>Build Lab</h1>
+        <p>
+          Explore curated Soulframe builds by Pact, weapon, and Virtue focus. Pick
+          a preset to see its strengths, weaknesses, and playstyle at a glance.
+        </p>
+      </header>
+
+      <section class="section" id="buildLabRoot">
+        <div class="split buildlab-layout">
+          <!-- Controls -->
+          <div class="buildlab-controls">
+            <h2 class="section-title">Choose a preset</h2>
+            <p class="section-subtitle">
+              Start with a curated build, then tweak Pacts and weapons as you like.
+            </p>
+
+            <label class="field-label" for="buildSelect">Build preset</label>
+            <select id="buildSelect" class="field-input">
+              <option value="">Loading builds…</option>
+            </select>
+
+            <div class="buildlab-field-group">
+              <label class="field-label" for="pactSelect">Pact</label>
+              <select id="pactSelect" class="field-input">
+                <!-- Populated from JSON -->
+              </select>
+            </div>
+
+            <div class="buildlab-field-group">
+              <label class="field-label" for="weaponSelect">Weapon</label>
+              <select id="weaponSelect" class="field-input">
+                <!-- Populated from JSON -->
+              </select>
+            </div>
+
+            <div class="buildlab-virtues">
+              <h3 class="mini-heading">Virtue focus</h3>
+              <div class="virtue-row">
+                <span>Courage</span>
+                <span id="virtueCourageValue">–</span>
+              </div>
+              <div class="virtue-row">
+                <span>Grace</span>
+                <span id="virtueGraceValue">–</span>
+              </div>
+              <div class="virtue-row">
+                <span>Spirit</span>
+                <span id="virtueSpiritValue">–</span>
+              </div>
+              <p class="virtue-note">
+                Values are relative emphasis, not exact in-game numbers.
+              </p>
+            </div>
+          </div>
+
+          <!-- Summary / Stats -->
+          <div class="buildlab-summary card" id="buildSummaryCard">
+            <h2 id="buildName">Select a build to begin</h2>
+            <p id="buildBlurb" class="buildlab-blurb">
+              Once you pick a preset on the left, you’ll see its role, strengths,
+              and recommended Virtue focus here.
+            </p>
+
+            <div id="buildTags" class="card-tag-row" style="margin-bottom:0.75rem;">
+              <!-- tags -->
+            </div>
+
+            <div class="stat-bars">
+              <div class="stat-row">
+                <span class="stat-label">Damage</span>
+                <div class="stat-bar">
+                  <div id="barDamage" class="stat-bar-fill"></div>
+                </div>
+              </div>
+              <div class="stat-row">
+                <span class="stat-label">Defense</span>
+                <div class="stat-bar">
+                  <div id="barDefense" class="stat-bar-fill"></div>
+                </div>
+              </div>
+              <div class="stat-row">
+                <span class="stat-label">Mobility</span>
+                <div class="stat-bar">
+                  <div id="barMobility" class="stat-bar-fill"></div>
+                </div>
+              </div>
+              <div class="stat-row">
+                <span class="stat-label">Control</span>
+                <div class="stat-bar">
+                  <div id="barControl" class="stat-bar-fill"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="complexity-row">
+              <span class="stat-label">Complexity</span>
+              <span id="complexityStars" class="complexity-stars">–</span>
+            </div>
+
+            <div class="buildlab-tips">
+              <h3 class="mini-heading">Playstyle tips</h3>
+              <ul id="buildTips" class="list-compact">
+                <li>Pick a preset from the left to see recommended tactics.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div>
+          Soulframe Atlas is an unofficial, fan-made resource for Soulframe
+          players. Soulframe and related marks are property of Digital Extremes
+          Ltd. No affiliation is implied.
+        </div>
+        <div>Built for Preludes pre-alpha. Content will evolve as patches land.</div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
