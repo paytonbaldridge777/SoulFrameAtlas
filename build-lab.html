@@ -40,20 +40,21 @@
       <header class="page-header">
         <h1>Build Lab</h1>
         <p>
-          Explore curated Soulframe builds by Pact, weapon, and Virtue focus. Pick
-          a preset to see its strengths, then swap to Custom mode to tweak stats
-          and experiment.
+          Explore curated Soulframe builds by Pact, weapon, and Virtue focus. In
+          <strong>Preset</strong> mode you see the curated stat profile; switch to
+          <strong>Custom</strong> to tweak Courage / Grace / Spirit and watch how
+          your damage, defense, and mobility shift.
         </p>
       </header>
 
       <section class="section" id="buildLabRoot">
         <div class="split buildlab-layout">
-          <!-- Controls -->
+          <!-- LEFT: Controls -->
           <div class="buildlab-controls">
-            <h2 class="section-title">Choose a preset</h2>
+            <h2 class="section-title">Build selection</h2>
             <p class="section-subtitle">
-              Start with a curated build, then adjust Pacts, weapons, and Virtue
-              focus to fit your style.
+              Start with a curated build, then adjust Pacts and Virtues to see how
+              the overall stat profile changes.
             </p>
 
             <label class="field-label" for="buildSelect">Build preset</label>
@@ -97,13 +98,15 @@
                 </label>
               </div>
               <p class="buildlab-mode-note">
-                Preset uses curated stats. Custom lets you tweak bars and Virtues
-                yourself without changing the saved builds.
+                Preset: curated Virtue spread & stats. Custom: adjust Courage /
+                Grace / Spirit and see how derived stats react. Builds in the JSON
+                are never overwritten.
               </p>
             </div>
 
             <div class="buildlab-virtues">
               <h3 class="mini-heading">Virtue focus</h3>
+
               <div class="virtue-row">
                 <span>Courage</span>
                 <span id="virtueCourageValue">–</span>
@@ -117,7 +120,8 @@
                 <span id="virtueSpiritValue">–</span>
               </div>
               <p class="virtue-note">
-                Values are relative emphasis, not exact in-game numbers.
+                Values are relative emphasis, not literal in-game numbers.
+                They’re used to derive the stat bars on the right.
               </p>
 
               <!-- Custom Virtue sliders (shown only in Custom mode) -->
@@ -156,12 +160,13 @@
             </div>
           </div>
 
-          <!-- Summary / Stats -->
+          <!-- RIGHT: Summary / derived stats -->
           <div class="buildlab-summary card" id="buildSummaryCard">
             <h2 id="buildName">Select a build to begin</h2>
             <p id="buildBlurb" class="buildlab-blurb">
-              Once you pick a preset on the left, you’ll see its role, strengths,
-              and recommended Virtue focus here.
+              Once you pick a preset on the left, you’ll see its intended role,
+              Virtue focus, and derived stats here. Switch to Custom mode to
+              reshape the Virtues.
             </p>
 
             <div id="buildTags" class="card-tag-row" style="margin-bottom:0.5rem;">
@@ -206,68 +211,15 @@
               </div>
             </div>
 
-            <!-- Custom stat sliders (shown only in Custom mode) -->
-            <div class="buildlab-custom-metrics" id="customMetricControls">
-              <label>
-                Damage
-                <input
-                  type="range"
-                  id="metricDamageInput"
-                  min="0"
-                  max="5"
-                  step="1"
-                />
-              </label>
-              <label>
-                Defense
-                <input
-                  type="range"
-                  id="metricDefenseInput"
-                  min="0"
-                  max="5"
-                  step="1"
-                />
-              </label>
-              <label>
-                Mobility
-                <input
-                  type="range"
-                  id="metricMobilityInput"
-                  min="0"
-                  max="5"
-                  step="1"
-                />
-              </label>
-              <label>
-                Control
-                <input
-                  type="range"
-                  id="metricControlInput"
-                  min="0"
-                  max="5"
-                  step="1"
-                />
-              </label>
-              <label>
-                Complexity
-                <input
-                  type="range"
-                  id="metricComplexityInput"
-                  min="1"
-                  max="5"
-                  step="1"
-                />
-              </label>
-            </div>
-
             <div class="complexity-row">
               <span class="stat-label">Complexity</span>
               <span id="complexityStars" class="complexity-stars">–</span>
             </div>
 
             <p class="buildlab-custom-note" id="customNote">
-              Custom mode: sliders update the bars and Virtues locally. Presets
-              remain unchanged.
+              Custom mode: Courage / Grace / Spirit sliders below your Pact
+              will directly change these bars. Think of it as a “what if” tool
+              rather than a strict DPS calculator.
             </p>
 
             <div class="buildlab-tips">
