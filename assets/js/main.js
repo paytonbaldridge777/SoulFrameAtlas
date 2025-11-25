@@ -109,7 +109,7 @@ async function renderGuides() {
       })
       .join("");
 
-    // After render, apply any existing filter/search once
+    // Apply any existing filter/search
     applyGuideFilters();
   } catch (err) {
     console.error(err);
@@ -164,7 +164,6 @@ function setupGuideSearch() {
 
   searchInput.addEventListener("input", () => {
     currentGuideQuery = searchInput.value.toLowerCase().trim();
-    console.log("[Guides] search:", currentGuideQuery); // debug
     applyGuideFilters();
   });
 }
@@ -291,8 +290,6 @@ function setupWikiSearch() {
 
   searchInput.addEventListener("input", () => {
     const query = searchInput.value.toLowerCase().trim();
-    console.log("[Wiki] search:", query); // debug
-
     const allItems = document.querySelectorAll(
       "#wikiItemsContainer .wiki-item, #wikiEnemiesContainer .wiki-item"
     );
@@ -354,19 +351,195 @@ async function renderRegions() {
 }
 
 // =====================================================
+// BUILD LAB: render + wire up
+// =====================================================
+
+let buildLabData = null;
+
+async function renderBuildLab() {
+  const root = document.getElementById("buildLabRoot");
+  if (!root) return; // not on build-lab.html
+
+  let data;
+  try {
+    data = await loadJSON("data/builds.json");
+    buildLabData = data;
+  } catch (err) {
+    console.error(err);
+    root.innerHTML = `
+      <div class="card">
+        <h3>Unable to load Build Lab data</h3>
+        <p style="color: var(--muted);">
+          Check <code>data/builds.json</code> exists and is valid JSON.
+        </p>
+      </div>
+    `;
+    return;
+  }
+
+  const buildSelect = document.getElementById("buildSelect");
+  const pactSelect = document.getElementById("pactSelect");
+  const weaponSelect = document.getElementById("weaponSelect");
+
+  const buildName = document.getElementById("buildName");
+  const buildBlurb = document.getElementById("buildBlurb");
+  const buildTags = document.getElementById("buildTags");
+  const buildTips = document.getElementById("buildTips");
+
+  const virtueCourage = document.getElementById("virtueCourageValue");
+  const virtueGrace = document.getElementById("virtueGraceValue");
+  const virtueSpirit = document.getElementById("virtueSpiritValue");
+
+  const barDamage = document.getElementById("barDamage");
+  const barDefense = document.getElementById("barDefense");
+  const barMobility = document.getElementById("barMobility");
+  const barControl = document.getElementById("barControl");
+  const complexityStars = document.getElementById("complexityStars");
+
+  if (
+    !buildSelect ||
+    !pactSelect ||
+    !weaponSelect ||
+    !buildName ||
+    !buildBlurb
+  ) {
+    console.warn("Build Lab elements missing from DOM.");
+    return;
+  }
+
+  // Populate selects
+  buildSelect.innerHTML = "";
+  data.builds.forEach((b, idx) => {
+    const opt = document.createElement("option");
+    opt.value = b.id;
+    opt.textContent = b.name;
+    if (idx === 0) opt.selected = true;
+    buildSelect.appendChild(opt);
+  });
+
+  pactSelect.innerHTML = "";
+  data.pacts.forEach((p) => {
+    const opt = document.createElement("option");
+    opt.value = p.id;
+    opt.textContent = p.name;
+    pactSelect.appendChild(opt);
+  });
+
+  weaponSelect.innerHTML = "";
+  data.weapons.forEach((w) => {
+    const opt = document.createElement("option");
+    opt.value = w.id;
+    opt.textContent = w.name;
+    weaponSelect.appendChild(opt);
+  });
+
+  function findPact(id) {
+    return data.pacts.find((p) => p.id === id);
+  }
+
+  function findWeapon(id) {
+    return data.weapons.find((w) => w.id === id);
+  }
+
+  function findBuild(id) {
+    return data.builds.find((b) => b.id === id);
+  }
+
+  function setBar(el, value) {
+    if (!el) return;
+    const clamped = Math.max(0, Math.min(5, value || 0));
+    const pct = (clamped / 5) * 100;
+    el.style.width = pct + "%";
+  }
+
+  function setVirtueText(el, value) {
+    if (!el) return;
+    el.textContent = typeof value === "number" ? value + "%" : "–";
+  }
+
+  function updateBuildUI(buildId) {
+    const build = findBuild(buildId);
+    if (!build) return;
+
+    buildName.textContent = build.name;
+    buildBlurb.textContent = build.summary || "";
+
+    // Pact & weapon selects
+    if (build.pactId && findPact(build.pactId)) {
+      pactSelect.value = build.pactId;
+    }
+    if (build.weaponId && findWeapon(build.weaponId)) {
+      weaponSelect.value = build.weaponId;
+    }
+
+    // Tags
+    if (buildTags) {
+      buildTags.innerHTML = (build.tags || [])
+        .map((t) => `<span class="tag">${t}</span>`)
+        .join("");
+    }
+
+    // Virtues
+    const v = build.virtues || {};
+    setVirtueText(virtueCourage, v.courage);
+    setVirtueText(virtueGrace, v.grace);
+    setVirtueText(virtueSpirit, v.spirit);
+
+    // Metrics
+    const m = build.metrics || {};
+    setBar(barDamage, m.damage);
+    setBar(barDefense, m.defense);
+    setBar(barMobility, m.mobility);
+    setBar(barControl, m.control);
+
+    if (complexityStars) {
+      const comp = Math.max(1, Math.min(5, m.complexity || 1));
+      complexityStars.textContent =
+        "★".repeat(comp) + "☆".repeat(Math.max(0, 5 - comp));
+    }
+
+    // Tips
+    if (buildTips) {
+      const tips = build.tips || [];
+      if (!tips.length) {
+        buildTips.innerHTML = `<li>No specific tips yet—experiment and adjust as you go.</li>`;
+      } else {
+        buildTips.innerHTML = tips.map((t) => `<li>${t}</li>`).join("");
+      }
+    }
+  }
+
+  // Initial selection
+  if (data.builds.length > 0) {
+    updateBuildUI(data.builds[0].id);
+  }
+
+  // Events
+  buildSelect.addEventListener("change", () => {
+    const id = buildSelect.value;
+    if (id) updateBuildUI(id);
+  });
+
+  // Pact/weapon selects are mostly cosmetic right now: they let users see “what if”
+  // without changing the underlying metrics. In future you could tweak metrics based
+  // on pact/weapon synergy.
+}
+
+// =====================================================
 // Init
 // =====================================================
 
 (async function initAtlas() {
-  // Render dynamic content (page-safe: each renderer early-returns if its container isn't present)
+  // Render dynamic content – each renderer no-ops on pages where it's irrelevant
   await Promise.allSettled([
     renderGuides(),
     renderWikiItems(),
     renderWikiEnemies(),
-    renderRegions()
+    renderRegions(),
+    renderBuildLab()
   ]);
 
-  // Wire up behaviours that depend on rendered content
+  // Wire up behaviours
   setupGuideFilters();
   setupGuideSearch();
   setupWikiAccordions();
