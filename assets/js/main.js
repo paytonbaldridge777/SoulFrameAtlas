@@ -350,22 +350,227 @@ async function renderRegions() {
 }
 
 // =====================================================
-// BUILD LAB: render + wire up
+// BUILD LAB: simplified, fully-reactive Preset/Custom
 // =====================================================
 
-let buildLabData = null;
-let currentBuildId = null;
-let currentBuildMode = "preset";
-let currentCustomState = null;
+let buildData = null;
+let activeBuildId = null;
+let buildMode = "preset";
 
 async function renderBuildLab() {
   const root = document.getElementById("buildLabRoot");
   if (!root) return; // not on build-lab.html
 
-  let data;
+  // DOM refs
+  const buildSelect = document.getElementById("buildSelect");
+  const pactSelect = document.getElementById("pactSelect");
+  const weaponSelect = document.getElementById("weaponSelect");
+
+  const buildName = document.getElementById("buildName");
+  const buildBlurb = document.getElementById("buildBlurb");
+  const buildTags = document.getElementById("buildTags");
+  const buildTips = document.getElementById("buildTips");
+
+  const virtueCourageValue = document.getElementById("virtueCourageValue");
+  const virtueGraceValue = document.getElementById("virtueGraceValue");
+  const virtueSpiritValue = document.getElementById("virtueSpiritValue");
+
+  const pactRoleText = document.getElementById("pactRoleText");
+  const weaponRoleText = document.getElementById("weaponRoleText");
+
+  const barDamage = document.getElementById("barDamage");
+  const barDefense = document.getElementById("barDefense");
+  const barMobility = document.getElementById("barMobility");
+  const barControl = document.getElementById("barControl");
+  const complexityStars = document.getElementById("complexityStars");
+
+  const modeRadios = document.querySelectorAll("input[name='buildMode']");
+
+  const virtueCourageInput = document.getElementById("virtueCourageInput");
+  const virtueGraceInput = document.getElementById("virtueGraceInput");
+  const virtueSpiritInput = document.getElementById("virtueSpiritInput");
+
+  const metricDamageInput = document.getElementById("metricDamageInput");
+  const metricDefenseInput = document.getElementById("metricDefenseInput");
+  const metricMobilityInput = document.getElementById("metricMobilityInput");
+  const metricControlInput = document.getElementById("metricControlInput");
+  const metricComplexityInput = document.getElementById("metricComplexityInput");
+
+  const customVirtueControls = document.getElementById("customVirtueControls");
+  const customMetricControls = document.getElementById("customMetricControls");
+  const customNote = document.getElementById("customNote");
+
+  if (!buildSelect) {
+    console.warn("Build Lab markup missing key elements.");
+    return;
+  }
+
+  // Helper functions
+  function setBar(el, value) {
+    if (!el) return;
+    const v = Math.max(0, Math.min(5, value || 0));
+    const pct = (v / 5) * 100;
+    el.style.width = pct + "%";
+  }
+
+  function setVirtueText(el, value) {
+    if (!el) return;
+    el.textContent =
+      typeof value === "number" ? `${value}%` : value ? String(value) : "–";
+  }
+
+  function setComplexity(value) {
+    if (!complexityStars) return;
+    const v = Math.max(1, Math.min(5, value || 1));
+    complexityStars.textContent = "★".repeat(v) + "☆".repeat(5 - v);
+  }
+
+  function findPact(id) {
+    return buildData && buildData.pacts.find((p) => p.id === id);
+  }
+
+  function findWeapon(id) {
+    return buildData && buildData.weapons.find((w) => w.id === id);
+  }
+
+  function findBuild(id) {
+    return buildData && buildData.builds.find((b) => b.id === id);
+  }
+
+  function updatePactWeaponText() {
+    if (pactRoleText) {
+      const p = findPact(pactSelect.value);
+      pactRoleText.textContent = p ? `${p.name} – ${p.role}` : "–";
+    }
+    if (weaponRoleText) {
+      const w = findWeapon(weaponSelect.value);
+      weaponRoleText.textContent = w ? `${w.name} – ${w.role}` : "–";
+    }
+  }
+
+  function applyBuildToUI(build) {
+    if (!build) return;
+    activeBuildId = build.id;
+
+    // title/summary/tags/tips
+    buildName.textContent = build.name;
+    buildBlurb.textContent = build.summary || "";
+
+    if (buildTags) {
+      buildTags.innerHTML = (build.tags || [])
+        .map((t) => `<span class="tag">${t}</span>`)
+        .join("");
+    }
+
+    if (buildTips) {
+      const tips = build.tips || [];
+      buildTips.innerHTML = tips.length
+        ? tips.map((t) => `<li>${t}</li>`).join("")
+        : `<li>No specific tips yet—experiment and adjust as you go.</li>`;
+    }
+
+    // selects
+    if (build.pactId && findPact(build.pactId)) {
+      pactSelect.value = build.pactId;
+    }
+    if (build.weaponId && findWeapon(build.weaponId)) {
+      weaponSelect.value = build.weaponId;
+    }
+    updatePactWeaponText();
+
+    // virtues
+    const v = build.virtues || {};
+    setVirtueText(virtueCourageValue, v.courage);
+    setVirtueText(virtueGraceValue, v.grace);
+    setVirtueText(virtueSpiritValue, v.spirit);
+
+    if (virtueCourageInput) virtueCourageInput.value = v.courage ?? 0;
+    if (virtueGraceInput) virtueGraceInput.value = v.grace ?? 0;
+    if (virtueSpiritInput) virtueSpiritInput.value = v.spirit ?? 0;
+
+    // metrics
+    const m = build.metrics || {};
+    setBar(barDamage, m.damage);
+    setBar(barDefense, m.defense);
+    setBar(barMobility, m.mobility);
+    setBar(barControl, m.control);
+    setComplexity(m.complexity);
+
+    if (metricDamageInput) metricDamageInput.value = m.damage ?? 0;
+    if (metricDefenseInput) metricDefenseInput.value = m.defense ?? 0;
+    if (metricMobilityInput) metricMobilityInput.value = m.mobility ?? 0;
+    if (metricControlInput) metricControlInput.value = m.control ?? 0;
+    if (metricComplexityInput)
+      metricComplexityInput.value = m.complexity ?? 1;
+  }
+
+  function applyCustomFromInputs() {
+    // virtues -> text only
+    const vC = virtueCourageInput ? Number(virtueCourageInput.value) || 0 : 0;
+    const vG = virtueGraceInput ? Number(virtueGraceInput.value) || 0 : 0;
+    const vS = virtueSpiritInput ? Number(virtueSpiritInput.value) || 0 : 0;
+
+    setVirtueText(virtueCourageValue, vC);
+    setVirtueText(virtueGraceValue, vG);
+    setVirtueText(virtueSpiritValue, vS);
+
+    // metrics sliders directly drive bars
+    const d = metricDamageInput ? Number(metricDamageInput.value) || 0 : 0;
+    const de = metricDefenseInput ? Number(metricDefenseInput.value) || 0 : 0;
+    const mo = metricMobilityInput ? Number(metricMobilityInput.value) || 0 : 0;
+    const c = metricControlInput ? Number(metricControlInput.value) || 0 : 0;
+    const comp = metricComplexityInput
+      ? Number(metricComplexityInput.value) || 1
+      : 1;
+
+    setBar(barDamage, d);
+    setBar(barDefense, de);
+    setBar(barMobility, mo);
+    setBar(barControl, c);
+    setComplexity(comp);
+  }
+
+  function setMode(newMode) {
+    buildMode = newMode;
+
+    const enableCustom = newMode === "custom";
+
+    if (customVirtueControls)
+      customVirtueControls.style.display = enableCustom ? "block" : "none";
+    if (customMetricControls)
+      customMetricControls.style.display = enableCustom ? "block" : "none";
+    if (customNote) customNote.style.display = enableCustom ? "block" : "none";
+
+    // Enable/disable sliders
+    const sliders = [
+      virtueCourageInput,
+      virtueGraceInput,
+      virtueSpiritInput,
+      metricDamageInput,
+      metricDefenseInput,
+      metricMobilityInput,
+      metricControlInput,
+      metricComplexityInput
+    ];
+    sliders.forEach((s) => {
+      if (s) s.disabled = !enableCustom;
+    });
+
+    // When switching back to preset, re-apply the current build from JSON
+    if (newMode === "preset" && activeBuildId && buildData) {
+      const b = findBuild(activeBuildId);
+      if (b) applyBuildToUI(b);
+    }
+
+    // When switching to custom, immediately sync from sliders
+    if (newMode === "custom") {
+      applyCustomFromInputs();
+    }
+  }
+
+  // Load data
   try {
-    data = await loadJSON("data/builds.json");
-    buildLabData = data;
+    buildData = await loadJSON("data/builds.json");
   } catch (err) {
     console.error(err);
     root.innerHTML = `
@@ -379,259 +584,9 @@ async function renderBuildLab() {
     return;
   }
 
-  const buildSelect = document.getElementById("buildSelect");
-  const pactSelect = document.getElementById("pactSelect");
-  const weaponSelect = document.getElementById("weaponSelect");
-
-  const buildName = document.getElementById("buildName");
-  const buildBlurb = document.getElementById("buildBlurb");
-  const buildTags = document.getElementById("buildTags");
-  const buildTips = document.getElementById("buildTips");
-
-  const virtueCourage = document.getElementById("virtueCourageValue");
-  const virtueGrace = document.getElementById("virtueGraceValue");
-  const virtueSpirit = document.getElementById("virtueSpiritValue");
-
-  const barDamage = document.getElementById("barDamage");
-  const barDefense = document.getElementById("barDefense");
-  const barMobility = document.getElementById("barMobility");
-  const barControl = document.getElementById("barControl");
-  const complexityStars = document.getElementById("complexityStars");
-
-  const pactRoleText = document.getElementById("pactRoleText");
-  const weaponRoleText = document.getElementById("weaponRoleText");
-
-  const customVirtueControls = document.getElementById("customVirtueControls");
-  const customMetricControls = document.getElementById("customMetricControls");
-  const customNote = document.getElementById("customNote");
-
-  const virtueCourageInput = document.getElementById("virtueCourageInput");
-  const virtueGraceInput = document.getElementById("virtueGraceInput");
-  const virtueSpiritInput = document.getElementById("virtueSpiritInput");
-
-  const metricDamageInput = document.getElementById("metricDamageInput");
-  const metricDefenseInput = document.getElementById("metricDefenseInput");
-  const metricMobilityInput = document.getElementById("metricMobilityInput");
-  const metricControlInput = document.getElementById("metricControlInput");
-  const metricComplexityInput = document.getElementById("metricComplexityInput");
-
-  const modeRadios = document.querySelectorAll("input[name='buildMode']");
-
-  if (
-    !buildSelect ||
-    !pactSelect ||
-    !weaponSelect ||
-    !buildName ||
-    !buildBlurb
-  ) {
-    console.warn("Build Lab elements missing from DOM.");
-    return;
-  }
-
-  // Helpers
-  function findPact(id) {
-    return data.pacts.find((p) => p.id === id);
-  }
-
-  function findWeapon(id) {
-    return data.weapons.find((w) => w.id === id);
-  }
-
-  function findBuild(id) {
-    return data.builds.find((b) => b.id === id);
-  }
-
-  function setBar(el, value) {
-    if (!el) return;
-    const clamped = Math.max(0, Math.min(5, value || 0));
-    const pct = (clamped / 5) * 100;
-    el.style.width = pct + "%";
-  }
-
-  function setVirtueText(el, value) {
-    if (!el) return;
-    el.textContent =
-      typeof value === "number" ? `${value}%` : value ? String(value) : "–";
-  }
-
-  function updatePactWeaponMeta() {
-    const pact = findPact(pactSelect.value);
-    const weapon = findWeapon(weaponSelect.value);
-
-    if (pactRoleText) {
-      pactRoleText.textContent = pact ? `${pact.name} – ${pact.role}` : "–";
-    }
-    if (weaponRoleText) {
-      weaponRoleText.textContent = weapon ? `${weapon.name} – ${weapon.role}` : "–";
-    }
-  }
-
-  function applyVirtuesAndMetrics(virtues, metrics) {
-    const v = virtues || {};
-    const m = metrics || {};
-
-    setVirtueText(virtueCourage, v.courage);
-    setVirtueText(virtueGrace, v.grace);
-    setVirtueText(virtueSpirit, v.spirit);
-
-    setBar(barDamage, m.damage);
-    setBar(barDefense, m.defense);
-    setBar(barMobility, m.mobility);
-    setBar(barControl, m.control);
-
-    if (complexityStars) {
-      const comp = Math.max(1, Math.min(5, m.complexity || 1));
-      complexityStars.textContent =
-        "★".repeat(comp) + "☆".repeat(Math.max(0, 5 - comp));
-    }
-  }
-
-  function syncInputsFromState(state) {
-    if (!state) return;
-    const v = state.virtues || {};
-    const m = state.metrics || {};
-
-    if (virtueCourageInput) virtueCourageInput.value = v.courage ?? 0;
-    if (virtueGraceInput) virtueGraceInput.value = v.grace ?? 0;
-    if (virtueSpiritInput) virtueSpiritInput.value = v.spirit ?? 0;
-
-    if (metricDamageInput) metricDamageInput.value = m.damage ?? 0;
-    if (metricDefenseInput) metricDefenseInput.value = m.defense ?? 0;
-    if (metricMobilityInput) metricMobilityInput.value = m.mobility ?? 0;
-    if (metricControlInput) metricControlInput.value = m.control ?? 0;
-    if (metricComplexityInput) metricComplexityInput.value = m.complexity ?? 1;
-  }
-
-  function buildStateFromInputs() {
-    const virtues = {
-      courage: virtueCourageInput ? Number(virtueCourageInput.value) || 0 : 0,
-      grace: virtueGraceInput ? Number(virtueGraceInput.value) || 0 : 0,
-      spirit: virtueSpiritInput ? Number(virtueSpiritInput.value) || 0 : 0
-    };
-    const metrics = {
-      damage: metricDamageInput ? Number(metricDamageInput.value) || 0 : 0,
-      defense: metricDefenseInput ? Number(metricDefenseInput.value) || 0 : 0,
-      mobility: metricMobilityInput ? Number(metricMobilityInput.value) || 0 : 0,
-      control: metricControlInput ? Number(metricControlInput.value) || 0 : 0,
-      complexity: metricComplexityInput
-        ? Number(metricComplexityInput.value) || 1
-        : 1
-    };
-    return { virtues, metrics };
-  }
-
-  function updateCustomFromInputs() {
-    currentCustomState = buildStateFromInputs();
-    applyVirtuesAndMetrics(
-      currentCustomState.virtues,
-      currentCustomState.metrics
-    );
-  }
-
-  function setMode(mode) {
-    currentBuildMode = mode;
-
-    if (customVirtueControls) {
-      customVirtueControls.style.display =
-        mode === "custom" ? "block" : "none";
-    }
-    if (customMetricControls) {
-      customMetricControls.style.display =
-        mode === "custom" ? "block" : "none";
-    }
-    if (customNote) {
-      customNote.style.display = mode === "custom" ? "block" : "none";
-    }
-
-    // When switching to preset, reset custom state from the current build
-    if (mode === "preset" && currentBuildId) {
-      const b = findBuild(currentBuildId);
-      if (b) {
-        currentCustomState = {
-          virtues: { ...(b.virtues || {}) },
-          metrics: { ...(b.metrics || {}) }
-        };
-        syncInputsFromState(currentCustomState);
-        applyVirtuesAndMetrics(b.virtues, b.metrics);
-      }
-    } else if (mode === "custom" && currentBuildId) {
-      // Seed custom state from the current build if none exists yet
-      if (!currentCustomState) {
-        const b = findBuild(currentBuildId);
-        if (b) {
-          currentCustomState = {
-            virtues: { ...(b.virtues || {}) },
-            metrics: { ...(b.metrics || {}) }
-          };
-        }
-      }
-      syncInputsFromState(currentCustomState);
-      applyVirtuesAndMetrics(
-        currentCustomState.virtues,
-        currentCustomState.metrics
-      );
-    }
-  }
-
-  function updateBuildUI(buildId) {
-    const build = findBuild(buildId);
-    if (!build) return;
-
-    currentBuildId = buildId;
-
-    buildName.textContent = build.name;
-    buildBlurb.textContent = build.summary || "";
-
-    if (buildTags) {
-      buildTags.innerHTML = (build.tags || [])
-        .map((t) => `<span class="tag">${t}</span>`)
-        .join("");
-    }
-
-    if (buildTips) {
-      const tips = build.tips || [];
-      if (!tips.length) {
-        buildTips.innerHTML = `<li>No specific tips yet—experiment and adjust as you go.</li>`;
-      } else {
-        buildTips.innerHTML = tips.map((t) => `<li>${t}</li>`).join("");
-      }
-    }
-
-    // Pact & weapon selects
-    if (build.pactId && findPact(build.pactId)) {
-      pactSelect.value = build.pactId;
-    }
-    if (build.weaponId && findWeapon(build.weaponId)) {
-      weaponSelect.value = build.weaponId;
-    }
-    updatePactWeaponMeta();
-
-    if (currentBuildMode === "preset") {
-      currentCustomState = {
-        virtues: { ...(build.virtues || {}) },
-        metrics: { ...(build.metrics || {}) }
-      };
-      syncInputsFromState(currentCustomState);
-      applyVirtuesAndMetrics(build.virtues, build.metrics);
-    } else {
-      // custom mode: seed if needed, otherwise respect current sliders
-      if (!currentCustomState) {
-        currentCustomState = {
-          virtues: { ...(build.virtues || {}) },
-          metrics: { ...(build.metrics || {}) }
-        };
-        syncInputsFromState(currentCustomState);
-      }
-      applyVirtuesAndMetrics(
-        currentCustomState.virtues,
-        currentCustomState.metrics
-      );
-    }
-  }
-
   // Populate selects
   buildSelect.innerHTML = "";
-  data.builds.forEach((b, idx) => {
+  buildData.builds.forEach((b, idx) => {
     const opt = document.createElement("option");
     opt.value = b.id;
     opt.textContent = b.name;
@@ -640,7 +595,7 @@ async function renderBuildLab() {
   });
 
   pactSelect.innerHTML = "";
-  data.pacts.forEach((p) => {
+  buildData.pacts.forEach((p) => {
     const opt = document.createElement("option");
     opt.value = p.id;
     opt.textContent = p.name;
@@ -648,69 +603,61 @@ async function renderBuildLab() {
   });
 
   weaponSelect.innerHTML = "";
-  data.weapons.forEach((w) => {
+  buildData.weapons.forEach((w) => {
     const opt = document.createElement("option");
     opt.value = w.id;
     opt.textContent = w.name;
     weaponSelect.appendChild(opt);
   });
 
-  // Event wiring
-  buildSelect.addEventListener("change", () => {
-    const id = buildSelect.value;
-    if (id) {
-      currentCustomState = null; // reset custom when switching builds
-      updateBuildUI(id);
-    }
-  });
+  // Initial build
+  if (buildData.builds.length > 0) {
+    applyBuildToUI(buildData.builds[0]);
+  }
 
-  pactSelect.addEventListener("change", () => {
-    updatePactWeaponMeta();
-  });
-
-  weaponSelect.addEventListener("change", () => {
-    updatePactWeaponMeta();
-  });
-
+  // Mode radios
   if (modeRadios && modeRadios.length) {
     modeRadios.forEach((r) => {
       r.addEventListener("change", () => {
-        if (r.checked) {
-          setMode(r.value);
-        }
+        if (r.checked) setMode(r.value);
       });
     });
   }
-
-  if (virtueCourageInput)
-    virtueCourageInput.addEventListener("input", updateCustomFromInputs);
-  if (virtueGraceInput)
-    virtueGraceInput.addEventListener("input", updateCustomFromInputs);
-  if (virtueSpiritInput)
-    virtueSpiritInput.addEventListener("input", updateCustomFromInputs);
-
-  if (metricDamageInput)
-    metricDamageInput.addEventListener("input", updateCustomFromInputs);
-  if (metricDefenseInput)
-    metricDefenseInput.addEventListener("input", updateCustomFromInputs);
-  if (metricMobilityInput)
-    metricMobilityInput.addEventListener("input", updateCustomFromInputs);
-  if (metricControlInput)
-    metricControlInput.addEventListener("input", updateCustomFromInputs);
-  if (metricComplexityInput)
-    metricComplexityInput.addEventListener("input", updateCustomFromInputs);
-
-  // Initial state: first build, preset mode
-  if (data.builds.length > 0) {
-    currentBuildMode = "preset";
-    if (modeRadios && modeRadios.length) {
-      modeRadios.forEach((r) => {
-        r.checked = r.value === "preset";
-      });
-    }
-    updateBuildUI(data.builds[0].id);
-    setMode("preset");
+  // default: preset
+  setMode("preset");
+  if (modeRadios && modeRadios.length) {
+    modeRadios.forEach((r) => {
+      r.checked = r.value === "preset";
+    });
   }
+
+  // Select changes
+  buildSelect.addEventListener("change", () => {
+    const b = findBuild(buildSelect.value);
+    if (b) applyBuildToUI(b);
+    if (buildMode === "custom") applyCustomFromInputs();
+  });
+
+  pactSelect.addEventListener("change", updatePactWeaponText);
+  weaponSelect.addEventListener("change", updatePactWeaponText);
+
+  // Slider changes (custom mode only)
+  const sliderInputs = [
+    virtueCourageInput,
+    virtueGraceInput,
+    virtueSpiritInput,
+    metricDamageInput,
+    metricDefenseInput,
+    metricMobilityInput,
+    metricControlInput,
+    metricComplexityInput
+  ];
+  sliderInputs.forEach((s) => {
+    if (!s) return;
+    s.addEventListener("input", () => {
+      if (buildMode === "custom") applyCustomFromInputs();
+    });
+  });
 }
 
 // =====================================================
