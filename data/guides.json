@@ -1,0 +1,34 @@
+[
+  {
+    "id": "early-envoy-route",
+    "title": "Early Envoy Route – First 10 Hours",
+    "summary": "Suggested order of Fables, World Trees, and early upgrades.",
+    "tags": ["beginner", "exploration"],
+    "difficulty": 1,
+    "link": "index.html#getting-started"
+  },
+  {
+    "id": "defender-pact-build",
+    "title": "Sword & Shield – Defender Pact Build",
+    "summary": "A tanky build emphasizing blocks, counters, and grey health management.",
+    "tags": ["combat", "pacts"],
+    "difficulty": 2,
+    "link": ""
+  },
+  {
+    "id": "resource-loops",
+    "title": "Efficient Resource Loops",
+    "summary": "Community-proven farming routes for core materials.",
+    "tags": ["crafting", "exploration"],
+    "difficulty": 2,
+    "link": "maps.html"
+  },
+  {
+    "id": "soul-mode-stealth",
+    "title": "Mastering Soul Mode & Stealth",
+    "summary": "Using Soul Mode for tagging, pickpocketing, and planning takedowns.",
+    "tags": ["exploration", "beginner"],
+    "difficulty": 2,
+    "link": ""
+  }
+]

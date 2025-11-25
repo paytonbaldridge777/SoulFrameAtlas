@@ -1,0 +1,32 @@
+[
+  {
+    "id": "sproutfolk-fronds",
+    "name": "Sproutfolk Fronds",
+    "type": "Resource",
+    "category": "Crafting Material",
+    "description": "Common drop from Sproutfolk in forested zones; also appears in resource nodes within their camps. Used in early armor.",
+    "links": {
+      "fextralife": "https://soulframe.wiki.fextralife.com/Crafting+Materials"
+    }
+  },
+  {
+    "id": "omen-beast-components",
+    "name": "Omen Beast Components",
+    "type": "Resource",
+    "category": "Boss Material",
+    "description": "Dropped from major Omen Beasts. Required for high-tier weapons and cosmetics.",
+    "links": {
+      "miraheze": "https://soulframe.miraheze.org/Resources"
+    }
+  },
+  {
+    "id": "ironbloom-ore",
+    "name": "Ironbloom Ore",
+    "type": "Resource",
+    "category": "Material",
+    "description": "Found in rocky outcrops and caves. Highlighted in Soul Mode. Used to upgrade early weapons.",
+    "links": {
+      "fextralife": "https://soulframe.wiki.fextralife.com/Items"
+    }
+  }
+]

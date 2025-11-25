@@ -1,0 +1,35 @@
+[
+  {
+    "id": "discharged-nimrod",
+    "name": "Discharged Nimrod",
+    "faction": "Ode",
+    "type": "Elite",
+    "behavior": "Fast lightning melee enforcer with punishing combos.",
+    "description": "Uses a tesla-charged staff. Watch for aerial telegraphs and roll through vertical strikes.",
+    "links": {
+      "miraheze": "https://soulframe.miraheze.org/wiki/Enemies"
+    }
+  },
+  {
+    "id": "sproutfolk-raiders",
+    "name": "Sproutfolk Raiders",
+    "faction": "Sproutfolk",
+    "type": "Mob",
+    "behavior": "Hit-and-run group tactics; can overwhelm unprepared players.",
+    "description": "Use terrain and shields to split them up.",
+    "links": {
+      "fextralife": "https://soulframe.wiki.fextralife.com/Enemies"
+    }
+  },
+  {
+    "id": "ode-sinecure",
+    "name": "Ode Sinecure",
+    "faction": "Ode",
+    "type": "Elite",
+    "behavior": "Designed to hunt Omen Beasts with layered defenses.",
+    "description": "Punishing combos, requires disciplined shield timing.",
+    "links": {
+      "fandom": "https://soulframe.fandom.com/wiki/Soulframe_Wiki"
+    }
+  }
+]

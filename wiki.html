@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Soulframe Atlas – Wiki Index</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Soulframe Atlas mini-wiki index for items, enemies, and resources, with links to full community wikis."
+  />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <div class="page">
+    <header>
+      <nav class="nav">
+        <div class="nav-brand">
+          <div class="nav-logo">SF</div>
+          <div class="nav-title">Soulframe Atlas</div>
+        </div>
+        <button class="nav-toggle" id="navToggle">Menu ▾</button>
+        <div class="nav-links" id="navLinks">
+          <a href="index.html">Home</a>
+          <a href="guides.html">Guides</a>
+          <a href="wiki.html">Wiki</a>
+          <a href="maps.html">Maps & Tools</a>
+          <a href="updates.html">Updates</a>
+          <button class="nav-cta" onclick="window.location.href='index.html'">
+            Back to Home
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <header class="page-header">
+        <h1>Atlas Index</h1>
+        <p>
+          A quick-reference mini-wiki for key items, crafting materials, and enemies.
+          Click an entry to see more details and links to full wiki pages.
+        </p>
+      </header>
+
+      <section class="section">
+        <div class="wiki-layout">
+          <!-- Items / materials -->
+          <div class="wiki-column">
+            <h3>Featured Items & Crafting Materials</h3>
+            <ul class="wiki-list" id="wikiItemsContainer">
+              <!-- Populated by JS -->
+              <li class="wiki-item">
+                <div class="wiki-item-header">
+                  <div class="wiki-item-name">Loading items…</div>
+                  <div class="wiki-item-meta">Please check data/items.json</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Enemies -->
+          <div class="wiki-column">
+            <h3>Enemies & Threats</h3>
+            <ul class="wiki-list" id="wikiEnemiesContainer">
+              <!-- Populated by JS -->
+              <li class="wiki-item">
+                <div class="wiki-item-header">
+                  <div class="wiki-item-name">Loading enemies…</div>
+                  <div class="wiki-item-meta">Please check data/enemies.json</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section" style="padding-left:0;padding-right:0;margin-top:1rem;">
+          <div class="split">
+            <div class="wiki-column">
+              <h3>More encyclopedic wikis</h3>
+              <ul class="list-compact">
+                <li>
+                  <strong>FextraLife Soulframe Wiki</strong> – Items, enemies,
+                  crafting, new player help.<br />
+                  <a
+                    href="https://soulframe.wiki.fextralife.com/Soulframe+Wiki"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Open FextraLife →
+                  </a>
+                </li>
+                <li>
+                  <strong>Miraheze Soulframe Wiki</strong> – Detailed sections on
+                  crafting and reforging.<br />
+                  <a
+                    href="https://soulframe.miraheze.org"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Open Miraheze →
+                  </a>
+                </li>
+                <li>
+                  <strong>Fandom Soulframe Wiki</strong> – Story, Ancestors, broader
+                  mechanics.<br />
+                  <a
+                    href="https://soulframe.fandom.com/wiki/Soulframe_Wiki"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Open Fandom →
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="wiki-column">
+              <h3>How to use this index</h3>
+              <p style="font-size:0.85rem; color:var(--muted);">
+                The Atlas index is meant for quick reminders: “what was that enemy
+                again?”, “where do I get this ore?”, “is this worth crafting now?”.
+                For deep numbers or patch-specific values, follow the links above to
+                the fully-fledged wikis and patch notes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div>
+          Soulframe Atlas is an unofficial, fan-made resource for Soulframe
+          players. Soulframe and related marks are property of Digital Extremes
+          Ltd. No affiliation is implied.
+        </div>
+        <div>Built for Preludes pre-alpha. Content will evolve as patches land.</div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Soulframe Atlas – Guides</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Soulframe Atlas guides for beginners, combat builds, crafting, and exploration."
+  />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <div class="page">
+    <header>
+      <nav class="nav">
+        <div class="nav-brand">
+          <div class="nav-logo">SF</div>
+          <div class="nav-title">Soulframe Atlas</div>
+        </div>
+        <button class="nav-toggle" id="navToggle">Menu ▾</button>
+        <div class="nav-links" id="navLinks">
+          <a href="index.html">Home</a>
+          <a href="guides.html">Guides</a>
+          <a href="wiki.html">Wiki</a>
+          <a href="maps.html">Maps & Tools</a>
+          <a href="updates.html">Updates</a>
+          <button
+            class="nav-cta"
+            onclick="window.location.href='index.html#getting-started'"
+          >
+            New Envoy Path
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <header class="page-header">
+        <h1>Guides</h1>
+        <p>
+          Learn how to survive your first Fables, craft smart, and shape your Envoy
+          with Pacts & Virtues. Filter by what you want to improve right now.
+        </p>
+      </header>
+
+      <!-- Filters -->
+      <section class="section" aria-label="Guide Filters">
+        <div class="pill-filter-row">
+          <button class="pill-filter active" data-filter="all" type="button">
+            All
+          </button>
+          <button class="pill-filter" data-filter="beginner" type="button">
+            Beginner
+          </button>
+          <button class="pill-filter" data-filter="combat" type="button">
+            Combat & Builds
+          </button>
+          <button class="pill-filter" data-filter="crafting" type="button">
+            Crafting & Resources
+          </button>
+          <button class="pill-filter" data-filter="exploration" type="button">
+            Exploration & Maps
+          </button>
+          <button class="pill-filter" data-filter="pacts" type="button">
+            Pacts & Virtues
+          </button>
+        </div>
+      </section>
+
+      <!-- Guides: populated from data/guides.json by main.js -->
+      <section class="section" aria-label="Guide Cards">
+        <div class="card-grid" id="guideGrid">
+          <!-- Populated by JS -->
+          <div class="card">
+            <h3>Loading guides…</h3>
+            <p style="color: var(--muted);">
+              If this message stays, check <code>data/guides.json</code> and your browser console.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div>
+          Soulframe Atlas is an unofficial, fan-made resource for Soulframe
+          players. Soulframe and related marks are property of Digital Extremes
+          Ltd. No affiliation is implied.
+        </div>
+        <div>Built for Preludes pre-alpha. Content will evolve as patches land.</div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
