@@ -1,0 +1,152 @@
+{
+  "pacts": [
+    {
+      "id": "bromius",
+      "name": "Bromius",
+      "role": "Courage Pact – frontline bruiser",
+      "tags": ["courage", "tank"]
+    },
+    {
+      "id": "oscelda",
+      "name": "Oscelda",
+      "role": "Spirit Pact – healer and crowd control",
+      "tags": ["spirit", "support"]
+    },
+    {
+      "id": "orengall",
+      "name": "Orengall",
+      "role": "Spirit Pact – howl buffs and hybrid damage",
+      "tags": ["spirit", "hybrid", "dps"]
+    },
+    {
+      "id": "ode-tempest",
+      "name": "Ode Tempest",
+      "role": "Caster Pact – lightning and AoE",
+      "tags": ["caster", "ranged", "aoe"]
+    }
+  ],
+  "weapons": [
+    {
+      "id": "sword-shield",
+      "name": "Sword & Shield",
+      "role": "Defensive melee with blocks and staggers"
+    },
+    {
+      "id": "polearm",
+      "name": "Polearm",
+      "role": "Mid-range control and safe pokes"
+    },
+    {
+      "id": "flyblades",
+      "name": "Flyblades",
+      "role": "High-mobility, high-tempo blades"
+    },
+    {
+      "id": "magick-focus",
+      "name": "Magick Focus / Staff",
+      "role": "Ranged casting and elemental control"
+    }
+  ],
+  "builds": [
+    {
+      "id": "defender-sword-shield",
+      "name": "Defender – Sword & Shield Courage Tank",
+      "pactId": "bromius",
+      "weaponId": "sword-shield",
+      "summary": "Frontline Courage-focused build built around sword & shield and a durable Pact (Bromius). Emphasizes blocking, staggering, and protecting allies rather than raw DPS.",
+      "tags": ["beginner", "combat", "tank", "courage", "sword-shield"],
+      "virtues": {
+        "courage": 60,
+        "grace": 15,
+        "spirit": 25
+      },
+      "metrics": {
+        "damage": 2,
+        "defense": 5,
+        "mobility": 2,
+        "control": 3,
+        "complexity": 1
+      },
+      "tips": [
+        "Walk forward with guard raised and let minor hits drain stamina instead of health.",
+        "Use light strings to build stagger, then heavy attacks or shield bashes to knock enemies down.",
+        "Prioritize armor and Stability on gear; you’re the one standing between danger and your allies."
+      ]
+    },
+    {
+      "id": "fey-warden-oscelda",
+      "name": "Fey Warden – Oscelda Support Healer",
+      "pactId": "oscelda",
+      "weaponId": "polearm",
+      "summary": "Spirit-based Oscelda build focused on healing and crowd control. Ideal for co-op and players who like to stabilize chaotic fights rather than chase top damage.",
+      "tags": ["support", "spirit", "healer", "crowd-control"],
+      "virtues": {
+        "courage": 25,
+        "grace": 20,
+        "spirit": 55
+      },
+      "metrics": {
+        "damage": 2,
+        "defense": 3,
+        "mobility": 3,
+        "control": 5,
+        "complexity": 2
+      },
+      "tips": [
+        "Lead with Oscelda’s crowd-control Arcanics to lock packs down before they reach your team.",
+        "Stay at mid-range with your polearm and reposition between heals rather than face-tanking.",
+        "Don’t sit on your healing Arcanics; use them often to smooth out mistakes and chip damage."
+      ]
+    },
+    {
+      "id": "omen-howler-orengall",
+      "name": "Omen Howler – Orengall Hybrid DPS",
+      "pactId": "orengall",
+      "weaponId": "flyblades",
+      "summary": "High-tempo Orengall build focused on maintaining howl buffs and shredding enemies with fast Flyblade strings during buff windows.",
+      "tags": ["advanced", "dps", "spirit", "hybrid", "flyblades"],
+      "virtues": {
+        "courage": 20,
+        "grace": 40,
+        "spirit": 40
+      },
+      "metrics": {
+        "damage": 4,
+        "defense": 2,
+        "mobility": 5,
+        "control": 3,
+        "complexity": 4
+      },
+      "tips": [
+        "Keep your howl/buff Arcanics up as often as possible; plan your aggression around those windows.",
+        "Weave in and out of melee instead of committing to long trades; you’re quick, not tanky.",
+        "This build rewards pattern recognition—learn enemy openings so you can stay on offense safely."
+      ]
+    },
+    {
+      "id": "storm-tempest-ode",
+      "name": "Storm Tempest – Ode Lightning Caster",
+      "pactId": "ode-tempest",
+      "weaponId": "magick-focus",
+      "summary": "Lightning-focused Ode Tempest build that controls groups of enemies at mid-range with repeated crowd control and AoE bursts.",
+      "tags": ["ranged", "caster", "spirit", "aoe"],
+      "virtues": {
+        "courage": 20,
+        "grace": 25,
+        "spirit": 55
+      },
+      "metrics": {
+        "damage": 4,
+        "defense": 2,
+        "mobility": 3,
+        "control": 5,
+        "complexity": 3
+      },
+      "tips": [
+        "Use your control Arcanics to keep packs clumped, then detonate them with lightning AoEs.",
+        "Stay at mid-range; too far and you waste casts, too close and you risk getting staggered out.",
+        "Watch for enemies that resist stagger-style control and be ready to kite instead of face-trading."
+      ]
+    }
+  ]
+}
