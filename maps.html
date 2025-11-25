@@ -41,6 +41,7 @@
         </p>
       </header>
 
+      <!-- External tools -->
       <section class="section">
         <div class="split">
           <div class="update-card">
@@ -97,6 +98,29 @@
               This section is intentionally framework-agnostic so you can plug in
               your own JS map widget, or embed external tools in iframes once you’ve
               confirmed permissions.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Region Overview (JSON-driven) -->
+      <section class="section">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Region Overview</h2>
+            <p class="section-subtitle">
+              A quick glance at where to go next. These recommendations are
+              spoiler-light and based on general difficulty, resource density, and enemy behavior.
+            </p>
+          </div>
+        </div>
+
+        <div class="card-grid" id="regionGrid">
+          <!-- Populated by JS from data/regions.json -->
+          <div class="card">
+            <h3>Loading regions…</h3>
+            <p style="color: var(--muted);">
+              If this message stays, check <code>data/regions.json</code> and your browser console.
             </p>
           </div>
         </div>

@@ -40,31 +40,53 @@
         <h1>Guides</h1>
         <p>
           Learn how to survive your first Fables, craft smart, and shape your Envoy
-          with Pacts & Virtues. Filter by what you want to improve right now.
+          with Pacts & Virtues. Filter by what you want to improve right now, or search by keyword.
         </p>
       </header>
 
-      <!-- Filters -->
-      <section class="section" aria-label="Guide Filters">
-        <div class="pill-filter-row">
-          <button class="pill-filter active" data-filter="all" type="button">
-            All
-          </button>
-          <button class="pill-filter" data-filter="beginner" type="button">
-            Beginner
-          </button>
-          <button class="pill-filter" data-filter="combat" type="button">
-            Combat & Builds
-          </button>
-          <button class="pill-filter" data-filter="crafting" type="button">
-            Crafting & Resources
-          </button>
-          <button class="pill-filter" data-filter="exploration" type="button">
-            Exploration & Maps
-          </button>
-          <button class="pill-filter" data-filter="pacts" type="button">
-            Pacts & Virtues
-          </button>
+      <!-- Filters + Search -->
+      <section class="section" aria-label="Guide Filters and Search">
+        <div class="split">
+          <div>
+            <div class="pill-filter-row">
+              <button class="pill-filter active" data-filter="all" type="button">
+                All
+              </button>
+              <button class="pill-filter" data-filter="beginner" type="button">
+                Beginner
+              </button>
+              <button class="pill-filter" data-filter="combat" type="button">
+                Combat & Builds
+              </button>
+              <button class="pill-filter" data-filter="crafting" type="button">
+                Crafting & Resources
+              </button>
+              <button class="pill-filter" data-filter="exploration" type="button">
+                Exploration & Maps
+              </button>
+              <button class="pill-filter" data-filter="pacts" type="button">
+                Pacts & Virtues
+              </button>
+            </div>
+          </div>
+
+          <div>
+            <input
+              id="guideSearch"
+              type="search"
+              placeholder="Search guides (e.g., 'Soul Mode', 'Defender')"
+              style="
+                width: 100%;
+                max-width: 280px;
+                padding: 0.4rem 0.7rem;
+                border-radius: 999px;
+                border: 1px solid rgba(255, 255, 255, 0.16);
+                background: rgba(0, 0, 0, 0.4);
+                color: var(--text);
+                font-size: 0.85rem;
+              "
+            />
+          </div>
         </div>
       </section>
 
