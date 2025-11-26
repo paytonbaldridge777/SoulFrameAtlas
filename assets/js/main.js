@@ -350,12 +350,12 @@ async function renderRegions() {
 }
 
 // =====================================================
-// BUILD LAB: virtues drive derived stats + pact modifiers
+// BUILD LAB: virtues → stats, with pact & weapon modifiers
 // =====================================================
 
 let buildData = null;
 let activeBuildId = null;
-let buildMode = "preset";
+let buildMode = "preset"; // "preset" or "custom"
 let currentVirtues = { courage: 0, grace: 0, spirit: 0 };
 
 async function renderBuildLab() {
@@ -406,7 +406,7 @@ async function renderBuildLab() {
 
   function setBar(el, value) {
     if (!el) return;
-    const v = clamp(value || 0, 0, 5);
+    const v = clamp(value || 0, 0, 5); // we treat stats as 0–5
     const pct = (v / 5) * 100;
     el.style.width = pct + "%";
   }
@@ -447,17 +447,17 @@ async function renderBuildLab() {
     }
   }
 
-  // Pact modifiers: tweak each stat a bit depending on the pact identity.
-  // If IDs don't match, modifiers default to 0 and nothing breaks.
+  // Pact modifiers (identity curves)
+  // IDs here should match your data/pacts.json id values.
   const pactModifiers = {
-    // Defensive / tanky pact: more defense, less mobility, slightly less damage
-    defender: { damage: -0.4, defense: +1.2, mobility: -0.4, control: +0.2 },
+    // Tanky / defensive pact
+    defender: { damage: -0.4, defense: +1.3, mobility: -0.4, control: +0.3 },
 
-    // Aggressive frontline: more damage & mobility, slightly less defense
-    vanguard: { damage: +1.0, defense: -0.5, mobility: +0.5, control: 0 },
+    // Aggressive frontline
+    vanguard: { damage: +1.0, defense: -0.6, mobility: +0.4, control: 0 },
 
-    // Spirit-heavy / caster pact: more damage & control, less raw defense
-    mystic: { damage: +0.6, defense: -0.4, mobility: 0, control: +0.8 }
+    // Spirit / caster
+    mystic: { damage: +0.4, defense: -0.4, mobility: 0, control: +1.0 }
   };
 
   function getPactMods(pactId) {
@@ -469,47 +469,105 @@ async function renderBuildLab() {
     };
   }
 
-  // Core formula: derive stats from virtues + pact
-  function computeMetricsFromVirtues(virtues, pactId) {
-    const c = virtues.courage || 0; // Courage: physical resilience / aggression
-    const g = virtues.grace || 0;   // Grace: mobility / finesse
-    const s = virtues.spirit || 0;  // Spirit: magic / control
+  // Weapon modifiers (light touches based on archetype)
+  // IDs here should match your data/weapons.json id values.
+  const weaponModifiers = {
+    sword_shield: { damage: -0.1, defense: +0.7, mobility: -0.3, control: 0 },
+    greatsword: { damage: +0.7, defense: 0, mobility: -0.5, control: -0.1 },
+    staff: { damage: +0.4, defense: -0.5, mobility: 0, control: +0.8 },
+    rapier: { damage: +0.2, defense: -0.2, mobility: +0.5, control: +0.3 },
+    bow: { damage: +0.4, defense: -0.3, mobility: +0.2, control: +0.4 }
+  };
 
-    // Base 0–5 values from 0–100 virtue percentages
-    // (weights chosen to "feel" right rather than perfect math)
-    let damageBase = 0.04 * c + 0.06 * s;          // Courage + strong Spirit
-    let defenseBase = 0.06 * c + 0.02 * g;         // Courage heavy
-    let mobilityBase = 0.055 * g + 0.015 * (100 - c); // Grace + low armor load
-    let controlBase = 0.04 * s + 0.035 * g;        // Spirit + Grace
+  function getWeaponMods(weaponId) {
+    return weaponModifiers[weaponId] || {
+      damage: 0,
+      defense: 0,
+      mobility: 0,
+      control: 0
+    };
+  }
 
-    // scale down into ~0–5 range
-    const scale = 0.06;
-    let damage = damageBase * scale;
-    let defense = defenseBase * scale;
-    let mobility = mobilityBase * scale;
-    let control = controlBase * scale;
+  // Core formula: virtues → stats, then buffed by pact/weapon
+  function computeMetricsFromVirtues(virtues, pactId, weaponId) {
+    const c = clamp(virtues.courage || 0, 0, 100);
+    const g = clamp(virtues.grace || 0, 0, 100);
+    const s = clamp(virtues.spirit || 0, 0, 100);
 
-    // Pact modifiers
-    const mods = getPactMods(pactId);
-    damage += mods.damage || 0;
-    defense += mods.defense || 0;
-    mobility += mods.mobility || 0;
-    control += mods.control || 0;
+    // Normalize to 0–1
+    const cN = c / 100;
+    const gN = g / 100;
+    const sN = s / 100;
 
-    // Clamp into 0–5 range
+    // Determine weapon type weighting: physical vs finesse vs spirit
+    const weapon = findWeapon(weaponId);
+    let weaponType = "balanced";
+
+    // If you have a "type" field in data/weapons.json, you can switch on that instead.
+    if (weapon && weapon.id) {
+      if (weapon.id.includes("sword_shield") || weapon.id.includes("greatsword")) {
+        weaponType = "physical";
+      } else if (weapon.id.includes("rapier") || weapon.id.includes("dagger")) {
+        weaponType = "finesse";
+      } else if (weapon.id.includes("staff") || weapon.id.includes("wand")) {
+        weaponType = "spirit";
+      }
+    }
+
+    // Damage weighting depends heavily on weapon type.
+    let dmgWeights;
+    if (weaponType === "physical") {
+      // physical/str weapons: Courage dominant, some Spirit
+      dmgWeights = { c: 0.6, g: 0.1, s: 0.3 };
+    } else if (weaponType === "finesse") {
+      // finesse weapons: Courage + Grace together, Spirit lighter
+      dmgWeights = { c: 0.4, g: 0.4, s: 0.2 };
+    } else if (weaponType === "spirit") {
+      // caster weapons: Spirit dominant
+      dmgWeights = { c: 0.15, g: 0.15, s: 0.7 };
+    } else {
+      // balanced fallback
+      dmgWeights = { c: 0.45, g: 0.2, s: 0.35 };
+    }
+
+    // Base stats (0–5 scale)
+    // These follow the rough identity:
+    // Courage → defense + physical damage
+    // Grace   → mobility + control (finesse dmg)
+    // Spirit  → magic damage + control
+    let damageBase =
+      5 *
+      (dmgWeights.c * cN + dmgWeights.g * gN + dmgWeights.s * sN);
+
+    let defenseBase = 5 * (0.7 * cN + 0.1 * gN + 0.2 * sN);
+    let mobilityBase = 5 * (0.1 * cN + 0.75 * gN + 0.15 * sN);
+    let controlBase = 5 * (0.15 * cN + 0.35 * gN + 0.5 * sN);
+
+    // Pact + weapon modifiers
+    const pactMods = getPactMods(pactId);
+    const weapMods = getWeaponMods(weaponId);
+
+    let damage =
+      damageBase + (pactMods.damage || 0) + (weapMods.damage || 0);
+    let defense =
+      defenseBase + (pactMods.defense || 0) + (weapMods.defense || 0);
+    let mobility =
+      mobilityBase + (pactMods.mobility || 0) + (weapMods.mobility || 0);
+    let control =
+      controlBase + (pactMods.control || 0) + (weapMods.control || 0);
+
     damage = clamp(damage, 0, 5);
     defense = clamp(defense, 0, 5);
     mobility = clamp(mobility, 0, 5);
     control = clamp(control, 0, 5);
 
-    // Complexity: rough measure of how "spread" the virtues are.
-    // More even spread = higher complexity; extreme focus = simpler.
+    // Complexity: more even virtue spread = higher complexity
     const total = c + g + s || 1;
     const avg = total / 3;
     const variance =
       (Math.abs(c - avg) + Math.abs(g - avg) + Math.abs(s - avg)) / 3;
-    // High variance => simple (1–2), low variance => complex (4–5)
-    let complexity = 5 - Math.round(variance / 20); // crude but readable
+    // High variance (one stat spiked) => simpler; low variance => more complex
+    let complexity = 5 - Math.round(variance / 20);
     complexity = clamp(complexity, 1, 5);
 
     return { damage, defense, mobility, control, complexity };
@@ -526,9 +584,9 @@ async function renderBuildLab() {
 
   function applyVirtuesToUI(virtues) {
     currentVirtues = {
-      courage: virtues.courage || 0,
-      grace: virtues.grace || 0,
-      spirit: virtues.spirit || 0
+      courage: clamp(virtues.courage || 0, 0, 100),
+      grace: clamp(virtues.grace || 0, 0, 100),
+      spirit: clamp(virtues.spirit || 0, 0, 100)
     };
 
     setVirtueText(virtueCourageValue, currentVirtues.courage);
@@ -549,7 +607,16 @@ async function renderBuildLab() {
       (activeBuildId && findBuild(activeBuildId)?.pactId) ||
       "";
 
-    const metrics = computeMetricsFromVirtues(currentVirtues, pactId);
+    const weaponId =
+      weaponSelect.value ||
+      (activeBuildId && findBuild(activeBuildId)?.weaponId) ||
+      "";
+
+    const metrics = computeMetricsFromVirtues(
+      currentVirtues,
+      pactId,
+      weaponId
+    );
     applyMetricsToUI(metrics);
   }
 
@@ -557,7 +624,7 @@ async function renderBuildLab() {
     if (!build) return;
     activeBuildId = build.id;
 
-    // text / tags / tips
+    // Text / tags / tips
     buildName.textContent = build.name;
     buildBlurb.textContent = build.summary || "";
 
@@ -574,7 +641,7 @@ async function renderBuildLab() {
         : `<li>No specific tips yet—experiment and adjust as you go.</li>`;
     }
 
-    // pact / weapon selects
+    // Pact / weapon selects
     if (build.pactId && findPact(build.pactId)) {
       pactSelect.value = build.pactId;
     }
@@ -583,11 +650,11 @@ async function renderBuildLab() {
     }
     updatePactWeaponText();
 
-    // virtues from build JSON (falls back to a sensible default)
+    // Virtues (from JSON, or fallback)
     const virtues = build.virtues || { courage: 40, grace: 30, spirit: 30 };
     applyVirtuesToUI(virtues);
 
-    // metrics derived purely from virtues + pact
+    // Recalculate metrics from virtues + pact + weapon
     recalcMetrics();
   }
 
@@ -599,7 +666,6 @@ async function renderBuildLab() {
       customVirtueControls.style.display = isCustom ? "block" : "none";
     if (customNote) customNote.style.display = isCustom ? "block" : "none";
 
-    // Enable / disable virtue sliders
     const sliders = [
       virtueCourageInput,
       virtueGraceInput,
@@ -615,9 +681,8 @@ async function renderBuildLab() {
       if (b) applyBuildToUI(b);
     }
 
-    // Switching to custom: keep current virtues but allow user to move them
+    // Switching to custom: keep current virtues and just recalc
     if (isCustom) {
-      // Just recalc so bars reflect whatever's there
       recalcMetrics();
     }
   }
@@ -677,7 +742,6 @@ async function renderBuildLab() {
       });
     });
   }
-  // default: preset
   setMode("preset");
   if (modeRadios && modeRadios.length) {
     modeRadios.forEach((r) => {
@@ -685,22 +749,24 @@ async function renderBuildLab() {
     });
   }
 
-  // Select changes
+  // Build change
   buildSelect.addEventListener("change", () => {
     const b = findBuild(buildSelect.value);
     if (b) applyBuildToUI(b);
   });
 
+  // Pact & weapon changes: ALWAYS recalc stats
   pactSelect.addEventListener("change", () => {
     updatePactWeaponText();
     recalcMetrics();
   });
+
   weaponSelect.addEventListener("change", () => {
     updatePactWeaponText();
-    // weapon currently only affects description, but could feed into metrics later
+    recalcMetrics();
   });
 
-  // Virtue slider changes (only affect stats in Custom mode)
+  // Virtue slider changes (Custom mode only)
   const virtueSliders = [
     virtueCourageInput,
     virtueGraceInput,

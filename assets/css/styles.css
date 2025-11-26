@@ -721,7 +721,7 @@ footer {
 
 .stat-bar {
   flex: 1;
-  height: 6px;
+  height: 10px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.08);
   overflow: hidden;
