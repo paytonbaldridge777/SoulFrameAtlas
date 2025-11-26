@@ -350,12 +350,12 @@ async function renderRegions() {
 }
 
 // =====================================================
-// BUILD LAB: virtues → stats, with pact & weapon modifiers
+// BUILD LAB: virtues → stats, with pact & weapon modifiers (robust)
 // =====================================================
 
 let buildData = null;
 let activeBuildId = null;
-let buildMode = "preset"; // "preset" or "custom"
+let buildMode = "preset";
 let currentVirtues = { courage: 0, grace: 0, spirit: 0 };
 
 async function renderBuildLab() {
@@ -406,7 +406,7 @@ async function renderBuildLab() {
 
   function setBar(el, value) {
     if (!el) return;
-    const v = clamp(value || 0, 0, 5); // we treat stats as 0–5
+    const v = clamp(value || 0, 0, 5); // 0–5 scale
     const pct = (v / 5) * 100;
     el.style.width = pct + "%";
   }
@@ -440,110 +440,159 @@ async function renderBuildLab() {
     const w = findWeapon(weaponSelect.value);
 
     if (pactRoleText) {
-      pactRoleText.textContent = p ? `${p.name} – ${p.role}` : "–";
+      const label =
+        (p && (p.role || p.name || "").toString()) || "–";
+      pactRoleText.textContent = label;
     }
     if (weaponRoleText) {
-      weaponRoleText.textContent = w ? `${w.name} – ${w.role}` : "–";
+      const label =
+        (w && (w.type || w.category || w.name || "").toString()) || "–";
+      weaponRoleText.textContent = label;
     }
   }
 
-  // Pact modifiers (identity curves)
-  // IDs here should match your data/pacts.json id values.
-  const pactModifiers = {
-    // Tanky / defensive pact
+  // ------------- Pact & Weapon style keys (robust to JSON naming) -------------
+
+  function getPactStyleKey(pact) {
+    if (!pact) return "neutral";
+    const text = (
+      (pact.role || pact.name || pact.id || "")
+        .toString()
+        .toLowerCase()
+    );
+
+    if (text.includes("defend") || text.includes("warden") || text.includes("tank")) {
+      return "defender";
+    }
+    if (text.includes("vanguard") || text.includes("aggress") || text.includes("assault")) {
+      return "vanguard";
+    }
+    if (text.includes("mystic") || text.includes("spirit") || text.includes("caster")) {
+      return "mystic";
+    }
+    return "neutral";
+  }
+
+  function getWeaponTypeKey(weapon) {
+    if (!weapon) return "balanced";
+
+    const text = (
+      (weapon.type || weapon.category || weapon.role || weapon.name || weapon.id || "")
+        .toString()
+        .toLowerCase()
+    );
+
+    if (
+      text.includes("staff") ||
+      text.includes("wand") ||
+      text.includes("spirit") ||
+      text.includes("rod")
+    ) {
+      return "spirit";
+    }
+    if (
+      text.includes("rapier") ||
+      text.includes("dagger") ||
+      text.includes("finesse") ||
+      text.includes("duelist")
+    ) {
+      return "finesse";
+    }
+    if (
+      text.includes("bow") ||
+      text.includes("ranged") ||
+      text.includes("crossbow")
+    ) {
+      return "ranged";
+    }
+    if (
+      text.includes("greatsword") ||
+      text.includes("heavy") ||
+      text.includes("hammer") ||
+      text.includes("axe")
+    ) {
+      return "heavy";
+    }
+    if (
+      text.includes("shield") ||
+      text.includes("sword & shield") ||
+      text.includes("sword_shield")
+    ) {
+      return "sword_shield";
+    }
+    return "balanced";
+  }
+
+  // Pact modifiers keyed by style (not by exact ID)
+  const pactStyleModifiers = {
     defender: { damage: -0.4, defense: +1.3, mobility: -0.4, control: +0.3 },
-
-    // Aggressive frontline
     vanguard: { damage: +1.0, defense: -0.6, mobility: +0.4, control: 0 },
-
-    // Spirit / caster
-    mystic: { damage: +0.4, defense: -0.4, mobility: 0, control: +1.0 }
+    mystic:   { damage: +0.4, defense: -0.4, mobility: 0,    control: +1.0 },
+    neutral:  { damage: 0,    defense: 0,    mobility: 0,    control: 0 }
   };
 
   function getPactMods(pactId) {
-    return pactModifiers[pactId] || {
-      damage: 0,
-      defense: 0,
-      mobility: 0,
-      control: 0
-    };
+    const pact = findPact(pactId);
+    const style = getPactStyleKey(pact);
+    return pactStyleModifiers[style] || pactStyleModifiers.neutral;
   }
 
-  // Weapon modifiers (light touches based on archetype)
-  // IDs here should match your data/weapons.json id values.
-  const weaponModifiers = {
+  // Weapon modifiers keyed by type
+  const weaponTypeModifiers = {
     sword_shield: { damage: -0.1, defense: +0.7, mobility: -0.3, control: 0 },
-    greatsword: { damage: +0.7, defense: 0, mobility: -0.5, control: -0.1 },
-    staff: { damage: +0.4, defense: -0.5, mobility: 0, control: +0.8 },
-    rapier: { damage: +0.2, defense: -0.2, mobility: +0.5, control: +0.3 },
-    bow: { damage: +0.4, defense: -0.3, mobility: +0.2, control: +0.4 }
+    heavy:        { damage: +0.7, defense: 0,    mobility: -0.5, control: -0.1 },
+    spirit:       { damage: +0.4, defense: -0.5, mobility: 0,    control: +0.8 },
+    finesse:      { damage: +0.2, defense: -0.2, mobility: +0.5, control: +0.3 },
+    ranged:       { damage: +0.4, defense: -0.3, mobility: +0.2, control: +0.4 },
+    balanced:     { damage: 0,    defense: 0,    mobility: 0,    control: 0 }
   };
 
   function getWeaponMods(weaponId) {
-    return weaponModifiers[weaponId] || {
-      damage: 0,
-      defense: 0,
-      mobility: 0,
-      control: 0
-    };
+    const weapon = findWeapon(weaponId);
+    const typeKey = getWeaponTypeKey(weapon);
+    return weaponTypeModifiers[typeKey] || weaponTypeModifiers.balanced;
   }
 
-  // Core formula: virtues → stats, then buffed by pact/weapon
+  // ---------- Core formula: Virtues → stats, then Pact & Weapon modifiers ----------
+
   function computeMetricsFromVirtues(virtues, pactId, weaponId) {
     const c = clamp(virtues.courage || 0, 0, 100);
     const g = clamp(virtues.grace || 0, 0, 100);
     const s = clamp(virtues.spirit || 0, 0, 100);
 
-    // Normalize to 0–1
     const cN = c / 100;
     const gN = g / 100;
     const sN = s / 100;
 
-    // Determine weapon type weighting: physical vs finesse vs spirit
     const weapon = findWeapon(weaponId);
-    let weaponType = "balanced";
+    const weaponType = getWeaponTypeKey(weapon);
 
-    // If you have a "type" field in data/weapons.json, you can switch on that instead.
-    if (weapon && weapon.id) {
-      if (weapon.id.includes("sword_shield") || weapon.id.includes("greatsword")) {
-        weaponType = "physical";
-      } else if (weapon.id.includes("rapier") || weapon.id.includes("dagger")) {
-        weaponType = "finesse";
-      } else if (weapon.id.includes("staff") || weapon.id.includes("wand")) {
-        weaponType = "spirit";
-      }
-    }
-
-    // Damage weighting depends heavily on weapon type.
     let dmgWeights;
-    if (weaponType === "physical") {
-      // physical/str weapons: Courage dominant, some Spirit
+    if (weaponType === "heavy" || weaponType === "sword_shield") {
+      // Physical: Courage dominant
       dmgWeights = { c: 0.6, g: 0.1, s: 0.3 };
-    } else if (weaponType === "finesse") {
-      // finesse weapons: Courage + Grace together, Spirit lighter
+    } else if (weaponType === "finesse" || weaponType === "ranged") {
+      // Finesse / ranged: Courage + Grace
       dmgWeights = { c: 0.4, g: 0.4, s: 0.2 };
     } else if (weaponType === "spirit") {
-      // caster weapons: Spirit dominant
+      // Caster: Spirit heavy
       dmgWeights = { c: 0.15, g: 0.15, s: 0.7 };
     } else {
-      // balanced fallback
+      // Balanced fallback
       dmgWeights = { c: 0.45, g: 0.2, s: 0.35 };
     }
 
-    // Base stats (0–5 scale)
-    // These follow the rough identity:
+    // Base 0–5 stats
     // Courage → defense + physical damage
-    // Grace   → mobility + control (finesse dmg)
+    // Grace   → mobility + control
     // Spirit  → magic damage + control
     let damageBase =
-      5 *
-      (dmgWeights.c * cN + dmgWeights.g * gN + dmgWeights.s * sN);
-
+      5 * (dmgWeights.c * cN + dmgWeights.g * gN + dmgWeights.s * sN);
     let defenseBase = 5 * (0.7 * cN + 0.1 * gN + 0.2 * sN);
     let mobilityBase = 5 * (0.1 * cN + 0.75 * gN + 0.15 * sN);
     let controlBase = 5 * (0.15 * cN + 0.35 * gN + 0.5 * sN);
 
-    // Pact + weapon modifiers
+    // Pact & weapon modifiers
     const pactMods = getPactMods(pactId);
     const weapMods = getWeaponMods(weaponId);
 
@@ -561,12 +610,11 @@ async function renderBuildLab() {
     mobility = clamp(mobility, 0, 5);
     control = clamp(control, 0, 5);
 
-    // Complexity: more even virtue spread = higher complexity
+    // Complexity based on how even the virtues are
     const total = c + g + s || 1;
     const avg = total / 3;
     const variance =
       (Math.abs(c - avg) + Math.abs(g - avg) + Math.abs(s - avg)) / 3;
-    // High variance (one stat spiked) => simpler; low variance => more complex
     let complexity = 5 - Math.round(variance / 20);
     complexity = clamp(complexity, 1, 5);
 
@@ -606,7 +654,6 @@ async function renderBuildLab() {
       pactSelect.value ||
       (activeBuildId && findBuild(activeBuildId)?.pactId) ||
       "";
-
     const weaponId =
       weaponSelect.value ||
       (activeBuildId && findBuild(activeBuildId)?.weaponId) ||
@@ -650,11 +697,11 @@ async function renderBuildLab() {
     }
     updatePactWeaponText();
 
-    // Virtues (from JSON, or fallback)
+    // Virtues
     const virtues = build.virtues || { courage: 40, grace: 30, spirit: 30 };
     applyVirtuesToUI(virtues);
 
-    // Recalculate metrics from virtues + pact + weapon
+    // Recalc with current pact/weapon
     recalcMetrics();
   }
 
@@ -675,19 +722,17 @@ async function renderBuildLab() {
       if (s) s.disabled = !isCustom;
     });
 
-    // Switching back to preset: reload virtues from build
     if (!isCustom && activeBuildId && buildData) {
       const b = findBuild(activeBuildId);
       if (b) applyBuildToUI(b);
     }
 
-    // Switching to custom: keep current virtues and just recalc
     if (isCustom) {
       recalcMetrics();
     }
   }
 
-  // ---------- load data ----------
+  // ---------- Load data ----------
   try {
     buildData = await loadJSON("data/builds.json");
   } catch (err) {
@@ -755,7 +800,7 @@ async function renderBuildLab() {
     if (b) applyBuildToUI(b);
   });
 
-  // Pact & weapon changes: ALWAYS recalc stats
+  // Pact & weapon changes → always recalc
   pactSelect.addEventListener("change", () => {
     updatePactWeaponText();
     recalcMetrics();
@@ -766,7 +811,7 @@ async function renderBuildLab() {
     recalcMetrics();
   });
 
-  // Virtue slider changes (Custom mode only)
+  // Virtue sliders (Custom mode only)
   const virtueSliders = [
     virtueCourageInput,
     virtueGraceInput,
@@ -787,6 +832,7 @@ async function renderBuildLab() {
     });
   });
 }
+
 
 
 // =====================================================
