@@ -27,11 +27,26 @@ const gqlEndpoint = "https://api.avakot.org/v1/gql";
 const pactsQuery = `
 query GetPacts {
   pacts {
-    PactID
-    Name
+    ItemID
+    Ingame
     Description
-    Role
-    VirtueFocus
+    Icon
+    Abilities
+    AbilitiesExpanded {
+      Name
+      Description
+      Icon
+    }
+    BonusHP
+    BonusVirtueType
+    BonusVirtueValue
+    MagickDefence
+    PhysicalDefence
+    StabilityIncrease
+    UnnarmedDmg
+    VirtueOrder
+    Craft
+    InternalID
   }
 }
 `;
@@ -85,3 +100,4 @@ document.getElementById("downloadBtn").onclick = downloadJSON;
 
 </body>
 </html>
+
