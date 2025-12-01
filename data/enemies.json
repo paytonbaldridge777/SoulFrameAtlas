@@ -13,9 +13,9 @@
       "icon": "https://static.wikitide.net/soulframewiki/thumb/0/02/GruulSeekerRuthos.jpg/280px-GruulSeekerRuthos.jpg",
       "cooldown": 180,
       "hash": "de5b478a3cbe78ff2bffd301aeed3884043e4575178bd194558895732b50d84c",
-      "onClick": "https://wiki.avakot.org/Gruul_Seeker_Ruthos",
+      "onClick": "",
       "links": {
-        "wiki": "",
+        "wiki": "https://wiki.avakot.org/Gruul_Seeker_Ruthos",
         "externalGuide": ""
       }
     },
@@ -32,9 +32,9 @@
       "icon": "https://static.wikitide.net/soulframewiki/thumb/f/fe/KnellKnight.jpg/280px-KnellKnight.jpg",
       "cooldown": 180,
       "hash": "c8081beba138e435200df1de7f54a07aec34f3d5c1b53e746556b70d72f2919e",
-      "onClick": "https://wiki.avakot.org/Knell_Knight",
+      "onClick": "",
       "links": {
-        "wiki": "",
+        "wiki": "https://wiki.avakot.org/Knell_Knight",
         "externalGuide": ""
       }
     },
@@ -51,9 +51,9 @@
       "icon": "https://static.wikitide.net/soulframewiki/thumb/1/1e/SinecureerrantGawth.jpg/280px-SinecureerrantGawth.jpg",
       "cooldown": 180,
       "hash": "3d2f0298598babe6fa1dc19b57b89e69ee4e892588a67185a0729468b09c77b5",
-      "onClick": "https://wiki.avakot.org/Sinecure-errant_Gawth",
+      "onClick": "",
       "links": {
-        "wiki": "",
+        "wiki": "https://wiki.avakot.org/Sinecure-errant_Gawth",
         "externalGuide": ""
       }
     },
@@ -70,9 +70,9 @@
       "icon": "https://static.wikitide.net/soulframewiki/thumb/2/28/MotherWeaver.png/280px-MotherWeaver.png",
       "cooldown": 180,
       "hash": "613571a15c143642b1ac6c3ba43e1a35a95536a0e324db172fddf9a2f9b44948",
-      "onClick": "https://wiki.avakot.org/Etheldred_The_Weaver",
+      "onClick": "",
       "links": {
-        "wiki": "",
+        "wiki": "https://wiki.avakot.org/Etheldred_The_Weaver",
         "externalGuide": ""
       }
     },
@@ -89,9 +89,9 @@
       "icon": "https://static.wikitide.net/soulframewiki/c/cf/FortCurlail.png",
       "cooldown": 180,
       "hash": "e73e8d9960c81ac5160c1f4be26f4d6d1f7df4af9d2bbd514e95b03c21793315",
-      "onClick": "https://wiki.avakot.org/Fort_Curlail",
+      "onClick": "",
       "links": {
-        "wiki": "",
+        "wiki": "https://wiki.avakot.org/Fort_Curlail",
         "externalGuide": ""
       }
     },
@@ -108,9 +108,9 @@
       "icon": "https://static.wikitide.net/soulframewiki/thumb/0/07/Kabocha.jpg/280px-Kabocha.jpg",
       "cooldown": 180,
       "hash": "b5e7ecc8cf9911575b40a70d500f0d6e9e46f40556a70a64bf5c3ec43ffc9e2b",
-      "onClick": "https://wiki.avakot.org/Kabocha",
+      "onClick": "",
       "links": {
-        "wiki": "",
+        "wiki": "https://wiki.avakot.org/Kabocha",
         "externalGuide": ""
       }
     },
@@ -127,9 +127,9 @@
       "icon": "https://static.wikitide.net/soulframewiki/thumb/5/52/ThriceboundImpidh.jpg/1024px-ThriceboundImpidh.jpg",
       "cooldown": 180,
       "hash": "cd4044e86e8aed35dcc379acb8fa2500bd73d5bef89ad9dc2b9183b18152d297",
-      "onClick": "https://wiki.avakot.org/Thrice-bound_Impidh",
+      "onClick": "",
       "links": {
-        "wiki": "",
+        "wiki": "https://wiki.avakot.org/Thrice-bound_Impidh",
         "externalGuide": ""
       }
     },
@@ -146,9 +146,9 @@
       "icon": "https://static.wikitide.net/soulframewiki/e/e4/FortKearnhold.jpg",
       "cooldown": 180,
       "hash": "ececb20ed2df04f89d58e3d173e769fcf437ee2ca7227114ee662a2ca332c8cc",
-      "onClick": "https://wiki.avakot.org/Fort_Kearnhold",
+      "onClick": "",
       "links": {
-        "wiki": "",
+        "wiki": "https://wiki.avakot.org/Fort_Kearnhold",
         "externalGuide": ""
       }
     },
@@ -165,9 +165,9 @@
       "icon": "https://static.wikitide.net/soulframewiki/thumb/c/cb/DischargedNimrod.jpg/280px-DischargedNimrod.jpg",
       "cooldown": 180,
       "hash": "a05f7816b375c95fa84202b4b7e0ebae0ffa11d8e13ebc70e9199c7ba643e046",
-      "onClick": "https://wiki.avakot.org/Discharged_Nimrod",
+      "onClick": "",
       "links": {
-        "wiki": "",
+        "wiki": "https://wiki.avakot.org/Discharged_Nimrod",
         "externalGuide": ""
       }
     },
@@ -184,9 +184,9 @@
       "icon": "https://static.wikitide.net/soulframewiki/thumb/0/0b/WraithofWastes.jpg/280px-WraithofWastes.jpg",
       "cooldown": 180,
       "hash": "78c6e474eb7ed88296b17d0dac2d4372262d4aac284fc77c6f2f86fe86b23f41",
-      "onClick": "https://wiki.avakot.org/Wraith_of_Wastes",
+      "onClick": "",
       "links": {
-        "wiki": "",
+        "wiki": "https://wiki.avakot.org/Wraith_of_Wastes",
         "externalGuide": ""
       }
     },
@@ -203,9 +203,9 @@
       "icon": "https://static.wikitide.net/soulframewiki/thumb/6/67/MendicantKingSquare.png/280px-MendicantKingSquare.png",
       "cooldown": 180,
       "hash": "86049e779095732213ab590a00f4c639addaf13d99de6a656ab0c2cb99f81a05",
-      "onClick": "https://wiki.avakot.org/The_Mendicant_King",
+      "onClick": "",
       "links": {
-        "wiki": "",
+        "wiki": "https://wiki.avakot.org/The_Mendicant_King",
         "externalGuide": ""
       }
     },
@@ -222,9 +222,9 @@
       "icon": "https://static.wikitide.net/soulframewiki/thumb/1/1e/SinecureerrantGawth.jpg/420px-SinecureerrantGawth.jpg",
       "cooldown": 180,
       "hash": "089fcfe939f1350187721613d93143bba6658e9c75037f6ed0be07807b130fb7",
-      "onClick": "https://wiki.avakot.org/Gruul_Seeker_Sontaro",
+      "onClick": "",
       "links": {
-        "wiki": "",
+        "wiki": "https://wiki.avakot.org/Gruul_Seeker_Sontaro",
         "externalGuide": ""
       }
     },
@@ -241,9 +241,9 @@
       "icon": "https://static.wikitide.net/soulframewiki/6/6c/MoteSlot.png",
       "cooldown": 180,
       "hash": "0a1e3094e8a2e96953975979e8832cafed6c003d5303ec6c867d0ae132ecdb8b",
-      "onClick": "https://wiki.avakot.org/Fore-Feller_Hewyl",
+      "onClick": "",
       "links": {
-        "wiki": "",
+        "wiki": "https://wiki.avakot.org/Fore-Feller_Hewyl",
         "externalGuide": ""
       }
     },
@@ -260,9 +260,9 @@
       "icon": "https://static.wikitide.net/soulframewiki/d/d6/Castellan_Malrog.png",
       "cooldown": 180,
       "hash": "4ccd7f9f0234235c8bdd7506bf87d7f6c385154372cc8c9444c384ef1bf7a1c9",
-      "onClick": "https://wiki.avakot.org/Sinecure-errant_Vella",
+      "onClick": "",
       "links": {
-        "wiki": "",
+        "wiki": "https://wiki.avakot.org/Sinecure-errant_Vella",
         "externalGuide": ""
       }
     },
@@ -279,9 +279,9 @@
       "icon": "https://static.wikitide.net/soulframewiki/thumb/4/40/CorruptedSproutBrute.jpg/420px-CorruptedSproutBrute.jpg",
       "cooldown": 180,
       "hash": "3c09fadb366fb3014bd34bb56bc77e49198ed7a57b2f4213355ff05f9aa45d46",
-      "onClick": "https://wiki.avakot.org/Gourdo",
+      "onClick": "",
       "links": {
-        "wiki": "",
+        "wiki": "https://wiki.avakot.org/Gourdo",
         "externalGuide": ""
       }
     },
@@ -298,9 +298,9 @@
       "icon": "https://static.wikitide.net/soulframewiki/thumb/1/16/EtheldredTheWeaver.png/420px-EtheldredTheWeaver.png",
       "cooldown": 180,
       "hash": "9b37fdb5dcaf8a70eeba93d4161ad42d557bf3c10b1dad1dc6aa4d4f3d5252d7",
-      "onClick": "https://wiki.avakot.org/Seachnall_The_Widower",
+      "onClick": "",
       "links": {
-        "wiki": "",
+        "wiki": "https://wiki.avakot.org/Seachnall_The_Widower",
         "externalGuide": ""
       }
     },
@@ -317,9 +317,9 @@
       "icon": "https://static.wikitide.net/soulframewiki/e/ed/CorruptedOde%27nDog.png",
       "cooldown": 180,
       "hash": "bc647d0fa870cce28891f98871975d41f9ee9673305058a28f0af6801a604047",
-      "onClick": "https://wiki.avakot.org/Reaper",
+      "onClick": "",
       "links": {
-        "wiki": "",
+        "wiki": "https://wiki.avakot.org/Reaper",
         "externalGuide": ""
       }
     },
@@ -336,9 +336,9 @@
       "icon": "https://static.wikitide.net/soulframewiki/5/52/ThriceboundImpidh.jpg",
       "cooldown": 180,
       "hash": "aa559ed5aa871b9aedc86ccbee97f9c684c68a109f8e005539181fe1e133522d",
-      "onClick": "https://wiki.avakot.org/Thrice-bound_Impidh",
+      "onClick": "",
       "links": {
-        "wiki": "",
+        "wiki": "https://wiki.avakot.org/Thrice-bound_Impidh",
         "externalGuide": ""
       }
     }
