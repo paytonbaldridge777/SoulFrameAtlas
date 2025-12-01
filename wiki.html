@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     name="description"
-    content="Soulframe Atlas mini-wiki index for items, enemies, and resources, with links to full community wikis."
+    content="Soulframe Atlas mini-wiki index for items, enemies, pacts, and resources, with links to full community wikis."
   />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
@@ -36,7 +36,7 @@
       <header class="page-header">
         <h1>Atlas Index</h1>
         <p>
-          A quick-reference mini-wiki for key items, crafting materials, and enemies.
+          A quick-reference mini-wiki for key items, crafting materials, enemies, and pacts.
           Click an entry to see more details. Use the search box to quickly find a name or keyword.
         </p>
       </header>
@@ -45,7 +45,7 @@
         <input
           id="wikiSearch"
           type="search"
-          placeholder="Search items and enemies (e.g., 'Sproutfolk', 'Ode')"
+          placeholder="Search items, enemies, and pacts (e.g., 'Sproutfolk', 'Ode', 'Defender Pact')"
           style="
             width: 100%;
             max-width: 360px;
@@ -84,6 +84,26 @@
                 <div class="wiki-item-header">
                   <div class="wiki-item-name">Loading enemies…</div>
                   <div class="wiki-item-meta">Please check data/enemies.json</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Pacts (separate section so we can keep adding more categories later) -->
+        <div class="section" style="padding-left:0;padding-right:0;margin-top:1.5rem;">
+          <div class="wiki-column">
+            <h3>Pacts & Roles</h3>
+            <p style="font-size:0.85rem; color:var(--muted); margin-bottom:0.5rem;">
+              High-level view of major pacts, their virtue focus, and general role. Values are conceptual
+              and may not match in-game numbers exactly.
+            </p>
+            <ul class="wiki-list" id="wikiPactsContainer">
+              <!-- Populated by JS -->
+              <li class="wiki-item">
+                <div class="wiki-item-header">
+                  <div class="wiki-item-name">Loading pacts…</div>
+                  <div class="wiki-item-meta">Please check data/pacts.json</div>
                 </div>
               </li>
             </ul>
@@ -135,7 +155,8 @@
               <h3>How to use this index</h3>
               <p style="font-size:0.85rem; color:var(--muted);">
                 The Atlas index is meant for quick reminders: “what was that enemy
-                again?”, “where do I get this ore?”, “is this worth crafting now?”.
+                again?”, “where do I get this ore?”, “is this pact more defensive or
+                aggressive?”, “is this worth crafting now?”.
                 For deep numbers or patch-specific values, follow the links above to
                 the fully-fledged wikis and patch notes.
               </p>
