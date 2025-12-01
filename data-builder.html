@@ -150,9 +150,9 @@ function normalizeWorldBosses(bossesRaw) {
       icon: b.icon || "",
       cooldown: b.cooldown ?? null,
       hash: b.hash || "",
-      onClick: b.onClick || "",
+      onClick: "",
       links: {
-        wiki: "",
+        wiki: b.onClick || "",
         externalGuide: ""
       }
     }))
