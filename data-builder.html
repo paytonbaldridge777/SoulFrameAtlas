@@ -142,8 +142,8 @@ function normalizeWorldBosses(bossesRaw) {
       name: b.name || b.id || "",
       type: "World Boss",
       faction: "",               // can be filled in manually later
-      threatTier: "World Boss",
-      primaryRegion: b.location || "",
+      threatTier: "",
+      primaryRegion: "",
       summary: "",               // Atlas-original summary to be written later
       notableTraits: [],
       notableDrops: [],
@@ -152,7 +152,8 @@ function normalizeWorldBosses(bossesRaw) {
       hash: b.hash || "",
       onClick: "",
       links: {
-        wiki: b.onClick || "",
+        map: b.location || "",
+		wiki: b.onClick || "",
         externalGuide: ""
       }
     }))
