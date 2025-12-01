@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pacts Data Builder</title>
+  <style>
+    body { font-family: Arial; padding: 20px; background: #111; color: #eee; }
+    textarea { width: 100%; height: 300px; margin-top: 10px; }
+    button { padding: 10px 15px; margin-right: 10px; }
+  </style>
+</head>
+
+<body>
+  <h1>Pacts Data Builder</h1>
+
+  <p>This tool queries the Avakot GraphQL API, normalizes the data, and generates a JSON file matching our Soulframe Atlas schema.</p>
+
+  <button id="runQueryBtn">Run Pacts Query</button>
+  <button id="downloadBtn" disabled>Download JSON</button>
+
+  <h2>Output JSON</h2>
+  <textarea id="output"></textarea>
+
+<script>
+const gqlEndpoint = "https://api.avakot.org/v1/gql";
+
+const pactsQuery = `
+query GetPacts {
+  pacts {
+    PactID
+    Name
+    Description
+    Role
+    VirtueFocus
+  }
+}
+`;
+
+async function runPactsQuery() {
+  const response = await fetch(gqlEndpoint, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ query: pactsQuery })
+  });
+
+  const data = await response.json();
+  const pactsRaw = data?.data?.pacts || [];
+
+  // Normalize to your desired JSON structure
+  const normalized = pactsRaw.map(p => ({
+    id: p.PactID || "",
+    name: p.Name || "",
+    role: p.Role || "",
+    virtueFocus: p.VirtueFocus || null,
+    summary: "Atlas-original summary goes here.",
+    notes: "",
+    links: { wiki: "", externalGuide: "" }
+  }));
+
+  const jsonText = JSON.stringify({ pacts: normalized }, null, 2);
+  document.getElementById("output").value = jsonText;
+
+  // Enable download button
+  window.generatedJSON = jsonText;
+  document.getElementById("downloadBtn").disabled = false;
+}
+
+// Download the generated JSON
+function downloadJSON() {
+  const blob = new Blob([window.generatedJSON], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+
+  link.href = url;
+  link.download = "pacts.json";
+  link.click();
+
+  URL.revokeObjectURL(url);
+}
+
+// Bind events
+document.getElementById("runQueryBtn").onclick = runPactsQuery;
+document.getElementById("downloadBtn").onclick = downloadJSON;
+</script>
+
+</body>
+</html>
