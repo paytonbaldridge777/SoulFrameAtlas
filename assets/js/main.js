@@ -176,11 +176,14 @@ async function renderWikiItems() {
   if (!container) return;
 
   try {
-    const items = await loadJSON("data/items.json");
+    const data = await loadJSON("data/items.json");
+    const items = Array.isArray(data) ? data : (Array.isArray(data.items) ? data.items : []);
+
     container.innerHTML = items
       .map((item) => {
         const linksHtml = item.links
-          ? Object.values(item.links)
+          ? Object.values(item.links || {})
+              .filter(Boolean)
               .map(
                 (url) =>
                   `<a href="${url}" target="_blank" rel="noreferrer">Full entry →</a>`
@@ -188,16 +191,27 @@ async function renderWikiItems() {
               .join(" · ")
           : "";
 
+        const meta = [item.category, item.subtype, item.rarity]
+          .filter(Boolean)
+          .join(" · ");
+
+        const description = item.summary || item.description || item.notes || "";
+
         return `
           <li class="wiki-item">
             <div class="wiki-item-header">
-              <div class="wiki-item-name">${item.name}</div>
+              <div class="wiki-item-name">${item.name || item.id}</div>
               <div class="wiki-item-meta">
-                ${item.category || item.type || ""}
+                ${meta}
               </div>
             </div>
             <div class="wiki-item-details">
-              ${item.description || ""}
+              ${description}
+              ${
+                item.sourceRegion
+                  ? `<br /><span style="font-size:0.8rem;opacity:0.75;">Region: ${item.sourceRegion}</span>`
+                  : ""
+              }
               ${linksHtml ? "<br />" + linksHtml : ""}
             </div>
           </li>
@@ -222,16 +236,20 @@ async function renderWikiEnemies() {
   if (!container) return;
 
   try {
-    const enemies = await loadJSON("data/enemies.json");
+    const data = await loadJSON("data/enemies.json");
+    const enemies = Array.isArray(data) ? data : (Array.isArray(data.enemies) ? data.enemies : []);
+
     container.innerHTML = enemies
       .map((enemy) => {
         const metaParts = [];
         if (enemy.faction) metaParts.push(enemy.faction);
         if (enemy.type) metaParts.push(enemy.type);
+        if (enemy.threatTier) metaParts.push(enemy.threatTier);
         const meta = metaParts.join(" · ");
 
         const linksHtml = enemy.links
-          ? Object.values(enemy.links)
+          ? Object.values(enemy.links || {})
+              .filter(Boolean)
               .map(
                 (url) =>
                   `<a href="${url}" target="_blank" rel="noreferrer">Full entry →</a>`
@@ -239,14 +257,21 @@ async function renderWikiEnemies() {
               .join(" · ")
           : "";
 
+        const description = enemy.summary || enemy.description || "";
+
         return `
           <li class="wiki-item">
             <div class="wiki-item-header">
-              <div class="wiki-item-name">${enemy.name}</div>
+              <div class="wiki-item-name">${enemy.name || enemy.id}</div>
               <div class="wiki-item-meta">${meta}</div>
             </div>
             <div class="wiki-item-details">
-              ${enemy.description || ""}
+              ${description}
+              ${
+                enemy.primaryRegion
+                  ? `<br /><span style="font-size:0.8rem;opacity:0.75;">Region: ${enemy.primaryRegion}</span>`
+                  : ""
+              }
               ${linksHtml ? "<br />" + linksHtml : ""}
             </div>
           </li>
@@ -260,6 +285,72 @@ async function renderWikiEnemies() {
         <div class="wiki-item-header">
           <div class="wiki-item-name">Unable to load enemies</div>
           <div class="wiki-item-meta">Check data/enemies.json</div>
+        </div>
+      </li>
+    `;
+  }
+}
+
+async function renderWikiPacts() {
+  const container = document.getElementById("wikiPactsContainer");
+  if (!container) return;
+
+  try {
+    const data = await loadJSON("data/pacts.json");
+    const pacts = Array.isArray(data) ? data : (Array.isArray(data.pacts) ? data.pacts : []);
+
+    container.innerHTML = pacts
+      .map((pact) => {
+        const virtue =
+          (pact.bonus && pact.bonus.virtueType) ||
+          pact.virtueOrder ||
+          "";
+
+        const roleGuess = virtue ? `${virtue} leaning` : "";
+
+        const abilitiesLine = pact.abilities
+          ? pact.abilities
+          : (Array.isArray(pact.abilitiesExpanded) && pact.abilitiesExpanded.length
+              ? pact.abilitiesExpanded
+                  .map((a) => a.name)
+                  .filter(Boolean)
+                  .join(", ")
+              : "");
+
+        const description = pact.description || "";
+
+        return `
+          <li class="wiki-item">
+            <div class="wiki-item-header">
+              <div class="wiki-item-name">${pact.name || pact.id}</div>
+              <div class="wiki-item-meta">
+                ${roleGuess}
+              </div>
+            </div>
+            <div class="wiki-item-details">
+              ${description}
+              ${
+                virtue
+                  ? `<br /><span style="font-size:0.8rem;opacity:0.75;">Virtue focus: ${virtue}</span>`
+                  : ""
+              }
+              ${
+                abilitiesLine
+                  ? `<br /><span style="font-size:0.8rem;opacity:0.75;">Abilities: ${abilitiesLine}</span>`
+                  : ""
+              }
+            </div>
+          </li>
+        `;
+      })
+      .join("");
+  } catch (err) {
+    console.error(err);
+    container.innerHTML = `
+      <li class="wiki-item">
+        <div class="wiki-item-header">
+          <div class="wiki-item-name">Unable to load pacts</div>
+          <div class="wiki-item-meta">Check data/pacts.json</div>
         </div>
       </li>
     `;
@@ -290,7 +381,7 @@ function setupWikiSearch() {
   searchInput.addEventListener("input", () => {
     const query = searchInput.value.toLowerCase().trim();
     const allItems = document.querySelectorAll(
-      "#wikiItemsContainer .wiki-item, #wikiEnemiesContainer .wiki-item"
+      "#wikiItemsContainer .wiki-item, #wikiEnemiesContainer .wiki-item, #wikiPactsContainer .wiki-item"
     );
 
     allItems.forEach((item) => {
@@ -833,240 +924,6 @@ async function renderBuildLab() {
   });
 }
 
-// ----------------------------
-// Wiki Index: items / enemies / pacts
-// ----------------------------
-(function initWikiIndex() {
-  const itemsContainer   = document.getElementById("wikiItemsContainer");
-  const enemiesContainer = document.getElementById("wikiEnemiesContainer");
-  const pactsContainer   = document.getElementById("wikiPactsContainer");
-  const searchInput      = document.getElementById("wikiSearch");
-
-  // If we're not on wiki.html, bail out quietly
-  if (!itemsContainer && !enemiesContainer && !pactsContainer) return;
-
-  // Helper: safe fetch JSON
-  async function loadJson(path) {
-    try {
-      const res = await fetch(path, { cache: "no-store" });
-      if (!res.ok) throw new Error(`Failed to load ${path}: ${res.status}`);
-      return await res.json();
-    } catch (err) {
-      console.error(err);
-      return null;
-    }
-  }
-
-  // Helper: create a basic wiki list item
-  function createWikiItem({ title, subtitle, body, pill, extraMeta }) {
-    const li = document.createElement("li");
-    li.className = "wiki-item";
-
-    const header = document.createElement("div");
-    header.className = "wiki-item-header";
-
-    const nameEl = document.createElement("div");
-    nameEl.className = "wiki-item-name";
-    nameEl.textContent = title || "Unknown";
-
-    const metaEl = document.createElement("div");
-    metaEl.className = "wiki-item-meta";
-    metaEl.textContent = subtitle || "";
-
-    header.appendChild(nameEl);
-    header.appendChild(metaEl);
-
-    const bodyEl = document.createElement("div");
-    bodyEl.className = "wiki-item-body";
-    bodyEl.style.fontSize = "0.8rem";
-    bodyEl.style.opacity = "0.9";
-    bodyEl.textContent = body || "";
-
-    if (pill || extraMeta) {
-      const metaLine = document.createElement("div");
-      metaLine.style.marginTop = "0.25rem";
-      metaLine.style.fontSize = "0.75rem";
-      metaLine.style.opacity = "0.85";
-
-      if (pill) {
-        const span = document.createElement("span");
-        span.textContent = pill;
-        span.style.display = "inline-block";
-        span.style.padding = "0.1rem 0.4rem";
-        span.style.borderRadius = "999px";
-        span.style.border = "1px solid rgba(255,255,255,0.18)";
-        span.style.marginRight = "0.35rem";
-        span.style.fontSize = "0.7rem";
-        metaLine.appendChild(span);
-      }
-
-      if (extraMeta) {
-        const span2 = document.createElement("span");
-        span2.textContent = extraMeta;
-        metaLine.appendChild(span2);
-      }
-
-      bodyEl.appendChild(metaLine);
-    }
-
-    li.appendChild(header);
-    li.appendChild(bodyEl);
-    return li;
-  }
-
-  // Keep track of all rendered entries for search
-  const searchIndex = []; // { type, li, text }
-
-  function addToSearchIndex(type, li, fields) {
-    const text = (fields.join(" ") || "").toLowerCase();
-    searchIndex.push({ type, li, text });
-  }
-
-  // ------------- Renderers -------------
-
-  function renderItems(data) {
-    if (!itemsContainer || !data || !Array.isArray(data.items)) return;
-
-    itemsContainer.innerHTML = "";
-    data.items.forEach(item => {
-      const li = createWikiItem({
-        title: item.name || item.id,
-        subtitle: [
-          item.category,
-          item.subtype,
-          item.rarity
-        ].filter(Boolean).join(" • "),
-        body: item.summary || item.notes || "",
-        pill: item.rarity || "",
-        extraMeta: item.sourceRegion ? `Region: ${item.sourceRegion}` : ""
-      });
-
-      itemsContainer.appendChild(li);
-
-      addToSearchIndex("item", li, [
-        item.name,
-        item.id,
-        item.category,
-        item.subtype,
-        item.rarity,
-        item.sourceRegion,
-        item.summary,
-        item.notes
-      ].filter(Boolean));
-    });
-  }
-
-  function renderEnemies(data) {
-    if (!enemiesContainer || !data || !Array.isArray(data.enemies)) return;
-
-    enemiesContainer.innerHTML = "";
-    data.enemies.forEach(enemy => {
-      const li = createWikiItem({
-        title: enemy.name || enemy.id,
-        subtitle: [
-          enemy.type || "Enemy",
-          enemy.faction,
-          enemy.threatTier
-        ].filter(Boolean).join(" • "),
-        body: enemy.summary || "",
-        pill: enemy.threatTier || "",
-        extraMeta: enemy.primaryRegion ? `Region: ${enemy.primaryRegion}` : ""
-      });
-
-      enemiesContainer.appendChild(li);
-
-      addToSearchIndex("enemy", li, [
-        enemy.name,
-        enemy.id,
-        enemy.type,
-        enemy.faction,
-        enemy.threatTier,
-        enemy.primaryRegion,
-        enemy.summary
-      ].filter(Boolean));
-    });
-  }
-
-  function renderPacts(data) {
-    if (!pactsContainer || !data || !Array.isArray(data.pacts)) return;
-
-    pactsContainer.innerHTML = "";
-    data.pacts.forEach(pact => {
-      const virtue = pact.bonus && pact.bonus.virtueType
-        ? pact.bonus.virtueType
-        : (pact.virtueOrder || "");
-
-      const roleGuess = virtue
-        ? `${virtue} leaning`
-        : "";
-
-      const abilitiesLine = pact.abilities
-        ? pact.abilities
-        : (Array.isArray(pact.abilitiesExpanded) && pact.abilitiesExpanded.length
-            ? pact.abilitiesExpanded.map(a => a.name).join(", ")
-            : "");
-
-      const li = createWikiItem({
-        title: pact.name || pact.id,
-        subtitle: roleGuess,
-        body: pact.description || "",
-        pill: virtue || "",
-        extraMeta: abilitiesLine ? `Abilities: ${abilitiesLine}` : ""
-      });
-
-      pactsContainer.appendChild(li);
-
-      addToSearchIndex("pact", li, [
-        pact.name,
-        pact.id,
-        virtue,
-        pact.description,
-        abilitiesLine
-      ].filter(Boolean));
-    });
-  }
-
-  // ------------- Search -------------
-
-  function setupSearch() {
-    if (!searchInput) return;
-    if (!searchIndex.length) return;
-
-    searchInput.addEventListener("input", () => {
-      const q = searchInput.value.trim().toLowerCase();
-      if (!q) {
-        // Show all
-        searchIndex.forEach(entry => {
-          entry.li.style.display = "";
-        });
-        return;
-      }
-
-      searchIndex.forEach(entry => {
-        entry.li.style.display = entry.text.includes(q) ? "" : "none";
-      });
-    });
-  }
-
-  // ------------- Init sequence -------------
-
-  (async function loadAll() {
-    // Load in parallel, but each renderer checks container presence
-    const [itemsData, enemiesData, pactsData] = await Promise.all([
-      loadJson("data/items.json"),
-      loadJson("data/enemies.json"),
-      loadJson("data/pacts.json")
-    ]);
-
-    if (itemsData)   renderItems(itemsData);
-    if (enemiesData) renderEnemies(enemiesData);
-    if (pactsData)   renderPacts(pactsData);
-
-    setupSearch();
-  })();
-})();
-
-
 // =====================================================
 // Init
 // =====================================================
@@ -1076,6 +933,7 @@ async function renderBuildLab() {
     renderGuides(),
     renderWikiItems(),
     renderWikiEnemies(),
+    renderWikiPacts(),  
     renderRegions(),
     renderBuildLab()
   ]);
@@ -1085,3 +943,4 @@ async function renderBuildLab() {
   setupWikiAccordions();
   setupWikiSearch();
 })();
+
