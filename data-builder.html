@@ -127,7 +127,7 @@ query GetEnemies {
     hash
     icon
     id
-    Region
+    location
     name
     onClick
   }
@@ -163,16 +163,17 @@ function normalizeWorldBosses(bossesRaw) {
 
 // NOTE: Same as above – adjust field names to match actual Avakot schema for items/resources.
 const itemsQuery = `
-query GetItems {
-  items {
-    ItemID
-    Ingame
+query Locations($itemId: String) {
+  craftingResources(ItemID: $itemId) {
     Description
-    Category
-    Subtype
-    Rarity
-    Region
+    DropSource
+    ImgAltInGame
+    ImgIcon
+    ImgInGame
     InternalID
+    ItemID
+    Rarity
+    ResourceType
   }
 }
 `;
@@ -181,14 +182,14 @@ function normalizeItems(itemsRaw) {
   return {
     items: itemsRaw.map(it => ({
       id: it.ItemID || "",
-      name: it.Ingame || it.ItemID || "",
-      category: it.Category || "",
-      subtype: it.Subtype || "",
+      name: it.ItemID || it.ItemID || "",
+      Description: it.Description || "",
+      DropSource: it.DropSource || "",
       rarity: it.Rarity || "",
-      virtueAttunement: null,
-      sourceRegion: it.Region || "",
-      summary: it.Description || "",
-      notes: "",
+      ImgAltInGame: it.ImgAltInGame || "",
+      ImgIcon: it.ImgIcon || "",     
+	  ImgInGame: it.ImgInGame || "",     
+	  ResourceType: it.ResourceType || "",     
       internalId: it.InternalID || "",
       links: {
         wiki: "",
