@@ -37,35 +37,39 @@
         <h1>Atlas Index</h1>
         <p>
           A quick-reference mini-wiki for key items, crafting materials, enemies, and pacts.
-          Click an entry to see more details. Use the search box to quickly find a name or keyword.
+          Click an entry to expand full details. Use search to filter across names, keywords, and regions.
         </p>
       </header>
 
-      <section class="section" aria-label="Wiki Search">
-        <input
-          id="wikiSearch"
-          type="search"
-          placeholder="Search items, enemies, and pacts (e.g., 'Sproutfolk', 'Ode', 'Defender Pact')"
-          style="
-            width: 100%;
-            max-width: 360px;
-            padding: 0.45rem 0.8rem;
-            border-radius: 999px;
-            border: 1px solid rgba(255, 255, 255, 0.16);
-            background: rgba(0, 0, 0, 0.4);
-            color: var(--text);
-            font-size: 0.85rem;
-          "
-        />
+      <!-- Controls row: search + tabs -->
+      <section class="section" aria-label="Wiki controls">
+        <div class="wiki-controls">
+          <input
+            id="wikiSearch"
+            type="search"
+            placeholder="Search items, enemies, and pacts (e.g., 'Sproutfolk', 'Ode', 'Defender Pact')"
+            class="wiki-search-input"
+          />
+
+          <div class="wiki-tabs" role="tablist">
+            <button class="wiki-tab active" data-target="all" type="button">All</button>
+            <button class="wiki-tab" data-target="items" type="button">Items</button>
+            <button class="wiki-tab" data-target="enemies" type="button">Enemies</button>
+            <button class="wiki-tab" data-target="pacts" type="button">Pacts</button>
+          </div>
+        </div>
       </section>
 
       <section class="section">
-        <div class="wiki-layout">
-          <!-- Items / materials -->
-          <div class="wiki-column">
-            <h3>Featured Items & Crafting Materials</h3>
+        <!-- Tab panels -->
+        <div class="wiki-panels">
+          <section
+            class="wiki-panel"
+            data-panel="items"
+            aria-label="Items & materials panel"
+          >
+            <h2 class="wiki-panel-title">Items & Crafting Materials</h2>
             <ul class="wiki-list" id="wikiItemsContainer">
-              <!-- Populated by JS -->
               <li class="wiki-item">
                 <div class="wiki-item-header">
                   <div class="wiki-item-name">Loading items…</div>
@@ -73,13 +77,15 @@
                 </div>
               </li>
             </ul>
-          </div>
+          </section>
 
-          <!-- Enemies -->
-          <div class="wiki-column">
-            <h3>Enemies & Threats</h3>
+          <section
+            class="wiki-panel"
+            data-panel="enemies"
+            aria-label="Enemies panel"
+          >
+            <h2 class="wiki-panel-title">Enemies & World Bosses</h2>
             <ul class="wiki-list" id="wikiEnemiesContainer">
-              <!-- Populated by JS -->
               <li class="wiki-item">
                 <div class="wiki-item-header">
                   <div class="wiki-item-name">Loading enemies…</div>
@@ -87,19 +93,19 @@
                 </div>
               </li>
             </ul>
-          </div>
-        </div>
+          </section>
 
-        <!-- Pacts (separate section so we can keep adding more categories later) -->
-        <div class="section" style="padding-left:0;padding-right:0;margin-top:1.5rem;">
-          <div class="wiki-column">
-            <h3>Pacts & Roles</h3>
-            <p style="font-size:0.85rem; color:var(--muted); margin-bottom:0.5rem;">
-              High-level view of major pacts, their virtue focus, and general role. Values are conceptual
-              and may not match in-game numbers exactly.
+          <section
+            class="wiki-panel"
+            data-panel="pacts"
+            aria-label="Pacts panel"
+          >
+            <h2 class="wiki-panel-title">Pacts & Roles</h2>
+            <p class="wiki-panel-intro">
+              Conceptual overview of each pact, its virtue focus, and defensive / offensive leanings.
+              Values here are Atlas approximations, not official numbers.
             </p>
             <ul class="wiki-list" id="wikiPactsContainer">
-              <!-- Populated by JS -->
               <li class="wiki-item">
                 <div class="wiki-item-header">
                   <div class="wiki-item-name">Loading pacts…</div>
@@ -107,10 +113,11 @@
                 </div>
               </li>
             </ul>
-          </div>
+          </section>
         </div>
 
-        <div class="section" style="padding-left:0;padding-right:0;margin-top:1rem;">
+        <!-- External wikis / how-to block -->
+        <div class="section" style="padding-left:0;padding-right:0;margin-top:1.5rem;">
           <div class="split">
             <div class="wiki-column">
               <h3>More encyclopedic wikis</h3>
@@ -154,9 +161,8 @@
             <div class="wiki-column">
               <h3>How to use this index</h3>
               <p style="font-size:0.85rem; color:var(--muted);">
-                The Atlas index is meant for quick reminders: “what was that enemy
-                again?”, “where do I get this ore?”, “is this pact more defensive or
-                aggressive?”, “is this worth crafting now?”.
+                Use the tabs to focus on items, enemies, or pacts, and tap an entry to expand
+                full details: stats, regions, map links, and external references.
                 For deep numbers or patch-specific values, follow the links above to
                 the fully-fledged wikis and patch notes.
               </p>
