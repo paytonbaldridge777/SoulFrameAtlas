@@ -44,7 +44,7 @@
 <script>
 const gqlEndpoint = "https://api.avakot.org/v1/gql";
 // CHANGE THIS to your real worker URL (no /update-pacts now, just base):
-const workerBase = "https://YOUR-WORKER-NAME.YOURACCOUNT.workers.dev/update-data";
+const workerBase = "https://update-pacts.paytonbaldridge.workers.dev/";
 
 let generatedJSON = "";
 let currentTarget = null; // "pacts" | "enemies" | "items"
@@ -63,8 +63,7 @@ query GetPacts {
     Description
     Icon
     Abilities
-    AbilitiesExpanded {
-      Name
+    AbilitiesExpanded {      
       Description
       Icon
     }
@@ -210,7 +209,7 @@ async function runQuery(target) {
     normalizer = normalizePacts;
   } else if (target === "enemies") {
     query = enemiesQuery;
-    normalizer = normalizeEnemies;
+    normalizer = normalizeWorldBosses;
   } else if (target === "items") {
     query = itemsQuery;
     normalizer = normalizeItems;
