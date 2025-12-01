@@ -16,13 +16,13 @@
   <p>This tool queries the Avakot GraphQL API, normalizes the data, and generates a JSON file matching our Soulframe Atlas schema.</p>
 
   <button id="runQueryBtn">Run Pacts Query</button>
-  <button id="downloadBtn" disabled>Download JSON</button>
+<button id="saveBtn" disabled>Save to Repo</button>
 
-  <h2>Output JSON</h2>
-  <textarea id="output"></textarea>
+<textarea id="output"></textarea>
 
 <script>
 const gqlEndpoint = "https://api.avakot.org/v1/gql";
+const workerEndpoint = "https://YOUR-WORKER.DOMAIN.workers.dev/update-pacts"; // update this
 
 const pactsQuery = `
 query GetPacts {
@@ -32,10 +32,6 @@ query GetPacts {
     Description
     Icon
     Abilities
-    AbilitiesExpanded {
-      Description
-      Icon
-    }
     BonusHP
     BonusVirtueType
     BonusVirtueValue
@@ -50,6 +46,8 @@ query GetPacts {
 }
 `;
 
+let generatedJSON = "";
+
 async function runPactsQuery() {
   const response = await fetch(gqlEndpoint, {
     method: "POST",
@@ -60,42 +58,57 @@ async function runPactsQuery() {
   const data = await response.json();
   const pactsRaw = data?.data?.pacts || [];
 
-  // Normalize to your desired JSON structure
+  // Example normalization – tweak later as you like
   const normalized = pactsRaw.map(p => ({
-    id: p.PactID || "",
-    name: p.Name || "",
-    role: p.Role || "",
-    virtueFocus: p.VirtueFocus || null,
-    summary: "Atlas-original summary goes here.",
-    notes: "",
+    id: p.ItemID || "",
+    name: p.Ingame || p.ItemID || "",
+    description: p.Description || "",
+    icon: p.Icon || "",
+    abilities: p.Abilities || "",
+    bonus: {
+      hp: p.BonusHP || 0,
+      virtueType: p.BonusVirtueType || "",
+      virtueValue: p.BonusVirtueValue || 0
+    },
+    defense: {
+      magick: p.MagickDefence || 0,
+      physical: p.PhysicalDefence || 0,
+      stabilityIncrease: p.StabilityIncrease || 0
+    },
+    unarmedDamage: p.UnnarmedDmg || 0,
+    virtueOrder: p.VirtueOrder || "",
+    craft: p.Craft || {},
+    internalId: p.InternalID || "",
     links: { wiki: "", externalGuide: "" }
   }));
 
-  const jsonText = JSON.stringify({ pacts: normalized }, null, 2);
-  document.getElementById("output").value = jsonText;
+  generatedJSON = JSON.stringify({ pacts: normalized }, null, 2);
+  document.getElementById("output").value = generatedJSON;
 
-  // Enable download button
-  window.generatedJSON = jsonText;
-  document.getElementById("downloadBtn").disabled = false;
+  document.getElementById("saveBtn").disabled = !generatedJSON;
 }
 
-// Download the generated JSON
-function downloadJSON() {
-  const blob = new Blob([window.generatedJSON], { type: "application/json" });
-  const url = URL.createObjectURL(blob);
-  const link = document.createElement("a");
+async function saveToRepo() {
+  if (!generatedJSON) return;
 
-  link.href = url;
-  link.download = "pacts.json";
-  link.click();
+  const res = await fetch(workerEndpoint, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: generatedJSON
+  });
 
-  URL.revokeObjectURL(url);
+  if (res.ok) {
+    alert("pacts.json updated in repo ✅");
+  } else {
+    const text = await res.text();
+    alert("Failed to update pacts.json ❌\n" + text);
+  }
 }
 
-// Bind events
 document.getElementById("runQueryBtn").onclick = runPactsQuery;
-document.getElementById("downloadBtn").onclick = downloadJSON;
+document.getElementById("saveBtn").onclick = saveToRepo;
 </script>
+
 
 </body>
 </html>
