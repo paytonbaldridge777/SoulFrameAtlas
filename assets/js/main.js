@@ -303,16 +303,16 @@ async function renderWikiEnemies() {
                 ? `<div><strong>Respawn / cooldown:</strong> ${enemy.cooldown}</div>`
                 : ""
             }
-            ${
-              enemy.hash
-                ? `<div><strong>Hash:</strong> ${enemy.hash}</div>`
-                : ""
-            }
-            ${
-              enemy.onClick
-                ? `<div><strong>Marker:</strong> ${enemy.onClick}</div>`
-                : ""
-            }
+            // ${
+              // enemy.hash
+                // ? `<div><strong>Hash:</strong> ${enemy.hash}</div>`
+                // : ""
+            // }
+            // ${
+              // enemy.onClick
+                // ? `<div><strong>Marker:</strong> ${enemy.onClick}</div>`
+                // : ""
+            // }
           </div>
         `;
 
@@ -366,6 +366,13 @@ async function renderWikiPacts() {
   const container = document.getElementById("wikiPactsContainer");
   if (!container) return;
 
+  // simple clamped % helper so bars are never invisible
+  function pct(value, max) {
+    if (typeof value !== "number" || !isFinite(value)) return 0;
+    const raw = (value / (max || 1)) * 100;
+    return Math.max(6, Math.min(100, raw)); // min 6% so you can see it
+  }
+
   try {
     const data = await loadJSON("data/pacts.json");
     const pacts = Array.isArray(data) ? data : (Array.isArray(data.pacts) ? data.pacts : []);
@@ -374,8 +381,11 @@ async function renderWikiPacts() {
       .map((pact) => {
         const name = pact.name || pact.id || "Unknown pact";
 
+        const bonus = pact.bonus || {};
+        const defense = pact.defense || {};
+
         const virtue =
-          (pact.bonus && pact.bonus.virtueType) ||
+          bonus.virtueType ||
           pact.virtueOrder ||
           "";
 
@@ -390,8 +400,7 @@ async function renderWikiPacts() {
                   .join(", ")
               : "");
 
-        const defense = pact.defense || {};
-        const bonus = pact.bonus || {};
+        const desc = pact.description || "";
 
         const metaGrid = `
           <div class="wiki-item-meta-grid">
@@ -433,6 +442,61 @@ async function renderWikiPacts() {
           </div>
         `;
 
+        // Bars: pick very rough max values; these are conceptual, not literal
+        const hpPct       = pct(bonus.hp, 100);
+        const magDefPct   = pct(defense.magick, 100);
+        const phyDefPct   = pct(defense.physical, 100);
+        const stabPct     = pct(defense.stabilityIncrease, 50);
+        const unarmedPct  = pct(pact.unarmedDamage, 100);
+        const virtuePct   = pct(bonus.virtueValue, 50);
+
+        const statBars = `
+          <div class="wiki-stat-block">
+            <div class="wiki-stat-row">
+              <div class="wiki-stat-label">HP Bonus</div>
+              <div class="wiki-stat-track">
+                <div class="wiki-stat-fill" style="width:${hpPct}%;"></div>
+              </div>
+              <div class="wiki-stat-value">${bonus.hp ?? "-"}</div>
+            </div>
+            <div class="wiki-stat-row">
+              <div class="wiki-stat-label">Magick Def.</div>
+              <div class="wiki-stat-track">
+                <div class="wiki-stat-fill" style="width:${magDefPct}%;"></div>
+              </div>
+              <div class="wiki-stat-value">${defense.magick ?? "-"}</div>
+            </div>
+            <div class="wiki-stat-row">
+              <div class="wiki-stat-label">Physical Def.</div>
+              <div class="wiki-stat-track">
+                <div class="wiki-stat-fill" style="width:${phyDefPct}%;"></div>
+              </div>
+              <div class="wiki-stat-value">${defense.physical ?? "-"}</div>
+            </div>
+            <div class="wiki-stat-row">
+              <div class="wiki-stat-label">Stability</div>
+              <div class="wiki-stat-track">
+                <div class="wiki-stat-fill" style="width:${stabPct}%;"></div>
+              </div>
+              <div class="wiki-stat-value">${defense.stabilityIncrease ?? "-"}</div>
+            </div>
+            <div class="wiki-stat-row">
+              <div class="wiki-stat-label">Unarmed</div>
+              <div class="wiki-stat-track">
+                <div class="wiki-stat-fill" style="width:${unarmedPct}%;"></div>
+              </div>
+              <div class="wiki-stat-value">${pact.unarmedDamage ?? "-"}</div>
+            </div>
+            <div class="wiki-stat-row">
+              <div class="wiki-stat-label">Virtue</div>
+              <div class="wiki-stat-track">
+                <div class="wiki-stat-fill" style="width:${virtuePct}%;"></div>
+              </div>
+              <div class="wiki-stat-value">${bonus.virtueValue ?? "-"}</div>
+            </div>
+          </div>
+        `;
+
         const abilitiesBlock = abilitiesLine
           ? `<p><strong>Abilities:</strong> ${abilitiesLine}</p>`
           : (Array.isArray(pact.abilitiesExpanded) && pact.abilitiesExpanded.length
@@ -451,12 +515,13 @@ async function renderWikiPacts() {
             <div class="wiki-item-header">
               <div class="wiki-item-name">${name}</div>
               <div class="wiki-item-meta">
-                ${roleGuess}
+                ${virtue ? `<span class="wiki-chip">${virtue}</span>` : ""}
               </div>
             </div>
             <div class="wiki-item-details">
-              ${pact.description ? `<p>${pact.description}</p>` : ""}
+              ${desc ? `<p>${desc}</p>` : ""}
               ${metaGrid}
+              ${statBars}
               ${abilitiesBlock}
               ${linksHtml}
             </div>
@@ -476,6 +541,7 @@ async function renderWikiPacts() {
     `;
   }
 }
+
 
 // Accordion behavior: click to expand one at a time within a list
 function setupWikiAccordions() {
