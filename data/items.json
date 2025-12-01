@@ -1,32 +1,1252 @@
-[
-  {
-    "id": "sproutfolk-fronds",
-    "name": "Sproutfolk Fronds",
-    "type": "Resource",
-    "category": "Crafting Material",
-    "description": "Common drop from Sproutfolk in forested zones; also appears in resource nodes within their camps. Used in early armor.",
-    "links": {
-      "fextralife": "https://soulframe.wiki.fextralife.com/Crafting+Materials"
+{
+  "items": [
+    {
+      "id": "Agaric",
+      "name": "Agaric",
+      "Description": "A warty mushroom, also known as a Feystool. A potent source of magick, traditionally consumed in the Fey ritual of The Cogah. Old superstitions say that one who craves Agaric, has been marked as an enemy of the Fey. For any creature who eats too much is cursed to become mushroom food in turn.",
+      "DropSource": "Discharged Nimrod ; Etheldred The Weaver ; Fore-Feller Hewyl ; Gourdo ; Gruul Seeker Ruthos ; Gruul Seeker Sontaro ; Kabocha ; Knell Knight ; Reaper ; Seachnall The Widower ; Sinecure-errant Gawth ; Sinecure-errant Vella ; The Mendicant King ; Thrice-bound Impidh ; Wraith of Wastes",
+      "rarity": "Rare",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/DewSpore06.png",
+      "ImgInGame": "",
+      "ResourceType": "Organic",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Arcs",
+      "name": "Arcs",
+      "Description": "Relic coins of the ancient Fey. Arcs are Soulframe's premium in-game currency, typically acquired by purchasing with real-world money.",
+      "DropSource": "",
+      "rarity": "Common",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/ArcsIcon.png",
+      "ImgInGame": "",
+      "ResourceType": "Currency",
+      "internalId": "PremiumCredits",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Arrows",
+      "name": "Arrows",
+      "Description": "'''Arrows''' used to be required to fire Bows, before they were given infinite ammunition. No longer obtainable.",
+      "DropSource": "Unavailable",
+      "rarity": "",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/Arrows.png",
+      "ImgInGame": "",
+      "ResourceType": "Unique",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Bisulcam Fodder",
+      "name": "Bisulcam Fodder",
+      "Description": "An Ode'n Sphere used to power the mighty Bisulcam cannon.",
+      "DropSource": "",
+      "rarity": "",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/OdeCannonball.png",
+      "ImgInGame": "",
+      "ResourceType": "Quest",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Brinefloss",
+      "name": "Brinefloss",
+      "Description": "A tall reed crowned with a downy-soft puff. It is tradition for the children of Dendria to harvest the fibres in late Lunust so their elders may make them felted toys.",
+      "DropSource": "",
+      "rarity": "Common",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/BrineFloss.png",
+      "ImgInGame": "",
+      "ResourceType": "Ingredient",
+      "internalId": "BrineflossResource",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Cage Key",
+      "name": "Cage Key",
+      "Description": "A Resource required to free Orengall's pups from Sinecure cages. Consumed upon rescue.",
+      "DropSource": "The Shewolf Snared",
+      "rarity": "Rare",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/Key.png",
+      "ImgInGame": "",
+      "ResourceType": "Unique",
+      "internalId": "CageKey",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Corrupt Onyx",
+      "name": "Corrupt Onyx",
+      "Description": "A black stone. Mirror-like when river smooth, sharp as glass when jagged. Once worn upon Cassid talismans for protection in battle. Now a tool for Ode'n weapon-craft.",
+      "DropSource": "Baliq;Banneret;Castellan Malrog;Corrupted Ode'n Dog;Discharged Nimrod;Default Droptable;Etheldred The Weaver;Hunter;Kabocha;Knight;Nimrod;Ode Chest;Ode Strongbox;The Mendicant King;Thrice-bound Impidh;Vadagar Stag;Wraith of Wastes",
+      "rarity": "Uncommon",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/Inorganic.png",
+      "ImgInGame": "",
+      "ResourceType": "Inorganic",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Crimsanthemum",
+      "name": "Crimsanthemum",
+      "Description": "A proud red flower, sturdy of stalk. Symbolic of the courageous march into futures unwritten. To be planted in the Eternium Gardens. A song played in Nightfold may take you there...",
+      "DropSource": "",
+      "rarity": "Common",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/Crimsanthemum.png",
+      "ImgInGame": "",
+      "ResourceType": "Bloom",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Crypt Key",
+      "name": "Crypt Key",
+      "Description": "A Resource required to enter the Crypt of the Circade. Consumed upon entry.",
+      "DropSource": "Banneret;Castellan Malrog;Corrupted Ode'n Dog;Corrupted Sproutfolk Brute;Etheldred The Weaver;Kabocha;Knight",
+      "rarity": "Rare",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/Key.png",
+      "ImgInGame": "",
+      "ResourceType": "Unique",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Cursed Marifold",
+      "name": "Cursed Marifold",
+      "Description": "A rare mutation of the Marifold flower, rumoured to be the latest-bloomer in all of Eldveil. But for those who plant early and wait long, it is said to have the sweetest smell. To be planted in the Eternium Gardens. A song played in Nightfold may take you there...",
+      "DropSource": "",
+      "rarity": "Common",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/CursedMarifold.png",
+      "ImgInGame": "",
+      "ResourceType": "Bloom",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Dendrit Weave",
+      "name": "Dendrit Weave",
+      "Description": "Scrap fabric. A textile twice-woven by Dendria's master webbers. Dense yet soft, worn yet sturdy. An essential for any well-clothed Midrathian.",
+      "DropSource": "Avakot;Barrel;Crate;Basic Chest#Glades;Pots",
+      "rarity": "Common",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/Textile02.png",
+      "ImgInGame": "",
+      "ResourceType": "Textile",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Dewspore",
+      "name": "Dewspore",
+      "Description": "A pinkish 'shroom with a purplish cap. According to Sproutfolk feybles, 'tis bad luck to tread upon a Dewspore! If for no reason other than the sure stain upon your shoe.",
+      "DropSource": "",
+      "rarity": "",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/DewSpore.png",
+      "ImgInGame": "",
+      "ResourceType": "Ingredient",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Dracs",
+      "name": "Dracs",
+      "Description": "'''Dracs''' are the common currency of Midrath; a golden coin used to facilitate commerce of all kinds.",
+      "DropSource": "Alca's Children;Avakot;Avakot's Stocks;Banneret;Barrel;Basic Chest#Glades;Basic Chest#Midrath;Basic Chest#Undercity;Crate;Crypt Sarcophagus;Echo Stone;Default Droptable;Dendrit Chest#Alca's Bounty;Dendrit Chest#Glades;Dendrit Chest#Midrath;Dendrit Chest#Oro's Well;Dendrit Chest#Undercity;Discharged Nimrod;Etheldred The Weaver;Factions#Glades;Guard;Hidden Harvest;Hunter;Kabocha;Kith of Kings;Knight;Mockery#Mockery Spirit;Nimrod;Ode Chest;Ode Strongbox;Pots;Silent Rose;Sinecure-errant Gawth;The Mendicant King;Thrice-bound Impidh;Factions#Undercity;Vadagar Stag;Wraith of Wastes",
+      "rarity": "Common",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/DracsCurrencyIcon.png",
+      "ImgInGame": "",
+      "ResourceType": "Currency",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Eldore",
+      "name": "Eldore",
+      "Description": "An iridescent metal, traditionally used in the art of Steelsinging. Thought to be the currency of the Fey. When used as a joinery, Eldore fastens severed weapons with the strength of bound realms. +3 damage.",
+      "DropSource": "Unavailable",
+      "rarity": "",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/Kintsugi.png",
+      "ImgInGame": "",
+      "ResourceType": "Joinery",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Eye of Weaver",
+      "name": "Eye of Weaver",
+      "Description": "A single pearl permeates with a bloated tinge of amber brown, in it beholds silken threads of corruption.",
+      "DropSource": "Weaver",
+      "rarity": "Uncommon",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/TreeSpiderEyes.png",
+      "ImgInGame": "",
+      "ResourceType": "Ingredient",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Feybalt",
+      "name": "Feybalt",
+      "Description": "A metal with blueish iridescence, traditionally used in the art of Steelsinging. Though its melting point is remarkably low, Feybalt is a powerful conductor for magicks- fey and otherwise. Sure to be the perfect joinery for mending magick weapons.",
+      "DropSource": "Crypt Sarcophagus;Discharged Nimrod;Neath'uns Chest;Nimrod;Ode'n Bisulcam;The Mendicant King;Vadagar Stag;Wraith of Wastes",
+      "rarity": "",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/Feybalt.png",
+      "ImgInGame": "",
+      "ResourceType": "Joinery",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Fire Fungus",
+      "name": "Fire Fungus",
+      "Description": "A red-hued mushroom oft' used in stews for its peppery taste. A favourite among Clan Jotar and provocateur of many an eating contest.",
+      "DropSource": "",
+      "rarity": "Uncommon",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/DewSpore02.png",
+      "ImgInGame": "",
+      "ResourceType": "Ingredient",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Flask of Gloaming",
+      "name": "Flask of Gloaming",
+      "Description": "Flask of Gloaming",
+      "DropSource": "",
+      "rarity": "Common",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/InventoryItems-ClayAle.png",
+      "ImgInGame": "",
+      "ResourceType": "Quest",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Gildaur",
+      "name": "Gildaur",
+      "Description": "A warm-gold metal, traditionally used in the art of Steelsinging. Found most frequently in the coffers of Aureli traders, Gildaur is a rare import. For good reason. It is flexible, lightweight and strong in equal measures, a fine joinery for anything that needs mending.",
+      "DropSource": "Basic Chest#Undercity;Castellan Malrog;Dendrit Chest#Undercity;Discharged Nimrod;Etheldred The Weaver;Gruul Seeker Ruthos;Kabocha;Nimrod;Sinecure-errant Gawth;The Mendicant King;Vadagar Stag",
+      "rarity": "",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/Gildaur.png",
+      "ImgInGame": "",
+      "ResourceType": "Joinery",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Gossamer Quartz",
+      "name": "Gossamer Quartz",
+      "Description": "A shire crystal shot through with veins of white. By Dendrit feyble, it is said that each fair stone holds the petrified wing of a sleeping Picktrix.",
+      "DropSource": "Avakot;Basic Chest#Glades;Crypt Sarcophagus;Echo Stone;Dendrit Chest#Alca's Bounty;Dendrit Chest#Glades;Dendrit Chest#Undercity;Factions#Glades;Factions#Undercity",
+      "rarity": "Uncommon",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/Organic03.png",
+      "ImgInGame": "",
+      "ResourceType": "Organic",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Grey Gold",
+      "name": "Grey Gold",
+      "Description": "A dull gold tinged with smoke. A fine metal, traditionally used in the art of Steelsinging. Once mined plentifully in the Mines of Borro, Grey Gold is a reliable joinery for broken weapons.",
+      "DropSource": "Unavailable",
+      "rarity": "",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/Kintsugi.png",
+      "ImgInGame": "",
+      "ResourceType": "Joinery",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Grim Rose",
+      "name": "Grim Rose",
+      "Description": "A magenta rose with near-black leaves. Unlike its close relative, the Hymn Rose, it does not sing. Not even a little.",
+      "DropSource": "",
+      "rarity": "Common",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/RotRoot.png",
+      "ImgInGame": "",
+      "ResourceType": "Ingredient",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Grynnetongue",
+      "name": "Grynnetongue",
+      "Description": "A deep crimson fungus bent like a lapping tongue. It is rough to the touch, much like a cat's. So named for a creature long extinct.",
+      "DropSource": "",
+      "rarity": "",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/DewSpore.png",
+      "ImgInGame": "",
+      "ResourceType": "Ingredient",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Harmonies",
+      "name": "Harmonies",
+      "Description": "Use '''Harmonies''' to upgrade the rarity and effectiveness of your Totems and Runes, up to a maximum of three stars.",
+      "DropSource": "",
+      "rarity": "",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/GlimmerDust.png",
+      "ImgInGame": "",
+      "ResourceType": "Currency",
+      "internalId": "FusionPoints",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Hymn Rose",
+      "name": "Hymn Rose",
+      "Description": "A wild rose of red. Listen close, Envoy, and you shall hear it singing soft upon the wind. Symbolic of a certain silent rebellion- do mind its thorns.",
+      "DropSource": "",
+      "rarity": "Common",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/HymnRose.png",
+      "ImgInGame": "",
+      "ResourceType": "Ingredient",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Ichor",
+      "name": "Ichor",
+      "Description": "Ichor: the basis of all Ode'n life. In liquid form, it pollutes Alcan rivers, rendering them fit for Sinecure drinking.",
+      "DropSource": "Baliq;Banneret;Castellan Malrog;Corrupted Ode'n Dog;Default Droptable;Etheldred The Weaver;Gruul Seeker Ruthos;Hunter;Kabocha;Knight;Ode Strongbox;Sinecure-errant Gawth;Thrice-bound Impidh;Wraith of Wastes",
+      "rarity": "Uncommon",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/Inorganic01.png",
+      "ImgInGame": "",
+      "ResourceType": "Inorganic",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Jaden Drop",
+      "name": "Jaden Drop",
+      "Description": "A mushroom of mossy green. Some say they are the tears of Iridis, fallen from the night sky. When boiled, they taste of salt.",
+      "DropSource": "",
+      "rarity": "Uncommon",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/DewSpore04.png",
+      "ImgInGame": "",
+      "ResourceType": "Ingredient",
+      "internalId": "JadenRingResource",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Kearnhold Key",
+      "name": "Kearnhold Key",
+      "Description": "Exclusively for high-ranking Sinecure use. Grants access to the back entrance Fort Kearnhold.",
+      "DropSource": "",
+      "rarity": "",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/Key.png",
+      "ImgInGame": "",
+      "ResourceType": "Quest",
+      "internalId": "MidrathFortBackDoorKeyItem",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Kearnhold Lock-Lever",
+      "name": "Kearnhold Lock-Lever",
+      "Description": "A component of the cranking mechanisms within Fort Kearnhold.",
+      "DropSource": "",
+      "rarity": "",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/Key.png",
+      "ImgInGame": "",
+      "ResourceType": "Quest",
+      "internalId": "MidrathFortKeyHandleItem",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Key",
+      "name": "Key",
+      "Description": "Opens a locked chest.",
+      "DropSource": "Banneret;Knight",
+      "rarity": "Rare",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/Key.png",
+      "ImgInGame": "",
+      "ResourceType": "Unique",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Knotwood",
+      "name": "Knotwood",
+      "Description": "A plank of wood hewn from a Knotwood tree. Hearty and rigid, 'tis apt for hilt craft and silt raft alike.",
+      "DropSource": "Avakot;Crate;Barrel;Basic Chest#Glades;Basic Chest#Undercity;Dendrit Chest#Midrath;Echo Stone;Mockery;Impidh Mockery;Pots",
+      "rarity": "Uncommon",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/Organic05.png",
+      "ImgInGame": "",
+      "ResourceType": "Organic",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Larklette",
+      "name": "Larklette",
+      "Description": "A blue blossom bursting with pollen. An embodiment of silent support, of gracious guidance. To be planted in the Eternium Gardens. A song played in Nightfold may take you there...",
+      "DropSource": "",
+      "rarity": "Common",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/Larklette.png",
+      "ImgInGame": "",
+      "ResourceType": "Bloom",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Lullily",
+      "name": "Lullily",
+      "Description": "A dusky blue flower, downturned like a dripping spout. When properly tended, Lullilies produce tiny drops of nectar dew. They taste of honey and spur a feeling of calm.",
+      "DropSource": "",
+      "rarity": "",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/Lulily.png",
+      "ImgInGame": "",
+      "ResourceType": "Ingredient",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Maiden's Veil",
+      "name": "Maiden's Veil",
+      "Description": "A reverent flower folded in prayer. Each veiling bloom, a well-wishing spirit. To be planted in the Eternium Gardens. A song played in Nightfold may take you there...",
+      "DropSource": "",
+      "rarity": "Common",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/MaidensVeil.png",
+      "ImgInGame": "",
+      "ResourceType": "Bloom",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Marifold",
+      "name": "Marifold",
+      "Description": "A chain of golden Minofold blooms, thought to represent the long line of ancestors who came before.<br>Give it roots, Envoy, take stake in a lineage anew. To be planted in the Eternium Gardens. A song played in Nightfold may take you there...",
+      "DropSource": "",
+      "rarity": "Common",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/Marifold.png",
+      "ImgInGame": "",
+      "ResourceType": "Bloom",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Molder Reed",
+      "name": "Molder Reed",
+      "Description": "A tall reed with dusty leaves. There are tales of an elder from Roods who could carve delicate flutes from its hollow stalk... What song would a Molder Reed sing.",
+      "DropSource": "",
+      "rarity": "",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/MolderReed.png",
+      "ImgInGame": "",
+      "ResourceType": "Ingredient",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Moonsteel Thread",
+      "name": "Moonsteel Thread",
+      "Description": "A small thread of Moonsteel, pulled molten-hot from quenching basin. An invention of the Steelsinger Kane, this sacred alloy was forged beneath Iridis' glow. When held taught and plucked, it rings a pitch high and true. Perfect for Bestitching.",
+      "DropSource": "",
+      "rarity": "Common",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/MoonsteelShard.png",
+      "ImgInGame": "",
+      "ResourceType": "Unique",
+      "internalId": "TransmogTokenTierA",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Mora's Kiss",
+      "name": "Mora's Kiss",
+      "Description": "A boldling bud that blossoms at dawn and wilts at dusk. A common ingredient among witches and healers, its inner-most whorl is though to hold a drop of Mora's courage.",
+      "DropSource": "",
+      "rarity": "Common",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/MorasKiss.png",
+      "ImgInGame": "",
+      "ResourceType": "Ingredient",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Moranite",
+      "name": "Moranite",
+      "Description": "An azure crystal. Rare as it is beautiful, Moranite glows with the cool blue of the second sun. 'Tis said to give its bearer luck... but only while hidden.",
+      "DropSource": "Avakot;Crypt Sarcophagus;Discharged Nimrod;Dendrit Chest#Alca's Bounty;Dendrit Chest#Glades;Dendrit Chest#Undercity;Factions#Glades;The Mendicant King;Nimrod;Factions#Undercity",
+      "rarity": "Rare",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/Organic06.png",
+      "ImgInGame": "",
+      "ResourceType": "Organic",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Mourning Bell",
+      "name": "Mourning Bell",
+      "Description": "A pearlescent flower with its face hung in mourning. On the 'eve the Fire King Fenn Jotar was laid to rest, The Duchess of Skelfland sent one hundred Mourning Bell bulbs across the Salz to be set at his statue's feet.",
+      "DropSource": "",
+      "rarity": "Common",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/MorningBell.png",
+      "ImgInGame": "",
+      "ResourceType": "Ingredient",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Neathcap",
+      "name": "Neathcap",
+      "Description": "A sap-gold mushroom native to the Neath'uns. It is supposed to have a similar effect to Wevetwoot Sap when ingested, though not without the side effect of extreme wambling.",
+      "DropSource": "",
+      "rarity": "Uncommon",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/DewSpore03.png",
+      "ImgInGame": "",
+      "ResourceType": "Ingredient",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Ode Graphite",
+      "name": "Ode Graphite",
+      "Description": "A lusterless ore. A strange mineral brought to Midrath by the Ode invasion. Though ashen and formless on its own, it seems to fortify Earthen alloys.",
+      "DropSource": "Crate;Barrel;Default Droptable;Hunter",
+      "rarity": "Common",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/Inorganic03.png",
+      "ImgInGame": "",
+      "ResourceType": "Inorganic",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Ode'n Synsylk",
+      "name": "Ode'n Synsylk",
+      "Description": "A web of alien fibers. Rough to the touch with a shifting sheen. Synsylk is like no textile ever crafted on earth... Yet its resistance to fire is rather useful.",
+      "DropSource": "Crate;Barrel;Default Droptable;Hunter",
+      "rarity": "Common",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/Textile.png",
+      "ImgInGame": "",
+      "ResourceType": "Textile",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Palladium",
+      "name": "Palladium",
+      "Description": "A silver-white metal of great value, traditionally used in the art of Steelsinging. Forming a seamless fusion twixt shattered parts, Palladium fortifies broken weapons when used as a joinery. +2 damage.",
+      "DropSource": "Unavailable",
+      "rarity": "",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/Kintsugi.png",
+      "ImgInGame": "",
+      "ResourceType": "Joinery",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Patch Leather",
+      "name": "Patch Leather",
+      "Description": "A worn yet well-tended strip of leather. 'Fore the Ode, Animal hide was more valued than pearl. 'Twas taken with reverence and preserved for generations. Today it is far too plentiful. Please Envoy, keep it well.",
+      "DropSource": "Avakot;Crate;Barrel;Basic Chest#Undercity;Dendrit Chest#Midrath;Echo Stone;Pots",
+      "rarity": "Common",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/Textile05.png",
+      "ImgInGame": "",
+      "ResourceType": "Textile",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Pensive's Quill",
+      "name": "Pensive's Quill",
+      "Description": "A sturdy quill with a well-tended nib. Made of speckled swan feather. Despite it's evident age, it seems rarely used.",
+      "DropSource": "",
+      "rarity": "",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/SpectersQuill.png",
+      "ImgInGame": "",
+      "ResourceType": "Quest",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Petrified Ichor",
+      "name": "Petrified Ichor",
+      "Description": "Ichor: the basis of all Ode'n life. When petrified it 'comes hollow and sharp, spreading coral-like to coat all it may.",
+      "DropSource": "Baliq;Banneret;Castellan Malrog;Discharged Nimrod;Etheldred The Weaver;Gruul Seeker Ruthos;Kabocha;Knight;Nimrod;Ode Chest;Ode Strongbox;Sinecure-errant Gawth;The Mendicant King;Thrice-bound Impidh;Vadagar Stag;Wraith of Wastes",
+      "rarity": "Rare",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/Inorganic04.png",
+      "ImgInGame": "",
+      "ResourceType": "Inorganic",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Pincer Shard",
+      "name": "Pincer Shard",
+      "Description": "A fetid material that resonates with a sharp, chitinous hum, and its fractured, russet-hued facets reflect visions of violent severance.",
+      "DropSource": "",
+      "rarity": "",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/MoteSlot.png",
+      "ImgInGame": "",
+      "ResourceType": "Ingredient",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Pollepod",
+      "name": "Pollepod",
+      "Description": "",
+      "DropSource": "",
+      "rarity": "",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/MoteSlot.png",
+      "ImgInGame": "",
+      "ResourceType": "Ingredient",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Queen's Folly",
+      "name": "Queen's Folly",
+      "Description": "A vibrant bloom with petals like the red sun. 'Tis said to have sprouted first upon the hallowed grave of the Midrathian Queen, Finngualla.",
+      "DropSource": "",
+      "rarity": "Common",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/QueensFolly.png",
+      "ImgInGame": "",
+      "ResourceType": "Ingredient",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Quenching Acid",
+      "name": "Quenching Acid",
+      "Description": "The fizzing fluid excreted from the Sourcap Mushroom. Scrape the sour dewdrops from its gills as Grandfa' taught you. Dilute a vial-full of acid in water to quench molten steel.",
+      "DropSource": "Crate;Barrel",
+      "rarity": "Common",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/Organic07.png",
+      "ImgInGame": "",
+      "ResourceType": "Organic",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Quicksilver",
+      "name": "Quicksilver",
+      "Description": "An incredibly smooth ball of silvern metal, traditionally used in the art of Steelsinging. Once thought to be stray bubbles, floated 'way from the silvern sea. Though this theory is disregarded by most Pensive's today, it would explain this ore's unnatural lightness. The ideal joinery for mending ranged weapons.",
+      "DropSource": "Basic Chest#Glades;Dendrit Chest#Glades;Etheldred The Weaver;Nimrod;The Mendicant King;Vadagar Stag",
+      "rarity": "",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/Quicksilver.png",
+      "ImgInGame": "",
+      "ResourceType": "Joinery",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "River Pearl",
+      "name": "River Pearl",
+      "Description": "An iridescent orb, cool as the claire. Found twixt the shells of the Spattling Clam. Rub your knuckles over its hinge and fish out its pesky pearl as Granfa' taught you.",
+      "DropSource": "Avakot;Banneret;Castellan Malrog;Echo Stone;Default Droptable;Etheldred The Weaver;Gruul Seeker Ruthos;Hunter;Kabocha;Knight;Thrice-bound Impidh;Wraith of Wastes",
+      "rarity": "Rare",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/RiverPearl.png",
+      "ImgInGame": "",
+      "ResourceType": "Unique",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Rotted Frond",
+      "name": "Rotted Frond",
+      "Description": "A crown of parasitic tendrils burrows from the skull of every doomed Sproutfolk. It is a desperate, daily ritual to sever the growth, for to allow the frond to mature is to have one's mind utterly consumed, while the discarded, writing fragments seek new flesh to corrupt.",
+      "DropSource": "Corrupted Sproutfolk;Corrupted Sproutfolk Brute",
+      "rarity": "Uncommon",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/CorruptedSproutFolkFond.png",
+      "ImgInGame": "",
+      "ResourceType": "Ingredient",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Sacred Shimmer",
+      "name": "Sacred Shimmer",
+      "Description": "The Sunlight trapped in morning dewdrops. The bonfire sparks upon fresh snow. Sacred shimmer can be found in all of Alca's nooks. The hard part is learning to harvest it.",
+      "DropSource": "Alca's Children;Kith of Kings;Silent Rose",
+      "rarity": "Uncommon",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/Gem2.png",
+      "ImgInGame": "",
+      "ResourceType": "Unique",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Sangelia",
+      "name": "Sangelia",
+      "Description": "A flower so named for its blood-red petals. Resembling three droplets spilt from an open wound, 'twas once a great threat to leave Sangelium at an enemy's door.",
+      "DropSource": "",
+      "rarity": "",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/Sangelia.png",
+      "ImgInGame": "",
+      "ResourceType": "Ingredient",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Sap Tap",
+      "name": "Sap Tap",
+      "Description": "A small spout for harvesting tree sap. Its ragged edges give the impression of having been carved by Poppet teeth.",
+      "DropSource": "",
+      "rarity": "Common",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/SapTap.png",
+      "ImgInGame": "",
+      "ResourceType": "Quest",
+      "internalId": "VerminiaSapTapperResourceGatheringTool",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Sappheline",
+      "name": "Sappheline",
+      "Description": "An amber gem. Precious as it is powerful, Sappheline is ever-warm to the touch. 'Tis said to grant its bearer the courage of the burning sun Saphene.",
+      "DropSource": "Avakot;Crypt Sarcophagus;Discharged Nimrod;Dendrit Chest#Alca's Bounty;Dendrit Chest#Glades;Dendrit Chest#Undercity;Factions#Glades;Nimrod;The Mendicant King;Factions#Undercity",
+      "rarity": "Rare",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/Organic08.png",
+      "ImgInGame": "",
+      "ResourceType": "Organic",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Scrap Brass",
+      "name": "Scrap Brass",
+      "Description": "A small scrap of brass. It might have been the lock or hinge of a kindly front door, yet unburned by Sinecure. Perhaps you may grant it purpose anew.",
+      "DropSource": "Avakot;Dendrit Chest#Oro's Well;Weapon Rack#Polearm Rack",
+      "rarity": "Uncommon",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/ScrapMetal.png",
+      "ImgInGame": "",
+      "ResourceType": "Metal",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Scrap Iron",
+      "name": "Scrap Iron",
+      "Description": "A small scrap of iron. It might have been a spoon or spade, yet unpillaged by Sinecure raids. Perhaps you may grant it purpose anew.",
+      "DropSource": "Avakot;Dendrit Chest#Oro's Well;Pots;Weapon Rack#Polearm Rack;Weapon Rack#Sword Rack",
+      "rarity": "Uncommon",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/ScrapMetal01.png",
+      "ImgInGame": "",
+      "ResourceType": "Metal",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Scrap Steel",
+      "name": "Scrap Steel",
+      "Description": "A small scrap of steel. It might have been a sterling sickle, yet unsmelted in Sinecure kiln. Perhaps you may grant it purpose anew.",
+      "DropSource": "Avakot;Weapon Rack#Sword Rack;Weapon Rack#Polearm Rack",
+      "rarity": "Uncommon",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/ScrapMetal02.png",
+      "ImgInGame": "",
+      "ResourceType": "Metal",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Silistyt",
+      "name": "Silistyt",
+      "Description": "A crystalline shard, like jagged glass. Artificially forged in the hearts of distant stars. Though otherwise indestructible, each fragment has a single, invisible crack. One precise strike may shatter the whole.",
+      "DropSource": "Baliq;Ode Chest;Ode Strongbox;Vadagar Stag",
+      "rarity": "Uncommon",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/Inorganic05.png",
+      "ImgInGame": "",
+      "ResourceType": "Inorganic",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Soulsbane",
+      "name": "Soulsbane",
+      "Description": "A sickly flower of deep purple petals. When brewed correctly, it has been known to cure ailments of the heart. But in the wrong hands, it can be coaxed into potent poisons.",
+      "DropSource": "",
+      "rarity": "Common",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/SoulsBane.png",
+      "ImgInGame": "",
+      "ResourceType": "Ingredient",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Spider's Thread",
+      "name": "Spider's Thread",
+      "Description": "An object festered with a putrid, jaundiced luminescence. Its turgid depths display the inexorable, liquefying rot of flesh.",
+      "DropSource": "Weaver",
+      "rarity": "Uncommon",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/SpiderBileSack.png",
+      "ImgInGame": "",
+      "ResourceType": "Ingredient",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Sproutfolk Frond",
+      "name": "Sproutfolk Frond",
+      "Description": "A frond of fernlike leaves grown upon the head of the common Sproutfolk. As it is quite out of fashion to grow out one's frond, most Sproutfolk groom them daily, discarding their trimmed tresses to the brush.",
+      "DropSource": "Avakot;Barrel;Basic Chest#Glades;Basic Chest#Undercity;Crate;Echo Stone;Dendrit Chest#Midrath",
+      "rarity": "Common",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/Textile04.png",
+      "ImgInGame": "",
+      "ResourceType": "Textile",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Sun Gold",
+      "name": "Sun Gold",
+      "Description": "A vibrant golden ore, traditionally used in the art of Steelsinging. So named for its bright reddish glint, Sun Gold grants broken weapons the luck of the stars when used as a joinery. +1 damage.",
+      "DropSource": "Unavailable",
+      "rarity": "",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/Kintsugi.png",
+      "ImgInGame": "",
+      "ResourceType": "Joinery",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Synod's Maiden",
+      "name": "Synod's Maiden",
+      "Description": "A morose stalk with a frilled blossom. Lavender in hue, though not in scent. Thought to resemble the many-layered gowns of Synod's wives.",
+      "DropSource": "",
+      "rarity": "Common",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/SynodsWit.png",
+      "ImgInGame": "",
+      "ResourceType": "Ingredient",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Synsylk Grappler",
+      "name": "Synsylk Grappler",
+      "Description": "A hooked device used by Sinecure soldiers to quickly glide between Alca's surface and the Skytowers above. Up and down they climb like so many spiders upon their threads.",
+      "DropSource": "",
+      "rarity": "",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/Key.png",
+      "ImgInGame": "",
+      "ResourceType": "Quest",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Thunderstone",
+      "name": "Thunderstone",
+      "Description": "",
+      "DropSource": "",
+      "rarity": "",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/ItemPickups-Pouch1.png",
+      "ImgInGame": "",
+      "ResourceType": "Quest",
+      "internalId": "BombItem",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Toe of Ode",
+      "name": "Toe of Ode",
+      "Description": "A purplish fungus recently discovered by Rutabag the Sproutfolk. It is named after a rather gruesome affliction which the Ode call Smogswell, in which their alien feet swell and bruise under the heavy Alcan atmosphere.",
+      "DropSource": "",
+      "rarity": "Uncommon",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/DewSpore05.png",
+      "ImgInGame": "",
+      "ResourceType": "Ingredient",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Verite",
+      "name": "Verite",
+      "Description": "A dull ore with a reddish tint. A fine metal, traditionally used in the art of Steelsinging. Verite was a favourite medium for talisman makers of the Quiet Years, as it was thought to bring stability in turbulent times. Today, it remains a reliable joinery for mending melee weapons.",
+      "DropSource": "Banneret;Dendrit Chest#Midrath;Knell Knight;Nimrod;Ode Chest;Ode Strongbox;The Mendicant King;Thrice-bound Impidh;Vadagar Stag",
+      "rarity": "",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/Verite.png",
+      "ImgInGame": "",
+      "ResourceType": "Joinery",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Weepin' Dris",
+      "name": "Weepin' Dris",
+      "Description": "A boldling bud that blossoms at dusk and wilts at dawn. A creature of the eve that drinks moonlight and dew. In its center, the spirit of Iridis hold green and true.",
+      "DropSource": "",
+      "rarity": "Common",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/WeepingDris.png",
+      "ImgInGame": "",
+      "ResourceType": "Ingredient",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Wevetwood Sap",
+      "name": "Wevetwood Sap",
+      "Description": "The golden sap of the Wevetroot forest. Sometimes referred to as Voicing Sap, 'tis said to share the wisdom of the elder trees with one who drinks it. Even a whiff has been known to trigger prophetic visions.",
+      "DropSource": "",
+      "rarity": "Rare",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/SapTap.png",
+      "ImgInGame": "",
+      "ResourceType": "Organic",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Whisprig",
+      "name": "Whisprig",
+      "Description": "A plank of wood hewn from a Whispwillow tree. Pliable and lightweight, 'tis apt for fish rod and ram prod alike.",
+      "DropSource": "Basic Chest#Undercity;Echo Stone;Dendrit Chest#Midrath;Crate;Barrel;Mockery;Impidh Mockery;Pots",
+      "rarity": "Common",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/Organic.png",
+      "ImgInGame": "",
+      "ResourceType": "Organic",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Will-o-bulb",
+      "name": "Will-o-bulb",
+      "Description": "The young sprouts of a Will-o-wing to be. Grandfa oft' said 'twas better to pluck them quick than give 'em a chance to fly off on ya. Though they are rather cute...",
+      "DropSource": "Will-o-wing",
+      "rarity": "Common",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/Organic01.png",
+      "ImgInGame": "",
+      "ResourceType": "Ingredient",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Will-o-frond",
+      "name": "Will-o-frond",
+      "Description": "A Will-o-wing's willowy wing! A distant relative of Sproutfolk, these little buggers are bane to foragers and farmers alike. Perhaps you'll find some use for their fluttery leaves, at least.",
+      "DropSource": "",
+      "rarity": "Uncommon",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/Nettles2.png",
+      "ImgInGame": "",
+      "ResourceType": "Ingredient",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Wintersquash Seed",
+      "name": "Wintersquash Seed",
+      "Description": "Sproutfolk consider the Wintersquash a cursed ancestor. In the harvest month of Ocfomar, young seedlings are subjected to grisly tales of an animate, cannibalistic squash named ‘Crone Cucurbita’ who savours those wandering too far afield the patch.",
+      "DropSource": "Wintersquash;Tattie-bogle",
+      "rarity": "Rare",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/Organic.png",
+      "ImgInGame": "",
+      "ResourceType": "Organic",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Wyrmwort",
+      "name": "Wyrmwort",
+      "Description": "A mushroom with glowing green pustules. Old Dendrit wivestales warn children not to touch its cap, lest the warts become contagious.",
+      "DropSource": "",
+      "rarity": "Uncommon",
+      "ImgAltInGame": "",
+      "ImgIcon": "https://api.avakot.org/v1/I/DewSpore01.png",
+      "ImgInGame": "",
+      "ResourceType": "Ingredient",
+      "internalId": "",
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
     }
-  },
-  {
-    "id": "omen-beast-components",
-    "name": "Omen Beast Components",
-    "type": "Resource",
-    "category": "Boss Material",
-    "description": "Dropped from major Omen Beasts. Required for high-tier weapons and cosmetics.",
-    "links": {
-      "miraheze": "https://soulframe.miraheze.org/Resources"
-    }
-  },
-  {
-    "id": "ironbloom-ore",
-    "name": "Ironbloom Ore",
-    "type": "Resource",
-    "category": "Material",
-    "description": "Found in rocky outcrops and caves. Highlighted in Soul Mode. Used to upgrade early weapons.",
-    "links": {
-      "fextralife": "https://soulframe.wiki.fextralife.com/Items"
-    }
-  }
-]
+  ]
+}
