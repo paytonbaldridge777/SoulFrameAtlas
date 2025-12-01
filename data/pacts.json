@@ -6,6 +6,33 @@
       "description": "'''When giants fall, when fail our brutes, 'Tis strength to turn to severed roots. And bear to look within for truce.''' Bear the burly pact of the Arbearer, Bromius. Be ward of the Wevetwood, regent of the Neath'uns' roots. Mighty, you must be. Of heft and heart alike.",
       "icon": "https://api.avakot.org/v1/I/BromiusPact.png",
       "abilities": "Rump Thump;Wevetroot;Song of Growth;Barkbare;Canopy's Blessing",
+      "abilitiesExpanded": [
+        {
+          "name": "",
+          "description": "Leap... And thump! Enemies in area of effect take damage. Nearby enemies are Staggered.",
+          "icon": "https://api.avakot.org/v1/I/CannonBallNoBacker.png"
+        },
+        {
+          "name": "",
+          "description": "Rouse the ancient Wevetroots. Enemies are caught in the thorns, taking damage over time.",
+          "icon": "https://api.avakot.org/v1/I/RootSpikeNoBacker.png"
+        },
+        {
+          "name": "",
+          "description": "By sacred song, seeds turn into saplings. Increased armour strength for you and nearby allies.",
+          "icon": "https://api.avakot.org/v1/I/ArmourPlatingNoBacker.png"
+        },
+        {
+          "name": "",
+          "description": "Like granting tree bark. Chance to steal armour strength from target on every attack.",
+          "icon": "https://api.avakot.org/v1/I/PowerFlowerNoBacker.png"
+        },
+        {
+          "name": "",
+          "description": "The trees sing in your favour. Small amount of damage blocked by armour is dealt to attacker.",
+          "icon": "https://api.avakot.org/v1/I/PowerFlowerNoBacker.png"
+        }
+      ],
       "bonus": {
         "hp": 80,
         "virtueType": "Courage",
@@ -50,6 +77,28 @@
       "description": "Royal tines thus graced in blue, Skyward bent to Mora true. Take ye the pact of Garren Rood, the great spirit stag of the Andurin Glades. <br>Bare blessing and burden of the Dendrit herds through bounty of seedtime and hollow of frostfall, both.",
       "icon": "https://api.avakot.org/v1/I/Pacts-Garren.png",
       "abilities": "Torment;Behest;Stampede;Heardheart;Righteous",
+      "abilitiesExpanded": [
+        {
+          "name": "",
+          "description": "A memory of corruption. Torment leeches Life from your foes and redistributes it to your allies.",
+          "icon": "https://api.avakot.org/v1/I/SapNoBacker.png"
+        },
+        {
+          "name": "",
+          "description": "Make them kneel. Enemies take damage at your command. Rend them weakened with lowered defenses.",
+          "icon": "https://api.avakot.org/v1/I/BlindingLightNoBacker.png"
+        },
+        {
+          "name": "",
+          "description": "Call forth the Stampede of Rood to charge through Enemies, stunning and doing damage.",
+          "icon": "https://api.avakot.org/v1/I/StampedeNoBacker.png"
+        },
+        {
+          "name": "",
+          "description": "Your rule is supreme. Regain Arcanic power to cast Behest more quickly.",
+          "icon": "https://api.avakot.org/v1/I/PowerFlowerNoBacker.png"
+        }
+      ],
       "bonus": {
         "hp": 20,
         "virtueType": "Spirit",
@@ -94,6 +143,33 @@
       "description": "Her ever-flame will she impart, To braving souls with burning hearts. Not life nor death will do you part. Take Mora's Hand, Envoy. Make a pact with the red sun. An honour once held only by the mighty Kings and Queens of Midrath is yours. Do not sully her flame.",
       "icon": "https://api.avakot.org/v1/I/Pacts-FennJotar.png",
       "abilities": "Ignus Wroth;Ember;Inferno;Hungry Flame;Smolder",
+      "abilitiesExpanded": [
+        {
+          "name": "",
+          "description": "Wake the old flame, set the earth ablaze. Enemies in area of effect take fire damage.",
+          "icon": "https://api.avakot.org/v1/I/FieryFissureNoBacker.png"
+        },
+        {
+          "name": "",
+          "description": "Do not stroke the quiet ember. Enemies that dare attack trigger a blast of defensive flame.",
+          "icon": "https://api.avakot.org/v1/I/BlazingArmorNoBacker.png"
+        },
+        {
+          "name": "",
+          "description": "Cast an arc of inferno. Bonus damage if the target is already on fire.",
+          "icon": "https://api.avakot.org/v1/I/PyroBlastNoBacker.png"
+        },
+        {
+          "name": "",
+          "description": "The fire within burns ever brighter. Taking fire damage increases Weapon damage.",
+          "icon": "https://api.avakot.org/v1/I/PowerFlowerNoBacker.png"
+        },
+        {
+          "name": "",
+          "description": "Targeted enemy heats up under your gaze, taking increasing fire damage till they burst into flame!",
+          "icon": "https://api.avakot.org/v1/I/PowerFlowerNoBacker.png"
+        }
+      ],
       "bonus": {
         "hp": 20,
         "virtueType": "Courage",
@@ -138,6 +214,33 @@
       "description": "'''Lightning cracks where thunder bodes. Voltaics strike against their own. Rebind your arm to Tempest Ode.''' Harness the power of Ode'n technology. Though freed you are, your Tempest training may prove useful still. May they rue the day they stole your frame.",
       "icon": "https://api.avakot.org/v1/I/Pacts-Ode.png",
       "abilities": "Seismor;Astra Sphere;Atmos Sphere;Lightning Strike;Gravitate",
+      "abilitiesExpanded": [
+        {
+          "name": "",
+          "description": "Bowl down foes with a Seismor. Raze the earth with a rolling ball of destruction.",
+          "icon": "https://api.avakot.org/v1/I/ShockwaveNoBacker.png"
+        },
+        {
+          "name": "",
+          "description": "A storm in a sphere. Enemies in the storm take extra Voltaic damage. Amped by Atmos.",
+          "icon": "https://api.avakot.org/v1/I/ShockBallNoBacker.png"
+        },
+        {
+          "name": "",
+          "description": "A covert device of Ode'n armour. Orbited by Atmos, you are shielded from strikes. Amped by Astra.",
+          "icon": "https://api.avakot.org/v1/I/PersonalShieldNoBacker.png"
+        },
+        {
+          "name": "",
+          "description": "Pound the earth with meteoric force. Deal additional Voltaic damage on downed Enemies.",
+          "icon": "https://api.avakot.org/v1/I/PowerFlowerNoBacker.png"
+        },
+        {
+          "name": "",
+          "description": "Latch onto your target with Synsylk thread. Fly forth and strike to deal additional Voltaic damage.",
+          "icon": "https://api.avakot.org/v1/I/PowerFlowerNoBacker.png"
+        }
+      ],
       "bonus": {
         "hp": 50,
         "virtueType": "Courage",
@@ -182,6 +285,33 @@
       "description": "Sleek as silvern, sharp as bone. Hear ye howls and know ye're home. For by her pact, no wolf be lone.<br>Be one with the Pack of the Omen shewolf Orengall. Prowl the Furthing packlands by light of Iridis, a silent assassin of fang and claw. May your bite be fierce and your love be fiercer.",
       "icon": "https://api.avakot.org/v1/I/Pacts-Orengal.png",
       "abilities": "Werewalker;Packhunter;Howl;Soulbound;Feral",
+      "abilitiesExpanded": [
+        {
+          "name": "",
+          "description": "Run free your silvern soul. Prowl ahead undetected, while your frame is left vulnerable.",
+          "icon": "https://api.avakot.org/v1/I/BecomeWolf.png"
+        },
+        {
+          "name": "",
+          "description": "Call upon Orengall&apos;s spirit Pack. Wolves deal damage and draw fire before retreating to Silvern.",
+          "icon": "https://api.avakot.org/v1/I/WhiteNoBacker-WolfPack.png"
+        },
+        {
+          "name": "",
+          "description": "Sing your blood song. Increased Courage and chance of Smite for you and your party. Ode dogs turn on their masters.",
+          "icon": "https://api.avakot.org/v1/I/WhiteNoBacker-WolfHowl.png"
+        },
+        {
+          "name": "",
+          "description": "Strength in numbers. Melee damage increases when an ally is in range. Can stack.",
+          "icon": "https://api.avakot.org/v1/I/PowerFlowerNoBacker.png"
+        },
+        {
+          "name": "",
+          "description": "Mother loves fiercely. Orengall leaps into combat. Increase chance with each point spent.",
+          "icon": "https://api.avakot.org/v1/I/PowerFlowerNoBacker.png"
+        }
+      ],
       "bonus": {
         "hp": 20,
         "virtueType": "Spirit",
@@ -226,6 +356,33 @@
       "description": "Roused by rain, was she, a new witch abloom in the garden of Eldveil. Share the pact of the Fey healer, Oscelda. Fend the thriving, tend the ailing, and mend the damned. Have Spirit, Envoy. For all of us living share the same breath. Forget it is so, and choke.",
       "icon": "https://api.avakot.org/v1/I/OsceldaP12.png",
       "abilities": "Bestone;Elderbloom;Phantom Flock;Tendril;Vernal Pool",
+      "abilitiesExpanded": [
+        {
+          "name": "",
+          "description": "Cement your Enemies to stone... for time. Apt to shatter under strikes or be free all the sooner.",
+          "icon": "https://api.avakot.org/v1/I/TurnToStoneNoBacker.png"
+        },
+        {
+          "name": "",
+          "description": "Reap the long-sowed seed of the Elderbloom. Restore Life to all Envoys within the puff of pollen.",
+          "icon": "https://api.avakot.org/v1/I/HealingWardNoBacker.png"
+        },
+        {
+          "name": "",
+          "description": "Hail Alca’s winged children. A flock of phantom songbirds attack your target. Singing revenge.",
+          "icon": "https://api.avakot.org/v1/I/RazorFlockNoBacker.png"
+        },
+        {
+          "name": "",
+          "description": "Alca defends her children. Enemy attacks may be met with creeping Tendrils, which slow movement and deal damage over time.",
+          "icon": "https://api.avakot.org/v1/I/PowerFlowerNoBacker.png"
+        },
+        {
+          "name": "",
+          "description": "Water is life. Arcanic powers recharge more quickly when standing in water.",
+          "icon": "https://api.avakot.org/v1/I/PowerFlowerNoBacker.png"
+        }
+      ],
       "bonus": {
         "hp": 0,
         "virtueType": "Spirit",
@@ -270,6 +427,33 @@
       "description": "Borne of a moonlight pond, was he, with an arrow ready-nocked. Take the pact of the Fey assassin, Sirin. Learn the trickster's glamour, wear the ranger's shroud. Have Grace, Envoy. For a well-aimed bolt may end a world. It has done so once before.",
       "icon": "https://api.avakot.org/v1/I/SirinP12.png",
       "abilities": "Picktrix Powder;Trick of the Light;Glamour;Shrouded;Pickpocket",
+      "abilitiesExpanded": [
+        {
+          "name": "",
+          "description": "Cast a cloud of magick dust. Enemies are blinded, leaving them vulnerable to sneak attacks.",
+          "icon": "https://api.avakot.org/v1/I/PocketSandNoBacker.png"
+        },
+        {
+          "name": "",
+          "description": "Set free your trickster shadow. A decoy draws enemy fire and explodes when foes get too close.",
+          "icon": "https://api.avakot.org/v1/I/DecoyNoBacker.png"
+        },
+        {
+          "name": "",
+          "description": "Cast a veil of magicks to hide you from your foes. Float like a nightmoth and attack from behind.",
+          "icon": "https://api.avakot.org/v1/I/InvisibilityNoBacker.png"
+        },
+        {
+          "name": "",
+          "description": "Child of the shadow. Threats glow clearly in the dark.",
+          "icon": "https://api.avakot.org/v1/I/PowerFlowerNoBacker.png"
+        },
+        {
+          "name": "",
+          "description": "Use your Glamour to sneak up on enemies and steal loot from their pockets.",
+          "icon": "https://api.avakot.org/v1/I/PowerFlowerNoBacker.png"
+        }
+      ],
       "bonus": {
         "hp": 40,
         "virtueType": "Grace",
@@ -314,6 +498,33 @@
       "description": "Chief of the Solist Warriors, was she, wreathed in flame and fury. Claim the pact of the Fey champion, Tethren. Raise your sword to sun, howl the Felling song. Have Courage, Envoy. For a warrior's heart is weapon and relief. And a human heart can crack.",
       "icon": "https://api.avakot.org/v1/I/TethrenP12.png",
       "abilities": "Fellust;Call of the Ancients;Clash;Conquerer;Last Stand",
+      "abilitiesExpanded": [
+        {
+          "name": "",
+          "description": "Summon the wrath of The Felling. Consecutive melee strikes deal accumulative damage.",
+          "icon": "https://api.avakot.org/v1/I/BloodlustNoBacker.png"
+        },
+        {
+          "name": "",
+          "description": "Sing the auld warsong. Attract attention from nearby enemies. Increased damage. Increased defense.",
+          "icon": "https://api.avakot.org/v1/I/RageNoBacker.png"
+        },
+        {
+          "name": "",
+          "description": "Sound your ensign. Stagger and Stun Enemies within your shockwave. Increased defense against Stagger.",
+          "icon": "https://api.avakot.org/v1/I/SteadyFeetNoBacker.png"
+        },
+        {
+          "name": "",
+          "description": "Each battle, a drop in the well of war. Absorb a small amount of Life from Enemies you fell.",
+          "icon": "https://api.avakot.org/v1/I/PowerFlowerNoBacker.png"
+        },
+        {
+          "name": "",
+          "description": "Hold your ground. Low Life triggers increased attack speed.",
+          "icon": "https://api.avakot.org/v1/I/PowerFlowerNoBacker.png"
+        }
+      ],
       "bonus": {
         "hp": 80,
         "virtueType": "Courage",
@@ -358,6 +569,33 @@
       "description": "Wyld soul from dolmen grave. Oscelda bless this Envoy frame. By finger snapped, in magick's name.<br>Share the pact of the Wyld witch, Oscelda. Fend the thriving, tend the ailing, and mend the damned. Have Spirit, Envoy. For all of us living share the same breath. Forget it is so, and choke.",
       "icon": "https://api.avakot.org/v1/I/WyldOscelda.png",
       "abilities": "Bestone;Elderbloom;Phantom Flock;Tendril;Vernal Pool",
+      "abilitiesExpanded": [
+        {
+          "name": "",
+          "description": "Cement your Enemies to stone... for time. Apt to shatter under strikes or be free all the sooner.",
+          "icon": "https://api.avakot.org/v1/I/TurnToStoneNoBacker.png"
+        },
+        {
+          "name": "",
+          "description": "Reap the long-sowed seed of the Elderbloom. Restore Life to all Envoys within the puff of pollen.",
+          "icon": "https://api.avakot.org/v1/I/HealingWardNoBacker.png"
+        },
+        {
+          "name": "",
+          "description": "Hail Alca’s winged children. A flock of phantom songbirds attack your target. Singing revenge.",
+          "icon": "https://api.avakot.org/v1/I/RazorFlockNoBacker.png"
+        },
+        {
+          "name": "",
+          "description": "Alca defends her children. Enemy attacks may be met with creeping Tendrils, which slow movement and deal damage over time.",
+          "icon": "https://api.avakot.org/v1/I/PowerFlowerNoBacker.png"
+        },
+        {
+          "name": "",
+          "description": "Water is life. Arcanic powers recharge more quickly when standing in water.",
+          "icon": "https://api.avakot.org/v1/I/PowerFlowerNoBacker.png"
+        }
+      ],
       "bonus": {
         "hp": 0,
         "virtueType": "Spirit",
@@ -383,6 +621,33 @@
       "description": "Wyld soul from dolmen grave. Sirin grace this Envoy frame. By plucked lash, by archer's aim.<br>Take the pact of the Wyld assassin, Sirin. Learn the trickster's glamour, wear the ranger's shroud. Have Grace, Envoy. For a well-aimed bolt may end a world. It has done so once before.",
       "icon": "https://api.avakot.org/v1/I/WyldSirin.png",
       "abilities": "Picktrix Powder;Trick of the Light;Glamour;Shrouded;Pickpocket",
+      "abilitiesExpanded": [
+        {
+          "name": "",
+          "description": "Cast a cloud of magick dust. Enemies are blinded, leaving them vulnerable to sneak attacks.",
+          "icon": "https://api.avakot.org/v1/I/PocketSandNoBacker.png"
+        },
+        {
+          "name": "",
+          "description": "Set free your trickster shadow. A decoy draws enemy fire and explodes when foes get too close.",
+          "icon": "https://api.avakot.org/v1/I/DecoyNoBacker.png"
+        },
+        {
+          "name": "",
+          "description": "Cast a veil of magicks to hide you from your foes. Float like a nightmoth and attack from behind.",
+          "icon": "https://api.avakot.org/v1/I/InvisibilityNoBacker.png"
+        },
+        {
+          "name": "",
+          "description": "Child of the shadow. Threats glow clearly in the dark.",
+          "icon": "https://api.avakot.org/v1/I/PowerFlowerNoBacker.png"
+        },
+        {
+          "name": "",
+          "description": "Use your Glamour to sneak up on enemies and steal loot from their pockets.",
+          "icon": "https://api.avakot.org/v1/I/PowerFlowerNoBacker.png"
+        }
+      ],
       "bonus": {
         "hp": 0,
         "virtueType": "Grace",
@@ -408,6 +673,33 @@
       "description": "Wyld soul from dolmen grave, Tethren brave this Envoy frame. By marrowed femur wreathed in flame.<br>Claim the pact of the Wyld warrior, Tethren. Raise your sword to sun, howl the Felling song. Have Courage, Envoy. For a warrior's heart is weapon and relief. And a human heart can crack.",
       "icon": "https://api.avakot.org/v1/I/WyldTethren.png",
       "abilities": "Fellust;Call of the Ancients;Clash;Conquerer;Last Stand",
+      "abilitiesExpanded": [
+        {
+          "name": "",
+          "description": "Summon the wrath of The Felling. Consecutive melee strikes deal accumulative damage.",
+          "icon": "https://api.avakot.org/v1/I/BloodlustNoBacker.png"
+        },
+        {
+          "name": "",
+          "description": "Sing the auld warsong. Attract attention from nearby enemies. Increased damage. Increased defense.",
+          "icon": "https://api.avakot.org/v1/I/RageNoBacker.png"
+        },
+        {
+          "name": "",
+          "description": "Sound your ensign. Stagger and Stun Enemies within your shockwave. Increased defense against Stagger.",
+          "icon": "https://api.avakot.org/v1/I/SteadyFeetNoBacker.png"
+        },
+        {
+          "name": "",
+          "description": "Each battle, a drop in the well of war. Absorb a small amount of Life from Enemies you fell.",
+          "icon": "https://api.avakot.org/v1/I/PowerFlowerNoBacker.png"
+        },
+        {
+          "name": "",
+          "description": "Hold your ground. Low Life triggers increased attack speed.",
+          "icon": "https://api.avakot.org/v1/I/PowerFlowerNoBacker.png"
+        }
+      ],
       "bonus": {
         "hp": 0,
         "virtueType": "Courage",
