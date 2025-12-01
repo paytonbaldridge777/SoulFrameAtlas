@@ -168,8 +168,39 @@ function setupGuideSearch() {
 }
 
 // =====================================================
-// WIKI: items + enemies + accordions + search
+// WIKI: items + enemies + pacts + accordions + search + tabs
 // =====================================================
+
+// Helper: build link HTML, including map links
+function buildWikiLinks(links, extraMapUrl) {
+  const parts = [];
+
+  if (links && typeof links === "object") {
+    for (const [key, url] of Object.entries(links)) {
+      if (!url) continue;
+      const lower = key.toLowerCase();
+      let label = "Open link";
+
+      if (lower.includes("map")) label = "Open map overlay";
+      else if (lower === "wiki") label = "Open wiki";
+      else if (lower.includes("guide")) label = "Open guide";
+      else if (lower.includes("external")) label = "Open external";
+
+      parts.push(
+        `<a href="${url}" target="_blank" rel="noreferrer">${label} →</a>`
+      );
+    }
+  }
+
+  // If there is a separate explicit map URL (e.g., mapLink / mapUrl)
+  if (extraMapUrl) {
+    parts.push(
+      `<a href="${extraMapUrl}" target="_blank" rel="noreferrer">Open map overlay →</a>`
+    );
+  }
+
+  return parts.length ? `<div class="wiki-item-links">${parts.join(" · ")}</div>` : "";
+}
 
 async function renderWikiItems() {
   const container = document.getElementById("wikiItemsContainer");
@@ -181,38 +212,48 @@ async function renderWikiItems() {
 
     container.innerHTML = items
       .map((item) => {
-        const linksHtml = item.links
-          ? Object.values(item.links || {})
-              .filter(Boolean)
-              .map(
-                (url) =>
-                  `<a href="${url}" target="_blank" rel="noreferrer">Full entry →</a>`
-              )
-              .join(" · ")
-          : "";
+        const name = item.name || item.id || "Unknown item";
+        const category = item.category || item.type || "";
+        const subtype = item.subtype || "";
+        const rarity = item.rarity || "";
+        const region = item.sourceRegion || "";
+        const summary = item.summary || item.description || item.notes || "";
 
-        const meta = [item.category, item.subtype, item.rarity]
-          .filter(Boolean)
-          .join(" · ");
+        const metaGrid = `
+          <div class="wiki-item-meta-grid">
+            ${category ? `<div><strong>Category:</strong> ${category}</div>` : ""}
+            ${subtype ? `<div><strong>Subtype:</strong> ${subtype}</div>` : ""}
+            ${rarity ? `<div><strong>Rarity:</strong> ${rarity}</div>` : ""}
+            ${region ? `<div><strong>Region:</strong> ${region}</div>` : ""}
+            ${
+              item.virtueAttunement
+                ? `<div><strong>Virtue attunement:</strong> ${item.virtueAttunement}</div>`
+                : ""
+            }
+          </div>
+        `;
 
-        const description = item.summary || item.description || item.notes || "";
+        // Try to find a map-related link: links.map, links.mapUrl, item.mapLink, item.mapUrl, etc.
+        const mapUrl =
+          (item.links && (item.links.map || item.links.mapUrl)) ||
+          item.mapLink ||
+          item.mapUrl ||
+          null;
+
+        const linksHtml = buildWikiLinks(item.links, mapUrl);
 
         return `
           <li class="wiki-item">
             <div class="wiki-item-header">
-              <div class="wiki-item-name">${item.name || item.id}</div>
+              <div class="wiki-item-name">${name}</div>
               <div class="wiki-item-meta">
-                ${meta}
+                ${[category, subtype, rarity].filter(Boolean).join(" · ")}
               </div>
             </div>
             <div class="wiki-item-details">
-              ${description}
-              ${
-                item.sourceRegion
-                  ? `<br /><span style="font-size:0.8rem;opacity:0.75;">Region: ${item.sourceRegion}</span>`
-                  : ""
-              }
-              ${linksHtml ? "<br />" + linksHtml : ""}
+              ${summary ? `<p>${summary}</p>` : ""}
+              ${metaGrid}
+              ${linksHtml}
             </div>
           </li>
         `;
@@ -241,38 +282,68 @@ async function renderWikiEnemies() {
 
     container.innerHTML = enemies
       .map((enemy) => {
+        const name = enemy.name || enemy.id || "Unknown enemy";
+        const type = enemy.type || "Enemy";
+        const faction = enemy.faction || "";
+        const threatTier = enemy.threatTier || "";
+        const region = enemy.primaryRegion || enemy.location || "";
+        const summary = enemy.summary || enemy.description || "";
+
         const metaParts = [];
-        if (enemy.faction) metaParts.push(enemy.faction);
-        if (enemy.type) metaParts.push(enemy.type);
-        if (enemy.threatTier) metaParts.push(enemy.threatTier);
+        if (faction) metaParts.push(faction);
+        if (type) metaParts.push(type);
+        if (threatTier) metaParts.push(threatTier);
         const meta = metaParts.join(" · ");
 
-        const linksHtml = enemy.links
-          ? Object.values(enemy.links || {})
-              .filter(Boolean)
-              .map(
-                (url) =>
-                  `<a href="${url}" target="_blank" rel="noreferrer">Full entry →</a>`
-              )
-              .join(" · ")
-          : "";
+        const metaGrid = `
+          <div class="wiki-item-meta-grid">
+            ${region ? `<div><strong>Region:</strong> ${region}</div>` : ""}
+            ${
+              enemy.cooldown != null
+                ? `<div><strong>Respawn / cooldown:</strong> ${enemy.cooldown}</div>`
+                : ""
+            }
+            ${
+              enemy.hash
+                ? `<div><strong>Hash:</strong> ${enemy.hash}</div>`
+                : ""
+            }
+            ${
+              enemy.onClick
+                ? `<div><strong>Marker:</strong> ${enemy.onClick}</div>`
+                : ""
+            }
+          </div>
+        `;
 
-        const description = enemy.summary || enemy.description || "";
+        const mapUrl =
+          (enemy.links && (enemy.links.map || enemy.links.mapUrl)) ||
+          enemy.mapLink ||
+          enemy.mapUrl ||
+          null;
+
+        const linksHtml = buildWikiLinks(enemy.links, mapUrl);
 
         return `
           <li class="wiki-item">
             <div class="wiki-item-header">
-              <div class="wiki-item-name">${enemy.name || enemy.id}</div>
+              <div class="wiki-item-name">${name}</div>
               <div class="wiki-item-meta">${meta}</div>
             </div>
             <div class="wiki-item-details">
-              ${description}
+              ${summary ? `<p>${summary}</p>` : ""}
+              ${metaGrid}
               ${
-                enemy.primaryRegion
-                  ? `<br /><span style="font-size:0.8rem;opacity:0.75;">Region: ${enemy.primaryRegion}</span>`
+                Array.isArray(enemy.notableTraits) && enemy.notableTraits.length
+                  ? `<p><strong>Notable traits:</strong> ${enemy.notableTraits.join(", ")}</p>`
                   : ""
               }
-              ${linksHtml ? "<br />" + linksHtml : ""}
+              ${
+                Array.isArray(enemy.notableDrops) && enemy.notableDrops.length
+                  ? `<p><strong>Notable drops:</strong> ${enemy.notableDrops.join(", ")}</p>`
+                  : ""
+              }
+              ${linksHtml}
             </div>
           </li>
         `;
@@ -301,6 +372,8 @@ async function renderWikiPacts() {
 
     container.innerHTML = pacts
       .map((pact) => {
+        const name = pact.name || pact.id || "Unknown pact";
+
         const virtue =
           (pact.bonus && pact.bonus.virtueType) ||
           pact.virtueOrder ||
@@ -317,28 +390,75 @@ async function renderWikiPacts() {
                   .join(", ")
               : "");
 
-        const description = pact.description || "";
+        const defense = pact.defense || {};
+        const bonus = pact.bonus || {};
+
+        const metaGrid = `
+          <div class="wiki-item-meta-grid">
+            ${
+              bonus.hp != null
+                ? `<div><strong>Bonus HP:</strong> ${bonus.hp}</div>`
+                : ""
+            }
+            ${
+              bonus.virtueType
+                ? `<div><strong>Virtue type:</strong> ${bonus.virtueType}</div>`
+                : ""
+            }
+            ${
+              bonus.virtueValue != null
+                ? `<div><strong>Virtue value:</strong> ${bonus.virtueValue}</div>`
+                : ""
+            }
+            ${
+              defense.magick != null
+                ? `<div><strong>Magick defence:</strong> ${defense.magick}</div>`
+                : ""
+            }
+            ${
+              defense.physical != null
+                ? `<div><strong>Physical defence:</strong> ${defense.physical}</div>`
+                : ""
+            }
+            ${
+              defense.stabilityIncrease != null
+                ? `<div><strong>Stability bonus:</strong> ${defense.stabilityIncrease}</div>`
+                : ""
+            }
+            ${
+              pact.unarmedDamage != null
+                ? `<div><strong>Unarmed damage:</strong> ${pact.unarmedDamage}</div>`
+                : ""
+            }
+          </div>
+        `;
+
+        const abilitiesBlock = abilitiesLine
+          ? `<p><strong>Abilities:</strong> ${abilitiesLine}</p>`
+          : (Array.isArray(pact.abilitiesExpanded) && pact.abilitiesExpanded.length
+              ? `<ul style="margin-top:0.3rem;">${pact.abilitiesExpanded
+                  .map(
+                    (a) =>
+                      `<li><strong>${a.name}:</strong> ${a.description || ""}</li>`
+                  )
+                  .join("")}</ul>`
+              : "");
+
+        const linksHtml = buildWikiLinks(pact.links);
 
         return `
           <li class="wiki-item">
             <div class="wiki-item-header">
-              <div class="wiki-item-name">${pact.name || pact.id}</div>
+              <div class="wiki-item-name">${name}</div>
               <div class="wiki-item-meta">
                 ${roleGuess}
               </div>
             </div>
             <div class="wiki-item-details">
-              ${description}
-              ${
-                virtue
-                  ? `<br /><span style="font-size:0.8rem;opacity:0.75;">Virtue focus: ${virtue}</span>`
-                  : ""
-              }
-              ${
-                abilitiesLine
-                  ? `<br /><span style="font-size:0.8rem;opacity:0.75;">Abilities: ${abilitiesLine}</span>`
-                  : ""
-              }
+              ${pact.description ? `<p>${pact.description}</p>` : ""}
+              ${metaGrid}
+              ${abilitiesBlock}
+              ${linksHtml}
             </div>
           </li>
         `;
@@ -357,23 +477,28 @@ async function renderWikiPacts() {
   }
 }
 
+// Accordion behavior: click to expand one at a time within a list
 function setupWikiAccordions() {
-  const wikiItems = document.querySelectorAll(".wiki-item");
-  if (!wikiItems.length) return;
+  const lists = document.querySelectorAll(
+    "#wikiItemsContainer, #wikiEnemiesContainer, #wikiPactsContainer"
+  );
+  if (!lists.length) return;
 
-  wikiItems.forEach((item) => {
-    item.addEventListener("click", () => {
-      const parentList = item.parentElement;
-      parentList
-        .querySelectorAll(".wiki-item")
-        .forEach((other) => {
-          if (other !== item) other.classList.remove("expanded");
-        });
-      item.classList.toggle("expanded");
+  lists.forEach((list) => {
+    list.querySelectorAll(".wiki-item").forEach((item) => {
+      item.addEventListener("click", () => {
+        list
+          .querySelectorAll(".wiki-item")
+          .forEach((other) => {
+            if (other !== item) other.classList.remove("expanded");
+          });
+        item.classList.toggle("expanded");
+      });
     });
   });
 }
 
+// Search across whatever is currently visible
 function setupWikiSearch() {
   const searchInput = document.getElementById("wikiSearch");
   if (!searchInput) return;
@@ -385,11 +510,51 @@ function setupWikiSearch() {
     );
 
     allItems.forEach((item) => {
+      const panel = item.closest(".wiki-panel");
+      const panelHidden = panel && panel.dataset.hidden === "true";
+      if (panelHidden) {
+        // respect tab hiding
+        return;
+      }
       const text = (item.textContent || "").toLowerCase();
       item.style.display = !query || text.includes(query) ? "" : "none";
     });
   });
 }
+
+// Tabs: filter which panels are shown
+function setupWikiTabs() {
+  const tabs = document.querySelectorAll(".wiki-tab");
+  const panels = document.querySelectorAll(".wiki-panel");
+  if (!tabs.length || !panels.length) return;
+
+  function applyTab(target) {
+    tabs.forEach((t) => {
+      t.classList.toggle("active", t.dataset.target === target);
+    });
+
+    panels.forEach((panel) => {
+      const panelKey = panel.dataset.panel;
+      let hidden = false;
+
+      if (target === "all") hidden = false;
+      else hidden = panelKey !== target;
+
+      panel.dataset.hidden = hidden ? "true" : "false";
+      panel.style.display = hidden ? "none" : "";
+    });
+  }
+
+  // Default: "all"
+  applyTab("all");
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      applyTab(tab.dataset.target || "all");
+    });
+  });
+}
+
 
 // =====================================================
 // REGIONS: render Region Overview
@@ -933,14 +1098,14 @@ async function renderBuildLab() {
     renderGuides(),
     renderWikiItems(),
     renderWikiEnemies(),
-    renderWikiPacts(),  
+    renderWikiPacts(),   // ← add this
     renderRegions(),
     renderBuildLab()
   ]);
 
   setupGuideFilters();
   setupGuideSearch();
+  setupWikiTabs();        // ← new
   setupWikiAccordions();
   setupWikiSearch();
 })();
-
