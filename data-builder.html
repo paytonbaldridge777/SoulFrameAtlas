@@ -2,27 +2,58 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Pacts Data Builder</title>
+  <title>Data Builder – Pacts / Enemies / Items</title>
   <style>
-    body { font-family: Arial; padding: 20px; background: #111; color: #eee; }
-    textarea { width: 100%; height: 300px; margin-top: 10px; }
-    button { padding: 10px 15px; margin-right: 10px; }
+    body { font-family: Arial, sans-serif; padding: 20px; background: #111; color: #eee; }
+    h1, h2 { margin-bottom: 0.4rem; }
+    p { margin-top: 0.2rem; margin-bottom: 0.8rem; }
+    button { padding: 8px 12px; margin: 4px 4px 8px 0; cursor: pointer; }
+    textarea { width: 100%; height: 320px; margin-top: 10px; font-family: monospace; font-size: 0.85rem; }
+    .section { margin-bottom: 1.5rem; }
+    .tag { display: inline-block; padding: 2px 6px; border-radius: 4px; background: #333; font-size: 0.8rem; margin-left: 6px; }
   </style>
 </head>
-
 <body>
-  <h1>Pacts Data Builder</h1>
+  <h1>Data Builder</h1>
+  <p>
+    Query Avakot’s GraphQL API and normalize data into our Atlas JSON files.
+    <span class="tag">Pacts</span>
+    <span class="tag">Enemies</span>
+    <span class="tag">Items</span>
+  </p>
 
-  <p>This tool queries the Avakot GraphQL API, normalizes the data, and generates a JSON file matching our Soulframe Atlas schema.</p>
+  <div class="section">
+    <h2>1. Choose Data Type & Run Query</h2>
+    <button id="runPactsBtn">Run Pacts Query</button>
+    <button id="runEnemiesBtn">Run Enemies Query</button>
+    <button id="runItemsBtn">Run Items Query</button>
+    <p id="status" style="font-size:0.9rem; opacity:0.8;"></p>
+  </div>
 
-  <button id="runQueryBtn">Run Pacts Query</button>
-<button id="saveBtn" disabled>Save to Repo</button>
+  <div class="section">
+    <h2>2. Generated JSON (Review)</h2>
+    <textarea id="output" spellcheck="false"></textarea>
+  </div>
 
-<textarea id="output"></textarea>
+  <div class="section">
+    <h2>3. Save</h2>
+    <button id="saveBtn" disabled>Save to Repo</button>
+    <span style="font-size:0.9rem; opacity:0.8;">Updates the correct file in <code>/data/*.json</code></span>
+  </div>
 
 <script>
 const gqlEndpoint = "https://api.avakot.org/v1/gql";
-const workerEndpoint = "https://update-pacts.paytonbaldridge.workers.dev"; // update this
+// CHANGE THIS to your real worker URL (no /update-pacts now, just base):
+const workerBase = "https://YOUR-WORKER-NAME.YOURACCOUNT.workers.dev/update-data";
+
+let generatedJSON = "";
+let currentTarget = null; // "pacts" | "enemies" | "items"
+
+const statusEl = document.getElementById("status");
+const outputEl = document.getElementById("output");
+const saveBtn = document.getElementById("saveBtn");
+
+// --- PACTS ---
 
 const pactsQuery = `
 query GetPacts {
@@ -32,6 +63,11 @@ query GetPacts {
     Description
     Icon
     Abilities
+    AbilitiesExpanded {
+      Name
+      Description
+      Icon
+    }
     BonusHP
     BonusVirtueType
     BonusVirtueValue
@@ -46,72 +82,210 @@ query GetPacts {
 }
 `;
 
-let generatedJSON = "";
-
-async function runPactsQuery() {
-  const response = await fetch(gqlEndpoint, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ query: pactsQuery })
-  });
-
-  const data = await response.json();
-  const pactsRaw = data?.data?.pacts || [];
-
-  // Example normalization – tweak later as you like
-  const normalized = pactsRaw.map(p => ({
-    id: p.ItemID || "",
-    name: p.Ingame || p.ItemID || "",
-    description: p.Description || "",
-    icon: p.Icon || "",
-    abilities: p.Abilities || "",
-    bonus: {
-      hp: p.BonusHP || 0,
-      virtueType: p.BonusVirtueType || "",
-      virtueValue: p.BonusVirtueValue || 0
-    },
-    defense: {
-      magick: p.MagickDefence || 0,
-      physical: p.PhysicalDefence || 0,
-      stabilityIncrease: p.StabilityIncrease || 0
-    },
-    unarmedDamage: p.UnnarmedDmg || 0,
-    virtueOrder: p.VirtueOrder || "",
-    craft: p.Craft || {},
-    internalId: p.InternalID || "",
-    links: { wiki: "", externalGuide: "" }
-  }));
-
-  generatedJSON = JSON.stringify({ pacts: normalized }, null, 2);
-  document.getElementById("output").value = generatedJSON;
-
-  document.getElementById("saveBtn").disabled = !generatedJSON;
+function normalizePacts(pactsRaw) {
+  return {
+    pacts: pactsRaw.map(p => ({
+      id: p.ItemID || "",
+      name: p.Ingame || p.ItemID || "",
+      description: p.Description || "",
+      icon: p.Icon || "",
+      abilities: p.Abilities || "",
+      abilitiesExpanded: (p.AbilitiesExpanded || []).map(a => ({
+        name: a.Name || "",
+        description: a.Description || "",
+        icon: a.Icon || ""
+      })),
+      bonus: {
+        hp: p.BonusHP ?? 0,
+        virtueType: p.BonusVirtueType || "",
+        virtueValue: p.BonusVirtueValue ?? 0
+      },
+      defense: {
+        magick: p.MagickDefence ?? 0,
+        physical: p.PhysicalDefence ?? 0,
+        stabilityIncrease: p.StabilityIncrease ?? 0
+      },
+      unarmedDamage: p.UnnarmedDmg ?? 0,
+      virtueOrder: p.VirtueOrder || "",
+      craft: p.Craft || {},
+      internalId: p.InternalID || "",
+      links: {
+        wiki: "",
+        externalGuide: ""
+      }
+    }))
+  };
 }
 
-async function saveToRepo() {
-  if (!generatedJSON) return;
+// --- ENEMIES ---
 
-  const res = await fetch(workerEndpoint, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: generatedJSON
-  });
+// NOTE: You may need to adjust the root field name and fields below based on the actual schema.
+// This is a TEMPLATE; tweak `enemiesQuery` and `normalizeEnemies` to match Avakot's real enemy fields.
+const enemiesQuery = `
+query GetEnemies {
+  worldBosses {
+    cooldown
+    hash
+    icon
+    id
+    Region
+    name
+    onClick
+  }
+}
+`;
 
-  if (res.ok) {
-    alert("pacts.json updated in repo ✅");
+// Map worldBosses into our enemies.json-style structure
+function normalizeWorldBosses(bossesRaw) {
+  return {
+    enemies: bossesRaw.map(b => ({
+      id: b.id || "",
+      name: b.name || b.id || "",
+      type: "World Boss",
+      faction: "",               // can be filled in manually later
+      threatTier: "World Boss",
+      primaryRegion: b.location || "",
+      summary: "",               // Atlas-original summary to be written later
+      notableTraits: [],
+      notableDrops: [],
+      icon: b.icon || "",
+      cooldown: b.cooldown ?? null,
+      hash: b.hash || "",
+      onClick: b.onClick || "",
+      links: {
+        wiki: "",
+        externalGuide: ""
+      }
+    }))
+  };
+}
+
+// --- ITEMS ---
+
+// NOTE: Same as above – adjust field names to match actual Avakot schema for items/resources.
+const itemsQuery = `
+query GetItems {
+  items {
+    ItemID
+    Ingame
+    Description
+    Category
+    Subtype
+    Rarity
+    Region
+    InternalID
+  }
+}
+`;
+
+function normalizeItems(itemsRaw) {
+  return {
+    items: itemsRaw.map(it => ({
+      id: it.ItemID || "",
+      name: it.Ingame || it.ItemID || "",
+      category: it.Category || "",
+      subtype: it.Subtype || "",
+      rarity: it.Rarity || "",
+      virtueAttunement: null,
+      sourceRegion: it.Region || "",
+      summary: it.Description || "",
+      notes: "",
+      internalId: it.InternalID || "",
+      links: {
+        wiki: "",
+        externalGuide: ""
+      }
+    }))
+  };
+}
+
+// --- GENERIC FETCHER ---
+
+async function runQuery(target) {
+  let query;
+  let normalizer;
+
+  if (target === "pacts") {
+    query = pactsQuery;
+    normalizer = normalizePacts;
+  } else if (target === "enemies") {
+    query = enemiesQuery;
+    normalizer = normalizeEnemies;
+  } else if (target === "items") {
+    query = itemsQuery;
+    normalizer = normalizeItems;
   } else {
-    const text = await res.text();
-    alert("Failed to update pacts.json ❌\n" + text);
+    console.error("Unknown target", target);
+    return;
+  }
+
+  currentTarget = target;
+  saveBtn.disabled = true;
+  statusEl.textContent = `Running ${target} query...`;
+
+  try {
+    const res = await fetch(gqlEndpoint, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ query })
+    });
+
+    const json = await res.json();
+    if (!json.data) {
+      console.error("No data from API:", json);
+      statusEl.textContent = `Error: no data returned for ${target}. Check console.`;
+      return;
+    }
+
+    const rootKey = Object.keys(json.data)[0]; // e.g. "pacts", "enemies", "items"
+    const rawArray = json.data[rootKey] || [];
+    const normalized = normalizer(rawArray);
+    generatedJSON = JSON.stringify(normalized, null, 2);
+    outputEl.value = generatedJSON;
+    saveBtn.disabled = false;
+    statusEl.textContent = `Loaded and normalized ${rawArray.length} ${target}.`;
+  } catch (err) {
+    console.error("Error running query:", err);
+    statusEl.textContent = `Error running ${target} query. See console.`;
   }
 }
 
-document.getElementById("runQueryBtn").onclick = runPactsQuery;
-document.getElementById("saveBtn").onclick = saveToRepo;
+async function saveToRepo() {
+  if (!generatedJSON || !currentTarget) {
+    return;
+  }
+
+  statusEl.textContent = `Saving ${currentTarget}.json to repo...`;
+
+  try {
+    const url = `${workerBase}?target=${encodeURIComponent(currentTarget)}`;
+
+    const res = await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: generatedJSON
+    });
+
+    if (!res.ok) {
+      const text = await res.text();
+      statusEl.textContent = `Failed to save ${currentTarget}.json`;
+      alert("Failed to update file:\n" + text);
+      return;
+    }
+
+    statusEl.textContent = `Successfully updated ${currentTarget}.json ✅`;
+    alert(`${currentTarget}.json updated in repo ✅`);
+  } catch (err) {
+    console.error("Error saving:", err);
+    statusEl.textContent = `Error saving ${currentTarget}.json. See console.`;
+  }
+}
+
+// Bind buttons
+document.getElementById("runPactsBtn").onclick = () => runQuery("pacts");
+document.getElementById("runEnemiesBtn").onclick = () => runQuery("enemies");
+document.getElementById("runItemsBtn").onclick = () => runQuery("items");
+saveBtn.onclick = saveToRepo;
 </script>
-
-
 </body>
 </html>
-
-
-
