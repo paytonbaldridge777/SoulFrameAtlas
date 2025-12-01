@@ -5,8 +5,8 @@
       "name": "Gruul Seeker Ruthos",
       "type": "World Boss",
       "faction": "",
-      "threatTier": "World Boss",
-      "primaryRegion": "https://soulmap.avakot.org/P12?loc=gruul-seeker-ruthos",
+      "threatTier": "",
+      "primaryRegion": "",
       "summary": "",
       "notableTraits": [],
       "notableDrops": [],
@@ -15,6 +15,7 @@
       "hash": "de5b478a3cbe78ff2bffd301aeed3884043e4575178bd194558895732b50d84c",
       "onClick": "",
       "links": {
+        "map": "https://soulmap.avakot.org/P12?loc=gruul-seeker-ruthos",
         "wiki": "https://wiki.avakot.org/Gruul_Seeker_Ruthos",
         "externalGuide": ""
       }
@@ -24,8 +25,8 @@
       "name": "Knell Knight",
       "type": "World Boss",
       "faction": "",
-      "threatTier": "World Boss",
-      "primaryRegion": "https://soulmap.avakot.org/P12?loc=knell-knight",
+      "threatTier": "",
+      "primaryRegion": "",
       "summary": "",
       "notableTraits": [],
       "notableDrops": [],
@@ -34,6 +35,7 @@
       "hash": "c8081beba138e435200df1de7f54a07aec34f3d5c1b53e746556b70d72f2919e",
       "onClick": "",
       "links": {
+        "map": "https://soulmap.avakot.org/P12?loc=knell-knight",
         "wiki": "https://wiki.avakot.org/Knell_Knight",
         "externalGuide": ""
       }
@@ -43,8 +45,8 @@
       "name": "Sinecure-errant Gawth",
       "type": "World Boss",
       "faction": "",
-      "threatTier": "World Boss",
-      "primaryRegion": "https://soulmap.avakot.org/P12?loc=sinecure-errant-gawth",
+      "threatTier": "",
+      "primaryRegion": "",
       "summary": "",
       "notableTraits": [],
       "notableDrops": [],
@@ -53,6 +55,7 @@
       "hash": "3d2f0298598babe6fa1dc19b57b89e69ee4e892588a67185a0729468b09c77b5",
       "onClick": "",
       "links": {
+        "map": "https://soulmap.avakot.org/P12?loc=sinecure-errant-gawth",
         "wiki": "https://wiki.avakot.org/Sinecure-errant_Gawth",
         "externalGuide": ""
       }
@@ -62,8 +65,8 @@
       "name": "Etheldred the Weaver",
       "type": "World Boss",
       "faction": "",
-      "threatTier": "World Boss",
-      "primaryRegion": "https://soulmap.avakot.org/P12?loc=etheldred-the-weaver",
+      "threatTier": "",
+      "primaryRegion": "",
       "summary": "",
       "notableTraits": [],
       "notableDrops": [],
@@ -72,6 +75,7 @@
       "hash": "613571a15c143642b1ac6c3ba43e1a35a95536a0e324db172fddf9a2f9b44948",
       "onClick": "",
       "links": {
+        "map": "https://soulmap.avakot.org/P12?loc=etheldred-the-weaver",
         "wiki": "https://wiki.avakot.org/Etheldred_The_Weaver",
         "externalGuide": ""
       }
@@ -81,8 +85,8 @@
       "name": "Fort Curlail Siege",
       "type": "World Boss",
       "faction": "",
-      "threatTier": "World Boss",
-      "primaryRegion": "https://soulmap.avakot.org/P12?loc=fort-curlail",
+      "threatTier": "",
+      "primaryRegion": "",
       "summary": "",
       "notableTraits": [],
       "notableDrops": [],
@@ -91,6 +95,7 @@
       "hash": "e73e8d9960c81ac5160c1f4be26f4d6d1f7df4af9d2bbd514e95b03c21793315",
       "onClick": "",
       "links": {
+        "map": "https://soulmap.avakot.org/P12?loc=fort-curlail",
         "wiki": "https://wiki.avakot.org/Fort_Curlail",
         "externalGuide": ""
       }
@@ -100,8 +105,8 @@
       "name": "Kabocha",
       "type": "World Boss",
       "faction": "",
-      "threatTier": "World Boss",
-      "primaryRegion": "https://soulmap.avakot.org/P12?loc=kabocha",
+      "threatTier": "",
+      "primaryRegion": "",
       "summary": "",
       "notableTraits": [],
       "notableDrops": [],
@@ -110,6 +115,7 @@
       "hash": "b5e7ecc8cf9911575b40a70d500f0d6e9e46f40556a70a64bf5c3ec43ffc9e2b",
       "onClick": "",
       "links": {
+        "map": "https://soulmap.avakot.org/P12?loc=kabocha",
         "wiki": "https://wiki.avakot.org/Kabocha",
         "externalGuide": ""
       }
@@ -119,8 +125,8 @@
       "name": "Thrice-Bound Impidh",
       "type": "World Boss",
       "faction": "",
-      "threatTier": "World Boss",
-      "primaryRegion": "https://soulmap.avakot.org/P12?loc=thricebound-impidh",
+      "threatTier": "",
+      "primaryRegion": "",
       "summary": "",
       "notableTraits": [],
       "notableDrops": [],
@@ -129,6 +135,7 @@
       "hash": "cd4044e86e8aed35dcc379acb8fa2500bd73d5bef89ad9dc2b9183b18152d297",
       "onClick": "",
       "links": {
+        "map": "https://soulmap.avakot.org/P12?loc=thricebound-impidh",
         "wiki": "https://wiki.avakot.org/Thrice-bound_Impidh",
         "externalGuide": ""
       }
@@ -138,8 +145,8 @@
       "name": "Fort Kearnhold Siege",
       "type": "World Boss",
       "faction": "",
-      "threatTier": "World Boss",
-      "primaryRegion": "https://soulmap.avakot.org/P12?loc=fort-kearnhold",
+      "threatTier": "",
+      "primaryRegion": "",
       "summary": "",
       "notableTraits": [],
       "notableDrops": [],
@@ -148,6 +155,7 @@
       "hash": "ececb20ed2df04f89d58e3d173e769fcf437ee2ca7227114ee662a2ca332c8cc",
       "onClick": "",
       "links": {
+        "map": "https://soulmap.avakot.org/P12?loc=fort-kearnhold",
         "wiki": "https://wiki.avakot.org/Fort_Kearnhold",
         "externalGuide": ""
       }
@@ -157,8 +165,8 @@
       "name": "Discharged Nimrod",
       "type": "World Boss",
       "faction": "",
-      "threatTier": "World Boss",
-      "primaryRegion": "https://soulmap.avakot.org/P12?loc=discharged-nimrod",
+      "threatTier": "",
+      "primaryRegion": "",
       "summary": "",
       "notableTraits": [],
       "notableDrops": [],
@@ -167,6 +175,7 @@
       "hash": "a05f7816b375c95fa84202b4b7e0ebae0ffa11d8e13ebc70e9199c7ba643e046",
       "onClick": "",
       "links": {
+        "map": "https://soulmap.avakot.org/P12?loc=discharged-nimrod",
         "wiki": "https://wiki.avakot.org/Discharged_Nimrod",
         "externalGuide": ""
       }
@@ -176,8 +185,8 @@
       "name": "Wraith of Wastes",
       "type": "World Boss",
       "faction": "",
-      "threatTier": "World Boss",
-      "primaryRegion": "https://soulmap.avakot.org/P12?loc=wraith-of-wastes",
+      "threatTier": "",
+      "primaryRegion": "",
       "summary": "",
       "notableTraits": [],
       "notableDrops": [],
@@ -186,6 +195,7 @@
       "hash": "78c6e474eb7ed88296b17d0dac2d4372262d4aac284fc77c6f2f86fe86b23f41",
       "onClick": "",
       "links": {
+        "map": "https://soulmap.avakot.org/P12?loc=wraith-of-wastes",
         "wiki": "https://wiki.avakot.org/Wraith_of_Wastes",
         "externalGuide": ""
       }
@@ -195,8 +205,8 @@
       "name": "Mendicant King",
       "type": "World Boss",
       "faction": "",
-      "threatTier": "World Boss",
-      "primaryRegion": "https://soulmap.avakot.org/P12?loc=mendicant-king",
+      "threatTier": "",
+      "primaryRegion": "",
       "summary": "",
       "notableTraits": [],
       "notableDrops": [],
@@ -205,6 +215,7 @@
       "hash": "86049e779095732213ab590a00f4c639addaf13d99de6a656ab0c2cb99f81a05",
       "onClick": "",
       "links": {
+        "map": "https://soulmap.avakot.org/P12?loc=mendicant-king",
         "wiki": "https://wiki.avakot.org/The_Mendicant_King",
         "externalGuide": ""
       }
@@ -214,8 +225,8 @@
       "name": "[Dungeon] Gruul Seeker Sontaro",
       "type": "World Boss",
       "faction": "",
-      "threatTier": "World Boss",
-      "primaryRegion": "https://soulmap.avakot.org/P12?loc=undercity-of-dermak&index=6",
+      "threatTier": "",
+      "primaryRegion": "",
       "summary": "",
       "notableTraits": [],
       "notableDrops": [],
@@ -224,6 +235,7 @@
       "hash": "089fcfe939f1350187721613d93143bba6658e9c75037f6ed0be07807b130fb7",
       "onClick": "",
       "links": {
+        "map": "https://soulmap.avakot.org/P12?loc=undercity-of-dermak&index=6",
         "wiki": "https://wiki.avakot.org/Gruul_Seeker_Sontaro",
         "externalGuide": ""
       }
@@ -233,8 +245,8 @@
       "name": "[Dungeon] Fore-Feller Hewyl",
       "type": "World Boss",
       "faction": "",
-      "threatTier": "World Boss",
-      "primaryRegion": "https://soulmap.avakot.org/P12?loc=undercity-of-dermak&index=12",
+      "threatTier": "",
+      "primaryRegion": "",
       "summary": "",
       "notableTraits": [],
       "notableDrops": [],
@@ -243,6 +255,7 @@
       "hash": "0a1e3094e8a2e96953975979e8832cafed6c003d5303ec6c867d0ae132ecdb8b",
       "onClick": "",
       "links": {
+        "map": "https://soulmap.avakot.org/P12?loc=undercity-of-dermak&index=12",
         "wiki": "https://wiki.avakot.org/Fore-Feller_Hewyl",
         "externalGuide": ""
       }
@@ -252,8 +265,8 @@
       "name": "[Dungeon] Sinecure-errant Vella",
       "type": "World Boss",
       "faction": "",
-      "threatTier": "World Boss",
-      "primaryRegion": "https://soulmap.avakot.org/P12?loc=undercity-of-dermak&index=8",
+      "threatTier": "",
+      "primaryRegion": "",
       "summary": "",
       "notableTraits": [],
       "notableDrops": [],
@@ -262,6 +275,7 @@
       "hash": "4ccd7f9f0234235c8bdd7506bf87d7f6c385154372cc8c9444c384ef1bf7a1c9",
       "onClick": "",
       "links": {
+        "map": "https://soulmap.avakot.org/P12?loc=undercity-of-dermak&index=8",
         "wiki": "https://wiki.avakot.org/Sinecure-errant_Vella",
         "externalGuide": ""
       }
@@ -271,8 +285,8 @@
       "name": "[Dungeon] Gourdo",
       "type": "World Boss",
       "faction": "",
-      "threatTier": "World Boss",
-      "primaryRegion": "https://soulmap.avakot.org/P12?loc=neathuns&index=4",
+      "threatTier": "",
+      "primaryRegion": "",
       "summary": "",
       "notableTraits": [],
       "notableDrops": [],
@@ -281,6 +295,7 @@
       "hash": "3c09fadb366fb3014bd34bb56bc77e49198ed7a57b2f4213355ff05f9aa45d46",
       "onClick": "",
       "links": {
+        "map": "https://soulmap.avakot.org/P12?loc=neathuns&index=4",
         "wiki": "https://wiki.avakot.org/Gourdo",
         "externalGuide": ""
       }
@@ -290,8 +305,8 @@
       "name": "[Dungeon] Seachnall The Widower",
       "type": "World Boss",
       "faction": "",
-      "threatTier": "World Boss",
-      "primaryRegion": "https://soulmap.avakot.org/P12?loc=neathuns&index=3",
+      "threatTier": "",
+      "primaryRegion": "",
       "summary": "",
       "notableTraits": [],
       "notableDrops": [],
@@ -300,6 +315,7 @@
       "hash": "9b37fdb5dcaf8a70eeba93d4161ad42d557bf3c10b1dad1dc6aa4d4f3d5252d7",
       "onClick": "",
       "links": {
+        "map": "https://soulmap.avakot.org/P12?loc=neathuns&index=3",
         "wiki": "https://wiki.avakot.org/Seachnall_The_Widower",
         "externalGuide": ""
       }
@@ -309,8 +325,8 @@
       "name": "[Dungeon] Reaper",
       "type": "World Boss",
       "faction": "",
-      "threatTier": "World Boss",
-      "primaryRegion": "https://soulmap.avakot.org/P12?loc=glades-of-andurin&index=7",
+      "threatTier": "",
+      "primaryRegion": "",
       "summary": "",
       "notableTraits": [],
       "notableDrops": [],
@@ -319,6 +335,7 @@
       "hash": "bc647d0fa870cce28891f98871975d41f9ee9673305058a28f0af6801a604047",
       "onClick": "",
       "links": {
+        "map": "https://soulmap.avakot.org/P12?loc=glades-of-andurin&index=7",
         "wiki": "https://wiki.avakot.org/Reaper",
         "externalGuide": ""
       }
@@ -328,8 +345,8 @@
       "name": "[Dungeon] Thrice-bound Impidh",
       "type": "World Boss",
       "faction": "",
-      "threatTier": "World Boss",
-      "primaryRegion": "https://soulmap.avakot.org/P12?loc=glades-of-andurin&index=4",
+      "threatTier": "",
+      "primaryRegion": "",
       "summary": "",
       "notableTraits": [],
       "notableDrops": [],
@@ -338,6 +355,7 @@
       "hash": "aa559ed5aa871b9aedc86ccbee97f9c684c68a109f8e005539181fe1e133522d",
       "onClick": "",
       "links": {
+        "map": "https://soulmap.avakot.org/P12?loc=glades-of-andurin&index=4",
         "wiki": "https://wiki.avakot.org/Thrice-bound_Impidh",
         "externalGuide": ""
       }
