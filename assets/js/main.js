@@ -303,16 +303,6 @@ async function renderWikiEnemies() {
                 ? `<div><strong>Respawn / cooldown:</strong> ${enemy.cooldown}</div>`
                 : ""
             }
-            // ${
-              // enemy.hash
-                // ? `<div><strong>Hash:</strong> ${enemy.hash}</div>`
-                // : ""
-            // }
-            // ${
-              // enemy.onClick
-                // ? `<div><strong>Marker:</strong> ${enemy.onClick}</div>`
-                // : ""
-            // }
           </div>
         `;
 
