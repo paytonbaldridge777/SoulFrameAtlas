@@ -205,35 +205,29 @@ async function renderWikiItems() {
         const linksHtml = buildWikiLinks(item.links);
 
         return `
-          <li class="wiki-card wiki-item-card">
+        <li class="wiki-card wiki-item-card">
+          <div class="wiki-card-header">
             ${
               icon
-                ? `<div class="wiki-card-media">
-                     <img src="${icon}" alt="${name}">
-                   </div>`
+                ? `<div class="wiki-card-icon"><img src="${icon}" alt="${name}"></div>`
                 : ""
             }
-            <div class="wiki-card-body">
+            <div>
               <div class="wiki-card-title">${name}</div>
-              ${
-                subtitle
-                  ? `<div class="wiki-card-subtitle">${subtitle}</div>`
-                  : ""
-              }
-              ${
-                description
-                  ? `<p>${description}</p>`
-                  : ""
-              }
-              ${
-                dropSource
-                  ? `<p><strong>Drops from:</strong> ${dropSource}</p>`
-                  : ""
-              }
-              ${linksHtml}
+              ${subtitle ? `<div class="wiki-card-subtitle">${subtitle}</div>` : ""}
             </div>
-          </li>
-        `;
+          </div>
+          <div class="wiki-card-body">
+            ${description ? `<p>${description}</p>` : ""}
+            ${
+              dropSource
+                ? `<p><strong>Drops from:</strong> ${dropSource}</p>`
+                : ""
+            }
+            ${linksHtml}
+          </div>
+        </li>
+      `;
       })
       .join("");
   } catch (err) {
@@ -284,22 +278,30 @@ async function renderWikiEnemies() {
 
         const linksHtml = buildWikiLinks(enemy.links);
 
-        return `
-          <li class="wiki-card wiki-enemy-card">
+       return `
+        <li class="wiki-card wiki-item-card">
+          <div class="wiki-card-header">
             ${
-              enemy.icon
-                ? `<div class="wiki-card-media"><img src="${enemy.icon}" alt=""></div>`
-                : ``
+              icon
+                ? `<div class="wiki-card-icon"><img src="${icon}" alt="${name}"></div>`
+                : ""
             }
-            <div class="wiki-card-body">
+            <div>
               <div class="wiki-card-title">${name}</div>
-              <div class="wiki-card-subtitle">${subtitle}</div>
-              ${summary ? `<p>${summary}</p>` : ""}
-              ${metaGrid}
-              ${linksHtml}
+              ${subtitle ? `<div class="wiki-card-subtitle">${subtitle}</div>` : ""}
             </div>
-          </li>
-        `;
+          </div>
+          <div class="wiki-card-body">
+            ${description ? `<p>${description}</p>` : ""}
+            ${
+              dropSource
+                ? `<p><strong>Drops from:</strong> ${dropSource}</p>`
+                : ""
+            }
+            ${linksHtml}
+          </div>
+        </li>
+      `;
       })
       .join("");
   } catch (err) {
@@ -1046,4 +1048,5 @@ let buildDataLoaded = false;
   setupWikiAccordions();
   setupWikiSearch();
 })();
+
 
