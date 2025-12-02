@@ -306,6 +306,112 @@ async function renderWikiEnemies() {
     container.innerHTML = `<li class="wiki-item">Unable to load enemies.json</li>`;
   }
 }
+
+// =====================================================
+// WIKI — WEAPONS (ACCORDION LAYOUT + STAT BARS)
+// =====================================================
+async function renderWikiWeapons() {
+  const container = document.getElementById("wikiWeaponsContainer");
+  if (!container) return;
+
+  try {
+    const data = await loadJSON("data/weapons.json");
+    const weapons = Array.isArray(data) ? data : data?.weapons || [];
+
+    container.innerHTML = weapons
+      .map((w) => {
+        const name =
+          w.name || w.ItemID || w.id || "Unknown weapon";
+        const desc =
+          w.description || w.Description || "";
+        const rarity = w.rarity || w.Rarity || "";
+        const dmgType = w.damageType || w.DamageType || "";
+        const slot = w.slot || w.Slot || "";
+        const attuneVirtue =
+          w.attuneVirtue || w.AttuneVirtue || "";
+        const attuneTier =
+          w.attuneTier || w.AttuneTier || "";
+        const reqVirtue =
+          w.reqVirtue || w.ReqVirtue || "";
+        const icon =
+          w.imgIcon || w.ImgIcon || "";
+
+        const stats = w.stats || w.Stats || null;
+
+        const metaGrid = `
+          <div class="wiki-item-meta-grid">
+            ${slot ? `<div><strong>Slot:</strong> ${slot}</div>` : ""}
+            ${dmgType ? `<div><strong>Damage:</strong> ${dmgType}</div>` : ""}
+            ${attuneVirtue ? `<div><strong>Attune Virtue:</strong> ${attuneVirtue}</div>` : ""}
+            ${attuneTier ? `<div><strong>Attune Tier:</strong> ${attuneTier}</div>` : ""}
+            ${reqVirtue ? `<div><strong>Req Virtue:</strong> ${reqVirtue}</div>` : ""}
+          </div>
+        `;
+
+        let statsBlock = "";
+        if (stats && typeof stats === "object") {
+          const entries = Object.entries(stats)
+            .filter(([k, v]) => v != null && v !== "")
+            .slice(0, 8);
+          if (entries.length) {
+            statsBlock = `
+              <p><strong>Stats:</strong></p>
+              <ul>
+                ${entries
+                  .map(
+                    ([k, v]) =>
+                      `<li>${k}: ${v}</li>`
+                  )
+                  .join("")}
+              </ul>
+            `;
+          }
+        }
+
+        const linksHtml = buildWikiLinks(w.links);
+
+        const rarityChipClass = rarity
+          ? `wiki-chip--${rarity.toLowerCase()}`
+          : "";
+
+        return `
+          <li class="wiki-card wiki-item wiki-weapon-card">
+            <div class="wiki-card-header">
+              ${
+                icon
+                  ? `<div class="wiki-card-icon">
+                       <img src="${icon}" alt="${name}">
+                     </div>`
+                  : ""
+              }
+              <div>
+                <div class="wiki-card-title">${name}</div>
+                <div class="wiki-card-subtitle">
+                  ${rarity ? `<span class="wiki-chip ${rarityChipClass}">${rarity}</span>` : ""}
+                  ${dmgType ? ` · ${dmgType}` : ""}
+                </div>
+              </div>
+            </div>
+            <div class="wiki-card-body">
+              ${desc ? `<p>${desc}</p>` : ""}
+              ${metaGrid}
+              ${statsBlock}
+              ${linksHtml}
+            </div>
+          </li>
+        `;
+      })
+      .join("");
+  } catch (err) {
+    console.error(err);
+    container.innerHTML = `
+      <li class="wiki-item">
+        Unable to load weapons (check data/weapons.json)
+      </li>
+    `;
+  }
+}
+
 // =====================================================
 // WIKI — PACTS (ACCORDION LAYOUT + STAT BARS)
 // =====================================================
@@ -547,8 +653,10 @@ function setupWikiTabs() {
     });
   }
 
-  applyTab("all");
-
+  //applyTab("all");
+  // Default: show Items only
+  applyTab("items");
+  
   tabs.forEach((tab) => {
     tab.addEventListener("click", () =>
       applyTab(tab.dataset.target || "all")
@@ -566,10 +674,12 @@ function setupWikiSearch() {
   searchInput.addEventListener("input", () => {
     const q = searchInput.value.toLowerCase().trim();
 
+ //   const allItems = document.querySelectorAll(
+  //    ".wiki-list .wiki-item"
+  //  );
     const allItems = document.querySelectorAll(
-      ".wiki-list .wiki-item"
+      "#wikiItemsContainer .wiki-item, #wikiWeaponsContainer .wiki-item, #wikiEnemiesContainer .wiki-item, #wikiPactsContainer .wiki-item"
     );
-
     allItems.forEach((item) => {
       const panel = item.closest(".wiki-panel");
       const panelHidden = panel?.dataset.hidden === "true";
@@ -1064,6 +1174,7 @@ let buildDataLoaded = false;
   await Promise.allSettled([
     renderGuides(),
     renderWikiItems(),
+    renderWikiWeapons(),
     renderWikiEnemies(),
     renderWikiPacts(),
     renderRegions(),
@@ -1076,6 +1187,7 @@ let buildDataLoaded = false;
   setupWikiAccordions();
   setupWikiSearch();
 })();
+
 
 
 
