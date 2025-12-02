@@ -876,7 +876,7 @@ footer {
   object-fit: cover;
   display: block;
 }
-
+/*
 .wiki-card-icon-enemy {
   width: 82px;
   height: 82px;
@@ -886,6 +886,7 @@ footer {
   background: rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
 }
+*/
 
 .wiki-card-icon-enemy img {
   width: 100%;
@@ -1072,4 +1073,5 @@ footer {
     flex-direction: column;
   }
 }
+
 
