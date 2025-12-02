@@ -1044,6 +1044,12 @@ footer {
   text-align: right;
 }
 
+.wiki-item-icon {
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-align: right;
+}
+
 .wiki-item-details {
   margin-top: 0.4rem;
   font-size: 0.8rem;
@@ -1143,6 +1149,59 @@ footer {
   font-variant-numeric: tabular-nums;
   opacity: 0.85;
 }
+
+/* Enemy-specific tweaks */
+
+.wiki-item--enemy {
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.wiki-item--enemy .wiki-card-media {
+  width: 100%;
+  aspect-ratio: 16 / 9;            /* keeps all images same height */
+  overflow: hidden;
+}
+
+.wiki-item--enemy .wiki-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.wiki-item--enemy .wiki-item-header {
+  padding: 0.6rem 0.8rem 0.3rem;
+}
+
+.wiki-item--enemy .wiki-item-details {
+  padding: 0 0.8rem 0.7rem;
+}
+
+.wiki-item-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  line-height: 1.2;
+}
+
+.wiki-item-subtitle {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 0.1rem;
+}
+
+/* tighten meta & paragraphs so it doesn't look jumbled */
+
+.wiki-item-details p {
+  margin: 0.25rem 0;
+}
+
+.wiki-item-meta-grid {
+  margin-top: 0.35rem;
+}
+
 
 
 
