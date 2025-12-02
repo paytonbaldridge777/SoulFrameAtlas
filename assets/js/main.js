@@ -346,7 +346,7 @@ async function renderWikiPacts() {
           ? `<ul>${pact.abilitiesExpanded
               .map(
                 (a) =>
-                  `<div class="wiki-card-icon"><img src="${icon}" alt="${name}"></div>`
+                  `<div class="wiki-card-icon"><img src="${a.icon}" alt="${a.name}"></div>`
                   `<li><strong>${a.name}:</strong> ${
                     a.description || ""
                   }</li>`
@@ -1047,6 +1047,7 @@ let buildDataLoaded = false;
   setupWikiAccordions();
   setupWikiSearch();
 })();
+
 
 
 
