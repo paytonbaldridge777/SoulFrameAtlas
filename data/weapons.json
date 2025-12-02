@@ -1,1 +1,2559 @@
-[]
+{
+  "weapons": [
+    {
+      "id": "Blitzel",
+      "name": "Blitzel",
+      "description": "'''A finely balanced bow of Ode'n make.''' Invented shortly after the Alcan conquest. Taking amusement from the Dendrit hunters' primitive weapon of choice, Ode'n blademakers crafted the Blitzel from the many discarded bows littering the late battlefield. Thus, a new addition to the Sinecure Armamentarium.",
+      "rarity": "Uncommon",
+      "imgIcon": "https://api.avakot.org/v1/I/Blitzel.png",
+      "damageType": "Sharp",
+      "slot": "Weapon",
+      "attuneTier": "2",
+      "attuneVirtue": "Courage",
+      "reqVirtue": "10",
+      "art": "Bow",
+      "craft": {
+        "Fragments": "2",
+        "Time": 10,
+        "Cost": 2,
+        "BondReq": "2",
+        "ingredients": [
+          {
+            "item": "Scrap Steel",
+            "qty": 25
+          },
+          {
+            "item": "Knotwood",
+            "qty": 25
+          },
+          {
+            "item": "Sappheline",
+            "qty": 8
+          }
+        ]
+      },
+      "stats": {
+        "Smite": "1/50",
+        "SmitePercent": "2%",
+        "Lvl0": {
+          "Stagger": 24,
+          "Attack": 31,
+          "ChargedAttack": 62,
+          "DamageAttuneCap": null
+        },
+        "Lvl30": {
+          "Stagger": 54,
+          "Attack": 70,
+          "ChargedAttack": 140,
+          "DamageAttuneCap": 86
+        },
+        "VirtueAttuneCap": 21,
+        "AttuneCaps": {
+          "DamageLight": 86,
+          "DamageHeavy": 174,
+          "DamageChargedHeavy": null,
+          "ChargedHeavy": null,
+          "DamageChargedShot": 210,
+          "ChargedShot": 62,
+          "DamageThrow": null,
+          "Throw": null,
+          "DamageSpecialThrow": null,
+          "SpecialThrow": null
+        }
+      },
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Bog & Myrtle",
+      "name": "Bog & Myrtle",
+      "description": "Myrtle, a sword as swift as a pricking thorn. Wide of girth, she whistles fair with every swing. The weapon of a Dendrit commoner, but that does not make her so. Bog, a round and rusted shield. Dented and scarred by more wars than one. To mistress Myrtle, ever-bound. Once battle-lost, now Envoy-found.",
+      "rarity": "Uncommon",
+      "imgIcon": "https://api.avakot.org/v1/I/BogandMyrtle.png",
+      "damageType": "Sharp",
+      "slot": "Weapon",
+      "attuneTier": "2",
+      "attuneVirtue": "Grace",
+      "reqVirtue": "10",
+      "art": "Shield",
+      "craft": {
+        "Fragments": "2",
+        "Time": 10,
+        "Cost": 2,
+        "BondReq": null,
+        "ingredients": [
+          {
+            "item": "Scrap Iron",
+            "qty": 25
+          },
+          {
+            "item": "Scrap Brass",
+            "qty": 25
+          },
+          {
+            "item": "Moranite",
+            "qty": 8
+          }
+        ]
+      },
+      "stats": {
+        "Smite": "1/50",
+        "SmitePercent": "2%",
+        "Lvl0": {
+          "Stagger": 24,
+          "Attack": 39,
+          "ChargedAttack": 62,
+          "DamageAttuneCap": null
+        },
+        "Lvl30": {
+          "Stagger": 54,
+          "Attack": 78,
+          "ChargedAttack": 125,
+          "DamageAttuneCap": 102
+        },
+        "VirtueAttuneCap": 26,
+        "AttuneCaps": {
+          "DamageLight": 102,
+          "DamageHeavy": 204,
+          "DamageChargedHeavy": null,
+          "ChargedHeavy": null,
+          "DamageChargedShot": null,
+          "ChargedShot": null,
+          "DamageThrow": 140,
+          "Throw": 39,
+          "DamageSpecialThrow": null,
+          "SpecialThrow": null
+        }
+      },
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Cobladh",
+      "name": "Cobladh",
+      "description": "'''The stolen dagger of Wyld Sirin.''' In the wake of the Felling, the trickster Sirin snuck an enchanted flame blade from Tethren's own mantle. With delicate archer's hands, he snaked a moonstone into its hilt, marking it as his own Cobladh Dagger. It was stolen from him by his daughter, and from her by her son. And now... It is yours.",
+      "rarity": "Uncommon",
+      "imgIcon": "https://api.avakot.org/v1/I/CobladhShortBlade.png",
+      "damageType": "Sharp",
+      "slot": "Sidearm",
+      "attuneTier": "2",
+      "attuneVirtue": "Grace",
+      "reqVirtue": "",
+      "art": "Short%20Blade",
+      "craft": {
+        "Fragments": "N/A",
+        "Time": null,
+        "Cost": 2,
+        "BondReq": "N/A",
+        "ingredients": [
+          {
+            "item": "Scrap Steel",
+            "qty": 20
+          },
+          {
+            "item": "Patch Leather",
+            "qty": 20
+          },
+          {
+            "item": "Moranite",
+            "qty": 8
+          }
+        ]
+      },
+      "stats": {
+        "Smite": null,
+        "SmitePercent": 7,
+        "Lvl0": {
+          "Stagger": null,
+          "Attack": null,
+          "ChargedAttack": null,
+          "DamageAttuneCap": null
+        },
+        "Lvl30": {
+          "Stagger": null,
+          "Attack": null,
+          "ChargedAttack": null,
+          "DamageAttuneCap": null
+        },
+        "VirtueAttuneCap": 26,
+        "AttuneCaps": {
+          "DamageLight": null,
+          "DamageHeavy": null,
+          "DamageChargedHeavy": null,
+          "ChargedHeavy": null,
+          "DamageChargedShot": null,
+          "ChargedShot": null,
+          "DamageThrow": null,
+          "Throw": null,
+          "DamageSpecialThrow": null,
+          "SpecialThrow": null
+        }
+      },
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Dewelion",
+      "name": "Dewelion",
+      "description": "'''A Fey warrior's gloryblade.''' Dewelion is a word of the ancient Fey tongue. It means something like 'horizon;' a confluence of opposites; where day and night may meet. For a human steelsinger to have sung these delicate pieces back to former glory... An impossible confluence indeed.",
+      "rarity": "Rare",
+      "imgIcon": "https://api.avakot.org/v1/I/Dewelion.png",
+      "damageType": "Sharp",
+      "slot": "Weapon",
+      "attuneTier": "3",
+      "attuneVirtue": "Grace",
+      "reqVirtue": "20",
+      "art": "Long%20Blade",
+      "craft": {
+        "Fragments": "3",
+        "Time": 20,
+        "Cost": 3500,
+        "BondReq": "3",
+        "ingredients": [
+          {
+            "item": "Scrap Iron",
+            "qty": 15
+          },
+          {
+            "item": "Gossamer Quartz",
+            "qty": 15
+          },
+          {
+            "item": "Moranite",
+            "qty": 6
+          }
+        ]
+      },
+      "stats": {
+        "Smite": "6/100",
+        "SmitePercent": "6%",
+        "Lvl0": {
+          "Stagger": 34,
+          "Attack": 43,
+          "ChargedAttack": 86,
+          "DamageAttuneCap": 87
+        },
+        "Lvl30": {
+          "Stagger": 58,
+          "Attack": 107,
+          "ChargedAttack": 214,
+          "DamageAttuneCap": 110
+        },
+        "VirtueAttuneCap": 22,
+        "AttuneCaps": {
+          "DamageLight": 110,
+          "DamageHeavy": 220,
+          "DamageChargedHeavy": null,
+          "ChargedHeavy": null,
+          "DamageChargedShot": null,
+          "ChargedShot": null,
+          "DamageThrow": 152,
+          "Throw": 32,
+          "DamageSpecialThrow": null,
+          "SpecialThrow": null
+        }
+      },
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Duhk Halic",
+      "name": "Duhk Halic",
+      "description": "'''Forged of fever, wrought of wrath. The Ode'n lance, Duhk Halic.''' An Ode'n instrument of corruption. Even the Nimrod who wields it suffers from its venomous touch. Whether Omen beast or sacred tree, wherever Duhk Halic finds its mark, a wound spews ichor. Though... your weaver ways seem to have purged this wretched lance of corruption... For now.",
+      "rarity": "Uncommon",
+      "imgIcon": "https://api.avakot.org/v1/I/DuhkHalic.png",
+      "damageType": "Sharp",
+      "slot": "Weapon",
+      "attuneTier": "2",
+      "attuneVirtue": "Courage",
+      "reqVirtue": "10",
+      "art": "Polearm",
+      "craft": {
+        "Fragments": "1",
+        "Time": 10,
+        "Cost": 2500,
+        "BondReq": "h",
+        "ingredients": [
+          {
+            "item": "Scrap Iron",
+            "qty": 25
+          },
+          {
+            "item": "Gossamer Quartz",
+            "qty": 20
+          },
+          {
+            "item": "River Pearl",
+            "qty": 8
+          }
+        ]
+      },
+      "stats": {
+        "Smite": "1/25",
+        "SmitePercent": "4%",
+        "Lvl0": {
+          "Stagger": 36,
+          "Attack": 59,
+          "ChargedAttack": 103,
+          "DamageAttuneCap": null
+        },
+        "Lvl30": {
+          "Stagger": 66,
+          "Attack": 98,
+          "ChargedAttack": 172,
+          "DamageAttuneCap": 142
+        },
+        "VirtueAttuneCap": 39,
+        "AttuneCaps": {
+          "DamageLight": 142,
+          "DamageHeavy": 284,
+          "DamageChargedHeavy": null,
+          "ChargedHeavy": null,
+          "DamageChargedShot": null,
+          "ChargedShot": null,
+          "DamageThrow": 200,
+          "Throw": 60,
+          "DamageSpecialThrow": null,
+          "SpecialThrow": null
+        }
+      },
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Esthelle",
+      "name": "Esthelle",
+      "description": "'''The magick globes of Wyld Oscelda.''' Alca's magicks, distilled into globes of the witch's own conjuring. 'Tis said when the Felling fires were quenched, Oscelda retreated to her wevetroot study. So guilt-stricken was she, so desperate to cast a spell that would right her wrongs, she conjured Esthelle. Three orbs, three amends, should she ever meet the Empress again. Of course, she would not.",
+      "rarity": "Uncommon",
+      "imgIcon": "https://api.avakot.org/v1/I/Esthelle.png",
+      "damageType": "",
+      "slot": "Sidearm",
+      "attuneTier": "2",
+      "attuneVirtue": "Spirit",
+      "reqVirtue": "",
+      "art": "Magick",
+      "craft": {
+        "Fragments": "0",
+        "Time": null,
+        "Cost": 2,
+        "BondReq": "N/A",
+        "ingredients": [
+          {
+            "item": "Scrap Brass",
+            "qty": 20
+          },
+          {
+            "item": "Quenching Acid",
+            "qty": 20
+          },
+          {
+            "item": "Gossamer Quartz",
+            "qty": 20
+          }
+        ]
+      },
+      "stats": {
+        "Smite": "9/100",
+        "SmitePercent": 9,
+        "Lvl0": {
+          "Stagger": 8,
+          "Attack": 32,
+          "ChargedAttack": 64,
+          "DamageAttuneCap": null
+        },
+        "Lvl30": {
+          "Stagger": null,
+          "Attack": null,
+          "ChargedAttack": null,
+          "DamageAttuneCap": null
+        },
+        "VirtueAttuneCap": 22,
+        "AttuneCaps": {
+          "DamageLight": null,
+          "DamageHeavy": null,
+          "DamageChargedHeavy": null,
+          "ChargedHeavy": null,
+          "DamageChargedShot": null,
+          "ChargedShot": null,
+          "DamageThrow": null,
+          "Throw": null,
+          "DamageSpecialThrow": null,
+          "SpecialThrow": null
+        }
+      },
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Gathannan",
+      "name": "Gathannan",
+      "description": "The ere pronged Glaive of Garren Rood. No mortal weapons has points so fine nor plenty as the Omen Beast's own crown. Though this charger's lance comes close. Dual spires are cast of gold as old as the line of Rood. The oaken staff is freshly bound and still smells of forest.",
+      "rarity": "Rare",
+      "imgIcon": "https://api.avakot.org/v1/I/Gathannan.png",
+      "damageType": "Sharp",
+      "slot": "Weapon",
+      "attuneTier": "3",
+      "attuneVirtue": "Spirit",
+      "reqVirtue": "20",
+      "art": "Polearm",
+      "craft": {
+        "Fragments": "2",
+        "Time": 10,
+        "Cost": 2,
+        "BondReq": "3",
+        "ingredients": [
+          {
+            "item": "Scrap Brass",
+            "qty": 20
+          },
+          {
+            "item": "Sappheline",
+            "qty": 8
+          },
+          {
+            "item": "Moranite",
+            "qty": 8
+          }
+        ]
+      },
+      "stats": {
+        "Smite": "1/25",
+        "SmitePercent": "4%",
+        "Lvl0": {
+          "Stagger": 44,
+          "Attack": 69,
+          "ChargedAttack": 121,
+          "DamageAttuneCap": 144
+        },
+        "Lvl30": {
+          "Stagger": 74,
+          "Attack": 133,
+          "ChargedAttack": 233,
+          "DamageAttuneCap": 162
+        },
+        "VirtueAttuneCap": 35,
+        "AttuneCaps": {
+          "DamageLight": 162,
+          "DamageHeavy": 324,
+          "DamageChargedHeavy": null,
+          "ChargedHeavy": null,
+          "DamageChargedShot": null,
+          "ChargedShot": null,
+          "DamageThrow": 235,
+          "Throw": 52,
+          "DamageSpecialThrow": null,
+          "SpecialThrow": null
+        }
+      },
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Grinn",
+      "name": "Grinn",
+      "description": "'''The toothed sawblade of Sinecure trappers.''' Hooked and barbed like wardog teeth, Grinn finds the grip of any so ruthless. Though the Ode prefer to hunt in legions, 'tis custom to carry such a sawblade on solitary journeys. Tucked close to it's master's side, Grinn makes for a fierce companion with a ripping bite... Near drooling for prey.",
+      "rarity": "Uncommon",
+      "imgIcon": "https://api.avakot.org/v1/I/Grinn.png",
+      "damageType": "Sharp",
+      "slot": "Sidearm",
+      "attuneTier": "2",
+      "attuneVirtue": "Courage",
+      "reqVirtue": "10",
+      "art": "Short%20Blade",
+      "craft": {
+        "Fragments": "2",
+        "Time": 10,
+        "Cost": 2,
+        "BondReq": null,
+        "ingredients": [
+          {
+            "item": "Scrap steel",
+            "qty": 25
+          },
+          {
+            "item": "Ichor",
+            "qty": 20
+          },
+          {
+            "item": "Corrupt Onyx",
+            "qty": 20
+          }
+        ]
+      },
+      "stats": {
+        "Smite": "3/50",
+        "SmitePercent": "6%",
+        "Lvl0": {
+          "Stagger": 20,
+          "Attack": 35,
+          "ChargedAttack": 56,
+          "DamageAttuneCap": null
+        },
+        "Lvl30": {
+          "Stagger": 50,
+          "Attack": 74,
+          "ChargedAttack": 118,
+          "DamageAttuneCap": 94
+        },
+        "VirtueAttuneCap": 23,
+        "AttuneCaps": {
+          "DamageLight": 94,
+          "DamageHeavy": 188,
+          "DamageChargedHeavy": null,
+          "ChargedHeavy": null,
+          "DamageChargedShot": null,
+          "ChargedShot": null,
+          "DamageThrow": 128,
+          "Throw": 36,
+          "DamageSpecialThrow": null,
+          "SpecialThrow": null
+        }
+      },
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Gwylen",
+      "name": "Gwylen",
+      "description": "A witching-staff of alder. Though its curling boughs look natural as wind, Gwylen was hand-shaped by Aureli jardiniers. Not carved, but grown into delicate curves- finely tuned to facilitate the flow of magic. To grow a single wand takes years. A staff like Gwylen, a lifetime.",
+      "rarity": "Common",
+      "imgIcon": "https://api.avakot.org/v1/I/Gwylen.png",
+      "damageType": "Arcanic",
+      "slot": "Weapon",
+      "attuneTier": "1",
+      "attuneVirtue": "Spirit",
+      "reqVirtue": "",
+      "art": "Magick",
+      "craft": {
+        "Fragments": "1",
+        "Time": 4,
+        "Cost": 1500,
+        "BondReq": "1",
+        "ingredients": [
+          {
+            "item": "Scrap Iron",
+            "qty": 15
+          },
+          {
+            "item": "Ode'n Synsylk",
+            "qty": 20
+          },
+          {
+            "item": "Gossamer Quartz",
+            "qty": 15
+          }
+        ]
+      },
+      "stats": {
+        "Smite": "3/50",
+        "SmitePercent": "6%",
+        "Lvl0": {
+          "Stagger": 4,
+          "Attack": 32,
+          "ChargedAttack": 64,
+          "DamageAttuneCap": null
+        },
+        "Lvl30": {
+          "Stagger": 19,
+          "Attack": 53,
+          "ChargedAttack": 106,
+          "DamageAttuneCap": 78
+        },
+        "VirtueAttuneCap": 27,
+        "AttuneCaps": {
+          "DamageLight": 78,
+          "DamageHeavy": 156,
+          "DamageChargedHeavy": 180,
+          "ChargedHeavy": 78,
+          "DamageChargedShot": null,
+          "ChargedShot": null,
+          "DamageThrow": null,
+          "Throw": null,
+          "DamageSpecialThrow": null,
+          "SpecialThrow": null
+        }
+      },
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Igne Mora",
+      "name": "Igne Mora",
+      "description": "'''The Steelsinger Kane wrought two flaming blades from the fire of the binary suns - Mora and Saphene.''' For four summers, his young pupil Fenn toiled under master Kane to forge the Sun blades. Pleading each passing year to take one for himself, Kane refused to strike them complete. So smaller of hilt yet finer of point, Fenn stole Igne Mora away in the night and bade never to return. By legend, Kane returned the forsaken twin to the fire with a curse that would grant the impatient prince no peace thereafter.",
+      "rarity": "Uncommon",
+      "imgIcon": "https://api.avakot.org/v1/I/IgneMora.png",
+      "damageType": "Sharp",
+      "slot": "Weapon",
+      "attuneTier": "2",
+      "attuneVirtue": "Courage",
+      "reqVirtue": "10",
+      "art": "Long%20Blade",
+      "craft": {
+        "Fragments": "2",
+        "Time": 10,
+        "Cost": 2,
+        "BondReq": null,
+        "ingredients": [
+          {
+            "item": "Scrap Brass",
+            "qty": 20
+          },
+          {
+            "item": "Sappheline",
+            "qty": 8
+          },
+          {
+            "item": "Quenching Acid",
+            "qty": 20
+          }
+        ]
+      },
+      "stats": {
+        "Smite": "1/100",
+        "SmitePercent": "1%",
+        "Lvl0": {
+          "Stagger": 24,
+          "Attack": 43,
+          "ChargedAttack": 69,
+          "DamageAttuneCap": null
+        },
+        "Lvl30": {
+          "Stagger": 54,
+          "Attack": 82,
+          "ChargedAttack": 131,
+          "DamageAttuneCap": 110
+        },
+        "VirtueAttuneCap": 29,
+        "AttuneCaps": {
+          "DamageLight": 110,
+          "DamageHeavy": 220,
+          "DamageChargedHeavy": null,
+          "ChargedHeavy": null,
+          "DamageChargedShot": null,
+          "ChargedShot": null,
+          "DamageThrow": 152,
+          "Throw": 43,
+          "DamageSpecialThrow": null,
+          "SpecialThrow": null
+        }
+      },
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Juniper",
+      "name": "Juniper",
+      "description": "'''Grandfather's bow. So named after the sacred tree from which she was hewn.''' She is twisted fair of living wood like her sister bow, Dhonu. Even her quiver breaths life. Charmed, she grows arrows near as fast as Grandfather can loose them. Though these days, they both grow slower. On either end, the curling boughs wrap 'round a Salz Agate. This precious stone was once believed to bridge the realms between man and Fey. Much like their master.",
+      "rarity": "Uncommon",
+      "imgIcon": "https://api.avakot.org/v1/I/Juniper.png",
+      "damageType": "Sharp",
+      "slot": "Weapon",
+      "attuneTier": "2",
+      "attuneVirtue": "Grace",
+      "reqVirtue": "10",
+      "art": "Bow",
+      "craft": null,
+      "stats": {
+        "Smite": "3/50",
+        "SmitePercent": "6%",
+        "Lvl0": {
+          "Stagger": 20,
+          "Attack": 36,
+          "ChargedAttack": 72,
+          "DamageAttuneCap": null
+        },
+        "Lvl30": {
+          "Stagger": 50,
+          "Attack": 75,
+          "ChargedAttack": 150,
+          "DamageAttuneCap": 96
+        },
+        "VirtueAttuneCap": 24,
+        "AttuneCaps": {
+          "DamageLight": 96,
+          "DamageHeavy": 192,
+          "DamageChargedHeavy": null,
+          "ChargedHeavy": null,
+          "DamageChargedShot": 240,
+          "ChargedShot": 72,
+          "DamageThrow": null,
+          "Throw": null,
+          "DamageSpecialThrow": null,
+          "SpecialThrow": null
+        }
+      },
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Marrow's Bane",
+      "name": "Marrow's Bane",
+      "description": "'''A mighty claw, a dripping maw. The menacing cleaver of the Arbearer, Bromius.''' Five sharpened spires glint in the pale Neath'uns light. Be they the teeth of Marrow's Bane? Or the claws of the great Omen Bear himself? Wield this weapon by the Arbrearer's deal: to protect the old roots yet to heal- or to pick your teeth after good meal.",
+      "rarity": "Rare",
+      "imgIcon": "https://api.avakot.org/v1/I/MarrowsBane.png",
+      "damageType": "Sharp",
+      "slot": "Weapon",
+      "attuneTier": "3",
+      "attuneVirtue": "Courage",
+      "reqVirtue": "20",
+      "art": "Long%20Blade",
+      "craft": {
+        "Fragments": "3",
+        "Time": 10,
+        "Cost": 3500,
+        "BondReq": null,
+        "ingredients": [
+          {
+            "item": "Scrap Steel",
+            "qty": 15
+          },
+          {
+            "item": "Patch Leather",
+            "qty": 40
+          },
+          {
+            "item": "Moranite",
+            "qty": 6
+          }
+        ]
+      },
+      "stats": {
+        "Smite": "1/20",
+        "SmitePercent": "5%",
+        "Lvl0": {
+          "Stagger": null,
+          "Attack": 54,
+          "ChargedAttack": 108,
+          "DamageAttuneCap": null
+        },
+        "Lvl30": {
+          "Stagger": 58,
+          "Attack": 118,
+          "ChargedAttack": 236,
+          "DamageAttuneCap": 132
+        },
+        "VirtueAttuneCap": 27,
+        "AttuneCaps": {
+          "DamageLight": 132,
+          "DamageHeavy": 264,
+          "DamageChargedHeavy": null,
+          "ChargedHeavy": null,
+          "DamageChargedShot": null,
+          "ChargedShot": null,
+          "DamageThrow": 186,
+          "Throw": 41,
+          "DamageSpecialThrow": null,
+          "SpecialThrow": null
+        }
+      },
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Needleseye",
+      "name": "Needleseye",
+      "description": "'''The unusual greatsword of the Child-Queen Muireall Jotar.''' Though small for her age, 11 year-old Muireall insisted that her ritual coronation blade should be a greatsword. The court steelsinger forged the hilt in the likeness of Muireall's dear cat, Fleabert, and hollowed the blade so that her tiny majesty might be able to lift it. Amused by the shape, she named it Needleseye, and swung the great thing one-handed.",
+      "rarity": "Uncommon",
+      "imgIcon": "https://api.avakot.org/v1/I/DendritGreatSword.png",
+      "damageType": "Sharp",
+      "slot": "Weapon",
+      "attuneTier": "2",
+      "attuneVirtue": "Grace",
+      "reqVirtue": "10",
+      "art": "Greatsword",
+      "craft": {
+        "Fragments": "2",
+        "Time": 10,
+        "Cost": 2500,
+        "BondReq": null,
+        "ingredients": [
+          {
+            "item": "Scrap Brass",
+            "qty": 20
+          },
+          {
+            "item": "Scrap Steel",
+            "qty": 20
+          },
+          {
+            "item": "Quenching Acid",
+            "qty": 20
+          }
+        ]
+      },
+      "stats": {
+        "Smite": "1/20",
+        "SmitePercent": "5%",
+        "Lvl0": {
+          "Stagger": 54,
+          "Attack": 65,
+          "ChargedAttack": 130,
+          "DamageAttuneCap": null
+        },
+        "Lvl30": {
+          "Stagger": null,
+          "Attack": null,
+          "ChargedAttack": null,
+          "DamageAttuneCap": null
+        },
+        "VirtueAttuneCap": null,
+        "AttuneCaps": {
+          "DamageLight": null,
+          "DamageHeavy": null,
+          "DamageChargedHeavy": null,
+          "ChargedHeavy": null,
+          "DamageChargedShot": null,
+          "ChargedShot": null,
+          "DamageThrow": null,
+          "Throw": null,
+          "DamageSpecialThrow": null,
+          "SpecialThrow": null
+        }
+      },
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Nettle",
+      "name": "Nettle",
+      "description": "Naught more than an overlarge paper knife. But this cunning blade seeks a cunning hand. An ornamental dirk of Skelflandish make. Held in the bookbinder's grip, Nettle is designed to slice open the delicate edges of a folded page. 'Twas tween these bounds that Skelflandish tradition sealed secret messages. And a word, as much as any blade, can cut deep.",
+      "rarity": "Common",
+      "imgIcon": "https://api.avakot.org/v1/I/Nettle.png",
+      "damageType": "Sharp",
+      "slot": "Sidearm",
+      "attuneTier": "1",
+      "attuneVirtue": "Grace",
+      "reqVirtue": "",
+      "art": "Short%20Blade",
+      "craft": {
+        "Fragments": "1",
+        "Time": 4,
+        "Cost": 1,
+        "BondReq": "1",
+        "ingredients": [
+          {
+            "item": "Scrap Steel",
+            "qty": 25
+          },
+          {
+            "item": "Ode Graphite",
+            "qty": 30
+          },
+          {
+            "item": "Quenching Acid",
+            "qty": 25
+          }
+        ]
+      },
+      "stats": {
+        "Smite": "3/100",
+        "SmitePercent": "3%",
+        "Lvl0": {
+          "Stagger": 16,
+          "Attack": 32,
+          "ChargedAttack": 51,
+          "DamageAttuneCap": null
+        },
+        "Lvl30": {
+          "Stagger": 46,
+          "Attack": 58,
+          "ChargedAttack": 93,
+          "DamageAttuneCap": 88
+        },
+        "VirtueAttuneCap": 32,
+        "AttuneCaps": {
+          "DamageLight": 88,
+          "DamageHeavy": 176,
+          "DamageChargedHeavy": null,
+          "ChargedHeavy": null,
+          "DamageChargedShot": null,
+          "ChargedShot": null,
+          "DamageThrow": 100,
+          "Throw": 48,
+          "DamageSpecialThrow": null,
+          "SpecialThrow": null
+        }
+      },
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Nurash",
+      "name": "Nurash",
+      "description": "'''A cleaver, a heaver, of tarnish and rust.''' What strange shapes mar the teeth of this ancient sawblade? What thousand-year tale leads it to mockery hands? Nurash is surely the oldest weapon you've ever held, yet the violet runes glow with fresh life. A new chapter carved in this perpetual fable.",
+      "rarity": "Uncommon",
+      "imgIcon": "https://api.avakot.org/v1/I/Nurash.png",
+      "damageType": "Sharp",
+      "slot": "Weapon",
+      "attuneTier": "2",
+      "attuneVirtue": "Courage",
+      "reqVirtue": "10",
+      "art": "Long%20Blade",
+      "craft": {
+        "Fragments": "2",
+        "Time": 10,
+        "Cost": 2,
+        "BondReq": null,
+        "ingredients": [
+          {
+            "item": "Scrap Brass",
+            "qty": 25
+          },
+          {
+            "item": "Quenching Acid",
+            "qty": 20
+          },
+          {
+            "item": "Ichor",
+            "qty": 20
+          }
+        ]
+      },
+      "stats": {
+        "Smite": "1/20",
+        "SmitePercent": "5%",
+        "Lvl0": {
+          "Stagger": 24,
+          "Attack": 39,
+          "ChargedAttack": 78,
+          "DamageAttuneCap": 78
+        },
+        "Lvl30": {
+          "Stagger": 54,
+          "Attack": 78,
+          "ChargedAttack": 156,
+          "DamageAttuneCap": 102
+        },
+        "VirtueAttuneCap": 26,
+        "AttuneCaps": {
+          "DamageLight": 102,
+          "DamageHeavy": 204,
+          "DamageChargedHeavy": null,
+          "ChargedHeavy": null,
+          "DamageChargedShot": null,
+          "ChargedShot": null,
+          "DamageThrow": 140,
+          "Throw": 39,
+          "DamageSpecialThrow": null,
+          "SpecialThrow": null
+        }
+      },
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Odiac",
+      "name": "Odiac",
+      "description": "The crackle of lightning, bottled up one's sleeve. Odiac is the mechanical power source of Ode'n casters. Fixed upon the wrists, its rapidly oscillating spheres generate voltaic charge. With no more than a gesture, its master may cast homing bolts of lightning and summon Lectric Shields at will.",
+      "rarity": "Uncommon",
+      "imgIcon": "https://api.avakot.org/v1/I/Odiac.png",
+      "damageType": "Voltaic",
+      "slot": "Sidearm",
+      "attuneTier": "2",
+      "attuneVirtue": "Spirit",
+      "reqVirtue": "10",
+      "art": "Magick",
+      "craft": {
+        "Fragments": "2",
+        "Time": 4,
+        "Cost": 1,
+        "BondReq": "2",
+        "ingredients": [
+          {
+            "item": "Scrap Iron",
+            "qty": 25
+          },
+          {
+            "item": "Ode Graphite",
+            "qty": 25
+          },
+          {
+            "item": "Ode'n Synsylk",
+            "qty": 25
+          }
+        ]
+      },
+      "stats": {
+        "Smite": "3/50",
+        "SmitePercent": "6%",
+        "Lvl0": {
+          "Stagger": 4,
+          "Attack": 27,
+          "ChargedAttack": 54,
+          "DamageAttuneCap": null
+        },
+        "Lvl30": {
+          "Stagger": 19,
+          "Attack": 53,
+          "ChargedAttack": 106,
+          "DamageAttuneCap": 78
+        },
+        "VirtueAttuneCap": 18,
+        "AttuneCaps": {
+          "DamageLight": 78,
+          "DamageHeavy": 156,
+          "DamageChargedHeavy": 192,
+          "ChargedHeavy": 56,
+          "DamageChargedShot": null,
+          "ChargedShot": null,
+          "DamageThrow": null,
+          "Throw": null,
+          "DamageSpecialThrow": null,
+          "SpecialThrow": null
+        }
+      },
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Oryn-Umbr",
+      "name": "Oryn-Umbr",
+      "description": "Oryn, an Ode'n short sword tipped by an eclipse. Its hollowed blade lightens the Sinecure swing, so it may be wielded by only one hand. Umbr, a shield aglow with Ode'n sigil. Skytowers loft are mapped in blue upon its tempered face. Cast in lightweight alloys, Umbr is forged to be thrown as a starnshot blazing.",
+      "rarity": "Uncommon",
+      "imgIcon": "https://api.avakot.org/v1/I/OrynUmbr.png",
+      "damageType": "Sharp",
+      "slot": "Weapon",
+      "attuneTier": "2",
+      "attuneVirtue": "Courage",
+      "reqVirtue": "10",
+      "art": "Shield",
+      "craft": {
+        "Fragments": "2",
+        "Time": 10,
+        "Cost": 2,
+        "BondReq": null,
+        "ingredients": [
+          {
+            "item": "Scrap Iron",
+            "qty": 25
+          },
+          {
+            "item": "Knotwood",
+            "qty": 25
+          },
+          {
+            "item": "Dendrit Weave",
+            "qty": 25
+          }
+        ]
+      },
+      "stats": {
+        "Smite": "1/20",
+        "SmitePercent": "5%",
+        "Lvl0": {
+          "Stagger": 24,
+          "Attack": 37,
+          "ChargedAttack": 59,
+          "DamageAttuneCap": null
+        },
+        "Lvl30": {
+          "Stagger": 54,
+          "Attack": 76,
+          "ChargedAttack": 122,
+          "DamageAttuneCap": 98
+        },
+        "VirtueAttuneCap": 25,
+        "AttuneCaps": {
+          "DamageLight": 98,
+          "DamageHeavy": 196,
+          "DamageChargedHeavy": null,
+          "ChargedHeavy": null,
+          "DamageChargedShot": null,
+          "ChargedShot": null,
+          "DamageThrow": 134,
+          "Throw": 37,
+          "DamageSpecialThrow": null,
+          "SpecialThrow": null
+        }
+      },
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Precklies",
+      "name": "Precklies",
+      "description": "A full set of three Precklies. Part of a traditional Dendrit game called Preck. The rules are simple- each player has three chances to strike a target with these small but mighty blades. These Precklies are child-sized, likely a bloomsday gift for a knightmaiden in training. As such, they are surely well accustomed to meeting their mark.",
+      "rarity": "Common",
+      "imgIcon": "https://api.avakot.org/v1/I/Precklies.png",
+      "damageType": "Sharp",
+      "slot": "Sidearm",
+      "attuneTier": "1",
+      "attuneVirtue": "Courage",
+      "reqVirtue": "",
+      "art": "Flyblade",
+      "craft": {
+        "Fragments": "1",
+        "Time": 4,
+        "Cost": 1,
+        "BondReq": "1",
+        "ingredients": [
+          {
+            "item": "Scrap Brass",
+            "qty": 15
+          },
+          {
+            "item": "Scrap Steel",
+            "qty": 15
+          },
+          {
+            "item": "Sproutfolk Frond",
+            "qty": 25
+          }
+        ]
+      },
+      "stats": {
+        "Smite": "1/25",
+        "SmitePercent": "4%",
+        "Lvl0": {
+          "Stagger": 4,
+          "Attack": 19,
+          "ChargedAttack": 19,
+          "DamageAttuneCap": null
+        },
+        "Lvl30": {
+          "Stagger": 19,
+          "Attack": 46,
+          "ChargedAttack": 46,
+          "DamageAttuneCap": 66
+        },
+        "VirtueAttuneCap": "21 (Display Errors at 19)",
+        "AttuneCaps": {
+          "DamageLight": 66,
+          "DamageHeavy": "X",
+          "DamageChargedHeavy": null,
+          "ChargedHeavy": null,
+          "DamageChargedShot": null,
+          "ChargedShot": null,
+          "DamageThrow": 28,
+          "Throw": "21 (Display Errors at 19)",
+          "DamageSpecialThrow": null,
+          "SpecialThrow": null
+        }
+      },
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Purity",
+      "name": "Purity",
+      "description": "'''The undead greatsword of a Mendicant knight.''' Named for the owner's intentions, Purity was there in the Fonnish Charge, tucked into her scabbard. Though her knight, like most others on that wretched march, perished before he could draw his sword. She waited in her scabbard. Eras rose and fell. Until at last, her knight climbed from the grave to draw her at last.",
+      "rarity": "Rare",
+      "imgIcon": "https://api.avakot.org/v1/I/MendicantGreatSword.png",
+      "damageType": "Sharp",
+      "slot": "Weapon",
+      "attuneTier": "3",
+      "attuneVirtue": "Courage",
+      "reqVirtue": "20",
+      "art": "Greatsword",
+      "craft": {
+        "Fragments": "3",
+        "Time": 20,
+        "Cost": 3,
+        "BondReq": "2",
+        "ingredients": [
+          {
+            "item": "Scrap Steel",
+            "qty": 45
+          },
+          {
+            "item": "Silistyt",
+            "qty": 15
+          },
+          {
+            "item": "Petrified Ichor",
+            "qty": 6
+          }
+        ]
+      },
+      "stats": {
+        "Smite": "3/50",
+        "SmitePercent": "6%",
+        "Lvl0": {
+          "Stagger": 60,
+          "Attack": 72,
+          "ChargedAttack": 144,
+          "DamageAttuneCap": null
+        },
+        "Lvl30": {
+          "Stagger": null,
+          "Attack": null,
+          "ChargedAttack": null,
+          "DamageAttuneCap": null
+        },
+        "VirtueAttuneCap": null,
+        "AttuneCaps": {
+          "DamageLight": null,
+          "DamageHeavy": null,
+          "DamageChargedHeavy": null,
+          "ChargedHeavy": null,
+          "DamageChargedShot": null,
+          "ChargedShot": null,
+          "DamageThrow": null,
+          "Throw": null,
+          "DamageSpecialThrow": null,
+          "SpecialThrow": null
+        }
+      },
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Rivt-II",
+      "name": "Rivt-II",
+      "description": "An Ode'n Splitsword cast of foreign ore from distant orbits. <p><span style=\"color:#e0e0e0\">The centering sphere is marked by the symbol of Culveer, the constellation of destruction. In battle, the blade is split in two. By Culveer's essence, one right insists upon another, and thus the twin blades slice enemies to fractions.</span>",
+      "rarity": "Common",
+      "imgIcon": "https://api.avakot.org/v1/I/RivtII.png",
+      "damageType": "Sharp",
+      "slot": "Weapon",
+      "attuneTier": "1",
+      "attuneVirtue": "Grace",
+      "reqVirtue": "",
+      "art": "Short%20Blade",
+      "craft": {
+        "Fragments": "1",
+        "Time": 4,
+        "Cost": 1500,
+        "BondReq": "1",
+        "ingredients": [
+          {
+            "item": "Scrap Steel",
+            "qty": 25
+          },
+          {
+            "item": "Ode Graphite",
+            "qty": 30
+          },
+          {
+            "item": "Corrupt Onyx",
+            "qty": 25
+          }
+        ]
+      },
+      "stats": {
+        "Smite": "1/25",
+        "SmitePercent": "4%",
+        "Lvl0": {
+          "Stagger": 12,
+          "Attack": 26,
+          "ChargedAttack": 39,
+          "DamageAttuneCap": null
+        },
+        "Lvl30": {
+          "Stagger": 27,
+          "Attack": 40,
+          "ChargedAttack": 60,
+          "DamageAttuneCap": 64
+        },
+        "VirtueAttuneCap": 26,
+        "AttuneCaps": {
+          "DamageLight": 64,
+          "DamageHeavy": 128,
+          "DamageChargedHeavy": null,
+          "ChargedHeavy": null,
+          "DamageChargedShot": null,
+          "ChargedShot": null,
+          "DamageThrow": 136,
+          "Throw": 62,
+          "DamageSpecialThrow": null,
+          "SpecialThrow": null
+        }
+      },
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Rook",
+      "name": "Rook",
+      "description": "The wrought iron rookblade is both club and spear. A favourite amongst the towering Knightmaidens, such polearms littered the fields of Dendria after the dread song rand. Now they are held by the Thrall.",
+      "rarity": "Uncommon",
+      "imgIcon": "https://api.avakot.org/v1/I/Rook.png",
+      "damageType": "Blunt",
+      "slot": "Weapon",
+      "attuneTier": "2",
+      "attuneVirtue": "Spirit",
+      "reqVirtue": "10",
+      "art": "Polearm",
+      "craft": {
+        "Fragments": "2",
+        "Time": 10,
+        "Cost": 2500,
+        "BondReq": null,
+        "ingredients": [
+          {
+            "item": "Scrap Iron",
+            "qty": 25
+          },
+          {
+            "item": "Ichor",
+            "qty": 20
+          },
+          {
+            "item": "Silistyt",
+            "qty": 20
+          }
+        ]
+      },
+      "stats": {
+        "Smite": "1/50",
+        "SmitePercent": "2%",
+        "Lvl0": {
+          "Stagger": 40,
+          "Attack": 60,
+          "ChargedAttack": 105,
+          "DamageAttuneCap": null
+        },
+        "Lvl30": {
+          "Stagger": 70,
+          "Attack": 99,
+          "ChargedAttack": 173,
+          "DamageAttuneCap": 144
+        },
+        "VirtueAttuneCap": 40,
+        "AttuneCaps": {
+          "DamageLight": 144,
+          "DamageHeavy": 288,
+          "DamageChargedHeavy": null,
+          "ChargedHeavy": null,
+          "DamageChargedShot": null,
+          "ChargedShot": null,
+          "DamageThrow": 204,
+          "Throw": 60,
+          "DamageSpecialThrow": null,
+          "SpecialThrow": null
+        }
+      },
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Skílter",
+      "name": "Skílter",
+      "description": "An Ode'n flyblade. <p><span style=\"color:#e0e0e0\">Forged in the molten star Volhal, this air-light knife is foiled in multiplicity. Skílter can be thrown across a skytower while never leaving its master's hand. Such blades are common gifts to honour superiors and say more about status than utility. Yet those of Grace may fly death upon her tiny wings.</span>",
+      "rarity": "Uncommon",
+      "imgIcon": "https://api.avakot.org/v1/I/Skilter.png",
+      "damageType": "Sharp",
+      "slot": "Sidearm",
+      "attuneTier": "2",
+      "attuneVirtue": "Grace",
+      "reqVirtue": "10",
+      "art": "Flyblade",
+      "craft": {
+        "Fragments": "2",
+        "Time": 10,
+        "Cost": 2500,
+        "BondReq": null,
+        "ingredients": [
+          {
+            "item": "Scrap Brass",
+            "qty": 25
+          },
+          {
+            "item": "Silistyt",
+            "qty": 20
+          },
+          {
+            "item": "Corrupt Onyx",
+            "qty": 20
+          }
+        ]
+      },
+      "stats": {
+        "Smite": "3/100",
+        "SmitePercent": "3%",
+        "Lvl0": {
+          "Stagger": 6,
+          "Attack": 24,
+          "ChargedAttack": 24,
+          "DamageAttuneCap": null
+        },
+        "Lvl30": {
+          "Stagger": 21,
+          "Attack": 63,
+          "ChargedAttack": 63,
+          "DamageAttuneCap": 72
+        },
+        "VirtueAttuneCap": 16,
+        "AttuneCaps": {
+          "DamageLight": 72,
+          "DamageHeavy": "X",
+          "DamageChargedHeavy": null,
+          "ChargedHeavy": null,
+          "DamageChargedShot": null,
+          "ChargedShot": null,
+          "DamageThrow": 30,
+          "Throw": 16,
+          "DamageSpecialThrow": null,
+          "SpecialThrow": null
+        }
+      },
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Sollos-I",
+      "name": "Sollos-I",
+      "description": "A standard issue broadsword for Ode'n Gruul-Seekers. Though this model is outdated, its blade remains finely pointed. The worn handholds on either side of the hilt indicate two wielders. The first carried the Sollos-I in their right hand, the other, likely a new recruit using a retired sword to train, swung it in their left.",
+      "rarity": "Uncommon",
+      "imgIcon": "https://api.avakot.org/v1/I/SollosI.png",
+      "damageType": "Sharp",
+      "slot": "Weapon",
+      "attuneTier": "2",
+      "attuneVirtue": "Spirit",
+      "reqVirtue": "10",
+      "art": "Long%20Blade",
+      "craft": {
+        "Fragments": "2",
+        "Time": 4,
+        "Cost": 1,
+        "BondReq": "2",
+        "ingredients": [
+          {
+            "item": "Scrap Steel",
+            "qty": 25
+          },
+          {
+            "item": "Ichor",
+            "qty": 25
+          },
+          {
+            "item": "Ode Graphite",
+            "qty": 30
+          }
+        ]
+      },
+      "stats": {
+        "Smite": "1/25",
+        "SmitePercent": "4%",
+        "Lvl0": {
+          "Stagger": 24,
+          "Attack": 40,
+          "ChargedAttack": 64,
+          "DamageAttuneCap": null
+        },
+        "Lvl30": {
+          "Stagger": 54,
+          "Attack": 79,
+          "ChargedAttack": 126,
+          "DamageAttuneCap": 104
+        },
+        "VirtueAttuneCap": 27,
+        "AttuneCaps": {
+          "DamageLight": 104,
+          "DamageHeavy": 208,
+          "DamageChargedHeavy": null,
+          "ChargedHeavy": null,
+          "DamageChargedShot": null,
+          "ChargedShot": null,
+          "DamageThrow": 144,
+          "Throw": 40,
+          "DamageSpecialThrow": null,
+          "SpecialThrow": null
+        }
+      },
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Stultin",
+      "name": "Stultin",
+      "description": "'''A cut and rusted sword from an era long forgotten.''' Stultin, the ancient arm of a fallen mockery. The steel blade was fractured in some unremembered battle, then filed flat in falchion style. The wooden hilt has rotted and dried, near petrified. But the glowing runes... Seemingly etched anew into well-settled rust.\"",
+      "rarity": "Uncommon",
+      "imgIcon": "https://api.avakot.org/v1/I/Stultin.png",
+      "damageType": "Sharp",
+      "slot": "Weapon",
+      "attuneTier": "2",
+      "attuneVirtue": "Grace",
+      "reqVirtue": "10",
+      "art": "Long%20Blade",
+      "craft": {
+        "Fragments": "2",
+        "Time": 10,
+        "Cost": 2,
+        "BondReq": null,
+        "ingredients": [
+          {
+            "item": "Scrap Brass",
+            "qty": 25
+          },
+          {
+            "item": "Ichor",
+            "qty": 20
+          },
+          {
+            "item": "Corrupt Onyx",
+            "qty": 20
+          }
+        ]
+      },
+      "stats": {
+        "Smite": "3/100",
+        "SmitePercent": "3%",
+        "Lvl0": {
+          "Stagger": 24,
+          "Attack": 49,
+          "ChargedAttack": 98,
+          "DamageAttuneCap": null
+        },
+        "Lvl30": {
+          "Stagger": 54,
+          "Attack": 88,
+          "ChargedAttack": 176,
+          "DamageAttuneCap": 122
+        },
+        "VirtueAttuneCap": 33,
+        "AttuneCaps": {
+          "DamageLight": 122,
+          "DamageHeavy": 244,
+          "DamageChargedHeavy": null,
+          "ChargedHeavy": null,
+          "DamageChargedShot": null,
+          "ChargedShot": null,
+          "DamageThrow": 172,
+          "Throw": 50,
+          "DamageSpecialThrow": null,
+          "SpecialThrow": null
+        }
+      },
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Tessard",
+      "name": "Tessard",
+      "description": "'''A serpentine sword that hisses when swung.''' Perhaps an ornamental blade for a hearth-rack of yesteryear. Or a ceremonial sword for an occult order long lost. Whatever purpose she once held, Tessard today is no more than a mockery. What strange runes have carved their way into her ancient face?",
+      "rarity": "Uncommon",
+      "imgIcon": "https://api.avakot.org/v1/I/Tessard.png",
+      "damageType": "Sharp",
+      "slot": "Weapon",
+      "attuneTier": "2",
+      "attuneVirtue": "Spirit",
+      "reqVirtue": "10",
+      "art": "Long%20Blade",
+      "craft": {
+        "Fragments": "2",
+        "Time": 10,
+        "Cost": 2,
+        "BondReq": null,
+        "ingredients": [
+          {
+            "item": "Scrap Brass",
+            "qty": 25
+          },
+          {
+            "item": "Corrupt Onyx",
+            "qty": 20
+          },
+          {
+            "item": "Ichor",
+            "qty": 20
+          }
+        ]
+      },
+      "stats": {
+        "Smite": "1/50",
+        "SmitePercent": "2%",
+        "Lvl0": {
+          "Stagger": 24,
+          "Attack": 38,
+          "ChargedAttack": 76,
+          "DamageAttuneCap": null
+        },
+        "Lvl30": {
+          "Stagger": 54,
+          "Attack": 77,
+          "ChargedAttack": 154,
+          "DamageAttuneCap": 100
+        },
+        "VirtueAttuneCap": 25,
+        "AttuneCaps": {
+          "DamageLight": 100,
+          "DamageHeavy": 200,
+          "DamageChargedHeavy": null,
+          "ChargedHeavy": null,
+          "DamageChargedShot": null,
+          "ChargedShot": null,
+          "DamageThrow": 138,
+          "Throw": 38,
+          "DamageSpecialThrow": null,
+          "SpecialThrow": null
+        }
+      },
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "The Alder",
+      "name": "The Alder",
+      "description": "'''The sacred staff of Wyld legend.''' A finger snapped from the tender hand of the Empress Alora, from the sacred arm of her Alder tree. Arcing branches dipped in gold, hold an orb of glowing moonstone like so many clasped hands. Enchanted by the spirit of the witch, Oscelda, and the sacrifice of the Empress of Eldveil, both. Wield your ancestral arm with power, child of Oscelda.",
+      "rarity": "Uncommon",
+      "imgIcon": "https://api.avakot.org/v1/I/AlderStaff.png",
+      "damageType": "Voltaic",
+      "slot": "Weapon",
+      "attuneTier": "2",
+      "attuneVirtue": "Spirit",
+      "reqVirtue": "",
+      "art": "Magick",
+      "craft": {
+        "Fragments": "0",
+        "Time": null,
+        "Cost": 2,
+        "BondReq": "N/A",
+        "ingredients": [
+          {
+            "item": "Scrap Brass",
+            "qty": 20
+          },
+          {
+            "item": "Quenching Acid",
+            "qty": 20
+          },
+          {
+            "item": "Gossamer Quartz",
+            "qty": 20
+          }
+        ]
+      },
+      "stats": {
+        "Smite": "3/50",
+        "SmitePercent": "6%",
+        "Lvl0": {
+          "Stagger": null,
+          "Attack": null,
+          "ChargedAttack": null,
+          "DamageAttuneCap": null
+        },
+        "Lvl30": {
+          "Stagger": null,
+          "Attack": null,
+          "ChargedAttack": null,
+          "DamageAttuneCap": null
+        },
+        "VirtueAttuneCap": null,
+        "AttuneCaps": {
+          "DamageLight": null,
+          "DamageHeavy": null,
+          "DamageChargedHeavy": null,
+          "ChargedHeavy": null,
+          "DamageChargedShot": null,
+          "ChargedShot": null,
+          "DamageThrow": null,
+          "Throw": null,
+          "DamageSpecialThrow": null,
+          "SpecialThrow": null
+        }
+      },
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "The Erstroot",
+      "name": "The Erstroot",
+      "description": "'''A witching-staff of Wevetroot.''' Plucked from the Wastegraves by the Wazzard's own hand, a creeping root steeped in ichor. Be it Ode'n corruption that grants it such power? The darkened trace of magick sap? Or an ancient curse from the Waste Wraith himself?",
+      "rarity": "Uncommon",
+      "imgIcon": "https://api.avakot.org/v1/I/TheErstroot.png",
+      "damageType": "Arcanic",
+      "slot": "Weapon",
+      "attuneTier": "2",
+      "attuneVirtue": "Spirit",
+      "reqVirtue": "10",
+      "art": "Magick",
+      "craft": {
+        "Fragments": "2",
+        "Time": 10,
+        "Cost": 2500,
+        "BondReq": null,
+        "ingredients": [
+          {
+            "item": "Corrupt Onyx",
+            "qty": 20
+          },
+          {
+            "item": "Silistyt",
+            "qty": 20
+          },
+          {
+            "item": "Petrified Ichor",
+            "qty": 8
+          }
+        ]
+      },
+      "stats": {
+        "Smite": "3/50",
+        "SmitePercent": "6%",
+        "Lvl0": {
+          "Stagger": null,
+          "Attack": 27,
+          "ChargedAttack": 54,
+          "DamageAttuneCap": null
+        },
+        "Lvl30": {
+          "Stagger": 19,
+          "Attack": 66,
+          "ChargedAttack": 132,
+          "DamageAttuneCap": 78
+        },
+        "VirtueAttuneCap": 27,
+        "AttuneCaps": {
+          "DamageLight": 78,
+          "DamageHeavy": 156,
+          "DamageChargedHeavy": 200,
+          "ChargedHeavy": 60,
+          "DamageChargedShot": null,
+          "ChargedShot": null,
+          "DamageThrow": null,
+          "Throw": null,
+          "DamageSpecialThrow": null,
+          "SpecialThrow": null
+        }
+      },
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "The Ivor",
+      "name": "The Ivor",
+      "description": "'''The flameblade of Wyld legend.''' Forged from the femur of the Empress Alora, of alloys dug from the deepest of hollow hills. Marrow binds the Ivor Blade. The snaking sword curls like eager flame, stoked by the burning orb of Moranite embedded within. Enchanted by the courage of the warrior, Tethren, and the sacrifice of the Empress of Eldveil, both. Wield your ancestral arm with pride, child of Tethren.",
+      "rarity": "Uncommon",
+      "imgIcon": "https://api.avakot.org/v1/I/IvorLongBlade.png",
+      "damageType": "Sharp",
+      "slot": "Weapon",
+      "attuneTier": "2",
+      "attuneVirtue": "Courage",
+      "reqVirtue": "",
+      "art": "Long%20Blade",
+      "craft": {
+        "Fragments": "0",
+        "Time": null,
+        "Cost": 2,
+        "BondReq": "N/A",
+        "ingredients": [
+          {
+            "item": "Scrap Steel",
+            "qty": 20
+          },
+          {
+            "item": "Quenching Acid",
+            "qty": 20
+          },
+          {
+            "item": "Moranite",
+            "qty": 8
+          }
+        ]
+      },
+      "stats": {
+        "Smite": "1/25",
+        "SmitePercent": "4%",
+        "Lvl0": {
+          "Stagger": null,
+          "Attack": null,
+          "ChargedAttack": null,
+          "DamageAttuneCap": null
+        },
+        "Lvl30": {
+          "Stagger": null,
+          "Attack": null,
+          "ChargedAttack": null,
+          "DamageAttuneCap": null
+        },
+        "VirtueAttuneCap": 29,
+        "AttuneCaps": {
+          "DamageLight": null,
+          "DamageHeavy": null,
+          "DamageChargedHeavy": null,
+          "ChargedHeavy": null,
+          "DamageChargedShot": null,
+          "ChargedShot": null,
+          "DamageThrow": null,
+          "Throw": null,
+          "DamageSpecialThrow": null,
+          "SpecialThrow": null
+        }
+      },
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "The Paragon",
+      "name": "The Paragon",
+      "description": "'''The master greatsword of Wyld legend.''' Not forged of marrow, nor plucked of lash. Not snapped from sacred tree. The Paragon greatsword was sung into being by the Empress of Eldveil. Her voice carved its curves, shaped it sharp. Within the hilt, the virtues of Wylds three... Within the blade, something even more powerful. You are the second Envoy to wield it. The first etched a threat upon the blade: \"Return to Bayor.\"",
+      "rarity": "Rare",
+      "imgIcon": "https://api.avakot.org/v1/I/ParagonGreatSword.png",
+      "damageType": "Sharp",
+      "slot": "Weapon",
+      "attuneTier": "",
+      "attuneVirtue": "",
+      "reqVirtue": "",
+      "art": "Greatsword",
+      "craft": {
+        "Fragments": "0",
+        "Time": null,
+        "Cost": 2,
+        "BondReq": "N/A",
+        "ingredients": [
+          {
+            "item": "Scrap Brass",
+            "qty": 20
+          },
+          {
+            "item": "Sappheline",
+            "qty": 8
+          },
+          {
+            "item": "Moranite",
+            "qty": 8
+          }
+        ]
+      },
+      "stats": {
+        "Smite": "7/100",
+        "SmitePercent": "7%",
+        "Lvl0": {
+          "Stagger": null,
+          "Attack": null,
+          "ChargedAttack": null,
+          "DamageAttuneCap": null
+        },
+        "Lvl30": {
+          "Stagger": 84,
+          "Attack": null,
+          "ChargedAttack": null,
+          "DamageAttuneCap": null
+        },
+        "VirtueAttuneCap": "Scales with every virtue. Cap is Over 114",
+        "AttuneCaps": {
+          "DamageLight": null,
+          "DamageHeavy": null,
+          "DamageChargedHeavy": null,
+          "ChargedHeavy": null,
+          "DamageChargedShot": null,
+          "ChargedShot": null,
+          "DamageThrow": null,
+          "Throw": null,
+          "DamageSpecialThrow": null,
+          "SpecialThrow": null
+        }
+      },
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "The Royal Tines",
+      "name": "The Royal Tines",
+      "description": "Antler blades forged of alloyed steel and bone trace. Conceived in homage to the great Omen Stag, Garren Rood. An anonymous tome from The Pensives' archives recounts the weapon's first sighting as such: \"Twas the Stag's grace upon the Silvern we saw then. Cruel points aglow, fallow curves, so fraught. Hear these bellows of longing for my pelted loves? My losses, their indignities. Each charge shall wet the soil with the wine of their rebirth.\"",
+      "rarity": "Uncommon",
+      "imgIcon": "https://api.avakot.org/v1/I/TheRoyalTines.png",
+      "damageType": "Sharp",
+      "slot": "Weapon",
+      "attuneTier": "2",
+      "attuneVirtue": "Spirit",
+      "reqVirtue": "10",
+      "art": "Short%20Blade",
+      "craft": {
+        "Fragments": "1",
+        "Time": 10,
+        "Cost": 3,
+        "BondReq": "3",
+        "ingredients": [
+          {
+            "item": "Scrap Brass",
+            "qty": 15
+          },
+          {
+            "item": "Knotwood",
+            "qty": 20
+          },
+          {
+            "item": "River Pearl",
+            "qty": 6
+          }
+        ]
+      },
+      "stats": {
+        "Smite": "3/50",
+        "SmitePercent": "6%",
+        "Lvl0": {
+          "Stagger": 14,
+          "Attack": 21,
+          "ChargedAttack": 32,
+          "DamageAttuneCap": 58
+        },
+        "Lvl30": {
+          "Stagger": 27,
+          "Attack": 53,
+          "ChargedAttack": 106,
+          "DamageAttuneCap": 64
+        },
+        "VirtueAttuneCap": 17,
+        "AttuneCaps": {
+          "DamageLight": 64,
+          "DamageHeavy": 128,
+          "DamageChargedHeavy": null,
+          "ChargedHeavy": null,
+          "DamageChargedShot": null,
+          "ChargedShot": null,
+          "DamageThrow": 136,
+          "Throw": 41,
+          "DamageSpecialThrow": null,
+          "SpecialThrow": null
+        }
+      },
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "The Starling",
+      "name": "The Starling",
+      "description": "'''The feybow of Wyld legend.''' Strung taut with the golden eyelash of the Empress Alora, of spider silk weaver-wound. Stolen way 'fore it could be gifted. Such is the grace of the Starling Bow, its wind blades guarding the Sappheline orb from those who may steal it back. Enchanted by the grace of the rogue, Sirin, and the sacrifice of the Empress of Eldveil, both. Wield your ancestral arm with pride, child of Sirin.",
+      "rarity": "Uncommon",
+      "imgIcon": "https://api.avakot.org/v1/I/StarlingBow.png",
+      "damageType": "Sharp",
+      "slot": "Weapon",
+      "attuneTier": "2",
+      "attuneVirtue": "Grace",
+      "reqVirtue": "",
+      "art": "Bow",
+      "craft": {
+        "Fragments": "0",
+        "Time": null,
+        "Cost": 2,
+        "BondReq": "N/A",
+        "ingredients": [
+          {
+            "item": "Scrap Brass",
+            "qty": 20
+          },
+          {
+            "item": "Scrap Steel",
+            "qty": 20
+          },
+          {
+            "item": "Sappheline",
+            "qty": 8
+          }
+        ]
+      },
+      "stats": {
+        "Smite": "1/25",
+        "SmitePercent": "4%",
+        "Lvl0": {
+          "Stagger": null,
+          "Attack": null,
+          "ChargedAttack": null,
+          "DamageAttuneCap": null
+        },
+        "Lvl30": {
+          "Stagger": null,
+          "Attack": null,
+          "ChargedAttack": null,
+          "DamageAttuneCap": null
+        },
+        "VirtueAttuneCap": 29,
+        "AttuneCaps": {
+          "DamageLight": null,
+          "DamageHeavy": null,
+          "DamageChargedHeavy": null,
+          "ChargedHeavy": null,
+          "DamageChargedShot": null,
+          "ChargedShot": null,
+          "DamageThrow": null,
+          "Throw": null,
+          "DamageSpecialThrow": null,
+          "SpecialThrow": null
+        }
+      },
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Thistle",
+      "name": "Thistle",
+      "description": "A well-worn hunter's bow. Lightweight and well-balanced despite its age, Thistle has the mark of a Roods craftsman. The handle is grooved around your fingertips like an old friend. You've much in common with whoever held it last. Of that, you are certain.",
+      "rarity": "Common",
+      "imgIcon": "https://api.avakot.org/v1/I/Thistle.png",
+      "damageType": "Sharp",
+      "slot": "Weapon",
+      "attuneTier": "1",
+      "attuneVirtue": "Grace",
+      "reqVirtue": "",
+      "art": "Bow",
+      "craft": {
+        "Fragments": "1",
+        "Time": 4,
+        "Cost": 1500,
+        "BondReq": null,
+        "ingredients": [
+          {
+            "item": "Scrap Iron",
+            "qty": 15
+          },
+          {
+            "item": "Dendrit Weave",
+            "qty": 20
+          },
+          {
+            "item": "Knotwood",
+            "qty": 15
+          }
+        ]
+      },
+      "stats": {
+        "Smite": "1/20",
+        "SmitePercent": "5%",
+        "Lvl0": {
+          "Stagger": 20,
+          "Attack": 28,
+          "ChargedAttack": 56,
+          "DamageAttuneCap": null
+        },
+        "Lvl30": {
+          "Stagger": 50,
+          "Attack": 57,
+          "ChargedAttack": 114,
+          "DamageAttuneCap": 80
+        },
+        "VirtueAttuneCap": 28,
+        "AttuneCaps": {
+          "DamageLight": 80,
+          "DamageHeavy": 160,
+          "DamageChargedHeavy": null,
+          "ChargedHeavy": null,
+          "DamageChargedShot": 192,
+          "ChargedShot": 84,
+          "DamageThrow": null,
+          "Throw": null,
+          "DamageSpecialThrow": null,
+          "SpecialThrow": null
+        }
+      },
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Thrice Spurns",
+      "name": "Thrice Spurns",
+      "description": "'''The thrice spurned flyblades of Wyld Tethren.''' Crafted by the hero's own half-brother, Pothus, after the great Felling war. Thrice spurned was the Empress of Eldveil, one blade for each of her Wyld betrayers. From holster to hilts, these ceremonial flyblades were forged, etched, and gifted to Tethren in complete silence.",
+      "rarity": "Uncommon",
+      "imgIcon": "https://api.avakot.org/v1/I/ThriceSpurnedFlyblade.png",
+      "damageType": "Sharp",
+      "slot": "Sidearm",
+      "attuneTier": "2",
+      "attuneVirtue": "Courage",
+      "reqVirtue": "",
+      "art": "Flyblade",
+      "craft": {
+        "Fragments": "0",
+        "Time": null,
+        "Cost": 2,
+        "BondReq": null,
+        "ingredients": [
+          {
+            "item": "Scrap Brass",
+            "qty": 20
+          },
+          {
+            "item": "Scrap Steel",
+            "qty": 20
+          },
+          {
+            "item": "Sappheline",
+            "qty": 8
+          }
+        ]
+      },
+      "stats": {
+        "Smite": null,
+        "SmitePercent": null,
+        "Lvl0": {
+          "Stagger": null,
+          "Attack": null,
+          "ChargedAttack": null,
+          "DamageAttuneCap": null
+        },
+        "Lvl30": {
+          "Stagger": null,
+          "Attack": null,
+          "ChargedAttack": null,
+          "DamageAttuneCap": null
+        },
+        "VirtueAttuneCap": null,
+        "AttuneCaps": {
+          "DamageLight": null,
+          "DamageHeavy": null,
+          "DamageChargedHeavy": null,
+          "ChargedHeavy": null,
+          "DamageChargedShot": null,
+          "ChargedShot": null,
+          "DamageThrow": null,
+          "Throw": null,
+          "DamageSpecialThrow": null,
+          "SpecialThrow": null
+        }
+      },
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Unsula",
+      "name": "Unsula",
+      "description": "The binary blades of Sinecure mercenaries. Each Unsulum dagger is cast in a measured arc. Some liken it to a broken orbit, others to a pinching claw. Together, the Unsula are precisely formed to strike soundlessly through Alcan atmosphere.",
+      "rarity": "Uncommon",
+      "imgIcon": "https://api.avakot.org/v1/I/Unsula.png",
+      "damageType": "Sharp",
+      "slot": "Weapon",
+      "attuneTier": "2",
+      "attuneVirtue": "Spirit",
+      "reqVirtue": "10",
+      "art": "Short%20Blade",
+      "craft": {
+        "Fragments": "2",
+        "Time": 10,
+        "Cost": 2,
+        "BondReq": "2",
+        "ingredients": [
+          {
+            "item": "Scrap Steel",
+            "qty": 25
+          },
+          {
+            "item": "Silistyt",
+            "qty": 20
+          },
+          {
+            "item": "Petrified Ichor",
+            "qty": 8
+          }
+        ]
+      },
+      "stats": {
+        "Smite": "1/20",
+        "SmitePercent": "5%",
+        "Lvl0": {
+          "Stagger": 12,
+          "Attack": 26,
+          "ChargedAttack": 39,
+          "DamageAttuneCap": 58
+        },
+        "Lvl30": {
+          "Stagger": 27,
+          "Attack": 50,
+          "ChargedAttack": 75,
+          "DamageAttuneCap": 64
+        },
+        "VirtueAttuneCap": 17,
+        "AttuneCaps": {
+          "DamageLight": 64,
+          "DamageHeavy": 128,
+          "DamageChargedHeavy": null,
+          "ChargedHeavy": null,
+          "DamageChargedShot": null,
+          "ChargedShot": null,
+          "DamageThrow": null,
+          "Throw": null,
+          "DamageSpecialThrow": null,
+          "SpecialThrow": null
+        }
+      },
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Vasp-IV",
+      "name": "Vasp-IV",
+      "description": "'''A deadly Ode'n Halberd lost to the Sinecure ranks not long ago.''' Though the blade is rusted slightly, it is only for the Ode'n alloys, untreated for humid Alcan air. Assuredly, it is no less sharp, nor acutely balanced, than the night of its extraction from Ode'n mould.",
+      "rarity": "Common",
+      "imgIcon": "https://api.avakot.org/v1/I/VaspIV.png",
+      "damageType": "Sharp",
+      "slot": "Weapon",
+      "attuneTier": "1",
+      "attuneVirtue": "Courage",
+      "reqVirtue": "",
+      "art": "Polearm",
+      "craft": {
+        "Fragments": "1",
+        "Time": 4,
+        "Cost": 1,
+        "BondReq": "1",
+        "ingredients": [
+          {
+            "item": "Scrap Steel",
+            "qty": 25
+          },
+          {
+            "item": "Corrupt Onyx",
+            "qty": 25
+          },
+          {
+            "item": "Quenching Acid",
+            "qty": 25
+          }
+        ]
+      },
+      "stats": {
+        "Smite": "1/20",
+        "SmitePercent": "5%",
+        "Lvl0": {
+          "Stagger": 36,
+          "Attack": 58,
+          "ChargedAttack": 102,
+          "DamageAttuneCap": null
+        },
+        "Lvl30": {
+          "Stagger": 66,
+          "Attack": 85,
+          "ChargedAttack": 149,
+          "DamageAttuneCap": 138
+        },
+        "VirtueAttuneCap": 58,
+        "AttuneCaps": {
+          "DamageLight": 138,
+          "DamageHeavy": 276,
+          "DamageChargedHeavy": null,
+          "ChargedHeavy": null,
+          "DamageChargedShot": null,
+          "ChargedShot": null,
+          "DamageThrow": 198,
+          "Throw": 88,
+          "DamageSpecialThrow": null,
+          "SpecialThrow": null
+        }
+      },
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Vetch",
+      "name": "Vetch",
+      "description": "The swiftsword Vetch. Slender and pliant, this sword is of the Dendrit weapon class 'Illanfeoir' meaning blade of grass. Vetch is unadorned but for a single blue crystal embedded in its hilt- a Tear of Iridis. Likely a weapon wrought in the name of a loved one lost.",
+      "rarity": "Uncommon",
+      "imgIcon": "https://api.avakot.org/v1/I/Vetch.png",
+      "damageType": "Sharp",
+      "slot": "Weapon",
+      "attuneTier": "2",
+      "attuneVirtue": "Courage",
+      "reqVirtue": "10",
+      "art": "Long%20Blade",
+      "craft": {
+        "Fragments": "2",
+        "Time": 10,
+        "Cost": 2,
+        "BondReq": "2",
+        "ingredients": [
+          {
+            "item": "Scrap Steel",
+            "qty": 25
+          },
+          {
+            "item": "Silistyt",
+            "qty": 20
+          },
+          {
+            "item": "Petrified Ichor",
+            "qty": 8
+          }
+        ]
+      },
+      "stats": {
+        "Smite": "3/100",
+        "SmitePercent": "3%",
+        "Lvl0": {
+          "Stagger": 24,
+          "Attack": 42,
+          "ChargedAttack": 67,
+          "DamageAttuneCap": null
+        },
+        "Lvl30": {
+          "Stagger": 54,
+          "Attack": 81,
+          "ChargedAttack": 130,
+          "DamageAttuneCap": 108
+        },
+        "VirtueAttuneCap": 28,
+        "AttuneCaps": {
+          "DamageLight": 108,
+          "DamageHeavy": 216,
+          "DamageChargedHeavy": null,
+          "ChargedHeavy": null,
+          "DamageChargedShot": null,
+          "ChargedShot": null,
+          "DamageThrow": 150,
+          "Throw": 42,
+          "DamageSpecialThrow": null,
+          "SpecialThrow": null
+        }
+      },
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Virdigris",
+      "name": "Virdigris",
+      "description": "A ritual dagger, aglow with moonlight. A fine point, more handle than blade, Virdigris seeks sacrifice. She is wrought with copper, a cleansing metal meant to protect the holder from what vengeful spirit may lurch from its mark. The innermost ring of Iridis is her namesake. May that be the fate of your fallen.",
+      "rarity": "Uncommon",
+      "imgIcon": "https://api.avakot.org/v1/I/Virdigris.png",
+      "damageType": "Sharp",
+      "slot": "Sidearm",
+      "attuneTier": "2",
+      "attuneVirtue": "Spirit",
+      "reqVirtue": "10",
+      "art": "Short%20Blade",
+      "craft": {
+        "Fragments": "2",
+        "Time": 10,
+        "Cost": 2500,
+        "BondReq": "2",
+        "ingredients": [
+          {
+            "item": "Scrap Steel",
+            "qty": 25
+          },
+          {
+            "item": "Dendrit Weave",
+            "qty": 25
+          },
+          {
+            "item": "Sappheline",
+            "qty": 8
+          }
+        ]
+      },
+      "stats": {
+        "Smite": "1/25",
+        "SmitePercent": "4%",
+        "Lvl0": {
+          "Stagger": 20,
+          "Attack": 36,
+          "ChargedAttack": 58,
+          "DamageAttuneCap": null
+        },
+        "Lvl30": {
+          "Stagger": 50,
+          "Attack": 75,
+          "ChargedAttack": 120,
+          "DamageAttuneCap": 96
+        },
+        "VirtueAttuneCap": 24,
+        "AttuneCaps": {
+          "DamageLight": 96,
+          "DamageHeavy": 192,
+          "DamageChargedHeavy": null,
+          "ChargedHeavy": null,
+          "DamageChargedShot": null,
+          "ChargedShot": null,
+          "DamageThrow": 112,
+          "Throw": 36,
+          "DamageSpecialThrow": null,
+          "SpecialThrow": null
+        }
+      },
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Witan",
+      "name": "Witan",
+      "description": "'''Childblade to the glorious Dewelion.''' Our oldest tales tell of sacred unions between human and fey-kind. Of children who are neither, yet both. Witan was forged for such a child, its wooden hilt enchanted to grow in pace. Though... It is clear this childblade never reached its full size.",
+      "rarity": "Uncommon",
+      "imgIcon": "https://api.avakot.org/v1/I/Witan.png",
+      "damageType": "Sharp",
+      "slot": "Sidearm",
+      "attuneTier": "2",
+      "attuneVirtue": "Courage",
+      "reqVirtue": "10",
+      "art": "Short%20Blade",
+      "craft": {
+        "Fragments": "2",
+        "Time": 10,
+        "Cost": 2,
+        "BondReq": null,
+        "ingredients": [
+          {
+            "item": "Scrap Iron",
+            "qty": 25
+          },
+          {
+            "item": "Sappheline",
+            "qty": 8
+          },
+          {
+            "item": "River Pearl",
+            "qty": 8
+          }
+        ]
+      },
+      "stats": {
+        "Smite": "1/20",
+        "SmitePercent": "5%",
+        "Lvl0": {
+          "Stagger": 20,
+          "Attack": 35,
+          "ChargedAttack": 70,
+          "DamageAttuneCap": null
+        },
+        "Lvl30": {
+          "Stagger": 50,
+          "Attack": 74,
+          "ChargedAttack": 148,
+          "DamageAttuneCap": 94
+        },
+        "VirtueAttuneCap": 23,
+        "AttuneCaps": {
+          "DamageLight": 94,
+          "DamageHeavy": 188,
+          "DamageChargedHeavy": null,
+          "ChargedHeavy": null,
+          "DamageChargedShot": null,
+          "ChargedShot": null,
+          "DamageThrow": 128,
+          "Throw": 36,
+          "DamageSpecialThrow": null,
+          "SpecialThrow": null
+        }
+      },
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "id": "Wulder",
+      "name": "Wulder",
+      "description": "A hefty training sword, forged many generations ago. Though its hilt has known many young soldiers to be, Wulder is not so worn as it is old. You imagine this broadsword respectfully retired. A mantlepiece hung above a Curlainan hearth. Warming. Waiting. For the fated hand of its final student.",
+      "rarity": "Common",
+      "imgIcon": "https://api.avakot.org/v1/I/Wulder.png",
+      "damageType": "Sharp",
+      "slot": "Weapon",
+      "attuneTier": "1",
+      "attuneVirtue": "Courage",
+      "reqVirtue": "",
+      "art": "Long%20Blade",
+      "craft": {
+        "Fragments": "1",
+        "Time": 4,
+        "Cost": 1500,
+        "BondReq": null,
+        "ingredients": [
+          {
+            "item": "Scrap Iron",
+            "qty": 15
+          },
+          {
+            "item": "Sproutfolk Frond",
+            "qty": 20
+          },
+          {
+            "item": "Quenching Acid",
+            "qty": 25
+          }
+        ]
+      },
+      "stats": {
+        "Smite": "3/100",
+        "SmitePercent": "3%",
+        "Lvl0": {
+          "Stagger": 20,
+          "Attack": 36,
+          "ChargedAttack": 58,
+          "DamageAttuneCap": null
+        },
+        "Lvl30": {
+          "Stagger": 50,
+          "Attack": 63,
+          "ChargedAttack": 101,
+          "DamageAttuneCap": 96
+        },
+        "VirtueAttuneCap": 36,
+        "AttuneCaps": {
+          "DamageLight": 96,
+          "DamageHeavy": 192,
+          "DamageChargedHeavy": null,
+          "ChargedHeavy": null,
+          "DamageChargedShot": null,
+          "ChargedShot": null,
+          "DamageThrow": 132,
+          "Throw": 54,
+          "DamageSpecialThrow": null,
+          "SpecialThrow": null
+        }
+      },
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    }
+  ]
+}
