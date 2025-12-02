@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Data Builder – Pacts / Enemies / Items</title>
+  <title>Data Builder – Pacts / Enemies / Items / Weapons</title>
   <style>
     body { font-family: Arial, sans-serif; padding: 20px; background: #111; color: #eee; }
     h1, h2 { margin-bottom: 0.4rem; }
@@ -20,6 +20,7 @@
     <span class="tag">Pacts</span>
     <span class="tag">Enemies</span>
     <span class="tag">Items</span>
+    <span class="tag">Weapons</span>
   </p>
 
   <div class="section">
@@ -27,6 +28,7 @@
     <button id="runPactsBtn">Run Pacts Query</button>
     <button id="runEnemiesBtn">Run Enemies Query</button>
     <button id="runItemsBtn">Run Items Query</button>
+    <button id="runWeaponsBtn">Run Weapons Query</button>
     <p id="status" style="font-size:0.9rem; opacity:0.8;"></p>
   </div>
 
@@ -47,7 +49,7 @@ const gqlEndpoint = "https://api.avakot.org/v1/gql";
 const workerBase = "https://update-pacts.paytonbaldridge.workers.dev/";
 
 let generatedJSON = "";
-let currentTarget = null; // "pacts" | "enemies" | "items"
+let currentTarget = null; // "pacts" | "enemies" | "items" | "weapons"
 
 const statusEl = document.getElementById("status");
 const outputEl = document.getElementById("output");
@@ -118,8 +120,6 @@ function normalizePacts(pactsRaw) {
 
 // --- ENEMIES ---
 
-// NOTE: You may need to adjust the root field name and fields below based on the actual schema.
-// This is a TEMPLATE; tweak `enemiesQuery` and `normalizeEnemies` to match Avakot's real enemy fields.
 const enemiesQuery = `
 query GetEnemies {
   worldBosses {
@@ -153,7 +153,7 @@ function normalizeWorldBosses(bossesRaw) {
       onClick: "",
       links: {
         map: b.location || "",
-		wiki: b.onClick || "",
+        wiki: b.onClick || "",
         externalGuide: ""
       }
     }))
@@ -162,7 +162,6 @@ function normalizeWorldBosses(bossesRaw) {
 
 // --- ITEMS ---
 
-// NOTE: Same as above – adjust field names to match actual Avakot schema for items/resources.
 const itemsQuery = `
 query Locations($itemId: String) {
   craftingResources(ItemID: $itemId) {
@@ -188,10 +187,56 @@ function normalizeItems(itemsRaw) {
       DropSource: it.DropSource || "",
       rarity: it.Rarity || "",
       ImgAltInGame: it.ImgAltInGame || "",
-      ImgIcon: it.ImgIcon || "",     
-	  ImgInGame: it.ImgInGame || "",     
-	  ResourceType: it.ResourceType || "",     
+      ImgIcon: it.ImgIcon || "",
+      ImgInGame: it.ImgInGame || "",
+      ResourceType: it.ResourceType || "",
       internalId: it.InternalID || "",
+      links: {
+        wiki: "",
+        externalGuide: ""
+      }
+    }))
+  };
+}
+
+// --- WEAPONS ---
+
+const weaponsQuery = `
+query Weapons {
+  weapons {
+    Art
+    AttuneTier
+    AttuneVirtue
+    Craft
+    DamageType
+    Description
+    ImgIcon
+    ItemID
+    Rarity
+    ReqVirtue
+    Slot
+    Stats
+  }
+}
+`;
+
+// Normalize weapons into /data/weapons.json
+function normalizeWeapons(weaponsRaw) {
+  return {
+    weapons: weaponsRaw.map(w => ({
+      id: w.ItemID || "",
+      name: w.ItemID || "",
+      description: w.Description || "",
+      rarity: w.Rarity || "",
+      imgIcon: w.ImgIcon || "",
+      damageType: w.DamageType || "",
+      slot: w.Slot || "",
+      attuneTier: w.AttuneTier || "",
+      attuneVirtue: w.AttuneVirtue || "",
+      reqVirtue: w.ReqVirtue || "",
+      art: w.Art || "",
+      craft: w.Craft || null,
+      stats: w.Stats || null,
       links: {
         wiki: "",
         externalGuide: ""
@@ -215,6 +260,9 @@ async function runQuery(target) {
   } else if (target === "items") {
     query = itemsQuery;
     normalizer = normalizeItems;
+  } else if (target === "weapons") {
+    query = weaponsQuery;
+    normalizer = normalizeWeapons;
   } else {
     console.error("Unknown target", target);
     return;
@@ -238,7 +286,7 @@ async function runQuery(target) {
       return;
     }
 
-    const rootKey = Object.keys(json.data)[0]; // e.g. "pacts", "enemies", "items"
+    const rootKey = Object.keys(json.data)[0]; // e.g. "pacts", "worldBosses", "craftingResources", "weapons"
     const rawArray = json.data[rootKey] || [];
     const normalized = normalizer(rawArray);
     generatedJSON = JSON.stringify(normalized, null, 2);
@@ -286,6 +334,7 @@ async function saveToRepo() {
 document.getElementById("runPactsBtn").onclick = () => runQuery("pacts");
 document.getElementById("runEnemiesBtn").onclick = () => runQuery("enemies");
 document.getElementById("runItemsBtn").onclick = () => runQuery("items");
+document.getElementById("runWeaponsBtn").onclick = () => runQuery("weapons");
 saveBtn.onclick = saveToRepo;
 </script>
 </body>
