@@ -313,9 +313,12 @@ async function renderWikiPacts() {
   const container = document.getElementById("wikiPactsContainer");
   if (!container) return;
 
+  // clamp to 6–100% to keep bars visible
   const pct = (val, max) => {
     if (typeof val !== "number" || !isFinite(val)) return "6%";
-    return Math.max(6, Math.min(100, (val / max) * 100)) + "%";
+    const m = max || 1;
+    const p = (val / m) * 100;
+    return Math.max(6, Math.min(100, p)) + "%";
   };
 
   try {
@@ -328,7 +331,7 @@ async function renderWikiPacts() {
         const desc = pact.description || "";
         const bonus = pact.bonus || {};
         const defense = pact.defense || {};
-        const icon = pact.icon || {};
+        const icon = pact.icon || "";   // ✅ icon is a string URL, not an object
 
         const virtues =
           bonus.virtueType || pact.virtueOrder || "";
@@ -342,15 +345,21 @@ async function renderWikiPacts() {
                 .join(", ")
             : "");
 
-        const abilitiesBlock = pact.abilitiesExpanded
-          ? `<ul>${pact.abilitiesExpanded
-              .map(
-                (a) =>
-                  `<li class="wiki-card-icon"><img src="${pact.icon}"></li>`                  
-                  `<li><strong>${a.name}:</strong> ${a.description || ""}</li>`
-              )
-              .join("")}</ul>`
-          : "";
+        // expanded abilities list (no broken template concatenation)
+        const abilitiesBlock =
+          Array.isArray(pact.abilitiesExpanded) &&
+          pact.abilitiesExpanded.length
+            ? `<ul>
+                ${pact.abilitiesExpanded
+                  .map(
+                    (a) =>
+                      `<li><strong>${a.name}:</strong> ${
+                        a.description || ""
+                      }</li>`
+                  )
+                  .join("")}
+              </ul>`
+            : "";
 
         const metaGrid = `
           <div class="wiki-item-meta-grid">
@@ -396,44 +405,54 @@ async function renderWikiPacts() {
           <div class="wiki-stat-block">
             <div class="wiki-stat-row">
               <div class="wiki-stat-label">HP</div>
-              <div class="wiki-stat-track"><div class="wiki-stat-fill" style="width:${pct(
-                bonus.hp,
-                100
-              )};"></div></div>
+              <div class="wiki-stat-track">
+                <div class="wiki-stat-fill" style="width:${pct(
+                  bonus.hp,
+                  100
+                )};"></div>
+              </div>
               <div class="wiki-stat-value">${bonus.hp ?? "-"}</div>
             </div>
             <div class="wiki-stat-row">
               <div class="wiki-stat-label">Magick Def</div>
-              <div class="wiki-stat-track"><div class="wiki-stat-fill" style="width:${pct(
-                defense.magick,
-                100
-              )};"></div></div>
+              <div class="wiki-stat-track">
+                <div class="wiki-stat-fill" style="width:${pct(
+                  defense.magick,
+                  100
+                )};"></div>
+              </div>
               <div class="wiki-stat-value">${defense.magick ?? "-"}</div>
             </div>
             <div class="wiki-stat-row">
               <div class="wiki-stat-label">Physical Def</div>
-              <div class="wiki-stat-track"><div class="wiki-stat-fill" style="width:${pct(
-                defense.physical,
-                100
-              )};"></div></div>
+              <div class="wiki-stat-track">
+                <div class="wiki-stat-fill" style="width:${pct(
+                  defense.physical,
+                  100
+                )};"></div>
+              </div>
               <div class="wiki-stat-value">${defense.physical ?? "-"}</div>
             </div>
             <div class="wiki-stat-row">
               <div class="wiki-stat-label">Stability</div>
-              <div class="wiki-stat-track"><div class="wiki-stat-fill" style="width:${pct(
-                defense.stabilityIncrease,
-                50
-              )};"></div></div>
+              <div class="wiki-stat-track">
+                <div class="wiki-stat-fill" style="width:${pct(
+                  defense.stabilityIncrease,
+                  50
+                )};"></div>
+              </div>
               <div class="wiki-stat-value">${
                 defense.stabilityIncrease ?? "-"
               }</div>
             </div>
             <div class="wiki-stat-row">
               <div class="wiki-stat-label">Unarmed</div>
-              <div class="wiki-stat-track"><div class="wiki-stat-fill" style="width:${pct(
-                pact.unarmedDamage,
-                100
-              )};"></div></div>
+              <div class="wiki-stat-track">
+                <div class="wiki-stat-fill" style="width:${pct(
+                  pact.unarmedDamage,
+                  100
+                )};"></div>
+              </div>
               <div class="wiki-stat-value">${pact.unarmedDamage ?? "-"}</div>
             </div>
           </div>
@@ -442,14 +461,25 @@ async function renderWikiPacts() {
         const linksHtml = buildWikiLinks(pact.links);
 
         return `
-          <li class="wiki-item">
-            <div class="wiki-item-header">
-              <div class="wiki-item-name">${name}</div>
-              <div class="wiki-item-meta">
-                ${virtues ? `<span class="wiki-chip">${virtues}</span>` : ""}
+          <li class="wiki-card wiki-item wiki-pact-card">
+            <div class="wiki-card-header">
+              ${
+                icon
+                  ? `<div class="wiki-card-icon">
+                       <img src="${icon}" alt="${name}">
+                     </div>`
+                  : ""
+              }
+              <div>
+                <div class="wiki-card-title">${name}</div>
+                ${
+                  virtues
+                    ? `<div class="wiki-card-subtitle">${virtues}</div>`
+                    : ""
+                }
               </div>
             </div>
-            <div class="wiki-item-details">
+            <div class="wiki-card-body">
               ${desc ? `<p>${desc}</p>` : ""}
               ${metaGrid}
               ${statBars}
@@ -470,6 +500,7 @@ async function renderWikiPacts() {
     container.innerHTML = `<li class="wiki-item">Unable to load pacts.json</li>`;
   }
 }
+
 
 // =====================================================
 // WIKI ACCORDIONS (ITEM & PACT only — NOT enemies)
@@ -1045,6 +1076,7 @@ let buildDataLoaded = false;
   setupWikiAccordions();
   setupWikiSearch();
 })();
+
 
 
 
