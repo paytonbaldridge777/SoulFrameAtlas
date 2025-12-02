@@ -287,15 +287,16 @@ async function renderWikiEnemies() {
         const name = enemy.name || enemy.id || "Unknown enemy";
         const type = enemy.type || "Enemy";
         const faction = enemy.faction || "";
-        const threatTier = enemy.threatTier || "";
+        const threatTier = enemy.threatTier || "World Boss";
         const region = enemy.primaryRegion || enemy.location || "";
         const summary = enemy.summary || enemy.description || "";
 
+        const subtitle = threatTier || type;
+
         const metaParts = [];
+        if (region) metaParts.push(region);
         if (faction) metaParts.push(faction);
-        if (type) metaParts.push(type);
-        if (threatTier) metaParts.push(threatTier);
-        const meta = metaParts.join(" · ");
+        const meta = metaParts.join(" • ");
 
         const metaGrid = `
           <div class="wiki-item-meta-grid">
@@ -306,7 +307,7 @@ async function renderWikiEnemies() {
                 : ""
             }
           </div>
-        `;
+        ");
 
         const mapUrl =
           (enemy.links && (enemy.links.map || enemy.links.mapUrl)) ||
@@ -316,18 +317,23 @@ async function renderWikiEnemies() {
 
         const linksHtml = buildWikiLinks(enemy.links, mapUrl);
 
-        const iconHtml = enemy.icon
-          ? `<div class="wiki-item-icon"><img src="${enemy.icon}" alt=""></div>`
+        const hasIcon = !!enemy.icon;
+        const mediaHtml = hasIcon
+          ? `
+            <div class="wiki-card-media">
+              <img src="${enemy.icon}" alt="${name}">
+            </div>
+          `
           : "";
 
         return `
-          <li class="wiki-item">
+          <li class="wiki-item wiki-item--enemy">
+            ${mediaHtml}
             <div class="wiki-item-header">
               <div>
                 <div class="wiki-item-name">${name}</div>
-                <div class="wiki-item-meta">${meta}</div>
+                <div class="wiki-item-subtitle">${subtitle}</div>
               </div>
-              ${iconHtml}
             </div>
             <div class="wiki-item-details">
               ${summary ? `<p>${summary}</p>` : ""}
@@ -360,6 +366,7 @@ async function renderWikiEnemies() {
     `;
   }
 }
+
 
 
 async function renderWikiPacts() {
