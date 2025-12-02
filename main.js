@@ -336,7 +336,7 @@ async function renderWikiEnemies() {
               }
               ${linksHtml}
             </div>
-			<div class="wiki-item-icon"><img src=${icon}></div>
+			<div class="wiki-item-icon"><img src="${icon}" alt=""></div>
           </li>
         `;
       })
