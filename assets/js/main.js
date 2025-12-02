@@ -174,38 +174,62 @@ async function renderWikiItems() {
 
   try {
     const data = await loadJSON("data/items.json");
-    const items = Array.isArray(data) ? data : data?.items || [];
+    const items = Array.isArray(data) ? data : (data?.items || []);
 
     container.innerHTML = items
       .map((item) => {
-        const name = item.name || item.id || "Unknown Item";
-        const summary = item.summary || item.notes || "";
+        const name =
+          item.name || item.id || "Unknown Item";
 
-        const metaGrid = `
-          <div class="wiki-item-meta-grid">
-            ${item.category ? `<div><strong>Category:</strong> ${item.category}</div>` : ""}
-            ${item.subtype ? `<div><strong>Subtype:</strong> ${item.subtype}</div>` : ""}
-            ${item.rarity ? `<div><strong>Rarity:</strong> ${item.rarity}</div>` : ""}
-            ${item.sourceRegion ? `<div><strong>Region:</strong> ${item.sourceRegion}</div>` : ""}
-            ${
-              item.virtueAttunement
-                ? `<div><strong>Attunement:</strong> ${item.virtueAttunement}</div>`
-                : ""
-            }
-          </div>
-        `;
+        const description =
+          item.Description ||
+          item.summary ||
+          item.notes ||
+          "";
+
+        const dropSource =
+          item.DropSource || item.dropSource || "";
+
+        const rarity = item.rarity || "";
+        const resourceType =
+          item.ResourceType || item.category || "";
+
+        const icon =
+          item.ImgIcon || item.icon || "";
+
+        const subtitleParts = [];
+        if (resourceType) subtitleParts.push(resourceType);
+        if (rarity) subtitleParts.push(rarity);
+        const subtitle = subtitleParts.join(" • ");
 
         const linksHtml = buildWikiLinks(item.links);
 
         return `
-          <li class="wiki-item">
-            <div class="wiki-item-header">
-              <div class="wiki-item-name">${name}</div>
-              <div class="wiki-item-meta">${item.category || ""}</div>
-            </div>
-            <div class="wiki-item-details">
-              ${summary ? `<p>${summary}</p>` : ""}
-              ${metaGrid}
+          <li class="wiki-card wiki-item-card">
+            ${
+              icon
+                ? `<div class="wiki-card-media">
+                     <img src="${icon}" alt="${name}">
+                   </div>`
+                : ""
+            }
+            <div class="wiki-card-body">
+              <div class="wiki-card-title">${name}</div>
+              ${
+                subtitle
+                  ? `<div class="wiki-card-subtitle">${subtitle}</div>`
+                  : ""
+              }
+              ${
+                description
+                  ? `<p>${description}</p>`
+                  : ""
+              }
+              ${
+                dropSource
+                  ? `<p><strong>Drops from:</strong> ${dropSource}</p>`
+                  : ""
+              }
               ${linksHtml}
             </div>
           </li>
@@ -214,9 +238,17 @@ async function renderWikiItems() {
       .join("");
   } catch (err) {
     console.error(err);
-    container.innerHTML = `<li class="wiki-item">Unable to load items.json</li>`;
+    container.innerHTML = `
+      <li class="wiki-item">
+        <div class="wiki-item-header">
+          <div class="wiki-item-name">Unable to load items</div>
+          <div class="wiki-item-meta">Check data/items.json</div>
+        </div>
+      </li>
+    `;
   }
 }
+
 
 // =====================================================
 // WIKI — ENEMIES (OPTION A: CARD GRID LAYOUT)
@@ -1014,3 +1046,4 @@ let buildDataLoaded = false;
   setupWikiAccordions();
   setupWikiSearch();
 })();
+
