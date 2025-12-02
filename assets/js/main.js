@@ -282,8 +282,8 @@ async function renderWikiEnemies() {
         <li class="wiki-card wiki-item-card">
           <div class="wiki-card-header">
             ${
-              icon
-                ? `<div class="wiki-card-icon"><img src="${icon}" alt="${name}"></div>`
+              enemy.icon
+                ? `<div class="wiki-card-icon"><img src="${enemy.icon}" alt="${name}"></div>`
                 : ""
             }
             <div>
@@ -1048,5 +1048,6 @@ let buildDataLoaded = false;
   setupWikiAccordions();
   setupWikiSearch();
 })();
+
 
 
