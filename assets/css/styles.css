@@ -1150,6 +1150,63 @@ footer {
   opacity: 0.85;
 }
 
+/* ===== Enemies & World Bosses layout ===== */
+
+#wikiEnemiesContainer .wiki-item {
+  display: flex;
+  flex-direction: column;
+  padding: 0;                 /* let us control padding per section */
+  overflow: hidden;
+}
+
+/* Put the image at the top, full width, fixed aspect ratio */
+#wikiEnemiesContainer .wiki-item-icon {
+  order: 0;
+  width: 100%;
+  aspect-ratio: 16 / 9;       /* all images same height */
+  overflow: hidden;
+}
+
+#wikiEnemiesContainer .wiki-item-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Then title/subtitle, then details */
+#wikiEnemiesContainer .wiki-item-header {
+  order: 1;
+  padding: 0.6rem 0.8rem 0.2rem;
+}
+
+#wikiEnemiesContainer .wiki-item-details {
+  order: 2;
+  padding: 0 0.8rem 0.7rem;
+}
+
+/* Typography cleanup */
+#wikiEnemiesContainer .wiki-item-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  line-height: 1.2;
+}
+
+#wikiEnemiesContainer .wiki-item-meta {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 0.15rem;
+}
+
+#wikiEnemiesContainer .wiki-item-details {
+  font-size: 0.8rem;
+}
+
+#wikiEnemiesContainer .wiki-item-details p {
+  margin: 0.25rem 0;
+}
+
+
 /* Enemy-specific tweaks */
 
 .wiki-item--enemy {
