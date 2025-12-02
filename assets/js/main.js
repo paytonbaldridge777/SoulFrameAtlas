@@ -284,7 +284,7 @@ async function renderWikiEnemies() {
           <div class="wiki-card-header">
             ${
               enemy.icon
-                ? `<div class="wiki-card-icon"><img src="${enemy.icon}" alt="${name}"></div>`
+                ? `<div class="wiki-card-icon-enemy"><img src="${enemy.icon}" alt="${name}"></div>`
                 : ""
             }
             <div>
@@ -1045,6 +1045,7 @@ let buildDataLoaded = false;
   setupWikiAccordions();
   setupWikiSearch();
 })();
+
 
 
 
