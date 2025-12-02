@@ -280,7 +280,7 @@ async function renderWikiEnemies() {
         const linksHtml = buildWikiLinks(enemy.links);
 
        return `
-        <li class="wiki-card wiki-item-card">
+        <li class="wiki-card wiki-enemy-card">
           <div class="wiki-card-header">
             ${
               enemy.icon
@@ -289,16 +289,12 @@ async function renderWikiEnemies() {
             }
             <div>
               <div class="wiki-card-title">${name}</div>
-              ${subtitle ? `<div class="wiki-card-subtitle">${subtitle}</div>` : ""}
+              <div class="wiki-card-subtitle">${subtitle}</div>
             </div>
           </div>
           <div class="wiki-card-body">
-            ${description ? `<p>${description}</p>` : ""}
-            ${
-              dropSource
-                ? `<p><strong>Drops from:</strong> ${dropSource}</p>`
-                : ""
-            }
+            ${summary ? `<p>${summary}</p>` : ""}
+            ${metaGrid}
             ${linksHtml}
           </div>
         </li>
@@ -1049,6 +1045,7 @@ let buildDataLoaded = false;
   setupWikiAccordions();
   setupWikiSearch();
 })();
+
 
 
 
