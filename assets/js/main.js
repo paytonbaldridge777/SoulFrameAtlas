@@ -278,7 +278,9 @@ async function renderWikiEnemies() {
 
   try {
     const data = await loadJSON("data/enemies.json");
-    const enemies = Array.isArray(data) ? data : (Array.isArray(data.enemies) ? data.enemies : []);
+    const enemies = Array.isArray(data)
+      ? data
+      : (Array.isArray(data.enemies) ? data.enemies : []);
 
     container.innerHTML = enemies
       .map((enemy) => {
@@ -314,11 +316,18 @@ async function renderWikiEnemies() {
 
         const linksHtml = buildWikiLinks(enemy.links, mapUrl);
 
+        const iconHtml = enemy.icon
+          ? `<div class="wiki-item-icon"><img src="${enemy.icon}" alt=""></div>`
+          : "";
+
         return `
           <li class="wiki-item">
             <div class="wiki-item-header">
-              <div class="wiki-item-name">${name}</div>
-              <div class="wiki-item-meta">${meta}</div>
+              <div>
+                <div class="wiki-item-name">${name}</div>
+                <div class="wiki-item-meta">${meta}</div>
+              </div>
+              ${iconHtml}
             </div>
             <div class="wiki-item-details">
               ${summary ? `<p>${summary}</p>` : ""}
@@ -335,7 +344,6 @@ async function renderWikiEnemies() {
               }
               ${linksHtml}
             </div>
-			<div class="wiki-item-meta"><img src=${icon}></div>
           </li>
         `;
       })
@@ -352,6 +360,7 @@ async function renderWikiEnemies() {
     `;
   }
 }
+
 
 async function renderWikiPacts() {
   const container = document.getElementById("wikiPactsContainer");
