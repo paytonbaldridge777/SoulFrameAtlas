@@ -260,6 +260,7 @@ async function renderWikiEnemies() {
         const name = enemy.name || enemy.id || "Unknown Enemy";
         const subtitle = enemy.threatTier || "World Boss";
         const summary = enemy.summary || "";
+        const description = enemy.description || "";
 
         const metaGrid = `
           <div class="wiki-item-meta-grid">
@@ -1048,6 +1049,7 @@ let buildDataLoaded = false;
   setupWikiAccordions();
   setupWikiSearch();
 })();
+
 
 
 
