@@ -328,6 +328,7 @@ async function renderWikiPacts() {
         const desc = pact.description || "";
         const bonus = pact.bonus || {};
         const defense = pact.defense || {};
+        const icon = pact.icon || {};
 
         const virtues =
           bonus.virtueType || pact.virtueOrder || "";
@@ -1046,6 +1047,7 @@ let buildDataLoaded = false;
   setupWikiAccordions();
   setupWikiSearch();
 })();
+
 
 
 
