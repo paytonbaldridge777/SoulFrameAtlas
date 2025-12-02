@@ -193,11 +193,11 @@ function buildWikiLinks(links, extraMapUrl) {
   }
 
   // If there is a separate explicit map URL (e.g., mapLink / mapUrl)
-  if (extraMapUrl) {
-    parts.push(
-      `<a href="${extraMapUrl}" target="_blank" rel="noreferrer">Open map overlay →</a>`
-    );
-  }
+  // if (extraMapUrl) {
+    // parts.push(
+      // `<a href="${extraMapUrl}" target="_blank" rel="noreferrer">Open map overlay →</a>`
+    // );
+  // }
 
   return parts.length ? `<div class="wiki-item-links">${parts.join(" · ")}</div>` : "";
 }
@@ -335,6 +335,7 @@ async function renderWikiEnemies() {
               }
               ${linksHtml}
             </div>
+			<div class="wiki-item-meta"><img src=${icon}></div>
           </li>
         `;
       })
