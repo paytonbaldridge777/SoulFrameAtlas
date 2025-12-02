@@ -577,15 +577,6 @@ let activeBuildId = null;
 let buildMode = "preset";
 let currentVirtues = { courage: 0, grace: 0, spirit: 0 };
 
-async function renderBuildLab() {
-  const root = document.getElementById("buildLabRoot");
-  if (!root) return;
-
-// =====================================================
-// BUILD LAB — FULL SYSTEM
-// =====================================================
-
-let buildDataLoaded = false;
 
 async function renderBuildLab() {
   const root = document.getElementById("buildLabRoot");
@@ -999,7 +990,7 @@ async function renderBuildLab() {
   });
 }
 
-
+let buildDataLoaded = false;
 // -----------------------------------------------------
 // END OF BUILD LAB
 // -----------------------------------------------------
