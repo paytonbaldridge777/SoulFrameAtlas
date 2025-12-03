@@ -749,7 +749,7 @@ async function renderWikiLocations() {
             <div class="wiki-card-body">
               ${description ? `<p>${description}</p>` : ""}
               ${metaGrid}
-              ${mediaUrl && mediaUrl.trim() ? `<div><strong>Media:</strong> <a href="${mediaUrl}" target="_blank" rel="noreferrer">View →</a></div>` : ""}
+              ${mediaUrl && typeof mediaUrl === 'string' && mediaUrl.trim() ? `<div><strong>Media:</strong> <a href="${mediaUrl}" target="_blank" rel="noreferrer">View →</a></div>` : ""}
               ${linksHtml}
             </div>
           </li>
