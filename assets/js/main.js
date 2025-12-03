@@ -761,40 +761,57 @@ function setupWikiSearch() {
   searchInput.addEventListener("input", () => {
     const query = searchInput.value.toLowerCase().trim();
 
-    // All items from every category
-    const allItems = document.querySelectorAll(
-      "#wikiItemsContainer .wiki-item, \
-       #wikiEnemiesContainer .wiki-item, \
-       #wikiWeaponsContainer .wiki-item, \
-       #wikiPactsContainer .wiki-item"
-    );
-
+    const allItems = document.querySelectorAll(".wiki-list .wiki-item");
     const panels = document.querySelectorAll(".wiki-panel");
+    if (!allItems.length || !panels.length) return;
 
-    if (query.length === 0) {
-      // Reset search → restore normal tab behavior
-      panels.forEach(panel => {
-        if (panel.dataset.hidden === "true") {
-          panel.style.display = "none";
-        } else {
-          panel.style.display = "";
-        }
+    const tabs = document.querySelectorAll(".wiki-tab");
+    const allTab = document.querySelector('.wiki-tab[data-target="all"]');
+
+    // --- No query: restore normal tab behavior ---
+    if (!query) {
+      // Which tab is currently active?
+      const activeTab = document.querySelector(".wiki-tab.active");
+      const key = activeTab ? (activeTab.dataset.target || "all") : "items";
+
+      panels.forEach((panel) => {
+        const panelKey = panel.dataset.panel;
+        const hide = key !== "all" && panelKey !== key;
+        panel.dataset.hidden = hide ? "true" : "false";
+        panel.style.display = hide ? "none" : "";
       });
 
-      allItems.forEach(item => item.style.display = "");
+      // Show all items inside the visible panels
+      allItems.forEach((item) => {
+        item.style.display = "";
+      });
+
       return;
     }
 
-    // If searching, temporarily show all panels
-    panels.forEach(panel => panel.style.display = "");
+    // --- With a query: behave like the "All" tab ---
 
-    // Now filter each item
-    allItems.forEach(item => {
+    // Visually set the All tab active
+    tabs.forEach((tab) => {
+      const isAll = tab === allTab;
+      tab.classList.toggle("active", isAll);
+    });
+
+    // Show all panels while searching
+    panels.forEach((panel) => {
+      panel.dataset.hidden = "false";
+      panel.style.display = "";
+    });
+
+    // Filter each item by text
+    allItems.forEach((item) => {
       const text = (item.textContent || "").toLowerCase();
       item.style.display = text.includes(query) ? "" : "none";
     });
   });
 }
+
+
 
 
 

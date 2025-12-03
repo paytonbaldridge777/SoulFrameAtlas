@@ -1044,6 +1044,19 @@ footer {
   background: linear-gradient(180deg, rgba(186,104,255,0.95), rgba(244,224,165,0.95));
 }
 
+/* Hover overrides for wiki accent bars */
+#wikiItemsContainer .wiki-item:hover::before,
+#wikiEnemiesContainer .wiki-item:hover::before,
+#wikiWeaponsContainer .wiki-item:hover::before,
+#wikiPactsContainer .wiki-item:hover::before {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.14),
+    rgba(255, 255, 255, 0.34)
+  );
+  filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.22));
+}
+
 
 .wiki-panel[data-hidden="true"] {
   display: none;
