@@ -32,184 +32,163 @@
       </nav>
     </header>
 
-<main>
-  <header class="page-header">
-    <h1>Atlas Index</h1>
-    <p>
-      A compact Soulframe index for items, weapons, enemies, and pacts. Use the
-      tabs to focus on a category, and click a card to see more detail.
-    </p>
-  </header>
-
-  <section class="section" aria-label="Wiki Search">
-    <div class="wiki-controls">
-      <input
-        id="wikiSearch"
-        type="search"
-        class="wiki-search-input"
-        placeholder="Search the Atlas (name, region, rarity, etc.)"
-      />
-
-      <div class="wiki-tabs">
-        <button class="wiki-tab" data-target="items">Items</button>
-        <button class="wiki-tab" data-target="weapons">Weapons</button>
-        <button class="wiki-tab" data-target="enemies">Enemies</button>
-        <button class="wiki-tab" data-target="pacts">Pacts</button>
-        <button class="wiki-tab" data-target="all">All</button>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="wiki-panels">
-      <!-- ITEMS -->
-      <section
-        class="wiki-panel"
-        data-panel="items"
-        aria-label="Items & Crafting Materials"
-      >
-        <h2 class="wiki-panel-title">Items & Crafting Materials</h2>
-        <p class="wiki-panel-intro">
-          Core resources, crafting components, and curios harvested across Midrath.
+    <main>
+      <header class="page-header">
+        <h1>Atlas Index</h1>
+        <p>
+          A quick-reference mini-wiki for key items, crafting materials, enemies, weapons, and pacts.
+          Click an entry to expand full details. Use search to filter across names, keywords, and regions.
         </p>
-        <ul class="wiki-list" id="wikiItemsContainer">
-          <li class="wiki-item">Loading items…</li>
-        </ul>
+      </header>
+
+      <!-- Controls row: search + tabs -->
+      <section class="section" aria-label="Wiki controls">
+        <div class="wiki-controls">
+          <input
+            id="wikiSearch"
+            type="search"
+            placeholder="Search items, enemies, weapons, and pacts (e.g., 'Sproutfolk', 'Ode', 'Defender Pact')"
+            class="wiki-search-input"
+          />
+
+          <div class="wiki-tabs" role="tablist">
+            <button class="wiki-tab active" data-target="all" type="button">All</button>
+            <button class="wiki-tab" data-target="items" type="button">Items</button>
+			<button class="wiki-tab" data-target="weapons" type="button">Weapons</button>
+            <button class="wiki-tab" data-target="enemies" type="button">Enemies</button>
+            <button class="wiki-tab" data-target="pacts" type="button">Pacts</button>
+          </div>
+        </div>
       </section>
 
-      <!-- WEAPONS -->
-      <section
-        class="wiki-panel"
-        data-panel="weapons"
-        aria-label="Weapons"
-      >
-        <h2 class="wiki-panel-title">Weapons</h2>
-        <p class="wiki-panel-intro">
-          Weapons, their virtues, damage types, and attunements.
-        </p>
-        <ul class="wiki-list" id="wikiWeaponsContainer">
-          <li class="wiki-item">Loading weapons…</li>
-        </ul>
-      </section>
-
-      <!-- ENEMIES -->
-      <section
-        class="wiki-panel"
-        data-panel="enemies"
-        aria-label="Enemies & World Bosses"
-      >
-        <h2 class="wiki-panel-title">Enemies & World Bosses</h2>
-        <p class="wiki-panel-intro">
-          Hostile forces, world bosses, and notable threats.
-        </p>
-        <ul class="wiki-list" id="wikiEnemiesContainer">
-          <li class="wiki-item">Loading enemies…</li>
-        </ul>
-      </section>
-
-      <!-- PACTS -->
-      <section
-        class="wiki-panel"
-        data-panel="pacts"
-        aria-label="Pacts"
-      >
-        <h2 class="wiki-panel-title">Pacts</h2>
-        <p class="wiki-panel-intro">
-          Pact bonuses, defences, and abilities, visualized in a quick-read stat block.
-        </p>
-        <ul class="wiki-list" id="wikiPactsContainer">
-          <li class="wiki-item">Loading pacts…</li>
-        </ul>
-      </section>
-    </div>
-
-        <!-- Existing external wiki info / how-to block -->
-      <div class="section" style="padding-left:0;padding-right:0;margin-top:1.5rem;">
-        <div class="split">
-          <div class="wiki-column">
-            <h3>More encyclopedic wikis</h3>
-            <ul class="list-compact">
-              <li>
-                <strong>Soulframe wiki.gg</strong> – Deep mechanics, items,
-                enemies, and patch notes.<br />
-                <a
-                  href="https://soulframe.wiki.gg/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Open wiki.gg →
-                </a>
-              </li>
-              <li>
-                <strong>Avakot Soulframe tools</strong> – Community API, timers,
-                and overlays.<br />
-                <a
-                  href="https://wiki.avakot.org/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Open Avakot →
-                </a>
+      <section class="section">
+        <!-- Tab panels -->
+        <div class="wiki-panels">
+          <section
+            class="wiki-panel"
+            data-panel="items"
+            aria-label="Items & materials panel"
+          >
+            <h2 class="wiki-panel-title">Items & Crafting Materials</h2>
+            <ul class="wiki-list" id="wikiItemsContainer">
+              <li class="wiki-item">
+                <div class="wiki-item-header">
+                  <div class="wiki-item-name">Loading items…</div>
+                  <div class="wiki-item-meta">Please check data/items.json</div>
+                </div>
               </li>
             </ul>
-          </div>
-          </div>
-        </div>
-        <div class="wiki-column">
-          <h3>How to use this index</h3>
-          <p style="font-size:0.85rem; color:var(--muted);">
-            The Atlas index is designed for quick checks: “what drops this
-            resource?”, “what’s this weapon’s virtue attunement?”, “what pact
-            boosts stability the most?”. For fully detailed stats and
-            patch-specific values, follow the links above to the community
-            wikis.
-          </p>
-        </div>
-        
-    <div class="section" style="padding-left:0;padding-right:0;margin-top:1.5rem;">
-      <div class="split">
-        <div class="wiki-column">
-          <h3>More encyclopedic wikis</h3>
-          <ul class="list-compact">
-            <li>
-              <strong>Soulframe wiki.gg</strong> – Deep mechanics, items,
-              enemies, and patch notes.<br />
-              <a
-                href="https://soulframe.wiki.gg/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Open wiki.gg →
-              </a>
-            </li>
-            <li>
-              <strong>Avakot Soulframe tools</strong> – Community API, timers,
-              and overlays.<br />
-              <a
-                href="https://wiki.avakot.org/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Open Avakot →
-              </a>
-            </li>
-          </ul>
+          </section>
+
+          <section
+            class="wiki-panel"
+            data-panel="enemies"
+            aria-label="Enemies panel"
+          >
+            <h2 class="wiki-panel-title">Enemies & World Bosses</h2>
+            <ul class="wiki-list" id="wikiEnemiesContainer">
+              <li class="wiki-item">
+                <div class="wiki-item-header">
+                  <div class="wiki-item-name">Loading enemies…</div>
+                  <div class="wiki-item-meta">Please check data/enemies.json</div>
+                </div>
+              </li>
+            </ul>
+          </section>
+		  
+		  <section
+            class="wiki-panel"
+            data-panel="weapons"
+            aria-label="Weapons panel"
+          >
+            <h2 class="wiki-panel-title">Weapons</h2>
+            <ul class="wiki-list" id="wikiWeaponsContainer">
+              <li class="wiki-item">
+                <div class="wiki-item-header">
+                  <div class="wiki-item-name">Loading weapons…</div>
+                  <div class="wiki-item-meta">Please check data/weapons.json</div>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <section
+            class="wiki-panel"
+            data-panel="pacts"
+            aria-label="Pacts panel"
+          >
+            <h2 class="wiki-panel-title">Pacts & Roles</h2>
+            <p class="wiki-panel-intro">
+              Conceptual overview of each pact, its virtue focus, and defensive / offensive leanings.
+              Values here are Atlas approximations, not official numbers.
+            </p>
+            <ul class="wiki-list" id="wikiPactsContainer">
+              <li class="wiki-item">
+                <div class="wiki-item-header">
+                  <div class="wiki-item-name">Loading pacts…</div>
+                  <div class="wiki-item-meta">Please check data/pacts.json</div>
+                </div>
+              </li>
+            </ul>
+          </section>
         </div>
 
-        <div class="wiki-column">
-          <h3>How to use this index</h3>
-          <p style="font-size:0.85rem; color:var(--muted);">
-            The Atlas index is designed for quick checks: “what drops this
-            resource?”, “what’s this weapon’s virtue attunement?”, “what pact
-            boosts stability the most?”. For fully detailed stats and
-            patch-specific values, follow the links above to the community
-            wikis.
-          </p>
+        <!-- External wikis / how-to block -->
+        <div class="section" style="padding-left:0;padding-right:0;margin-top:1.5rem;">
+          <div class="split">
+            <div class="wiki-column">
+              <h3>More encyclopedic wikis</h3>
+              <ul class="list-compact">
+                <li>
+                  <strong>FextraLife Soulframe Wiki</strong> – Items, enemies, weapons
+                  crafting, new player help.<br />
+                  <a
+                    href="https://soulframe.wiki.fextralife.com/Soulframe+Wiki"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Open FextraLife →
+                  </a>
+                </li>
+                <li>
+                  <strong>Miraheze Soulframe Wiki</strong> – Detailed sections on
+                  crafting and reforging.<br />
+                  <a
+                    href="https://soulframe.miraheze.org"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Open Miraheze →
+                  </a>
+                </li>
+                <li>
+                  <strong>Fandom Soulframe Wiki</strong> – Story, Ancestors, broader
+                  mechanics.<br />
+                  <a
+                    href="https://soulframe.fandom.com/wiki/Soulframe_Wiki"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Open Fandom →
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="wiki-column">
+              <h3>How to use this index</h3>
+              <p style="font-size:0.85rem; color:var(--muted);">
+                Use the tabs to focus on items, enemies, or pacts, and tap an entry to expand
+                full details: stats, regions, map links, and external references.
+                For deep numbers or patch-specific values, follow the links above to
+                the fully-fledged wikis and patch notes.
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
-</main>
+      </section>
+    </main>
+
     <footer>
       <div class="footer-inner">
         <div>
@@ -225,4 +204,3 @@
   <script src="assets/js/main.js"></script>
 </body>
 </html>
-

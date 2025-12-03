@@ -205,7 +205,8 @@ async function renderWikiItems() {
         const linksHtml = buildWikiLinks(item.links);
 
         return `
-        <li class="wiki-card wiki-item-card">
+        <li class="wiki-item wiki-card wiki-item-card">
+
           <div class="wiki-card-header">
             ${
               icon
@@ -280,7 +281,7 @@ async function renderWikiEnemies() {
         const linksHtml = buildWikiLinks(enemy.links);
 
        return `
-        <li class="wiki-card wiki-enemy-card">
+        <li class="wiki-item wiki-card wiki-enemy-card">
           <div class="wiki-card-header">
             ${
               enemy.icon
@@ -758,25 +759,30 @@ function setupWikiSearch() {
   if (!searchInput) return;
 
   searchInput.addEventListener("input", () => {
-    const q = searchInput.value.toLowerCase().trim();
+    const query = searchInput.value.toLowerCase().trim();
 
- //   const allItems = document.querySelectorAll(
-  //    ".wiki-list .wiki-item"
-  //  );
     const allItems = document.querySelectorAll(
-      "#wikiItemsContainer .wiki-item, #wikiWeaponsContainer .wiki-item, #wikiEnemiesContainer .wiki-item, #wikiPactsContainer .wiki-item"
+      "#wikiItemsContainer .wiki-item, \
+       #wikiEnemiesContainer .wiki-item, \
+       #wikiWeaponsContainer .wiki-item, \
+       #wikiPactsContainer .wiki-item"
     );
+
     allItems.forEach((item) => {
       const panel = item.closest(".wiki-panel");
-      const panelHidden = panel?.dataset.hidden === "true";
 
-      if (panelHidden) return;
+      // Respect hidden panels
+      if (!panel || panel.dataset.hidden === "true") {
+        item.style.display = ""; 
+        return;
+      }
 
-      const text = item.textContent.toLowerCase();
-      item.style.display = !q || text.includes(q) ? "" : "none";
+      const text = (item.textContent || "").toLowerCase();
+      item.style.display = text.includes(query) ? "" : "none";
     });
   });
 }
+
 
 // =====================================================
 // REGIONS
