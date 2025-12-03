@@ -714,7 +714,7 @@ async function renderWikiLocations() {
         const coordinates = Array.isArray(location.coordinates) 
           ? location.coordinates.join(", ") 
           : "";
-        const mediaUrl = location.mediaUrl || "";
+        const mediaUrl = location.mediaUrl;
 
         const metaGrid = `
           <div class="wiki-item-meta-grid">
