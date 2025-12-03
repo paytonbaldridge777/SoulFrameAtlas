@@ -29,6 +29,7 @@
     <button id="runEnemiesBtn">Run Enemies Query</button>
     <button id="runItemsBtn">Run Items Query</button>
     <button id="runWeaponsBtn">Run Weapons Query</button>
+    <button id="runLocationsBtn">Run Locations Query</button>
     <p id="status" style="font-size:0.9rem; opacity:0.8;"></p>
   </div>
 
@@ -49,7 +50,7 @@ const gqlEndpoint = "https://api.avakot.org/v1/gql";
 const workerBase = "https://update-pacts.paytonbaldridge.workers.dev/";
 
 let generatedJSON = "";
-let currentTarget = null; // "pacts" | "enemies" | "items" | "weapons"
+let currentTarget = null; // "pacts" | "enemies" | "items" | "weapons" | "locations"
 
 const statusEl = document.getElementById("status");
 const outputEl = document.getElementById("output");
@@ -245,6 +246,41 @@ function normalizeWeapons(weaponsRaw) {
   };
 }
 
+// --- LOCATIONS ---
+
+const locationsQuery = `
+query Locations {
+  locations {
+    category {
+      categoryName
+    }
+    coordinates
+    description
+    icon
+    locationName
+    mediaUrl
+  }
+}
+`;
+
+// Normalize locations into /data/locations.json
+function normalizeLocations(locationsRaw) {
+  return {
+    locations: locationsRaw.map(loc => ({
+      name: loc.locationName || "",
+      category: loc.category?.categoryName || "",
+      description: loc.description || "",
+      icon: loc.icon || "",
+      coordinates: loc.coordinates || [],
+      mediaUrl: loc.mediaUrl || "",
+      links: {
+        wiki: "",
+        externalGuide: ""
+      }
+    }))
+  };
+}
+
 // --- GENERIC FETCHER ---
 
 async function runQuery(target) {
@@ -263,6 +299,9 @@ async function runQuery(target) {
   } else if (target === "weapons") {
     query = weaponsQuery;
     normalizer = normalizeWeapons;
+  } else if (target === "locations") {
+    query = locationsQuery;
+    normalizer = normalizeLocations;
   } else {
     console.error("Unknown target", target);
     return;
@@ -286,7 +325,7 @@ async function runQuery(target) {
       return;
     }
 
-    const rootKey = Object.keys(json.data)[0]; // e.g. "pacts", "worldBosses", "craftingResources", "weapons"
+    const rootKey = Object.keys(json.data)[0]; // e.g. "pacts", "worldBosses", "craftingResources", "weapons", "locations"
     const rawArray = json.data[rootKey] || [];
     const normalized = normalizer(rawArray);
     generatedJSON = JSON.stringify(normalized, null, 2);
@@ -335,6 +374,7 @@ document.getElementById("runPactsBtn").onclick = () => runQuery("pacts");
 document.getElementById("runEnemiesBtn").onclick = () => runQuery("enemies");
 document.getElementById("runItemsBtn").onclick = () => runQuery("items");
 document.getElementById("runWeaponsBtn").onclick = () => runQuery("weapons");
+document.getElementById("runLocationsBtn").onclick = () => runQuery("locations");
 saveBtn.onclick = saveToRepo;
 </script>
 </body>

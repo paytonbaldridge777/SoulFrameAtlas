@@ -1,0 +1,28 @@
+{
+  "locations": [
+    {
+      "name": "Fore-Feller Hewyl",
+      "category": "Agari",
+      "description": "Dungeon Agari",
+      "icon": "https://static.wikitide.net/soulframewiki/6/64/AgariHealthIcon.png",
+      "coordinates": [4191, 1885],
+      "mediaUrl": null,
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    },
+    {
+      "name": "Seachnall The Widower",
+      "category": "Agari",
+      "description": "Dungeon Agari",
+      "icon": "https://static.wikitide.net/soulframewiki/6/64/AgariHealthIcon.png",
+      "coordinates": [3699, 3180],
+      "mediaUrl": null,
+      "links": {
+        "wiki": "",
+        "externalGuide": ""
+      }
+    }
+  ]
+}
