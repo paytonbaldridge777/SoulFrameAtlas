@@ -1,28 +1,2984 @@
 {
-  "locations": [
-    {
-      "name": "Fore-Feller Hewyl",
-      "category": "Agari",
-      "description": "Dungeon Agari",
-      "icon": "https://static.wikitide.net/soulframewiki/6/64/AgariHealthIcon.png",
-      "coordinates": [4191, 1885],
-      "mediaUrl": null,
-      "links": {
-        "wiki": "",
-        "externalGuide": ""
+  "data": {
+    "locations": [
+      {
+        "category": {
+          "categoryName": "Agari"
+        },
+        "coordinates": [
+          4191,
+          1885
+        ],
+        "description": "Dungeon Agari",
+        "icon": "https://static.wikitide.net/soulframewiki/6/64/AgariHealthIcon.png",
+        "locationName": "Fore-Feller Hewyl",
+        "mediaUrl": null
+      },
+      {
+        "category": {
+          "categoryName": "Agari"
+        },
+        "coordinates": [
+          3699,
+          3180
+        ],
+        "description": "Dungeon Agari",
+        "icon": "https://static.wikitide.net/soulframewiki/6/64/AgariHealthIcon.png",
+        "locationName": "Seachnall The Widower",
+        "mediaUrl": null
+      },
+      {
+        "category": {
+          "categoryName": "Agari"
+        },
+        "coordinates": [
+          3638,
+          3702
+        ],
+        "description": "Dungeon Agari",
+        "icon": "https://static.wikitide.net/soulframewiki/6/64/AgariHealthIcon.png",
+        "locationName": "Gruul Seeker Sontaro",
+        "mediaUrl": null
+      },
+      {
+        "category": {
+          "categoryName": "Agari"
+        },
+        "coordinates": [
+          5229,
+          4105
+        ],
+        "description": "Dungeon Agari",
+        "icon": "https://static.wikitide.net/soulframewiki/6/64/AgariHealthIcon.png",
+        "locationName": "Sinecure-errant Vella",
+        "mediaUrl": null
+      },
+      {
+        "category": {
+          "categoryName": "Agari"
+        },
+        "coordinates": [
+          4667,
+          5188
+        ],
+        "description": "Dungeon Agari",
+        "icon": "https://static.wikitide.net/soulframewiki/6/64/AgariHealthIcon.png",
+        "locationName": "Gourdo",
+        "mediaUrl": null
+      },
+      {
+        "category": {
+          "categoryName": "Agari"
+        },
+        "coordinates": [
+          5082,
+          5576
+        ],
+        "description": "Dungeon Agari",
+        "icon": "https://static.wikitide.net/soulframewiki/6/64/AgariHealthIcon.png",
+        "locationName": "Reaper",
+        "mediaUrl": null
+      },
+      {
+        "category": {
+          "categoryName": "Free Standing Bosses"
+        },
+        "coordinates": [
+          2972,
+          3332
+        ],
+        "description": "He is the Castle Guardian of Fort Curlail",
+        "icon": "https://static.wikitide.net/soulframewiki/2/21/BanneretA.png",
+        "locationName": "Castellan Huthra",
+        "mediaUrl": null
+      },
+      {
+        "category": {
+          "categoryName": "Key Locations"
+        },
+        "coordinates": [
+          5252,
+          3233
+        ],
+        "description": "First the home of a hermit noble, then the study of the occupier’s astrologists. Rora’s Hyne has lived many lives. Most recently, this old tower housed a library of Feybles. After the Felling, it was the last place on Midrath where one could read freely the word of the Fey. Until of course, the Ode arrived and burned it all away.",
+        "icon": "https://static.wikitide.net/soulframewiki/3/30/Location.png?v=2",
+        "locationName": "Othavess",
+        "mediaUrl": null
+      },
+      {
+        "category": {
+          "categoryName": "Key Locations"
+        },
+        "coordinates": [
+          3984,
+          4674
+        ],
+        "description": "An old watchtower, once host to the Order of the Gyres. Servants of Iridis, and his many halos, the Order held its tribunals on the highest floor when his light was full and bright over the sea.",
+        "icon": "https://static.wikitide.net/soulframewiki/3/30/Location.png?v=2",
+        "locationName": "Moon's Watch - P10",
+        "mediaUrl": null
+      },
+      {
+        "category": {
+          "categoryName": "Oro Chests"
+        },
+        "coordinates": [
+          2634,
+          4067
+        ],
+        "description": "",
+        "icon": "https://static.wikitide.net/soulframewiki/7/78/WaypointMarkers-Treasure.png",
+        "locationName": "[oro] North East of Dermak 4 Well",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/e/ed/Oro_UndercityEntranceP10.png"
+      },
+      {
+        "category": {
+          "categoryName": "Oro Chests"
+        },
+        "coordinates": [
+          2662,
+          3906
+        ],
+        "description": "",
+        "icon": "https://static.wikitide.net/soulframewiki/7/78/WaypointMarkers-Treasure.png",
+        "locationName": "[oro] Just West of World Tree 2",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/9/96/OroWorldTree2P10.png"
+      },
+      {
+        "category": {
+          "categoryName": "Oro Chests"
+        },
+        "coordinates": [
+          2465,
+          3114
+        ],
+        "description": "",
+        "icon": "https://static.wikitide.net/soulframewiki/7/78/WaypointMarkers-Treasure.png",
+        "locationName": "[oro] At the orchard by The College of Pensives",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/e/e4/OroCollegeofPensives2P10.png"
+      },
+      {
+        "category": {
+          "categoryName": "Oro Chests"
+        },
+        "coordinates": [
+          1867,
+          3925
+        ],
+        "description": "",
+        "icon": "https://static.wikitide.net/soulframewiki/7/78/WaypointMarkers-Treasure.png",
+        "locationName": "[oro] At Salzbrim Docks",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/4/4d/OroSalzbrimP10.png"
+      },
+      {
+        "category": {
+          "categoryName": "Oro Chests"
+        },
+        "coordinates": [
+          2073,
+          3556
+        ],
+        "description": "",
+        "icon": "https://static.wikitide.net/soulframewiki/7/78/WaypointMarkers-Treasure.png",
+        "locationName": "[oro] Right over Hilly-den",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/5/56/OroHillyDenP10.png"
+      },
+      {
+        "category": {
+          "categoryName": "Oro Chests"
+        },
+        "coordinates": [
+          2962,
+          4167
+        ],
+        "description": "",
+        "icon": "https://static.wikitide.net/soulframewiki/7/78/WaypointMarkers-Treasure.png",
+        "locationName": "[oro] North of Mines of Borro",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/d/d0/OroMinesofBorro2P10.png"
+      },
+      {
+        "category": {
+          "categoryName": "Oro Chests"
+        },
+        "coordinates": [
+          2876,
+          3965
+        ],
+        "description": "",
+        "icon": "https://static.wikitide.net/soulframewiki/7/78/WaypointMarkers-Treasure.png",
+        "locationName": "[oro] South of Mines of Borro",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/0/0f/OroMinesofBorroP10.png"
+      },
+      {
+        "category": {
+          "categoryName": "Oro Chests"
+        },
+        "coordinates": [
+          2643,
+          3808
+        ],
+        "description": "",
+        "icon": "https://static.wikitide.net/soulframewiki/7/78/WaypointMarkers-Treasure.png",
+        "locationName": "[oro] East of Luminns",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/e/ef/OroLuminnsP10.png"
+      },
+      {
+        "category": {
+          "categoryName": "Oro Chests"
+        },
+        "coordinates": [
+          1686,
+          3521
+        ],
+        "description": "",
+        "icon": "https://static.wikitide.net/soulframewiki/7/78/WaypointMarkers-Treasure.png",
+        "locationName": "[oro] North of Hews",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/9/9f/OroHewsP10.png"
+      },
+      {
+        "category": {
+          "categoryName": "Oro Chests"
+        },
+        "coordinates": [
+          2661,
+          3661
+        ],
+        "description": "",
+        "icon": "https://static.wikitide.net/soulframewiki/7/78/WaypointMarkers-Treasure.png",
+        "locationName": "[oro] East of Garren Shrine",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/3/3c/OroGarrenShrineP10.png"
+      },
+      {
+        "category": {
+          "categoryName": "Oro Chests"
+        },
+        "coordinates": [
+          3051,
+          3431
+        ],
+        "description": "",
+        "icon": "https://static.wikitide.net/soulframewiki/7/78/WaypointMarkers-Treasure.png",
+        "locationName": "[oro] Next to Fort Curlail's Bridge",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/7/7c/OronextotthebridgeP10.jpg"
+      },
+      {
+        "category": {
+          "categoryName": "Oro Chests"
+        },
+        "coordinates": [
+          2908,
+          3515
+        ],
+        "description": "",
+        "icon": "https://static.wikitide.net/soulframewiki/7/78/WaypointMarkers-Treasure.png",
+        "locationName": "[oro] Curlail Wall Tower",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/4/44/OroCurlailTowerP10.png"
+      },
+      {
+        "category": {
+          "categoryName": "Oro Chests"
+        },
+        "coordinates": [
+          2361,
+          3104
+        ],
+        "description": "",
+        "icon": "https://static.wikitide.net/soulframewiki/7/78/WaypointMarkers-Treasure.png",
+        "locationName": "[oro] Just South of College",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/0/0b/OroCollegeofPensivesP10.png"
+      },
+      {
+        "category": {
+          "categoryName": "Oro Chests"
+        },
+        "coordinates": [
+          1836,
+          3037
+        ],
+        "description": "",
+        "icon": "https://static.wikitide.net/soulframewiki/7/78/WaypointMarkers-Treasure.png",
+        "locationName": "[oro] West of World Tree 1",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/b/be/OroBirdiesBogP10.png"
+      },
+      {
+        "category": {
+          "categoryName": "Oro Chests"
+        },
+        "coordinates": [
+          2502,
+          3408
+        ],
+        "description": "",
+        "icon": "https://static.wikitide.net/soulframewiki/7/78/WaypointMarkers-Treasure.png",
+        "locationName": "[oro] West of Astrologer's Watch",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/8/87/OroAstrologersWatchP10.png"
+      },
+      {
+        "category": {
+          "categoryName": "Quest"
+        },
+        "coordinates": [
+          2916,
+          3048
+        ],
+        "description": "This is where you trigger Verminia's quest, by entering the Glades.",
+        "icon": "https://static.wikitide.net/soulframewiki/7/7d/ExclamationMark.png",
+        "locationName": "Brewer of Hues - Start",
+        "mediaUrl": ""
+      },
+      {
+        "category": {
+          "categoryName": "Quest"
+        },
+        "coordinates": [
+          3382,
+          2758
+        ],
+        "description": "This is the location in which you find Verminia during the bond Rank Up, which is called 'A Which Withdrawn'.",
+        "icon": "https://static.wikitide.net/soulframewiki/7/7d/ExclamationMark.png",
+        "locationName": "Verminia Rank Up",
+        "mediaUrl": ""
+      },
+      {
+        "category": {
+          "categoryName": "Resources"
+        },
+        "coordinates": [
+          [
+            3139,
+            5032
+          ],
+          [
+            2897,
+            4884
+          ],
+          [
+            2967,
+            4827
+          ],
+          [
+            2984,
+            4583
+          ],
+          [
+            3068,
+            4696
+          ],
+          [
+            3156,
+            4599
+          ],
+          [
+            3321,
+            4788
+          ],
+          [
+            3448,
+            4770
+          ],
+          [
+            3326,
+            4519
+          ],
+          [
+            3482,
+            4545
+          ],
+          [
+            3716,
+            4614
+          ],
+          [
+            3520,
+            4188
+          ],
+          [
+            3154,
+            4380
+          ],
+          [
+            3219,
+            4201
+          ],
+          [
+            3271,
+            4055
+          ],
+          [
+            3108,
+            4078
+          ],
+          [
+            3041,
+            4209
+          ]
+        ],
+        "description": "These are where you find the Wevetwood Sap resource.\nYou have to ge tone after completing Brewer of Hues to start The Waste Bear.\nIt is in order with routing.",
+        "icon": "https://static.wikitide.net/soulframewiki/7/74/Pickup.png",
+        "locationName": "Wevetwood Sap",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/f/fd/Wevetwoodsap.png"
+      },
+      {
+        "category": {
+          "categoryName": "Agari"
+        },
+        "coordinates": [
+          3676,
+          5218
+        ],
+        "description": "",
+        "icon": "https://static.wikitide.net/soulframewiki/6/64/AgariHealthIcon.png",
+        "locationName": "Knell Knight",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/f/fd/KnellKnightSoulmap.jpg"
+      },
+      {
+        "category": {
+          "categoryName": "Dungeon Exits"
+        },
+        "coordinates": [
+          4116,
+          4732
+        ],
+        "description": "These are possible exits for Neath'uns tileset dungeons.",
+        "icon": "https://s3.7thseraph.org/wiki.avakot.org/soulmap.avakot.org/Icons/SF_exit.svg",
+        "locationName": "Neath'uns Exit",
+        "mediaUrl": ""
+      },
+      {
+        "category": {
+          "categoryName": "Neath'uns"
+        },
+        "coordinates": [
+          [
+            3773,
+            4403
+          ],
+          [
+            3116,
+            4948
+          ],
+          [
+            3698,
+            3167
+          ],
+          [
+            4668,
+            5172
+          ]
+        ],
+        "description": "These are unlocked upon finishing Bromius' Fable.",
+        "icon": "https://static.wikitide.net/soulframewiki/7/7b/EntranceMarker.png?v=2",
+        "locationName": "Neath'uns",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/2/2f/NeathunsDoor.png"
+      },
+      {
+        "category": {
+          "categoryName": "Key Locations"
+        },
+        "coordinates": [
+          3692,
+          4470
+        ],
+        "description": "The council of Elder Voicing Trees. Older than even the Omen Bear who wards them, and a fair bit wiser. Their branches intertwine into a great joint canopy that scrapes the sky. 'Tis said the Wevet Sap these trees produce was a gift from Mother Suns Mora and Saphene- a sweet nectar for their suckling babe Iridis on his first days upon Alca.",
+        "icon": "https://static.wikitide.net/soulframewiki/3/30/Location.png?v=2",
+        "locationName": "Wevetwood",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/thumb/5/51/WevetwoodShowcase.png/300px-WevetwoodShowcase.png"
+      },
+      {
+        "category": {
+          "categoryName": "Key Locations"
+        },
+        "coordinates": [
+          3689,
+          5203
+        ],
+        "description": "A wasteland of Ode'n making. An ichorous swamp where only corruption can thrive. Though... 'Tis not just the Ode who find vigour in Ichor. This rotted shoreline was once a great graveyard that none on Alca were so foolish to disturb. ",
+        "icon": "https://static.wikitide.net/soulframewiki/3/30/Location.png?v=2",
+        "locationName": "Galvinar Wastes",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/3/38/GalvinarWastes.png"
+      },
+      {
+        "category": {
+          "categoryName": "Key Locations"
+        },
+        "coordinates": [
+          3877,
+          4786
+        ],
+        "description": "What castle keep once hung o'er Midrath? What Ode'n palace no longer held 'loft? With each spellsong's note, the stories from this land were stripped away. Now, each fallen brick destroys its living memories. No trees, no creatures, no waters remain.",
+        "icon": "https://static.wikitide.net/soulframewiki/3/30/Location.png?v=2",
+        "locationName": "Fallen Skytower",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/0/0b/FallenSkytower.png"
+      },
+      {
+        "category": {
+          "categoryName": "Undercity of Dermak"
+        },
+        "coordinates": [
+          [
+            5363,
+            5430
+          ],
+          [
+            2475,
+            3230
+          ],
+          [
+            2034,
+            3456
+          ],
+          [
+            3637,
+            3688
+          ],
+          [
+            4203,
+            4369
+          ],
+          [
+            5230,
+            4088
+          ],
+          [
+            4746,
+            2654
+          ],
+          [
+            3023,
+            2681
+          ],
+          [
+            2530,
+            1514
+          ],
+          [
+            4191,
+            1870
+          ],
+          [
+            2912,
+            4339
+          ],
+          [
+            2442,
+            3549
+          ]
+        ],
+        "description": "",
+        "icon": "https://static.wikitide.net/soulframewiki/7/7b/EntranceMarker.png?v=2",
+        "locationName": "Undercity of Dermak",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/6/6a/DermakDoor.png"
+      },
+      {
+        "category": {
+          "categoryName": "Glades of Andurin"
+        },
+        "coordinates": [
+          [
+            2916,
+            3048
+          ],
+          [
+            2612,
+            3625
+          ],
+          [
+            3410,
+            2766
+          ],
+          [
+            4226,
+            2778
+          ],
+          [
+            4711,
+            4536
+          ],
+          [
+            3290,
+            4430
+          ],
+          [
+            5082,
+            5557
+          ]
+        ],
+        "description": "",
+        "icon": "https://static.wikitide.net/soulframewiki/7/7b/EntranceMarker.png?v=2",
+        "locationName": "Glades of Andurin",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/7/74/GladesDoor.png"
+      },
+      {
+        "category": {
+          "categoryName": "Free Standing Bosses"
+        },
+        "coordinates": [
+          4523,
+          3610
+        ],
+        "description": "You will need to kill two bannerets in a Siege event to be able to fight the Castellan.",
+        "icon": "https://static.wikitide.net/soulframewiki/2/21/BanneretA.png",
+        "locationName": "Castellan Malrog",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/d/d4/CastellanmalrogsoulmapP11.png"
+      },
+      {
+        "category": {
+          "categoryName": "Agari"
+        },
+        "coordinates": [
+          3356,
+          4982
+        ],
+        "description": "",
+        "icon": "https://static.wikitide.net/soulframewiki/6/64/AgariHealthIcon.png",
+        "locationName": "Sinecure-errant Gawth",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/d/da/SinecureErrantGawthSoulmap.jpg"
+      },
+      {
+        "category": {
+          "categoryName": "Agari"
+        },
+        "coordinates": [
+          5000,
+          2914
+        ],
+        "description": "",
+        "icon": "https://static.wikitide.net/soulframewiki/6/64/AgariHealthIcon.png",
+        "locationName": "Discharged Nimrod",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/4/49/DischargedNimrodSoulmap.jpg"
+      },
+      {
+        "category": {
+          "categoryName": "Agari"
+        },
+        "coordinates": [
+          3696,
+          4418
+        ],
+        "description": "",
+        "icon": "https://static.wikitide.net/soulframewiki/6/64/AgariHealthIcon.png",
+        "locationName": "Kabocha",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/9/96/KabochasoulmapP11.png"
+      },
+      {
+        "category": {
+          "categoryName": "Agari"
+        },
+        "coordinates": [
+          3070,
+          4927
+        ],
+        "description": "",
+        "icon": "https://static.wikitide.net/soulframewiki/6/64/AgariHealthIcon.png",
+        "locationName": "Etheldred the Weaver",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/1/16/EtheldredTheWeaver.png"
+      },
+      {
+        "category": {
+          "categoryName": "Agari"
+        },
+        "coordinates": [
+          3701,
+          2545
+        ],
+        "description": "",
+        "icon": "https://static.wikitide.net/soulframewiki/6/64/AgariHealthIcon.png",
+        "locationName": "Wazzard  of Wastes",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/thumb/a/a6/WraithWallpaper3.jpg/1280px-WraithWallpaper3.jpg"
+      },
+      {
+        "category": {
+          "categoryName": "Agari"
+        },
+        "coordinates": [
+          5666,
+          6134
+        ],
+        "description": "",
+        "icon": "https://static.wikitide.net/soulframewiki/6/64/AgariHealthIcon.png",
+        "locationName": "Gruul Seeker Ruthos",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/4/4e/GruulSeekerRuthosSoulmap.jpg"
+      },
+      {
+        "category": {
+          "categoryName": "Agari"
+        },
+        "coordinates": [
+          [
+            4451,
+            4282
+          ],
+          [
+            4227,
+            2793
+          ]
+        ],
+        "description": "Impidh #1 - Overworld Agari\nImpidh # 2 - Dungeon Agari",
+        "icon": "https://static.wikitide.net/soulframewiki/6/64/AgariHealthIcon.png",
+        "locationName": "Thrice-Bound Impidh",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/a/a5/ThriceboundImpidhSoulmap.jpg"
+      },
+      {
+        "category": {
+          "categoryName": "Quest"
+        },
+        "coordinates": [
+          3219,
+          4201
+        ],
+        "description": "",
+        "icon": "https://static.wikitide.net/soulframewiki/7/7d/ExclamationMark.png",
+        "locationName": "Bromius Quest",
+        "mediaUrl": ""
+      },
+      {
+        "category": {
+          "categoryName": "Oro Chests"
+        },
+        "coordinates": [
+          3050,
+          3424
+        ],
+        "description": "",
+        "icon": "https://s3.7thseraph.org/wiki.avakot.org/soulmap.avakot.org/Icons/SF_chest.svg",
+        "locationName": "[oro] Next to the bridge",
+        "mediaUrl": ""
+      },
+      {
+        "category": {
+          "categoryName": "Oro Chests"
+        },
+        "coordinates": [
+          2540,
+          3471
+        ],
+        "description": "",
+        "icon": "https://s3.7thseraph.org/wiki.avakot.org/soulmap.avakot.org/Icons/SF_chest.svg",
+        "locationName": "[oro] Near Astrologer's Watch",
+        "mediaUrl": ""
+      },
+      {
+        "category": {
+          "categoryName": "Oro Chests"
+        },
+        "coordinates": [
+          2085,
+          3552
+        ],
+        "description": "Credits : Limbogoth",
+        "icon": "https://s3.7thseraph.org/wiki.avakot.org/soulmap.avakot.org/Icons/SF_chest.svg",
+        "locationName": "[oro] Close of Oo-Mull",
+        "mediaUrl": ""
+      },
+      {
+        "category": {
+          "categoryName": "Points of Interest"
+        },
+        "coordinates": [
+          3443,
+          2957
+        ],
+        "description": "Praise the Pyramid.\n\nCredit: FriedRoadKill",
+        "icon": "",
+        "locationName": "Windaxian",
+        "mediaUrl": "https://i.imgur.com/lNJ0UAe.png"
+      },
+      {
+        "category": {
+          "categoryName": "Crypt of the Circade"
+        },
+        "coordinates": [
+          [
+            5267,
+            6326
+          ],
+          [
+            4739,
+            3393
+          ],
+          [
+            3708,
+            1534
+          ]
+        ],
+        "description": "You need a key to enter, a lot of what's inside is secrets.\nLevel : 10-15",
+        "icon": "https://static.wikitide.net/soulframewiki/7/7b/EntranceMarker.png?v=2",
+        "locationName": "Crypt of the Circade",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/0/0f/CircadeCryptEntrance.jpg"
+      },
+      {
+        "category": {
+          "categoryName": "Drop Sources"
+        },
+        "coordinates": [
+          [
+            2261,
+            4969
+          ],
+          [
+            1971,
+            3647
+          ],
+          [
+            2571,
+            3777
+          ],
+          [
+            1827,
+            4226
+          ],
+          [
+            2687,
+            5496
+          ],
+          [
+            2687,
+            5496
+          ],
+          [
+            4130,
+            5798
+          ],
+          [
+            1241,
+            2342
+          ],
+          [
+            1945,
+            3311
+          ],
+          [
+            5830,
+            5819
+          ],
+          [
+            4817,
+            6656
+          ],
+          [
+            1322,
+            2787
+          ],
+          [
+            2836,
+            5512
+          ],
+          [
+            4151,
+            770
+          ],
+          [
+            4721,
+            5270
+          ],
+          [
+            5332,
+            2268
+          ],
+          [
+            5457,
+            2688
+          ],
+          [
+            5557,
+            6409
+          ],
+          [
+            5728,
+            4959
+          ],
+          [
+            5870,
+            3776
+          ],
+          [
+            5912,
+            3366
+          ],
+          [
+            4750,
+            2049
+          ],
+          [
+            4676,
+            1528
+          ],
+          [
+            4967,
+            1269
+          ],
+          [
+            3782,
+            1233
+          ],
+          [
+            3377,
+            1187
+          ],
+          [
+            3059,
+            1206
+          ],
+          [
+            3824,
+            1619
+          ],
+          [
+            2728,
+            3012
+          ],
+          [
+            4745,
+            6239
+          ],
+          [
+            2091,
+            2066
+          ],
+          [
+            4455,
+            3619
+          ],
+          [
+            2131,
+            3704
+          ],
+          [
+            3450,
+            4032
+          ],
+          [
+            2081,
+            3989
+          ],
+          [
+            2638,
+            5056
+          ]
+        ],
+        "description": "Chance to spawn in each documented location, not guaranteed",
+        "icon": "https://s3.7thseraph.org/wiki.avakot.org/soulmap.avakot.org/Icons/SF_yokeidol.svg",
+        "locationName": "Damaged Sprites",
+        "mediaUrl": "https://i.imgur.com/FFKfAY8.jpeg"
+      },
+      {
+        "category": {
+          "categoryName": "Camps"
+        },
+        "coordinates": [
+          [
+            4769,
+            3139
+          ],
+          [
+            5647,
+            5653
+          ],
+          [
+            3019,
+            2496
+          ]
+        ],
+        "description": "You can free a corrupted dog there, and get a chest reward!",
+        "icon": "https://s3.7thseraph.org/wiki.avakot.org/soulmap.avakot.org/Icons/SF_chest.svg",
+        "locationName": "Corrupted Dog",
+        "mediaUrl": null
+      },
+      {
+        "category": {
+          "categoryName": "Agari"
+        },
+        "coordinates": [
+          1734,
+          1672
+        ],
+        "description": "You ring the bell behind it whenever he's there to fight him! You get an armor set off of him.",
+        "icon": "https://static.wikitide.net/soulframewiki/f/fe/MendicantKingIcon.png",
+        "locationName": "Mendicant King",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/b/ba/MendicantKingSoulmap.png"
+      },
+      {
+        "category": {
+          "categoryName": "Dungeon Exits"
+        },
+        "coordinates": [
+          4746,
+          3750
+        ],
+        "description": "",
+        "icon": "https://s3.7thseraph.org/wiki.avakot.org/soulmap.avakot.org/Icons/SF_exit.svg",
+        "locationName": "Crypt Exit",
+        "mediaUrl": ""
+      },
+      {
+        "category": {
+          "categoryName": "Camps"
+        },
+        "coordinates": [
+          [
+            2569,
+            3283
+          ],
+          [
+            2000,
+            3519
+          ],
+          [
+            2852,
+            3973
+          ],
+          [
+            2827,
+            4398
+          ],
+          [
+            2322,
+            4908
+          ],
+          [
+            3496,
+            3644
+          ],
+          [
+            3261,
+            2264
+          ],
+          [
+            2053,
+            3820
+          ],
+          [
+            4873,
+            3499
+          ],
+          [
+            3956,
+            2956
+          ],
+          [
+            2447,
+            1191
+          ],
+          [
+            2290,
+            2249
+          ],
+          [
+            3166,
+            5147
+          ],
+          [
+            2847,
+            2603
+          ],
+          [
+            3925,
+            1114
+          ],
+          [
+            1410,
+            2489
+          ],
+          [
+            5064,
+            4676
+          ],
+          [
+            3883,
+            1944
+          ]
+        ],
+        "description": "These are the spawning locations when logging in as the player.",
+        "icon": "https://static.wikitide.net/soulframewiki/f/f4/SparrowGuide.png",
+        "locationName": "Envoy Camp",
+        "mediaUrl": ""
+      },
+      {
+        "category": {
+          "categoryName": "Quest"
+        },
+        "coordinates": [
+          [
+            3402,
+            2356
+          ],
+          [
+            3589,
+            2451
+          ]
+        ],
+        "description": "These are the mandatory fight locations for the Verminia quest. Against the Nimrod.\nThey are required to open Verminia's swamp.",
+        "icon": "https://static.wikitide.net/soulframewiki/6/6d/QuestCompleteX.png",
+        "locationName": "Nimrod Fight",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/4/49/DischargedNimrodSoulmap.jpg"
+      },
+      {
+        "category": {
+          "categoryName": "Key Locations"
+        },
+        "coordinates": [
+          2969,
+          3289
+        ],
+        "description": "The legendary birthplace of the Dendrit Knightmaidens. After the Fonnish Charge of 717 the Mendicant King of Curlail and his men were lost. Thus, the Ladies of Curlailan court donned the ancient's armour to hold their keep and have worn it proudly ever since.",
+        "icon": "https://static.wikitide.net/soulframewiki/3/30/Location.png?v=2",
+        "locationName": "Fort Curlail",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/c/cf/FortCurlail.png"
+      },
+      {
+        "category": {
+          "categoryName": "Key Locations"
+        },
+        "coordinates": [
+          2997,
+          3550
+        ],
+        "description": "A modest hamlet within the fort's walls. A community of farmers built upon infertile land. Though by the standards of new science, Curlailan soil is too full of gems and metals to farm, its tillers and sowers have yielded the most luscious crops upon it for an era.",
+        "icon": "https://static.wikitide.net/soulframewiki/3/30/Location.png?v=2",
+        "locationName": "Curlail",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/5/58/Curlail2.png"
+      },
+      {
+        "category": {
+          "categoryName": "Key Locations"
+        },
+        "coordinates": [
+          2322,
+          3156
+        ],
+        "description": "A spire-like college belonging to the Order of the Pensives, a group of presumed scholars and philosophers. Additionally, this is where Orlick met his demise, as he fell from the spire of the College. When it was invaded by the Sinecure, they burned every single one of the historical books stored within.\nEstablished in the year 776 by the Schoolmaster Sicletrude. With humble beginnings as a library of Feybles, the Pensives Archive has grown into great Midrathian acclaim. The innermost chamber, Aurem Canus, draws eager Prentices from across the many Isles.",
+        "icon": "https://static.wikitide.net/soulframewiki/3/30/Location.png?v=2",
+        "locationName": "College of Pensives",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/a/af/CollegeOfPensives.png"
+      },
+      {
+        "category": {
+          "categoryName": "Key Locations"
+        },
+        "coordinates": [
+          1919,
+          3903
+        ],
+        "description": "Known for its sturdy people and sturdier ales, the old port town of Salzbrim has a long history of welcoming sailors from lands beyond the mist. After the Darning Flood of 562, it is said that half the world's pirates sailed in peace to bail out the Drippin' Flagon Tavern.",
+        "icon": "https://static.wikitide.net/soulframewiki/3/30/Location.png?v=2",
+        "locationName": "Salzbrim",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/3/34/Salzbrim.png"
+      },
+      {
+        "category": {
+          "categoryName": "Key Locations"
+        },
+        "coordinates": [
+          2908,
+          4083
+        ],
+        "description": "The Borro complex began as a tin extraction site in the Quiet Years. Long abandoned for reasons unknown, it was briefly rediscovered during the Cassid occupation of 401. When numerous Cassid foremen were lost within its depths, however, Napo Agnes boarded Borro's mouth shut once and for all.",
+        "icon": "https://static.wikitide.net/soulframewiki/3/30/Location.png?v=2",
+        "locationName": "Mines of Borro",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/b/bd/MinesofBorro.png"
+      },
+      {
+        "category": {
+          "categoryName": "Key Locations"
+        },
+        "coordinates": [
+          2041,
+          3555
+        ],
+        "description": "The is little known by word or writ of Hilly-Den. Named so by the Sproutfolk themselves, it is a secret-y place where few humans may venture. Though Lothgar of the Old Southern Hamlet claims in his memories to have seen \"A Monstrous Sproutbeast feasting on fertilizer\" within, this has never been confirmed.",
+        "icon": "https://static.wikitide.net/soulframewiki/3/30/Location.png?v=2",
+        "locationName": "Hilly-Den",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/6/60/HillyDen.png"
+      },
+      {
+        "category": {
+          "categoryName": "Key Locations"
+        },
+        "coordinates": [
+          1751,
+          3335
+        ],
+        "description": "The Hews cabins, a small community of Spruce loggers. 'Fore the Ode introduced Thunderstone felling, logging was a privileged profession granted only to those in the Arbearer's good favour. Each fallen tree was a blessing.",
+        "icon": "https://static.wikitide.net/soulframewiki/3/30/Location.png?v=2",
+        "locationName": "Hews",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/b/b7/HewsImage.png"
+      },
+      {
+        "category": {
+          "categoryName": "Quest"
+        },
+        "coordinates": [
+          3477,
+          2297
+        ],
+        "description": "Free the poppets(rats) to begin the quest!\nYou need to have walked through [Picktrix Thicket](https://soulmap.avakot.org/?loc=brewer-of-hues-start) first though!\nThis is the actual first step of the Verminia Quest.",
+        "icon": "https://static.wikitide.net/soulframewiki/7/7d/ExclamationMark.png",
+        "locationName": "Free Verminia's Poppets",
+        "mediaUrl": ""
+      },
+      {
+        "category": {
+          "categoryName": "Drop Sources"
+        },
+        "coordinates": [
+          [
+            2857,
+            3282
+          ],
+          [
+            3056,
+            3279
+          ],
+          [
+            3071,
+            3257
+          ],
+          [
+            3128,
+            3431
+          ],
+          [
+            3020,
+            3740
+          ],
+          [
+            3168,
+            3756
+          ],
+          [
+            2909,
+            4042
+          ],
+          [
+            2617,
+            4002
+          ],
+          [
+            2734,
+            4248
+          ],
+          [
+            3092,
+            4288
+          ],
+          [
+            2294,
+            3557
+          ],
+          [
+            2295,
+            4644
+          ],
+          [
+            3271,
+            5077
+          ],
+          [
+            1839,
+            2920
+          ]
+        ],
+        "description": "These Balloons are not guaranteed spawns. ",
+        "icon": "https://static.wikitide.net/soulframewiki/0/06/Feybalt.png",
+        "locationName": "Ode Balloon",
+        "mediaUrl": ""
+      },
+      {
+        "category": {
+          "categoryName": "Key Locations"
+        },
+        "coordinates": [
+          3196,
+          1509
+        ],
+        "description": "Placeholder location since P9.\nAlso where Warsongs takes place.",
+        "icon": "https://static.wikitide.net/soulframewiki/3/30/Location.png?v=2",
+        "locationName": "Castle Kearnhold",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/9/94/CastleKearnhold.png"
+      },
+      {
+        "category": {
+          "categoryName": "Undercity of Dermak"
+        },
+        "coordinates": [
+          5363,
+          5430
+        ],
+        "description": "Requires two players(Sirin's Decoy, Oscelda's Bestone OR Orengall pact, check video on method) to enter via pressing the pressure plates outside.\nLevels : 25-30",
+        "icon": "https://s3.7thseraph.org/wiki.avakot.org/soulmap.avakot.org/Icons/SF_entrance.svg",
+        "locationName": "[D] Crypt of Auld Jotar | Demark Market (Two Player)",
+        "mediaUrl": "https://www.youtube.com/watch?v=x3TpwvWX52w"
+      },
+      {
+        "category": {
+          "categoryName": "Glades of Andurin"
+        },
+        "coordinates": [
+          2916,
+          3048
+        ],
+        "description": "Go through this dungeon to activate the Verminia Quest.\nLevels : 10-15",
+        "icon": "https://s3.7thseraph.org/wiki.avakot.org/soulmap.avakot.org/Icons/SF_exclam.svg",
+        "locationName": "[G] Picktrix Thicket",
+        "mediaUrl": ""
+      },
+      {
+        "category": {
+          "categoryName": "Dungeon Exits"
+        },
+        "coordinates": [
+          [
+            2209,
+            4361
+          ],
+          [
+            3088,
+            4141
+          ],
+          [
+            2608,
+            3027
+          ],
+          [
+            3234,
+            2180
+          ],
+          [
+            3804,
+            3676
+          ]
+        ],
+        "description": "These are possible exits for Glades tileset dungeons.",
+        "icon": "https://s3.7thseraph.org/wiki.avakot.org/soulmap.avakot.org/Icons/SF_exit.svg",
+        "locationName": "Glades Exit",
+        "mediaUrl": ""
+      },
+      {
+        "category": {
+          "categoryName": "Key Locations"
+        },
+        "coordinates": [
+          4503,
+          4957
+        ],
+        "description": "An old watchtower, once host to the Order of the Gyres. Servants of Iridis, and his many halos, the Order held its tribunals on the highest floor when his light was full and bright over the sea!",
+        "icon": "https://static.wikitide.net/soulframewiki/3/30/Location.png?v=2",
+        "locationName": "Moon's Watch",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/8/80/MoonsWatch.png"
+      },
+      {
+        "category": {
+          "categoryName": "Points of Interest"
+        },
+        "coordinates": [
+          4905,
+          6748
+        ],
+        "description": "There should be a gap in the geometry, simply walk all the way down and you're out!",
+        "icon": "",
+        "locationName": "OOB Entrypoint - Point 1",
+        "mediaUrl": "https://youtu.be/7hUJEpCjf2o"
+      },
+      {
+        "category": {
+          "categoryName": "Key Locations"
+        },
+        "coordinates": [
+          2606,
+          3659
+        ],
+        "description": "A shrine crafted in reverence of the great Omen Stag lineage. Constructed in the year 310, the Stag Shrine first honoured Odulf Rood whose three-pronged antlers parted his kingdom's canopy. It has since been a place of Dendrit worship.",
+        "icon": "https://static.wikitide.net/soulframewiki/3/30/Location.png?v=2",
+        "locationName": "Garren Shrine",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/a/a0/GarrenShrine.png"
+      },
+      {
+        "category": {
+          "categoryName": "Undercity of Dermak"
+        },
+        "coordinates": [
+          2475,
+          3230
+        ],
+        "description": "Levels : 3-5",
+        "icon": "https://s3.7thseraph.org/wiki.avakot.org/soulmap.avakot.org/Icons/SF_entrance.svg",
+        "locationName": "[D] Terpeth District",
+        "mediaUrl": ""
+      },
+      {
+        "category": {
+          "categoryName": "Undercity of Dermak"
+        },
+        "coordinates": [
+          2983,
+          4167
+        ],
+        "description": "Levels : 5-7",
+        "icon": "https://s3.7thseraph.org/wiki.avakot.org/soulmap.avakot.org/Icons/SF_entrance.svg",
+        "locationName": "[D] Pegroot Mill",
+        "mediaUrl": ""
+      },
+      {
+        "category": {
+          "categoryName": "Key Locations"
+        },
+        "coordinates": [
+          5722,
+          3768
+        ],
+        "description": "First the home of a hermit noble, then the study of the occupier’s astrologists. Rora’s Hyne has lived many lives. Most recently, this old tower housed a library of Feybles. After the Felling, it was the last place on Midrath where one could read freely the word of the Fey. Until of course, the Ode arrived and burned it all away.",
+        "icon": "https://static.wikitide.net/soulframewiki/3/30/Location.png?v=2",
+        "locationName": "Othavess",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/a/a7/Othavess.png"
+      },
+      {
+        "category": {
+          "categoryName": "Quest"
+        },
+        "coordinates": [
+          3540,
+          3825
+        ],
+        "description": "Drop the fallen helmet here to unlock Tuvalkane",
+        "icon": "https://static.wikitide.net/soulframewiki/7/7d/ExclamationMark.png",
+        "locationName": "Tuvalkane - Point 2",
+        "mediaUrl": ""
+      },
+      {
+        "category": {
+          "categoryName": "Quest"
+        },
+        "coordinates": [
+          3602,
+          3525
+        ],
+        "description": "Pick up the fallen helmet in the center of the quarry and carry to [The Forge](https://soulmap.avakot.org/P11?loc=tuvalkane-point-2)",
+        "icon": "https://static.wikitide.net/soulframewiki/7/7d/ExclamationMark.png",
+        "locationName": "Tuvalkane - Point 1",
+        "mediaUrl": ""
+      },
+      {
+        "category": {
+          "categoryName": "Key Locations"
+        },
+        "coordinates": [
+          2714,
+          2503
+        ],
+        "description": "A watch tower, built in the late reign of Clan Jotar. It functioned not only in the network of signal flames across the Isle, but also as a school for young royals. At the age of nine, Muireall Jotar had already written the nine laws of her reign. A legislation she upheld when she was crowned Queen of Midrath in the year 680.",
+        "icon": "https://static.wikitide.net/soulframewiki/3/30/Location.png?v=2",
+        "locationName": "Turret Jotar",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/f/f4/TurretJotar.png"
+      },
+      {
+        "category": {
+          "categoryName": "Key Locations"
+        },
+        "coordinates": [
+          2457,
+          3762
+        ],
+        "description": "The boarding inns of the Pensives. A community of the illuminated. Though the houses are quaint, they were oft well-adorned, in their time, by the resident scholar’s sponsor.",
+        "icon": "https://static.wikitide.net/soulframewiki/3/30/Location.png?v=2",
+        "locationName": "Luminns",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/f/ff/Luminns.png"
+      },
+      {
+        "category": {
+          "categoryName": "Key Locations"
+        },
+        "coordinates": [
+          2862,
+          5308
+        ],
+        "description": "Here, a young Thane, Taugh of Clan Jotar, broke ground on a renowned road system. He proposed a level stone road that would span the entire isle. He had the village named in his honor as the first node of Taugh’s great Lane. The project quickly ran out of royal funding but the commencement party was legendary.",
+        "icon": "https://static.wikitide.net/soulframewiki/3/30/Location.png?v=2",
+        "locationName": "Taughslane",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/9/92/Taughslane.png"
+      },
+      {
+        "category": {
+          "categoryName": "Key Locations"
+        },
+        "coordinates": [
+          3413,
+          3574
+        ],
+        "description": "The oldest well in all of Midrath has many names and stories. Some claim it was dug in the Era of Ancients by Iridis himself. Others still say that once in the dry spell, Old King Rauthard had it filled with ale.",
+        "icon": "https://static.wikitide.net/soulframewiki/3/30/Location.png?v=2",
+        "locationName": "Oro's Well",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/3/3f/Oro%27sWell.png"
+      },
+      {
+        "category": {
+          "categoryName": "Key Locations"
+        },
+        "coordinates": [
+          2054,
+          2049
+        ],
+        "description": "An old Curlailan fort, said to be built by the order of the Mendicant King. Shortly 'fore his Fonnish charge, his small but mighty loyalist army used this plot as a training ground.",
+        "icon": "https://static.wikitide.net/soulframewiki/3/30/Location.png?v=2",
+        "locationName": "Fonnish Fort Ruins",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/a/aa/FonnishFortRuins.png"
+      },
+      {
+        "category": {
+          "categoryName": "Key Locations"
+        },
+        "coordinates": [
+          4374,
+          3588
+        ],
+        "description": "An auxiliary of Castle Kearnhold. Host to the many armies of Midrath past. In the years before the Felling, it is said The Witch General Agrona trained her battalion in the Tethren magicks. This rendered the early Kingdom near-invincible against rival isles… Until the Fey drew their war staffs.",
+        "icon": "https://static.wikitide.net/soulframewiki/3/30/Location.png?v=2",
+        "locationName": "Fort Kearnhold",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/e/e4/FortKearnhold.jpg"
+      },
+      {
+        "category": {
+          "categoryName": "Key Locations"
+        },
+        "coordinates": [
+          1498,
+          2697
+        ],
+        "description": "A pocket of Aurel on the Isle of Midrath. 'Tis said that the Grimpante Trees of Birdie's Bog are not native to the Isle, but a gift from the Aureli Queen Bernadette. Legend has it, she dropped a single seed in a bottle and cast it afloat upon the ocean Salz. By Iridis' guidance, it beached on Midrath the next morning.",
+        "icon": "https://static.wikitide.net/soulframewiki/3/30/Location.png?v=2",
+        "locationName": "Birdie's Bog",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/f/f2/BirdiesBog.png"
+      },
+      {
+        "category": {
+          "categoryName": "Key Locations"
+        },
+        "coordinates": [
+          5692,
+          5016
+        ],
+        "description": "A fishing village huddled 'round a cursed cove. A lovestruck mage once spent her summer begging Iridis to visit her in the moonlit cove. When the autumn chill blew in and he had still not arrived, she walked into the Salz, never to resurface.",
+        "icon": "https://static.wikitide.net/soulframewiki/3/30/Location.png?v=2",
+        "locationName": "Nellynoch",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/f/ff/Nellynoch.png"
+      },
+      {
+        "category": {
+          "categoryName": "Key Locations"
+        },
+        "coordinates": [
+          5202,
+          5900
+        ],
+        "description": "A small community of Slelflandish folk took residence in Midrath during the Cassid occupation. So beloved were they by natives and invaders alike, that they were asked to stay when the Cassids fled. The Skelfies became home to many Skelflandish since, as well as the first windmill on Midrathian soil.",
+        "icon": "https://static.wikitide.net/soulframewiki/3/30/Location.png?v=2",
+        "locationName": "Skelfies",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/6/63/Skelfies.png"
+      },
+      {
+        "category": {
+          "categoryName": "Key Locations"
+        },
+        "coordinates": [
+          2023,
+          3417
+        ],
+        "description": "A hamlet so named for its ancient wool mill. The source of Dendria’s finest weaves. ‘Twas once tradition for the elders to sing the Waulking songs while the strong-handed young waulked the new weaves. Even now, under Ode, the wheel turns diligently.",
+        "icon": "https://static.wikitide.net/soulframewiki/3/30/Location.png?v=2",
+        "locationName": "Oo-Mull",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/c/c0/OoMull.png"
+      },
+      {
+        "category": {
+          "categoryName": "Key Locations"
+        },
+        "coordinates": [
+          1806,
+          2462
+        ],
+        "description": "A hamlet stands proud and sturdy as its patron Omen Beast. The people of Roods were wards of the mythical herd, and hunters, both. The hunt is an ancient thing, a bond of blood twixt predator and prey. It is, like all things, a game. Roods minded well the rules.",
+        "icon": "https://static.wikitide.net/soulframewiki/3/30/Location.png?v=2",
+        "locationName": "Roods",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/c/cd/Roods.png"
+      },
+      {
+        "category": {
+          "categoryName": "Key Locations"
+        },
+        "coordinates": [
+          3646,
+          2348
+        ],
+        "description": "An Ode’n stake in the Kearnhold highlands. A swamp of corruption in what was once an idyllic pond. Named after the Ode’n star of justice, Sidae’s Stake is a manifestation of the Ode’n belief that Alca is rightfully theirs.",
+        "icon": "https://static.wikitide.net/soulframewiki/3/30/Location.png?v=2",
+        "locationName": "Sidae's Stake",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/e/e8/SidaesStake.png"
+      },
+      {
+        "category": {
+          "categoryName": "Key Locations"
+        },
+        "coordinates": [
+          2252,
+          1653
+        ],
+        "description": "A stable, once famous for taming the wild horses of the Airdelands. T’was necessity, for only horses of the Airde herd were tall enough for such riders as the Dendrit Knightmaidens. But wild they were. In the end, they could only be coaxed to stable with sips of sap and honey.",
+        "icon": "https://static.wikitide.net/soulframewiki/3/30/Location.png?v=2",
+        "locationName": "Sawney Way",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/5/58/SawneyWay.png"
+      },
+      {
+        "category": {
+          "categoryName": "Key Locations"
+        },
+        "coordinates": [
+          5090,
+          6515
+        ],
+        "description": "Mirifuir has stood upon the cliff’s edge for a thousand years. No rise nor fall of Kingdoms, no coming or going of Ode, not even the ever-pounding of the waves could topple it. For its walls were blessed by the Fey Empress in a rare meeting ‘twixt her court and the Midrathian Queen, Finngualla.",
+        "icon": "https://static.wikitide.net/soulframewiki/3/30/Location.png?v=2",
+        "locationName": "Mirifuir",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/6/69/Mirifuir.png"
+      },
+      {
+        "category": {
+          "categoryName": "Key Locations"
+        },
+        "coordinates": [
+          5815,
+          5620
+        ],
+        "description": "A lonely watchtower, overlooking the clear waters of the Salz. When the Princess of Kaxia was exiled to Midrath in the early 300s, she took residence in Creedance High and refused to leave. Some say she did it out of scorn; others say it was for love of a lowly fisherman she watched from the roof.",
+        "icon": "https://static.wikitide.net/soulframewiki/3/30/Location.png?v=2",
+        "locationName": "Creedance High",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/5/50/CreedanceHigh.png"
+      },
+      {
+        "category": {
+          "categoryName": "Key Locations"
+        },
+        "coordinates": [
+          2694,
+          3473
+        ],
+        "description": "During the Cassid reign over Midrath, the ruling General, Napo Agnes, found a fascination in the night sky. In his own words, Midrathian nights, unlike Cassid nights, are not \"tainted by the ever-glow of the Borealis.\" Thus, he converted many Dendrit towers, such as this, into astrologists' chambers, filling them with experts from across the many Isles.",
+        "icon": "https://static.wikitide.net/soulframewiki/3/30/Location.png?v=2",
+        "locationName": "Astrologer's Watch",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/e/e6/AstrologersWatch.png"
+      },
+      {
+        "category": {
+          "categoryName": "Key Locations"
+        },
+        "coordinates": [
+          2352,
+          2101
+        ],
+        "description": "A prime fishing spot 'fore the rivers went dark. Generations of anglers learned to tie the knotted lures in this old shack. The masters could replicate crickets, sprigworms, and even picktrix wings with just a Dendrit threads and many, many knots.",
+        "icon": "https://static.wikitide.net/soulframewiki/3/30/Location.png?v=2",
+        "locationName": "Bradan Bank",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/9/90/BradanBank.png"
+      },
+      {
+        "category": {
+          "categoryName": "Key Locations"
+        },
+        "coordinates": [
+          1703,
+          1659
+        ],
+        "description": "The new world. Alca as the Ode would have her. The old port town gives way to the Ichor floods. Tower air suffocates all living matter. What the Ode will do with their conquered land, none dare guess.",
+        "icon": "https://static.wikitide.net/soulframewiki/3/30/Location.png?v=2",
+        "locationName": "Stroaic",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/2/28/Stroaic.png"
+      },
+      {
+        "category": {
+          "categoryName": "Key Locations"
+        },
+        "coordinates": [
+          2440,
+          4828
+        ],
+        "description": "A beach comber's paradise. Once never knows what bobbles or losties may wash up on the shore of Comber's Leve. It's as though a blessing mingles with the sand. Or a curse.",
+        "icon": "https://static.wikitide.net/soulframewiki/3/30/Location.png?v=2",
+        "locationName": "Comber's Leve",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/1/14/CombersLeve.png"
+      },
+      {
+        "category": {
+          "categoryName": "Key Locations"
+        },
+        "coordinates": [
+          4896,
+          1237
+        ],
+        "description": "Likely a tribute to an Ode’n skycastle in some far reach of the cosmos. Perhaps named after the tower that has fallen ‘pon its coast. Regardless of its namesake, New Viscii is a land purged of its history. A slate made blank for the scripture of its new lord.",
+        "icon": "https://static.wikitide.net/soulframewiki/3/30/Location.png?v=2",
+        "locationName": "New Viscii",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/b/bb/NewViscii.png"
+      },
+      {
+        "category": {
+          "categoryName": "Key Locations"
+        },
+        "coordinates": [
+          1941,
+          1203
+        ],
+        "description": "A tower built as a respite for the tired Generals of Kearnhold. Oddly, whenever one went away to find reprieve, they found themselves keeping vigilant watch over the castle from afar, only to return more tired.",
+        "icon": "https://static.wikitide.net/soulframewiki/3/30/Location.png?v=2",
+        "locationName": "Heedoway",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/1/1f/Heedoway.png"
+      },
+      {
+        "category": {
+          "categoryName": "Glades of Andurin"
+        },
+        "coordinates": [
+          2612,
+          3625
+        ],
+        "description": "Levels : 10-15 ",
+        "icon": "https://s3.7thseraph.org/wiki.avakot.org/soulmap.avakot.org/Icons/quests/garen.svg",
+        "locationName": "[G] Folksgrove",
+        "mediaUrl": ""
+      },
+      {
+        "category": {
+          "categoryName": "Drop Sources"
+        },
+        "coordinates": [
+          [
+            2611,
+            3997
+          ],
+          [
+            2107,
+            4721
+          ],
+          [
+            2112,
+            4435
+          ],
+          [
+            2236,
+            4261
+          ],
+          [
+            2532,
+            4383
+          ],
+          [
+            2902,
+            4454
+          ],
+          [
+            3132,
+            4296
+          ],
+          [
+            2948,
+            4072
+          ],
+          [
+            3075,
+            3424
+          ],
+          [
+            1712,
+            1157
+          ],
+          [
+            2379,
+            1299
+          ],
+          [
+            2401,
+            1294
+          ],
+          [
+            2782,
+            1789
+          ],
+          [
+            2270,
+            1655
+          ],
+          [
+            4468,
+            3621
+          ],
+          [
+            5346,
+            3265
+          ],
+          [
+            2862,
+            4766
+          ],
+          [
+            2901,
+            4738
+          ],
+          [
+            2932,
+            4465
+          ],
+          [
+            2862,
+            4766
+          ],
+          [
+            2901,
+            4738
+          ],
+          [
+            3693,
+            5263
+          ],
+          [
+            1542,
+            2773
+          ],
+          [
+            1572,
+            2782
+          ],
+          [
+            2036,
+            2038
+          ]
+        ],
+        "description": "These chests are not guaranteed spawns. Chance to drop Thistle fragments",
+        "icon": "https://s3.7thseraph.org/wiki.avakot.org/soulmap.avakot.org/Icons/SF_ode.svg",
+        "locationName": "Ode Chest",
+        "mediaUrl": null
+      },
+      {
+        "category": {
+          "categoryName": "Dungeon Exits"
+        },
+        "coordinates": [
+          [
+            3000,
+            4299
+          ],
+          [
+            2490,
+            4894
+          ],
+          [
+            4796,
+            4344
+          ],
+          [
+            2618,
+            4079
+          ]
+        ],
+        "description": "These are possible exits for Dermak tileset dungeons.",
+        "icon": "https://s3.7thseraph.org/wiki.avakot.org/soulmap.avakot.org/Icons/SF_exit.svg",
+        "locationName": "Dermak Exit",
+        "mediaUrl": ""
+      },
+      {
+        "category": {
+          "categoryName": "Glades of Andurin"
+        },
+        "coordinates": [
+          3410,
+          2766
+        ],
+        "description": "Levels : 10-15",
+        "icon": "https://s3.7thseraph.org/wiki.avakot.org/soulmap.avakot.org/Icons/SF_entrance.svg",
+        "locationName": "[G] Canyon Dungeon",
+        "mediaUrl": ""
+      },
+      {
+        "category": {
+          "categoryName": "Key Locations"
+        },
+        "coordinates": [
+          4606,
+          5418
+        ],
+        "description": "The Merry Moray Inn was once a favourite resting place for those making pilgrimage to Mirifuir. The barman, ‘tis said, served a potent brew of sugared Sourcaps. A single sip would put a spring in a tired man’s walk. A full pint would put him straight to sleep when he returned.\n",
+        "icon": "https://static.wikitide.net/soulframewiki/3/30/Location.png?v=2",
+        "locationName": "Moray",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/3/36/Moray.png"
+      },
+      {
+        "category": {
+          "categoryName": "Key Locations"
+        },
+        "coordinates": [
+          2177,
+          4451
+        ],
+        "description": "A hamlet of artisans. Makers of instruments, whittlers of Totems, keepers of Midrath’s soul. Today, they toil with the others in the crops of Curlail. The elders still hum the working tunes.",
+        "icon": "https://static.wikitide.net/soulframewiki/3/30/Location.png?v=2",
+        "locationName": "Vertonn",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/7/75/Vertonn.png"
+      },
+      {
+        "category": {
+          "categoryName": "Key Locations"
+        },
+        "coordinates": [
+          4810,
+          2386
+        ],
+        "description": "A tiny hamlet tucked away in a crook between hills and pines. For a moment, when the patrols pass into the forest, one can imagine what Midrath was like before the song.",
+        "icon": "https://static.wikitide.net/soulframewiki/3/30/Location.png?v=2",
+        "locationName": "Kairness",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/8/83/Kairness.png"
+      },
+      {
+        "category": {
+          "categoryName": "Key Locations"
+        },
+        "coordinates": [
+          2366,
+          1293
+        ],
+        "description": "Even in the Pensive's tomes, Bracken Brae is a ruin. Whatever purpose these old chambers once held are long lost to history. What still remains, near-unblemished, is the stone phoenix. Raring to rise from the rubble.",
+        "icon": "https://static.wikitide.net/soulframewiki/3/30/Location.png?v=2",
+        "locationName": "Bracken Brae",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/e/e7/BrackenBrae.png"
+      },
+      {
+        "category": {
+          "categoryName": "Key Locations"
+        },
+        "coordinates": [
+          2006,
+          2841
+        ],
+        "description": "A shell of a castle, from the Quiet Era. One of the oldest human-made ruins in Midrath. Many believe it was the home of the legendary Silent Sage. How was it built without a word spoken?",
+        "icon": "https://static.wikitide.net/soulframewiki/3/30/Location.png?v=2",
+        "locationName": "Auld Priori",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/2/26/AuldPriori.png"
+      },
+      {
+        "category": {
+          "categoryName": "Key Locations"
+        },
+        "coordinates": [
+          4943,
+          4557
+        ],
+        "description": "A village, granted its name by the harsh mountain winds that blow through it. Best known for the prized goat Llywelyn that was reared in its community farm. Each day, a member of the village would carry Llywelyn to the peak of the Wynd for her to graze.",
+        "icon": "https://static.wikitide.net/soulframewiki/3/30/Location.png?v=2",
+        "locationName": "Wyndoun",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/0/0b/Wyndoun.png"
+      },
+      {
+        "category": {
+          "categoryName": "World Trees"
+        },
+        "coordinates": [
+          [
+            1967,
+            3014
+          ],
+          [
+            2690,
+            3911
+          ],
+          [
+            2884,
+            4448
+          ],
+          [
+            3636,
+            4853
+          ],
+          [
+            4622,
+            5677
+          ],
+          [
+            5733,
+            6019
+          ],
+          [
+            5172,
+            4637
+          ],
+          [
+            5569,
+            3445
+          ],
+          [
+            4433,
+            3513
+          ],
+          [
+            5093,
+            2348
+          ],
+          [
+            4003,
+            2775
+          ],
+          [
+            4294,
+            1584
+          ],
+          [
+            1738,
+            2593
+          ],
+          [
+            2278,
+            1045
+          ],
+          [
+            3279,
+            2135
+          ],
+          [
+            2431,
+            6229
+          ]
+        ],
+        "description": "This unlocks the map region",
+        "icon": "https://s3.7thseraph.org/wiki.avakot.org/soulframe.icons/release/Graphics/WaypointMarkers/Tree.png",
+        "locationName": "World Tree",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/b/b9/WorldTreeSoulmap.png"
+      },
+      {
+        "category": {
+          "categoryName": "Day Cycle Boss"
+        },
+        "coordinates": [
+          [
+            1876,
+            1727
+          ],
+          [
+            2217,
+            4668
+          ],
+          [
+            3625,
+            2267
+          ],
+          [
+            2867,
+            4361
+          ],
+          [
+            4839,
+            2319
+          ],
+          [
+            4754,
+            1373
+          ],
+          [
+            4112,
+            5112
+          ],
+          [
+            1474,
+            2430
+          ],
+          [
+            5716,
+            3212
+          ]
+        ],
+        "description": "Chance to spawn the Vadagar Stag. Only found at night outside of Faction Tales.",
+        "icon": "https://static.wikitide.net/soulframewiki/1/10/Stag.png",
+        "locationName": "Vadagar Stag",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/d/d9/VadagarStag.png"
+      },
+      {
+        "category": {
+          "categoryName": "Free Standing Bosses"
+        },
+        "coordinates": [
+          [
+            2607,
+            4690
+          ],
+          [
+            2256,
+            1753
+          ],
+          [
+            2939,
+            3363
+          ],
+          [
+            4330,
+            3611
+          ],
+          [
+            2416,
+            4792
+          ],
+          [
+            1947,
+            3894
+          ],
+          [
+            3657,
+            3484
+          ],
+          [
+            3068,
+            4514
+          ]
+        ],
+        "description": "Used to be called Nimrod Siege Engine.\nSome are guaranteed to spawn, others only have a chance.",
+        "icon": "https://static.wikitide.net/soulframewiki/7/7b/OdeCannon.png",
+        "locationName": "Ode'n Bisulcam",
+        "mediaUrl": "https://i.imgur.com/k5aqBLO.png"
+      },
+      {
+        "category": {
+          "categoryName": "Undercity of Dermak"
+        },
+        "coordinates": [
+          2618,
+          4079
+        ],
+        "description": "Levels : 1-3 ",
+        "icon": "https://s3.7thseraph.org/wiki.avakot.org/soulmap.avakot.org/Icons/SF_entrance.svg",
+        "locationName": "[D] Bastion",
+        "mediaUrl": ""
+      },
+      {
+        "category": {
+          "categoryName": "Juniper Statues"
+        },
+        "coordinates": [
+          [
+            1666,
+            3087
+          ],
+          [
+            2468,
+            3044
+          ],
+          [
+            3234,
+            3889
+          ]
+        ],
+        "description": "You can interact with the special yoke Idol statue, it will give you both a Juniper fragment piece, and some lore regarding the Envoy's past.\nIcon by : Elvi",
+        "icon": "https://static.wikitide.net/soulframewiki/a/a4/JuniperMapMark.png",
+        "locationName": "Juniper Fragment",
+        "mediaUrl": ""
+      },
+      {
+        "category": {
+          "categoryName": "Camps"
+        },
+        "coordinates": [
+          1714,
+          1153
+        ],
+        "description": "There be ship here!",
+        "icon": "",
+        "locationName": "Synod Ship",
+        "mediaUrl": ""
+      },
+      {
+        "category": {
+          "categoryName": "Camps"
+        },
+        "coordinates": [
+          [
+            2922,
+            4382
+          ],
+          [
+            2943,
+            4514
+          ],
+          [
+            3020,
+            3749
+          ],
+          [
+            3173,
+            3777
+          ],
+          [
+            2878,
+            3543
+          ],
+          [
+            1821,
+            2939
+          ],
+          [
+            2886,
+            4717
+          ],
+          [
+            1270,
+            2706
+          ],
+          [
+            1599,
+            2123
+          ],
+          [
+            1928,
+            1408
+          ],
+          [
+            1997,
+            3809
+          ],
+          [
+            2107,
+            4721
+          ],
+          [
+            2259,
+            830
+          ],
+          [
+            2332,
+            4824
+          ],
+          [
+            2780,
+            926
+          ],
+          [
+            3693,
+            5263
+          ],
+          [
+            3744,
+            1025
+          ],
+          [
+            3998,
+            964
+          ],
+          [
+            4151,
+            771
+          ],
+          [
+            4889,
+            2064
+          ],
+          [
+            5480,
+            2934
+          ],
+          [
+            5629,
+            6372
+          ],
+          [
+            5637,
+            4113
+          ],
+          [
+            5899,
+            3354
+          ],
+          [
+            1742,
+            2674
+          ],
+          [
+            2147,
+            1248
+          ],
+          [
+            2154,
+            2877
+          ],
+          [
+            2400,
+            2753
+          ],
+          [
+            2544,
+            1397
+          ],
+          [
+            3249,
+            2571
+          ],
+          [
+            3446,
+            2286
+          ],
+          [
+            3779,
+            1659
+          ],
+          [
+            4124,
+            2583
+          ],
+          [
+            4134,
+            1249
+          ],
+          [
+            2279,
+            3581
+          ],
+          [
+            3498,
+            3375
+          ],
+          [
+            3736,
+            2900
+          ],
+          [
+            4407,
+            5679
+          ],
+          [
+            4601,
+            4735
+          ],
+          [
+            4770,
+            3506
+          ],
+          [
+            4783,
+            5233
+          ],
+          [
+            5040,
+            4209
+          ],
+          [
+            5191,
+            5729
+          ],
+          [
+            4713,
+            2849
+          ],
+          [
+            5421,
+            3717
+          ],
+          [
+            4232,
+            5227
+          ],
+          [
+            3716,
+            5078
+          ],
+          [
+            4261,
+            2419
+          ],
+          [
+            4668,
+            1465
+          ],
+          [
+            3187,
+            1143
+          ],
+          [
+            2634,
+            2018
+          ],
+          [
+            2365,
+            1989
+          ],
+          [
+            1674,
+            3159
+          ],
+          [
+            2494,
+            2997
+          ],
+          [
+            2532,
+            4383
+          ],
+          [
+            2615,
+            4000
+          ],
+          [
+            2939,
+            4046
+          ],
+          [
+            3297,
+            4584
+          ],
+          [
+            2874,
+            2160
+          ],
+          [
+            2073,
+            1846
+          ],
+          [
+            5786,
+            5792
+          ],
+          [
+            5707,
+            5222
+          ],
+          [
+            2396,
+            3956
+          ],
+          [
+            2677,
+            3059
+          ],
+          [
+            3268,
+            3512
+          ],
+          [
+            3674,
+            4526
+          ],
+          [
+            4814,
+            6555
+          ],
+          [
+            2009,
+            1704
+          ],
+          [
+            3100,
+            4276
+          ],
+          [
+            3640,
+            2472
+          ],
+          [
+            4383,
+            1612
+          ],
+          [
+            2015,
+            3053
+          ],
+          [
+            1948,
+            3176
+          ],
+          [
+            5165,
+            3399
+          ]
+        ],
+        "description": "Sinecure camps may contain enemies, loot and/or animal cages.\nIcon by : Elvi",
+        "icon": "https://s3.7thseraph.org/wiki.avakot.org/soulmap.avakot.org/Icons/SF_synodcamp.svg",
+        "locationName": "Sinecure Camp",
+        "mediaUrl": ""
+      },
+      {
+        "category": {
+          "categoryName": "Undercity of Dermak"
+        },
+        "coordinates": [
+          2034,
+          3456
+        ],
+        "description": "Levels : 6-9",
+        "icon": "https://s3.7thseraph.org/wiki.avakot.org/soulmap.avakot.org/Icons/SF_entrance.svg",
+        "locationName": "[D] Fenn's Sanctuary",
+        "mediaUrl": ""
+      },
+      {
+        "category": {
+          "categoryName": "Points of Interest"
+        },
+        "coordinates": [
+          1734,
+          1672
+        ],
+        "description": "",
+        "icon": "",
+        "locationName": "Bell",
+        "mediaUrl": "https://www.youtube.com/watch?v=an9nu4jEUcU"
+      },
+      {
+        "category": {
+          "categoryName": "Points of Interest"
+        },
+        "coordinates": [
+          2438,
+          6497
+        ],
+        "description": "As of P10, this is inaccessible.",
+        "icon": "",
+        "locationName": "This area is out of bounds - Point 1",
+        "mediaUrl": null
+      },
+      {
+        "category": {
+          "categoryName": "Undercity of Dermak"
+        },
+        "coordinates": [
+          3637,
+          3688
+        ],
+        "description": "Levels : 10-15",
+        "icon": "https://s3.7thseraph.org/wiki.avakot.org/soulmap.avakot.org/Icons/SF_entrance.svg",
+        "locationName": "[D] Brackport",
+        "mediaUrl": ""
+      },
+      {
+        "category": {
+          "categoryName": "Points of Interest"
+        },
+        "coordinates": [
+          5907,
+          440
+        ],
+        "description": "",
+        "icon": "",
+        "locationName": "Definetly an UFO",
+        "mediaUrl": ""
+      },
+      {
+        "category": {
+          "categoryName": "Points of Interest"
+        },
+        "coordinates": [
+          [
+            3245,
+            1540
+          ],
+          [
+            3338,
+            1565
+          ],
+          [
+            2390,
+            1299
+          ]
+        ],
+        "description": "credit: FriedRoadKill, Contestant",
+        "icon": "",
+        "locationName": "Grogglenax the Chaste",
+        "mediaUrl": "https://i.imgur.com/nckdRLw.jpeg"
+      },
+      {
+        "category": {
+          "categoryName": "Social Spaces"
+        },
+        "coordinates": [
+          1866,
+          4002
+        ],
+        "description": "",
+        "icon": "https://static.wikitide.net/soulframewiki/c/c1/Map-SilentRoseIcon.png",
+        "locationName": "Silent Rose Enclave",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/thumb/a/ae/DrippinFlagon.png/1280px-DrippinFlagon.png"
+      },
+      {
+        "category": {
+          "categoryName": "Quest"
+        },
+        "coordinates": [
+          [
+            2118,
+            4413
+          ],
+          [
+            2939,
+            4502
+          ],
+          [
+            2961,
+            4070
+          ],
+          [
+            2200,
+            4115
+          ],
+          [
+            2888,
+            4679
+          ]
+        ],
+        "description": "Grab the note from the balloon to begin this quest",
+        "icon": "https://static.wikitide.net/soulframewiki/7/7d/ExclamationMark.png",
+        "locationName": "Orengall Quest Balloon",
+        "mediaUrl": ""
+      },
+      {
+        "category": {
+          "categoryName": "Social Spaces"
+        },
+        "coordinates": [
+          1992,
+          3959
+        ],
+        "description": "They actually can spawn at any Respawn Shrine.",
+        "icon": "https://static.wikitide.net/soulframewiki/f/fe/TrackedQuest.png",
+        "locationName": "Kith of Kings Enclave Invitation",
+        "mediaUrl": ""
+      },
+      {
+        "category": {
+          "categoryName": "Quest"
+        },
+        "coordinates": [
+          2303,
+          2956
+        ],
+        "description": "Pick up the quill and bring back to Orlick",
+        "icon": "https://static.wikitide.net/soulframewiki/7/7d/ExclamationMark.png",
+        "locationName": "Orlick's Quill",
+        "mediaUrl": ""
+      },
+      {
+        "category": {
+          "categoryName": "Notes"
+        },
+        "coordinates": [
+          [
+            2681,
+            3041
+          ],
+          [
+            2899,
+            3056
+          ]
+        ],
+        "description": "The Witch notes 1 and 3 are found inside the glades, in the entrance and exit tiles.",
+        "icon": "https://static.wikitide.net/soulframewiki/5/5b/Intelligence.png",
+        "locationName": "[note] The Witch (2/3)",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/e/e2/Notethewitch2outof3_P7.png"
+      },
+      {
+        "category": {
+          "categoryName": "Quest"
+        },
+        "coordinates": [
+          2324,
+          3173
+        ],
+        "description": "Clear the tower, climb up, speak to Orlick then head to [2303, 2956]",
+        "icon": "https://static.wikitide.net/soulframewiki/7/7d/ExclamationMark.png",
+        "locationName": "Orlick's Initial Location",
+        "mediaUrl": ""
+      },
+      {
+        "category": {
+          "categoryName": "Friendly Npcs"
+        },
+        "coordinates": [
+          [
+            2463,
+            3069
+          ],
+          [
+            2620,
+            4069
+          ],
+          [
+            3464,
+            3526
+          ]
+        ],
+        "description": "Avakot buys weapons from you and sells crafting items for Dracs",
+        "icon": "https://static.wikitide.net/soulframewiki/2/2c/AlcaMotes001BG.png",
+        "locationName": "Avakot",
+        "mediaUrl": "https://i.imgur.com/TwZet5j.png"
+      },
+      {
+        "category": {
+          "categoryName": "Notes"
+        },
+        "coordinates": [
+          2625,
+          4036
+        ],
+        "description": "",
+        "icon": "https://static.wikitide.net/soulframewiki/5/5b/Intelligence.png",
+        "locationName": "[note] A Game of Ships",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/8/8e/NoteagameofshipsP7.jpg"
+      },
+      {
+        "category": {
+          "categoryName": "Notes"
+        },
+        "coordinates": [
+          2025,
+          3552
+        ],
+        "description": "",
+        "icon": "https://static.wikitide.net/soulframewiki/5/5b/Intelligence.png",
+        "locationName": "[note] A Salesfolk",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/c/c8/NoteasalesfolkP7.png"
+      },
+      {
+        "category": {
+          "categoryName": "Notes"
+        },
+        "coordinates": [
+          3049,
+          3585
+        ],
+        "description": "",
+        "icon": "https://static.wikitide.net/soulframewiki/5/5b/Intelligence.png",
+        "locationName": "[note] The Steelsinger (1/3)",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/1/18/Notethesteelsinger1outof3P7.png"
+      },
+      {
+        "category": {
+          "categoryName": "Notes"
+        },
+        "coordinates": [
+          3640,
+          3688
+        ],
+        "description": "",
+        "icon": "https://static.wikitide.net/soulframewiki/5/5b/Intelligence.png",
+        "locationName": "[note] The Steelsinger (2/3)",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/6/69/Notethesteelsinger2outof3P7.png"
+      },
+      {
+        "category": {
+          "categoryName": "Social Spaces"
+        },
+        "coordinates": [
+          1978,
+          3456
+        ],
+        "description": "",
+        "icon": "https://static.wikitide.net/soulframewiki/9/92/AlcasChildrenFactionIcon.png",
+        "locationName": "Alca's Children Enclave",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/thumb/9/9f/AlcasChildrenEnclave.png/300px-AlcasChildrenEnclave.png"
+      },
+      {
+        "category": {
+          "categoryName": "Social Spaces"
+        },
+        "coordinates": [
+          2078,
+          4291
+        ],
+        "description": "They actually can spawn at any Respawn Shrine.",
+        "icon": "https://static.wikitide.net/soulframewiki/f/fe/TrackedQuest.png",
+        "locationName": "Silent Rose Enclave Invitation",
+        "mediaUrl": ""
+      },
+      {
+        "category": {
+          "categoryName": "Social Spaces"
+        },
+        "coordinates": [
+          2436,
+          2874
+        ],
+        "description": "You have to kill the Ashen Spirit during the night the first time to be able to enter.",
+        "icon": "https://static.wikitide.net/soulframewiki/1/1a/ChampionFaction.png",
+        "locationName": "Kith of Kings Enclave",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/thumb/9/93/KithofKingsEnclave.jpg/1280px-KithofKingsEnclave.jpg"
+      },
+      {
+        "category": {
+          "categoryName": "Social Spaces"
+        },
+        "coordinates": [
+          2042,
+          3613
+        ],
+        "description": "They actually can spawn at any Respawn Shrine.",
+        "icon": "https://static.wikitide.net/soulframewiki/f/fe/TrackedQuest.png",
+        "locationName": "Alca's Children Enclave Invitation",
+        "mediaUrl": ""
+      },
+      {
+        "category": {
+          "categoryName": "Oro Chests"
+        },
+        "coordinates": [
+          2989,
+          4163
+        ],
+        "description": "credits: Sharksashimi",
+        "icon": "https://s3.7thseraph.org/wiki.avakot.org/soulmap.avakot.org/Icons/SF_chest.svg",
+        "locationName": "[oro] Near the Mines of Borro",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/9/97/OroneartheminesofborroP7.png"
+      },
+      {
+        "category": {
+          "categoryName": "Oro Chests"
+        },
+        "coordinates": [
+          2368,
+          3101
+        ],
+        "description": "credit: Flaminux",
+        "icon": "https://s3.7thseraph.org/wiki.avakot.org/soulmap.avakot.org/Icons/SF_chest.svg",
+        "locationName": "[oro] Just outside college walls",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/5/5c/OrojustoutsidecollegewallsP7.jpg"
+      },
+      {
+        "category": {
+          "categoryName": "Oro Chests"
+        },
+        "coordinates": [
+          2905,
+          3514
+        ],
+        "description": "credits: Wiking",
+        "icon": "https://s3.7thseraph.org/wiki.avakot.org/soulmap.avakot.org/Icons/SF_chest.svg",
+        "locationName": "[oro] Curlail Walls Tower",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/d/d9/OrocurlailwallstowerP7.png"
+      },
+      {
+        "category": {
+          "categoryName": "Oro Chests"
+        },
+        "coordinates": [
+          1892,
+          3931
+        ],
+        "description": "credits: Dystopia",
+        "icon": "https://s3.7thseraph.org/wiki.avakot.org/soulmap.avakot.org/Icons/SF_chest.svg",
+        "locationName": "[oro] Salzbrim docks",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/b/b4/OrosalzbrimdocksP7.jpg"
+      },
+      {
+        "category": {
+          "categoryName": "Oro Chests"
+        },
+        "coordinates": [
+          2474,
+          3122
+        ],
+        "description": "credits: Yuritau",
+        "icon": "https://s3.7thseraph.org/wiki.avakot.org/soulmap.avakot.org/Icons/SF_chest.svg",
+        "locationName": "[oro] Pensive's Chest",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/7/79/OropensiveschestP7.jpg"
+      },
+      {
+        "category": {
+          "categoryName": "Oro Chests"
+        },
+        "coordinates": [
+          2611,
+          3855
+        ],
+        "description": "credits: Dystopia",
+        "icon": "https://s3.7thseraph.org/wiki.avakot.org/soulmap.avakot.org/Icons/SF_chest.svg",
+        "locationName": "[oro] Cozy Forest Chest",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/a/ae/OrocozyforestP7.jpg"
+      },
+      {
+        "category": {
+          "categoryName": "Oro Chests"
+        },
+        "coordinates": [
+          1728,
+          3571
+        ],
+        "description": "credits: Flaminux",
+        "icon": "https://s3.7thseraph.org/wiki.avakot.org/soulmap.avakot.org/Icons/SF_chest.svg",
+        "locationName": "[oro] Scenic Seaside",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/f/fa/OroscenicseasideP7.png"
+      },
+      {
+        "category": {
+          "categoryName": "Oro Chests"
+        },
+        "coordinates": [
+          2684,
+          3806
+        ],
+        "description": "credits: Icon",
+        "icon": "https://s3.7thseraph.org/wiki.avakot.org/soulmap.avakot.org/Icons/SF_chest.svg",
+        "locationName": "[oro] North of Garren's Shrine",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/2/2a/OronorthofgarrenshrineP7.png"
+      },
+      {
+        "category": {
+          "categoryName": "Oro Chests"
+        },
+        "coordinates": [
+          1824,
+          2983
+        ],
+        "description": "credit: Flaminux",
+        "icon": "https://s3.7thseraph.org/wiki.avakot.org/soulmap.avakot.org/Icons/SF_chest.svg",
+        "locationName": "[oro] By the great wall",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/6/69/OrobythegreatwallP7.jpg"
+      },
+      {
+        "category": {
+          "categoryName": "Oro Chests"
+        },
+        "coordinates": [
+          2642,
+          4066
+        ],
+        "description": "credits: ElderlyDreamer",
+        "icon": "https://s3.7thseraph.org/wiki.avakot.org/soulmap.avakot.org/Icons/SF_chest.svg",
+        "locationName": "[oro] North of Fort Curlail",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/d/df/OronorthoffortcurlailP7.png"
+      },
+      {
+        "category": {
+          "categoryName": "Oro Chests"
+        },
+        "coordinates": [
+          1995,
+          3535
+        ],
+        "description": "credits: Dystopia",
+        "icon": "https://s3.7thseraph.org/wiki.avakot.org/soulmap.avakot.org/Icons/SF_chest.svg",
+        "locationName": "[oro] Cliff at hilly-den",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/5/5c/OrocliffathillydenP7.jpg"
+      },
+      {
+        "category": {
+          "categoryName": "Oro Chests"
+        },
+        "coordinates": [
+          2883,
+          3960
+        ],
+        "description": "credits: Dystopia",
+        "icon": "https://s3.7thseraph.org/wiki.avakot.org/soulmap.avakot.org/Icons/SF_chest.svg",
+        "locationName": "[oro] Facing Mines of Borro",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/8/88/OrofacingminesofborroP7.jpg"
+      },
+      {
+        "category": {
+          "categoryName": "Oro Chests"
+        },
+        "coordinates": [
+          2657,
+          3658
+        ],
+        "description": "credits: Icon",
+        "icon": "https://s3.7thseraph.org/wiki.avakot.org/soulmap.avakot.org/Icons/SF_chest.svg",
+        "locationName": "[oro] East of Garren's Shrine",
+        "mediaUrl": "https://static.wikitide.net/soulframewiki/7/72/OroeastofgarrenshrineP7.png"
       }
-    },
-    {
-      "name": "Seachnall The Widower",
-      "category": "Agari",
-      "description": "Dungeon Agari",
-      "icon": "https://static.wikitide.net/soulframewiki/6/64/AgariHealthIcon.png",
-      "coordinates": [3699, 3180],
-      "mediaUrl": null,
-      "links": {
-        "wiki": "",
-        "externalGuide": ""
-      }
-    }
-  ]
+    ]
+  }
 }
