@@ -1391,5 +1391,8 @@ footer {
   margin-top: 0.25rem;
 }
 
-
-
+/* Hide non-matching cards in search */
+.wiki-item.hidden,
+.wiki-card.hidden {
+  display: none !important;
+}
