@@ -314,68 +314,133 @@ async function renderWikiWeapons() {
   const container = document.getElementById("wikiWeaponsContainer");
   if (!container) return;
 
+  // tiny helper to clean the wiki-style ''' markup
+  const cleanDesc = (txt) =>
+    (txt || "").replace(/'''/g, "").trim();
+
   try {
     const data = await loadJSON("data/weapons.json");
     const weapons = Array.isArray(data) ? data : data?.weapons || [];
 
     container.innerHTML = weapons
       .map((w) => {
-        const name =
-          w.name || w.ItemID || w.id || "Unknown weapon";
-        const desc =
-          w.description || w.Description || "";
+        const name = w.name || w.ItemID || w.id || "Unknown weapon";
+        const desc = cleanDesc(w.description || w.Description || "");
         const rarity = w.rarity || w.Rarity || "";
         const dmgType = w.damageType || w.DamageType || "";
-        const slot = w.slot || w.Slot || "";
-        const attuneVirtue =
-          w.attuneVirtue || w.AttuneVirtue || "";
-        const attuneTier =
-          w.attuneTier || w.AttuneTier || "";
-        const reqVirtue =
-          w.reqVirtue || w.ReqVirtue || "";
-        const icon =
-          w.imgIcon || w.ImgIcon || "";
+        const slot = w.slot || w.Slot || "Weapon";
+        const attuneVirtue = w.attuneVirtue || w.AttuneVirtue || "";
+        const attuneTier = w.attuneTier || w.AttuneTier || "";
+        const reqVirtue = w.reqVirtue || w.ReqVirtue || "";
+        const art = w.art || w.Art || "";
+        const icon = w.imgIcon || w.ImgIcon || "";
 
+        const craft = w.craft || w.Craft || null;
         const stats = w.stats || w.Stats || null;
+        const linksHtml = buildWikiLinks(w.links);
 
+        // --- meta grid: slot, damage, archetype, etc ---
         const metaGrid = `
           <div class="wiki-item-meta-grid">
-            ${slot ? `<div><strong>Slot:</strong> ${slot}</div>` : ""}
-            ${dmgType ? `<div><strong>Damage:</strong> ${dmgType}</div>` : ""}
-            ${attuneVirtue ? `<div><strong>Attune Virtue:</strong> ${attuneVirtue}</div>` : ""}
-            ${attuneTier ? `<div><strong>Attune Tier:</strong> ${attuneTier}</div>` : ""}
-            ${reqVirtue ? `<div><strong>Req Virtue:</strong> ${reqVirtue}</div>` : ""}
+            ${slot ? `<div><span class="wiki-section-label">Slot</span> ${slot}</div>` : ""}
+            ${art ? `<div><span class="wiki-section-label">Archetype</span> ${art}</div>` : ""}
+            ${dmgType ? `<div><span class="wiki-section-label">Damage</span> ${dmgType}</div>` : ""}
+            ${attuneVirtue ? `<div><span class="wiki-section-label">Attune Virtue</span> ${attuneVirtue}</div>` : ""}
+            ${attuneTier ? `<div><span class="wiki-section-label">Attune Tier</span> ${attuneTier}</div>` : ""}
+            ${reqVirtue ? `<div><span class="wiki-section-label">Req Virtue</span> ${reqVirtue}</div>` : ""}
           </div>
         `;
 
+        // --- crafting section ---
+        let craftBlock = "";
+        if (craft && typeof craft === "object") {
+          const ing = Array.isArray(craft.ingredients) ? craft.ingredients : [];
+          craftBlock = `
+            <div class="wiki-card-section">
+              <div class="wiki-card-section-title">Crafting</div>
+              <div class="wiki-card-chip-row">
+                ${craft.Fragments ? `<span class="wiki-chip subtle"><strong>Fragments</strong> ${craft.Fragments}</span>` : ""}
+                ${craft.Time != null ? `<span class="wiki-chip subtle"><strong>Time</strong> ${craft.Time}</span>` : ""}
+                ${craft.Cost != null ? `<span class="wiki-chip subtle"><strong>Cost</strong> ${craft.Cost}</span>` : ""}
+                ${craft.BondReq ? `<span class="wiki-chip subtle"><strong>Bond</strong> ${craft.BondReq}</span>` : ""}
+              </div>
+              ${
+                ing.length
+                  ? `<ul class="wiki-list-inline">
+                      ${ing
+                        .map(
+                          (x) =>
+                            `<li>${x.qty} × ${x.item}</li>`
+                        )
+                        .join("")}
+                     </ul>`
+                  : ""
+              }
+            </div>
+          `;
+        }
+
+        // --- key stats ---
         let statsBlock = "";
         if (stats && typeof stats === "object") {
-          const entries = Object.entries(stats)
-            .filter(([k, v]) => v != null && v !== "")
-            .slice(0, 8);
-          if (entries.length) {
+          const lvl0 = stats.Lvl0 || {};
+          const lvl30 = stats.Lvl30 || {};
+          const caps = stats.AttuneCaps || {};
+
+          const attackLine =
+            lvl0.Attack != null || lvl30.Attack != null
+              ? `<li><span class="wiki-section-label">Attack</span> ${lvl0.Attack ?? "?"} → ${lvl30.Attack ?? "?"}</li>`
+              : "";
+
+          const chargedLine =
+            lvl0.ChargedAttack != null || lvl30.ChargedAttack != null
+              ? `<li><span class="wiki-section-label">Charged</span> ${lvl0.ChargedAttack ?? "?"} → ${lvl30.ChargedAttack ?? "?"}</li>`
+              : "";
+
+          const staggerLine =
+            lvl0.Stagger != null || lvl30.Stagger != null
+              ? `<li><span class="wiki-section-label">Stagger</span> ${lvl0.Stagger ?? "?"} → ${lvl30.Stagger ?? "?"}</li>`
+              : "";
+
+          const smiteLine =
+            stats.Smite || stats.SmitePercent
+              ? `<li><span class="wiki-section-label">Smite</span> ${stats.Smite || ""} ${stats.SmitePercent || ""}</li>`
+              : "";
+
+          const capsLine =
+            caps.DamageLight != null || caps.DamageHeavy != null || caps.DamageChargedShot != null
+              ? `<li><span class="wiki-section-label">Caps</span>
+                   Light ${caps.DamageLight ?? "-"},
+                   Heavy ${caps.DamageHeavy ?? "-"},
+                   Charged Shot ${caps.DamageChargedShot ?? "-"}
+                 </li>`
+              : "";
+
+          const virtueCapLine =
+            stats.VirtueAttuneCap != null
+              ? `<li><span class="wiki-section-label">Virtue cap</span> ${stats.VirtueAttuneCap}</li>`
+              : "";
+
+          const list = [attackLine, chargedLine, staggerLine, smiteLine, capsLine, virtueCapLine]
+            .filter(Boolean)
+            .join("");
+
+          if (list) {
             statsBlock = `
-              <p><strong>Stats:</strong></p>
-              <ul>
-                ${entries
-                  .map(
-                    ([k, v]) =>
-                      `<li>${k}: ${v}</li>`
-                  )
-                  .join("")}
-              </ul>
+              <div class="wiki-card-section">
+                <div class="wiki-card-section-title">Key stats</div>
+                <ul class="wiki-list-inline">
+                  ${list}
+                </ul>
+              </div>
             `;
           }
         }
 
-        const linksHtml = buildWikiLinks(w.links);
-
-        const rarityChipClass = rarity
-          ? `wiki-chip--${rarity.toLowerCase()}`
-          : "";
+        const rarityClass = rarity ? `wiki-chip--${rarity.toLowerCase()}` : "";
 
         return `
-          <li class="wiki-card wiki-item wiki-weapon-card">
+          <li class="wiki-item wiki-card wiki-weapon-card">
             <div class="wiki-card-header">
               ${
                 icon
@@ -384,19 +449,42 @@ async function renderWikiWeapons() {
                      </div>`
                   : ""
               }
-              <div>
+              <div class="wiki-card-header-text">
                 <div class="wiki-card-title">${name}</div>
                 <div class="wiki-card-subtitle">
-                  ${rarity ? `<span class="wiki-chip ${rarityChipClass}">${rarity}</span>` : ""}
-                  ${dmgType ? ` · ${dmgType}` : ""}
+                  ${rarity ? `<span class="wiki-chip ${rarityClass}">${rarity}</span>` : ""}
+                  ${dmgType ? `<span class="wiki-chip subtle">${dmgType}</span>` : ""}
+                  ${art ? `<span class="wiki-chip subtle">${art}</span>` : ""}
                 </div>
               </div>
             </div>
+
             <div class="wiki-card-body">
-              ${desc ? `<p>${desc}</p>` : ""}
-              ${metaGrid}
+              ${
+                desc
+                  ? `<div class="wiki-card-section">
+                       <div class="wiki-card-section-title">Overview</div>
+                       <p>${desc}</p>
+                     </div>`
+                  : ""
+              }
+
+              <div class="wiki-card-section">
+                <div class="wiki-card-section-title">Virtues & role</div>
+                ${metaGrid}
+              </div>
+
+              ${craftBlock}
               ${statsBlock}
-              ${linksHtml}
+
+              ${
+                linksHtml
+                  ? `<div class="wiki-card-section">
+                       <div class="wiki-card-section-title">More info</div>
+                       ${linksHtml}
+                     </div>`
+                  : ""
+              }
             </div>
           </li>
         `;
@@ -405,9 +493,7 @@ async function renderWikiWeapons() {
   } catch (err) {
     console.error(err);
     container.innerHTML = `
-      <li class="wiki-item">
-        Unable to load weapons (check data/weapons.json)
-      </li>
+      <li class="wiki-item">Unable to load weapons (check data/weapons.json)</li>
     `;
   }
 }
@@ -1187,6 +1273,7 @@ let buildDataLoaded = false;
   setupWikiAccordions();
   setupWikiSearch();
 })();
+
 
 
 
