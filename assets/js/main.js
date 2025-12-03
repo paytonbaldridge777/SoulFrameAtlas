@@ -761,6 +761,7 @@ function setupWikiSearch() {
   searchInput.addEventListener("input", () => {
     const query = searchInput.value.toLowerCase().trim();
 
+    // All items from every category
     const allItems = document.querySelectorAll(
       "#wikiItemsContainer .wiki-item, \
        #wikiEnemiesContainer .wiki-item, \
@@ -768,20 +769,33 @@ function setupWikiSearch() {
        #wikiPactsContainer .wiki-item"
     );
 
-    allItems.forEach((item) => {
-      const panel = item.closest(".wiki-panel");
+    const panels = document.querySelectorAll(".wiki-panel");
 
-      // Respect hidden panels
-      if (!panel || panel.dataset.hidden === "true") {
-        item.style.display = ""; 
-        return;
-      }
+    if (query.length === 0) {
+      // Reset search → restore normal tab behavior
+      panels.forEach(panel => {
+        if (panel.dataset.hidden === "true") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "";
+        }
+      });
 
+      allItems.forEach(item => item.style.display = "");
+      return;
+    }
+
+    // If searching, temporarily show all panels
+    panels.forEach(panel => panel.style.display = "");
+
+    // Now filter each item
+    allItems.forEach(item => {
       const text = (item.textContent || "").toLowerCase();
       item.style.display = text.includes(query) ? "" : "none";
     });
   });
 }
+
 
 
 // =====================================================
