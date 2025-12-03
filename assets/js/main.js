@@ -811,6 +811,68 @@ function setupWikiSearch() {
   });
 }
 
+// =====================================================
+// WIKI IMAGE POPUP
+// =====================================================
+function setupWikiImageModal() {
+  const modal = document.getElementById("wikiImageModal");
+  const imgEl = document.getElementById("wikiModalImage");
+  const closeBtn = document.getElementById("wikiModalClose");
+  if (!modal || !imgEl || !closeBtn) return;
+
+  const openModal = (src, altText) => {
+    if (!src) return;
+    imgEl.src = src;
+    imgEl.alt = altText || "";
+    modal.classList.add("open");
+    modal.setAttribute("aria-hidden", "false");
+  };
+
+  const closeModal = () => {
+    modal.classList.remove("open");
+    modal.setAttribute("aria-hidden", "true");
+    imgEl.src = "";
+    imgEl.alt = "";
+  };
+
+  closeBtn.addEventListener("click", closeModal);
+
+  // Click on backdrop closes modal
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+  // ESC closes modal
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal.classList.contains("open")) {
+      closeModal();
+    }
+  });
+
+  // Click on any wiki icon -> open zoomed image
+  // We limit to the icon area so card click behavior remains intact
+  document.addEventListener("click", (e) => {
+    const iconWrapper = e.target.closest(".wiki-card-icon, .wiki-item-icon");
+    if (!iconWrapper) return;
+
+    const img = iconWrapper.querySelector("img");
+    if (!img || !img.src) return;
+
+    e.preventDefault();
+    e.stopPropagation();
+
+    const titleNode =
+      iconWrapper
+        .closest(".wiki-item, .wiki-card")
+        ?.querySelector(".wiki-item-name, .wiki-card-title") || null;
+
+    const altText = img.alt || (titleNode ? titleNode.textContent.trim() : "");
+
+    openModal(img.src, altText);
+  });
+}
 
 
 
@@ -1309,6 +1371,7 @@ let buildDataLoaded = false;
   setupWikiTabs();
   setupWikiAccordions();
   setupWikiSearch();
+  setupWikiImageModal();
 })();
 
 

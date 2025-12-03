@@ -1409,3 +1409,53 @@ footer {
 .wiki-card.hidden {
   display: none !important;
 }
+/* =========================================
+   Wiki image modal (icon zoom)
+   ========================================= */
+
+.wiki-image-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.78);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.wiki-image-modal.open {
+  display: flex;
+}
+
+.wiki-image-modal-inner {
+  position: relative;
+  background: radial-gradient(circle at top, #1c2430, #050609);
+  border-radius: 18px;
+  padding: 1rem 1.25rem 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.9);
+  max-width: 90vw;
+}
+
+#wikiModalImage {
+  max-height: 200px;
+  height: 200px;
+  width: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+.wiki-image-modal-close {
+  position: absolute;
+  top: 0.35rem;
+  right: 0.45rem;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.wiki-image-modal-close:hover {
+  color: var(--accent-alt);
+}
