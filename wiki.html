@@ -47,7 +47,7 @@
           <input
             id="wikiSearch"
             type="search"
-            placeholder="Search items, enemies, weapons, and pacts (e.g., 'Sproutfolk', 'Ode', 'Defender Pact')"
+            placeholder="Search items, enemies, weapons, pacts, and locations (e.g., 'Sproutfolk', 'Ode', 'Defender Pact', 'Fore-Feller')"
             class="wiki-search-input"
           />
 
@@ -57,6 +57,7 @@
 			<button class="wiki-tab" data-target="weapons" type="button">Weapons</button>
             <button class="wiki-tab" data-target="enemies" type="button">Enemies</button>
             <button class="wiki-tab" data-target="pacts" type="button">Pacts</button>
+            <button class="wiki-tab" data-target="locations" type="button">Locations</button>
           </div>
         </div>
       </section>
@@ -127,6 +128,22 @@
                 <div class="wiki-item-header">
                   <div class="wiki-item-name">Loading pacts…</div>
                   <div class="wiki-item-meta">Please check data/pacts.json</div>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <section
+            class="wiki-panel"
+            data-panel="locations"
+            aria-label="Locations panel"
+          >
+            <h2 class="wiki-panel-title">Locations</h2>
+            <ul class="wiki-list" id="wikiLocationsContainer">
+              <li class="wiki-item">
+                <div class="wiki-item-header">
+                  <div class="wiki-item-name">Loading locations…</div>
+                  <div class="wiki-item-meta">Please check data/locations.json</div>
                 </div>
               </li>
             </ul>

@@ -694,6 +694,74 @@ async function renderWikiPacts() {
   }
 }
 
+// =====================================================
+// WIKI — LOCATIONS (CARD LAYOUT)
+// =====================================================
+async function renderWikiLocations() {
+  const container = document.getElementById("wikiLocationsContainer");
+  if (!container) return;
+
+  try {
+    const data = await loadJSON("data/locations.json");
+    const locations = Array.isArray(data) ? data : data?.locations || [];
+
+    container.innerHTML = locations
+      .map((location) => {
+        const name = location.name || location.locationName || "Unknown Location";
+        const category = location.category || "";
+        const description = location.description || "";
+        const icon = location.icon || "";
+        const coordinates = Array.isArray(location.coordinates) 
+          ? location.coordinates.join(", ") 
+          : "";
+        const mediaUrl = location.mediaUrl;
+
+        const metaGrid = `
+          <div class="wiki-item-meta-grid">
+            ${
+              category
+                ? `<div><strong>Category:</strong> ${category}</div>`
+                : ""
+            }
+            ${
+              coordinates
+                ? `<div><strong>Coordinates:</strong> ${coordinates}</div>`
+                : ""
+            }
+          </div>
+        `;
+
+        const linksHtml = buildWikiLinks(location.links);
+
+        return `
+          <li class="wiki-item wiki-card wiki-location-card">
+            <div class="wiki-card-header">
+              ${
+                icon
+                  ? `<div class="wiki-card-icon"><img src="${icon}" alt="${name}"></div>`
+                  : ""
+              }
+              <div>
+                <div class="wiki-card-title">${name}</div>
+                ${category ? `<div class="wiki-card-subtitle">${category}</div>` : ""}
+              </div>
+            </div>
+            <div class="wiki-card-body">
+              ${description ? `<p>${description}</p>` : ""}
+              ${metaGrid}
+              ${mediaUrl && typeof mediaUrl === 'string' && mediaUrl.trim() ? `<div><strong>Media:</strong> <a href="${mediaUrl}" target="_blank" rel="noreferrer">View →</a></div>` : ""}
+              ${linksHtml}
+            </div>
+          </li>
+        `;
+      })
+      .join("");
+  } catch (err) {
+    console.error(err);
+    container.innerHTML = `<li class="wiki-item">Unable to load locations.json</li>`;
+  }
+}
+
 
 // =====================================================
 // WIKI ACCORDIONS (ITEM & PACT only — NOT enemies)
@@ -1362,6 +1430,7 @@ let buildDataLoaded = false;
     renderWikiWeapons(),
     renderWikiEnemies(),
     renderWikiPacts(),
+    renderWikiLocations(),
     renderRegions(),
     renderBuildLab()
   ]);
