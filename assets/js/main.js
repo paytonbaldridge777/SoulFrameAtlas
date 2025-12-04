@@ -396,10 +396,11 @@ async function renderWikiWeapons() {
             const max = maxVal ?? "?";
             const hasProgression = baseVal != null && maxVal != null && baseVal !== "?";
             
-            // Calculate progress percentage for visual bar
+            // Calculate progress percentage for visual bar (based on growth from base to max)
             let progressPercent = 0;
-            if (hasProgression && typeof baseVal === 'number' && typeof maxVal === 'number') {
-              progressPercent = Math.min(100, (maxVal / (maxVal * 1.5)) * 100);
+            if (hasProgression && typeof baseVal === 'number' && typeof maxVal === 'number' && maxVal > 0) {
+              // Show progression as percentage of max value
+              progressPercent = Math.min(100, (maxVal / (maxVal + baseVal)) * 100);
             }
             
             return `
@@ -421,7 +422,7 @@ async function renderWikiWeapons() {
 
           // Helper to create a single-value stat card
           const createSingleStatCard = (label, value) => {
-            if (value == null && value !== 0) return "";
+            if (value == null || value === '') return "";
             return `
               <li class="wiki-stat-card">
                 <div class="wiki-stat-card-label">${label}</div>
@@ -467,13 +468,13 @@ async function renderWikiWeapons() {
           if (hasCaps) {
             const capItems = [];
             if (caps.DamageLight != null) {
-              capItems.push(`<span class="wiki-stat-cap-item"><strong>Light</strong>${caps.DamageLight}</span>`);
+              capItems.push(`<span class="wiki-stat-cap-item"><strong>Light</strong> ${caps.DamageLight}</span>`);
             }
             if (caps.DamageHeavy != null) {
-              capItems.push(`<span class="wiki-stat-cap-item"><strong>Heavy</strong>${caps.DamageHeavy}</span>`);
+              capItems.push(`<span class="wiki-stat-cap-item"><strong>Heavy</strong> ${caps.DamageHeavy}</span>`);
             }
             if (caps.DamageChargedShot != null && caps.DamageChargedShot !== "-") {
-              capItems.push(`<span class="wiki-stat-cap-item"><strong>Charged</strong>${caps.DamageChargedShot}</span>`);
+              capItems.push(`<span class="wiki-stat-cap-item"><strong>Charged</strong> ${caps.DamageChargedShot}</span>`);
             }
             
             if (capItems.length > 0) {
