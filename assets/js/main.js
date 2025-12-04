@@ -360,7 +360,10 @@ async function renderWikiWeapons() {
           
           const craftCards = [];
           if (craft.Fragments) craftCards.push('<li class="wiki-crafting-card"><div class="wiki-crafting-card-label">Fragments</div><div class="wiki-crafting-card-value">' + craft.Fragments + '</div></li>');
-          if (craft.Time != null) craftCards.push('<li class="wiki-crafting-card"><div class="wiki-crafting-card-label">Time</div><div class="wiki-crafting-card-value">' + craft.Time + 'min</div></li>');
+          if (craft.Time != null) {
+            const timeValue = typeof craft.Time === 'string' && craft.Time.includes('min') ? craft.Time : craft.Time + 'min';
+            craftCards.push('<li class="wiki-crafting-card"><div class="wiki-crafting-card-label">Time</div><div class="wiki-crafting-card-value">' + timeValue + '</div></li>');
+          }
           if (craft.Cost != null) craftCards.push('<li class="wiki-crafting-card"><div class="wiki-crafting-card-label">Cost</div><div class="wiki-crafting-card-value">' + craft.Cost + '</div></li>');
           if (craft.BondReq && craft.BondReq !== "N/A") craftCards.push('<li class="wiki-crafting-card"><div class="wiki-crafting-card-label">Bond Req</div><div class="wiki-crafting-card-value">' + craft.BondReq + '</div></li>');
           
@@ -536,6 +539,9 @@ async function renderWikiWeapons() {
         `;
       })
       .join("");
+    
+    // Setup expand/collapse functionality after weapons are rendered
+    setupWeaponCardExpansion();
   } catch (err) {
     console.error(err);
     container.innerHTML = `
@@ -1504,7 +1510,6 @@ let buildDataLoaded = false;
   setupGuideSearch();
   setupWikiTabs();
   setupWikiAccordions();
-  setupWeaponCardExpansion();
   setupWikiSearch();
   setupWikiImageModal();
 })();
