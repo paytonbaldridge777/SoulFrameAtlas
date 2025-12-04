@@ -381,57 +381,121 @@ async function renderWikiWeapons() {
           `;
         }
 
-        // --- key stats ---
+        // --- key stats (BEAUTIFIED DISPLAY) ---
         let statsBlock = "";
         if (stats && typeof stats === "object") {
           const lvl0 = stats.Lvl0 || {};
           const lvl30 = stats.Lvl30 || {};
           const caps = stats.AttuneCaps || {};
 
-          const attackLine =
-            lvl0.Attack != null || lvl30.Attack != null
-              ? `<li><span class="wiki-section-label">Attack</span> ${lvl0.Attack ?? "?"} → ${lvl30.Attack ?? "?"}</li>`
-              : "";
+          // Helper to create a stat card with progression
+          const createStatCard = (label, baseVal, maxVal) => {
+            if (baseVal == null && maxVal == null) return "";
+            
+            const base = baseVal ?? "?";
+            const max = maxVal ?? "?";
+            const hasProgression = baseVal != null && maxVal != null && baseVal !== "?";
+            
+            // Calculate progress percentage for visual bar
+            let progressPercent = 0;
+            if (hasProgression && typeof baseVal === 'number' && typeof maxVal === 'number') {
+              progressPercent = Math.min(100, (maxVal / (maxVal * 1.5)) * 100);
+            }
+            
+            return `
+              <li class="wiki-stat-card">
+                <div class="wiki-stat-card-label">${label}</div>
+                <div class="wiki-stat-card-value">
+                  <span class="wiki-stat-base">${base}</span>
+                  <span class="wiki-stat-arrow">→</span>
+                  <span class="wiki-stat-max">${max}</span>
+                </div>
+                ${progressPercent > 0 ? `
+                  <div class="wiki-stat-progress">
+                    <div class="wiki-stat-progress-fill" style="width: ${progressPercent}%"></div>
+                  </div>
+                ` : ''}
+              </li>
+            `;
+          };
 
-          const chargedLine =
-            lvl0.ChargedAttack != null || lvl30.ChargedAttack != null
-              ? `<li><span class="wiki-section-label">Charged</span> ${lvl0.ChargedAttack ?? "?"} → ${lvl30.ChargedAttack ?? "?"}</li>`
-              : "";
+          // Helper to create a single-value stat card
+          const createSingleStatCard = (label, value) => {
+            if (value == null && value !== 0) return "";
+            return `
+              <li class="wiki-stat-card">
+                <div class="wiki-stat-card-label">${label}</div>
+                <div class="wiki-stat-card-value">
+                  <span class="wiki-stat-single">${value}</span>
+                </div>
+              </li>
+            `;
+          };
 
-          const staggerLine =
-            lvl0.Stagger != null || lvl30.Stagger != null
-              ? `<li><span class="wiki-section-label">Stagger</span> ${lvl0.Stagger ?? "?"} → ${lvl30.Stagger ?? "?"}</li>`
-              : "";
+          // Build stat cards
+          const cards = [];
+          
+          // Attack stat
+          if (lvl0.Attack != null || lvl30.Attack != null) {
+            cards.push(createStatCard("Attack", lvl0.Attack, lvl30.Attack));
+          }
+          
+          // Charged Attack stat
+          if (lvl0.ChargedAttack != null || lvl30.ChargedAttack != null) {
+            cards.push(createStatCard("Charged", lvl0.ChargedAttack, lvl30.ChargedAttack));
+          }
+          
+          // Stagger stat
+          if (lvl0.Stagger != null || lvl30.Stagger != null) {
+            cards.push(createStatCard("Stagger", lvl0.Stagger, lvl30.Stagger));
+          }
+          
+          // Smite stat (special format)
+          if (stats.Smite || stats.SmitePercent) {
+            const smiteValue = [stats.Smite, stats.SmitePercent].filter(Boolean).join(" ");
+            cards.push(createSingleStatCard("Smite", smiteValue));
+          }
+          
+          // Virtue Cap stat
+          if (stats.VirtueAttuneCap != null) {
+            cards.push(createSingleStatCard("Virtue Cap", stats.VirtueAttuneCap));
+          }
+          
+          // Caps card (special wider card)
+          const hasCaps = caps.DamageLight != null || caps.DamageHeavy != null || caps.DamageChargedShot != null;
+          let capsCard = "";
+          if (hasCaps) {
+            const capItems = [];
+            if (caps.DamageLight != null) {
+              capItems.push(`<span class="wiki-stat-cap-item"><strong>Light</strong>${caps.DamageLight}</span>`);
+            }
+            if (caps.DamageHeavy != null) {
+              capItems.push(`<span class="wiki-stat-cap-item"><strong>Heavy</strong>${caps.DamageHeavy}</span>`);
+            }
+            if (caps.DamageChargedShot != null && caps.DamageChargedShot !== "-") {
+              capItems.push(`<span class="wiki-stat-cap-item"><strong>Charged</strong>${caps.DamageChargedShot}</span>`);
+            }
+            
+            if (capItems.length > 0) {
+              capsCard = `
+                <li class="wiki-stat-card stat-caps">
+                  <div class="wiki-stat-card-label">Damage Caps</div>
+                  <div class="wiki-stat-caps-list">
+                    ${capItems.join("")}
+                  </div>
+                </li>
+              `;
+            }
+          }
 
-          const smiteLine =
-            stats.Smite || stats.SmitePercent
-              ? `<li><span class="wiki-section-label">Smite</span> ${stats.Smite || ""} ${stats.SmitePercent || ""}</li>`
-              : "";
+          const allCards = [...cards, capsCard].filter(Boolean).join("");
 
-          const capsLine =
-            caps.DamageLight != null || caps.DamageHeavy != null || caps.DamageChargedShot != null
-              ? `<li><span class="wiki-section-label">Caps</span>
-                   Light ${caps.DamageLight ?? "-"},
-                   Heavy ${caps.DamageHeavy ?? "-"},
-                   Charged Shot ${caps.DamageChargedShot ?? "-"}
-                 </li>`
-              : "";
-
-          const virtueCapLine =
-            stats.VirtueAttuneCap != null
-              ? `<li><span class="wiki-section-label">Virtue cap</span> ${stats.VirtueAttuneCap}</li>`
-              : "";
-
-          const list = [attackLine, chargedLine, staggerLine, smiteLine, capsLine, virtueCapLine]
-            .filter(Boolean)
-            .join("");
-
-          if (list) {
+          if (allCards) {
             statsBlock = `
               <div class="wiki-card-section">
-                <div class="wiki-card-section-title">Key stats</div>
-                <ul class="wiki-list-inline">
-                  ${list}
+                <div class="wiki-card-section-title">Key Stats</div>
+                <ul class="wiki-stats-grid">
+                  ${allCards}
                 </ul>
               </div>
             `;
