@@ -257,6 +257,9 @@ async function renderWikiItems() {
       `;
       })
       .join("");
+    
+    // Setup expand/collapse functionality after items are rendered
+    setupItemCardExpansion();
   } catch (err) {
     console.error(err);
     container.innerHTML = `
@@ -328,6 +331,9 @@ async function renderWikiEnemies() {
       `;
       })
       .join("");
+    
+    // Setup expand/collapse functionality after enemies are rendered
+    setupEnemyCardExpansion();
   } catch (err) {
     console.error(err);
     container.innerHTML = `<li class="wiki-item">Unable to load enemies.json</li>`;
@@ -790,6 +796,9 @@ async function renderWikiPacts() {
         `;
       })
       .join("");
+    
+    // Setup expand/collapse functionality after pacts are rendered
+    setupPactCardExpansion();
   } catch (err) {
     console.error(err);
     container.innerHTML = `<li class="wiki-item">Unable to load pacts.json</li>`;
@@ -858,35 +867,15 @@ async function renderWikiLocations() {
         `;
       })
       .join("");
+    
+    // Setup expand/collapse functionality after locations are rendered
+    setupLocationCardExpansion();
   } catch (err) {
     console.error(err);
     container.innerHTML = `<li class="wiki-item">Unable to load locations.json</li>`;
   }
 }
 
-
-// =====================================================
-// WIKI ACCORDIONS (ITEM & PACT only — NOT enemies)
-// =====================================================
-function setupWikiAccordions() {
-  const lists = ["wikiItemsContainer", "wikiPactsContainer"];
-
-  lists.forEach((id) => {
-    const list = document.getElementById(id);
-    if (!list) return;
-
-    list.querySelectorAll(".wiki-item").forEach((item) => {
-      item.addEventListener("click", () => {
-        list
-          .querySelectorAll(".wiki-item")
-          .forEach((other) => {
-            if (other !== item) other.classList.remove("expanded");
-          });
-        item.classList.toggle("expanded");
-      });
-    });
-  });
-}
 
 // =====================================================
 // WEAPON CARD EXPAND/COLLAPSE
@@ -904,6 +893,119 @@ function setupWeaponCardExpansion() {
       
       // Close all other weapon cards before toggling this one
       weaponsContainer.querySelectorAll(".wiki-weapon-card").forEach((other) => {
+        if (other !== card) {
+          other.classList.remove("expanded");
+        }
+      });
+      
+      // Toggle expanded state on clicked card
+      card.classList.toggle("expanded");
+    });
+  });
+}
+
+// =====================================================
+// ITEM CARD EXPAND/COLLAPSE
+// =====================================================
+function setupItemCardExpansion() {
+  const itemsContainer = document.getElementById("wikiItemsContainer");
+  if (!itemsContainer) return;
+
+  itemsContainer.querySelectorAll(".wiki-item-card").forEach((card) => {
+    card.addEventListener("click", (e) => {
+      // Don't trigger if clicking on a link or icon
+      if (e.target.closest("a") || e.target.closest(".wiki-card-icon")) {
+        return;
+      }
+      
+      // Don't trigger if clicking on a drop source card (for future interactivity)
+      if (e.target.closest(".wiki-drop-source-card")) {
+        return;
+      }
+      
+      // Close all other item cards before toggling this one
+      itemsContainer.querySelectorAll(".wiki-item-card").forEach((other) => {
+        if (other !== card) {
+          other.classList.remove("expanded");
+        }
+      });
+      
+      // Toggle expanded state on clicked card
+      card.classList.toggle("expanded");
+    });
+  });
+}
+
+// =====================================================
+// ENEMY CARD EXPAND/COLLAPSE
+// =====================================================
+function setupEnemyCardExpansion() {
+  const enemiesContainer = document.getElementById("wikiEnemiesContainer");
+  if (!enemiesContainer) return;
+
+  enemiesContainer.querySelectorAll(".wiki-enemy-card").forEach((card) => {
+    card.addEventListener("click", (e) => {
+      // Don't trigger if clicking on a link or icon
+      if (e.target.closest("a") || e.target.closest(".wiki-card-icon")) {
+        return;
+      }
+      
+      // Close all other enemy cards before toggling this one
+      enemiesContainer.querySelectorAll(".wiki-enemy-card").forEach((other) => {
+        if (other !== card) {
+          other.classList.remove("expanded");
+        }
+      });
+      
+      // Toggle expanded state on clicked card
+      card.classList.toggle("expanded");
+    });
+  });
+}
+
+// =====================================================
+// PACT CARD EXPAND/COLLAPSE
+// =====================================================
+function setupPactCardExpansion() {
+  const pactsContainer = document.getElementById("wikiPactsContainer");
+  if (!pactsContainer) return;
+
+  pactsContainer.querySelectorAll(".wiki-pact-card").forEach((card) => {
+    card.addEventListener("click", (e) => {
+      // Don't trigger if clicking on a link or icon
+      if (e.target.closest("a") || e.target.closest(".wiki-card-icon")) {
+        return;
+      }
+      
+      // Close all other pact cards before toggling this one
+      pactsContainer.querySelectorAll(".wiki-pact-card").forEach((other) => {
+        if (other !== card) {
+          other.classList.remove("expanded");
+        }
+      });
+      
+      // Toggle expanded state on clicked card
+      card.classList.toggle("expanded");
+    });
+  });
+}
+
+// =====================================================
+// LOCATION CARD EXPAND/COLLAPSE
+// =====================================================
+function setupLocationCardExpansion() {
+  const locationsContainer = document.getElementById("wikiLocationsContainer");
+  if (!locationsContainer) return;
+
+  locationsContainer.querySelectorAll(".wiki-location-card").forEach((card) => {
+    card.addEventListener("click", (e) => {
+      // Don't trigger if clicking on a link or icon
+      if (e.target.closest("a") || e.target.closest(".wiki-card-icon")) {
+        return;
+      }
+      
+      // Close all other location cards before toggling this one
+      locationsContainer.querySelectorAll(".wiki-location-card").forEach((other) => {
         if (other !== card) {
           other.classList.remove("expanded");
         }
@@ -1567,7 +1669,6 @@ let buildDataLoaded = false;
   setupGuideFilters();
   setupGuideSearch();
   setupWikiTabs();
-  setupWikiAccordions();
   setupWikiSearch();
   setupWikiImageModal();
 })();

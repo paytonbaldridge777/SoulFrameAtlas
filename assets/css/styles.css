@@ -1709,6 +1709,63 @@ footer {
 }
 
 /* =====================================================
+   ITEM/ENEMY/PACT/LOCATION CARD EXPAND/COLLAPSE  
+   ===================================================== */
+
+/* Apply the same collapsible pattern to all card types */
+.wiki-item-card .wiki-card-body,
+.wiki-enemy-card .wiki-card-body,
+.wiki-pact-card .wiki-card-body,
+.wiki-location-card .wiki-card-body {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease, margin-top 0.3s ease;
+  margin-top: 0;
+}
+
+/* When expanded, show all sections */
+.wiki-item-card.expanded .wiki-card-body,
+.wiki-enemy-card.expanded .wiki-card-body,
+.wiki-pact-card.expanded .wiki-card-body,
+.wiki-location-card.expanded .wiki-card-body {
+  max-height: 2000px;
+  opacity: 1;
+  margin-top: 0.55rem;
+}
+
+/* Add chevron indicators for all card types */
+.wiki-item-card .wiki-card-header::after,
+.wiki-enemy-card .wiki-card-header::after,
+.wiki-pact-card .wiki-card-header::after,
+.wiki-location-card .wiki-card-header::after {
+  content: "▼";
+  font-size: 0.7rem;
+  color: var(--accent);
+  opacity: 0.6;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  margin-left: auto;
+  align-self: center;
+}
+
+.wiki-item-card.expanded .wiki-card-header::after,
+.wiki-enemy-card.expanded .wiki-card-header::after,
+.wiki-pact-card.expanded .wiki-card-header::after,
+.wiki-location-card.expanded .wiki-card-header::after {
+  transform: rotate(180deg);
+  opacity: 1;
+}
+
+/* Highlight on hover */
+.wiki-item-card:not(.expanded):hover .wiki-card-header::after,
+.wiki-enemy-card:not(.expanded):hover .wiki-card-header::after,
+.wiki-pact-card:not(.expanded):hover .wiki-card-header::after,
+.wiki-location-card:not(.expanded):hover .wiki-card-header::after {
+  opacity: 1;
+  color: var(--accent-alt);
+}
+
+/* =====================================================
    VIRTUES & ROLE CARD-BASED LAYOUT
    ===================================================== */
 
