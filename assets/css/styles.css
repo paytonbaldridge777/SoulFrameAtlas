@@ -1318,6 +1318,198 @@ footer {
   white-space: nowrap;
 }
 
+/* =====================================================
+   MODERN KEY STATS DISPLAY (Weapons)
+   ===================================================== */
+
+/* Stats grid layout */
+.wiki-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.6rem;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Individual stat card */
+.wiki-stat-card {
+  position: relative;
+  padding: 0.65rem 0.75rem;
+  border-radius: 0.6rem;
+  background: radial-gradient(
+    circle at top left,
+    rgba(134, 216, 255, 0.08),
+    rgba(0, 0, 0, 0.6)
+  );
+  border: 1px solid rgba(134, 216, 255, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: all 0.2s ease;
+  overflow: hidden;
+}
+
+.wiki-stat-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(184, 242, 139, 0.8),
+    rgba(134, 216, 255, 0.8)
+  );
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.wiki-stat-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(134, 216, 255, 0.35);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+}
+
+.wiki-stat-card:hover::before {
+  opacity: 1;
+}
+
+/* Stat label */
+.wiki-stat-card-label {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(134, 216, 255, 0.9);
+  margin-bottom: 0.35rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* Stat value container */
+.wiki-stat-card-value {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Base value (level 0) */
+.wiki-stat-base {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  opacity: 0.85;
+}
+
+/* Arrow separator */
+.wiki-stat-arrow {
+  font-size: 0.75rem;
+  color: var(--accent);
+  opacity: 0.7;
+}
+
+/* Max value (level 30) */
+.wiki-stat-max {
+  font-size: 1.1rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--accent), var(--accent-alt));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Single value stats (no progression) */
+.wiki-stat-single {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent-alt);
+}
+
+/* Progress bar for visual representation */
+.wiki-stat-progress {
+  margin-top: 0.4rem;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  overflow: hidden;
+  position: relative;
+}
+
+.wiki-stat-progress-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(184, 242, 139, 0.6), rgba(244, 224, 165, 0.9));
+  border-radius: 999px;
+  transition: width 0.4s ease-out;
+}
+
+/* Special styling for caps/limits */
+.wiki-stat-card.stat-caps {
+  grid-column: 1 / -1;
+  background: radial-gradient(
+    circle at top left,
+    rgba(186, 104, 255, 0.08),
+    rgba(0, 0, 0, 0.6)
+  );
+  border-color: rgba(186, 104, 255, 0.15);
+}
+
+.wiki-stat-card.stat-caps::before {
+  background: linear-gradient(
+    to bottom,
+    rgba(186, 104, 255, 0.8),
+    rgba(244, 224, 165, 0.8)
+  );
+}
+
+.wiki-stat-card.stat-caps .wiki-stat-card-label {
+  color: rgba(186, 104, 255, 0.95);
+}
+
+/* Caps value display */
+.wiki-stat-caps-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+  font-size: 0.8rem;
+}
+
+.wiki-stat-cap-item {
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(186, 104, 255, 0.25);
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.wiki-stat-cap-item strong {
+  color: rgba(244, 224, 165, 0.95);
+  margin-right: 0.25rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .wiki-stats-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.5rem;
+  }
+
+  .wiki-stat-card {
+    padding: 0.55rem 0.65rem;
+  }
+
+  .wiki-stat-base,
+  .wiki-stat-max {
+    font-size: 0.95rem;
+  }
+}
+
 /* Small chips row under section titles */
 .wiki-card-chip-row {
   display: flex;
