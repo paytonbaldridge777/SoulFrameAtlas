@@ -1651,3 +1651,244 @@ footer {
 .wiki-image-modal-close:hover {
   color: var(--accent-alt);
 }
+
+/* =====================================================
+   WEAPON CARD EXPAND/COLLAPSE FUNCTIONALITY
+   ===================================================== */
+
+/* Description is shown by default (outside collapsible body) */
+.wiki-weapon-card-description {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* Weapon card body (collapsible sections) starts collapsed */
+.wiki-weapon-card .wiki-card-body {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease, margin-top 0.3s ease;
+  margin-top: 0;
+}
+
+/* When expanded, show all sections */
+.wiki-weapon-card.expanded .wiki-card-body {
+  max-height: 2000px; /* Large enough to accommodate content */
+  opacity: 1;
+  margin-top: 0.55rem;
+}
+
+/* Visual indicator for expandable cards */
+.wiki-weapon-card {
+  cursor: pointer;
+  position: relative;
+}
+
+/* Add a chevron/arrow indicator */
+.wiki-weapon-card .wiki-card-header::after {
+  content: "▼";
+  font-size: 0.7rem;
+  color: var(--accent);
+  opacity: 0.6;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  margin-left: auto;
+  align-self: center;
+}
+
+.wiki-weapon-card.expanded .wiki-card-header::after {
+  transform: rotate(180deg);
+  opacity: 1;
+}
+
+/* Highlight on hover to indicate clickability */
+.wiki-weapon-card:not(.expanded):hover .wiki-card-header::after {
+  opacity: 1;
+  color: var(--accent-alt);
+}
+
+/* =====================================================
+   VIRTUES & ROLE CARD-BASED LAYOUT
+   ===================================================== */
+
+.wiki-virtue-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.6rem;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.wiki-virtue-card {
+  position: relative;
+  padding: 0.6rem 0.7rem;
+  border-radius: 0.6rem;
+  background: radial-gradient(
+    circle at top left,
+    rgba(255, 214, 128, 0.08),
+    rgba(0, 0, 0, 0.6)
+  );
+  border: 1px solid rgba(255, 214, 128, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: all 0.2s ease;
+  overflow: hidden;
+}
+
+.wiki-virtue-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 214, 128, 0.8),
+    rgba(255, 168, 76, 0.8)
+  );
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.wiki-virtue-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 214, 128, 0.35);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+}
+
+.wiki-virtue-card:hover::before {
+  opacity: 1;
+}
+
+.wiki-virtue-card-label {
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255, 214, 128, 0.9);
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+.wiki-virtue-card-value {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+/* =====================================================
+   CRAFTING CARD-BASED LAYOUT
+   ===================================================== */
+
+.wiki-crafting-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 0.6rem;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.wiki-crafting-card {
+  position: relative;
+  padding: 0.6rem 0.7rem;
+  border-radius: 0.6rem;
+  background: radial-gradient(
+    circle at top left,
+    rgba(184, 242, 139, 0.08),
+    rgba(0, 0, 0, 0.6)
+  );
+  border: 1px solid rgba(184, 242, 139, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: all 0.2s ease;
+  overflow: hidden;
+}
+
+.wiki-crafting-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(184, 242, 139, 0.8),
+    rgba(244, 224, 165, 0.8)
+  );
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.wiki-crafting-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(184, 242, 139, 0.35);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+}
+
+.wiki-crafting-card:hover::before {
+  opacity: 1;
+}
+
+.wiki-crafting-card-label {
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(184, 242, 139, 0.9);
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+.wiki-crafting-card-value {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+/* Ingredients list styling within crafting section */
+.wiki-crafting-ingredients {
+  margin-top: 0.6rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.wiki-crafting-ingredients-title {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-alt);
+  margin-bottom: 0.35rem;
+  font-weight: 600;
+}
+
+.wiki-crafting-ingredients-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.78rem;
+}
+
+.wiki-crafting-ingredients-list li {
+  padding: 0.25rem 0.4rem;
+  border-radius: 0.4rem;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(184, 242, 139, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .wiki-virtue-grid,
+  .wiki-crafting-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 0.5rem;
+  }
+  
+  .wiki-virtue-card,
+  .wiki-crafting-card {
+    padding: 0.5rem 0.6rem;
+  }
+}

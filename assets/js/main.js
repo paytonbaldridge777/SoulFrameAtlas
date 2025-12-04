@@ -340,45 +340,42 @@ async function renderWikiWeapons() {
         const stats = w.stats || w.Stats || null;
         const linksHtml = buildWikiLinks(w.links);
 
-        // --- meta grid: slot, damage, archetype, etc ---
-        const metaGrid = `
-          <div class="wiki-item-meta-grid">
-            ${slot ? `<div><span class="wiki-section-label">Slot</span> ${slot}</div>` : ""}
-            ${art ? `<div><span class="wiki-section-label">Archetype</span> ${art}</div>` : ""}
-            ${dmgType ? `<div><span class="wiki-section-label">Damage</span> ${dmgType}</div>` : ""}
-            ${attuneVirtue ? `<div><span class="wiki-section-label">Attune Virtue</span> ${attuneVirtue}</div>` : ""}
-            ${attuneTier ? `<div><span class="wiki-section-label">Attune Tier</span> ${attuneTier}</div>` : ""}
-            ${reqVirtue ? `<div><span class="wiki-section-label">Req Virtue</span> ${reqVirtue}</div>` : ""}
-          </div>
-        `;
+        // --- Virtues & Role cards (modernized) ---
+        const virtueCards = [];
+        if (slot) virtueCards.push('<li class="wiki-virtue-card"><div class="wiki-virtue-card-label">Slot</div><div class="wiki-virtue-card-value">' + slot + '</div></li>');
+        if (art) virtueCards.push('<li class="wiki-virtue-card"><div class="wiki-virtue-card-label">Archetype</div><div class="wiki-virtue-card-value">' + art + '</div></li>');
+        if (dmgType) virtueCards.push('<li class="wiki-virtue-card"><div class="wiki-virtue-card-label">Damage</div><div class="wiki-virtue-card-value">' + dmgType + '</div></li>');
+        if (attuneVirtue) virtueCards.push('<li class="wiki-virtue-card"><div class="wiki-virtue-card-label">Attune Virtue</div><div class="wiki-virtue-card-value">' + attuneVirtue + '</div></li>');
+        if (attuneTier) virtueCards.push('<li class="wiki-virtue-card"><div class="wiki-virtue-card-label">Attune Tier</div><div class="wiki-virtue-card-value">' + attuneTier + '</div></li>');
+        if (reqVirtue) virtueCards.push('<li class="wiki-virtue-card"><div class="wiki-virtue-card-label">Req Virtue</div><div class="wiki-virtue-card-value">' + reqVirtue + '</div></li>');
+        
+        const virtuesBlock = virtueCards.length ? 
+          '<ul class="wiki-virtue-grid">' + virtueCards.join("") + '</ul>'
+          : "";
 
-        // --- crafting section ---
+        // --- Crafting cards (modernized) ---
         let craftBlock = "";
         if (craft && typeof craft === "object") {
           const ing = Array.isArray(craft.ingredients) ? craft.ingredients : [];
-          craftBlock = `
-            <div class="wiki-card-section">
-              <div class="wiki-card-section-title">Crafting</div>
-              <div class="wiki-card-chip-row">
-                ${craft.Fragments ? `<span class="wiki-chip subtle"><strong>Fragments</strong> ${craft.Fragments}</span>` : ""}
-                ${craft.Time != null ? `<span class="wiki-chip subtle"><strong>Time</strong> ${craft.Time}</span>` : ""}
-                ${craft.Cost != null ? `<span class="wiki-chip subtle"><strong>Cost</strong> ${craft.Cost}</span>` : ""}
-                ${craft.BondReq ? `<span class="wiki-chip subtle"><strong>Bond</strong> ${craft.BondReq}</span>` : ""}
-              </div>
-              ${
-                ing.length
-                  ? `<ul class="wiki-list-inline">
-                      ${ing
-                        .map(
-                          (x) =>
-                            `<li>${x.qty} × ${x.item}</li>`
-                        )
-                        .join("")}
-                     </ul>`
-                  : ""
-              }
-            </div>
-          `;
+          
+          const craftCards = [];
+          if (craft.Fragments) craftCards.push('<li class="wiki-crafting-card"><div class="wiki-crafting-card-label">Fragments</div><div class="wiki-crafting-card-value">' + craft.Fragments + '</div></li>');
+          if (craft.Time != null) {
+            const timeValue = typeof craft.Time === 'string' && craft.Time.includes('min') ? craft.Time : craft.Time + 'min';
+            craftCards.push('<li class="wiki-crafting-card"><div class="wiki-crafting-card-label">Time</div><div class="wiki-crafting-card-value">' + timeValue + '</div></li>');
+          }
+          if (craft.Cost != null) craftCards.push('<li class="wiki-crafting-card"><div class="wiki-crafting-card-label">Cost</div><div class="wiki-crafting-card-value">' + craft.Cost + '</div></li>');
+          if (craft.BondReq && craft.BondReq !== "N/A") craftCards.push('<li class="wiki-crafting-card"><div class="wiki-crafting-card-label">Bond Req</div><div class="wiki-crafting-card-value">' + craft.BondReq + '</div></li>');
+          
+          const craftCardsHtml = craftCards.length ? '<ul class="wiki-crafting-grid">' + craftCards.join("") + '</ul>' : "";
+          const ingredientsHtml = ing.length 
+            ? '<div class="wiki-crafting-ingredients"><div class="wiki-crafting-ingredients-title">Ingredients</div><ul class="wiki-crafting-ingredients-list">' + 
+              ing.map(x => '<li>' + x.qty + ' × ' + x.item + '</li>').join("") + 
+              '</ul></div>'
+            : "";
+          
+          craftBlock = '<div class="wiki-card-section"><div class="wiki-card-section-title">Crafting</div>' + 
+            craftCardsHtml + ingredientsHtml + '</div>';
         }
 
         // --- key stats (BEAUTIFIED DISPLAY) ---
@@ -403,34 +400,30 @@ async function renderWikiWeapons() {
               progressPercent = Math.min(100, (maxVal / (maxVal + baseVal)) * 100);
             }
             
-            return `
-              <li class="wiki-stat-card">
-                <div class="wiki-stat-card-label">${label}</div>
-                <div class="wiki-stat-card-value">
-                  <span class="wiki-stat-base">${base}</span>
-                  <span class="wiki-stat-arrow">→</span>
-                  <span class="wiki-stat-max">${max}</span>
-                </div>
-                ${progressPercent > 0 ? `
-                  <div class="wiki-stat-progress">
-                    <div class="wiki-stat-progress-fill" style="width: ${progressPercent}%"></div>
-                  </div>
-                ` : ''}
-              </li>
-            `;
+            const progressBar = progressPercent > 0 
+              ? '<div class="wiki-stat-progress"><div class="wiki-stat-progress-fill" style="width: ' + progressPercent + '%"></div></div>'
+              : '';
+            
+            return '<li class="wiki-stat-card">' +
+              '<div class="wiki-stat-card-label">' + label + '</div>' +
+              '<div class="wiki-stat-card-value">' +
+                '<span class="wiki-stat-base">' + base + '</span>' +
+                '<span class="wiki-stat-arrow">→</span>' +
+                '<span class="wiki-stat-max">' + max + '</span>' +
+              '</div>' +
+              progressBar +
+              '</li>';
           };
 
           // Helper to create a single-value stat card
           const createSingleStatCard = (label, value) => {
             if (value == null || value === '') return "";
-            return `
-              <li class="wiki-stat-card">
-                <div class="wiki-stat-card-label">${label}</div>
-                <div class="wiki-stat-card-value">
-                  <span class="wiki-stat-single">${value}</span>
-                </div>
-              </li>
-            `;
+            return '<li class="wiki-stat-card">' +
+              '<div class="wiki-stat-card-label">' + label + '</div>' +
+              '<div class="wiki-stat-card-value">' +
+                '<span class="wiki-stat-single">' + value + '</span>' +
+              '</div>' +
+              '</li>';
           };
 
           // Build stat cards
@@ -468,94 +461,87 @@ async function renderWikiWeapons() {
           if (hasCaps) {
             const capItems = [];
             if (caps.DamageLight != null) {
-              capItems.push(`<span class="wiki-stat-cap-item"><strong>Light</strong> ${caps.DamageLight}</span>`);
+              capItems.push('<span class="wiki-stat-cap-item"><strong>Light</strong> ' + caps.DamageLight + '</span>');
             }
             if (caps.DamageHeavy != null) {
-              capItems.push(`<span class="wiki-stat-cap-item"><strong>Heavy</strong> ${caps.DamageHeavy}</span>`);
+              capItems.push('<span class="wiki-stat-cap-item"><strong>Heavy</strong> ' + caps.DamageHeavy + '</span>');
             }
             if (caps.DamageChargedShot != null && caps.DamageChargedShot !== "-") {
-              capItems.push(`<span class="wiki-stat-cap-item"><strong>Charged</strong> ${caps.DamageChargedShot}</span>`);
+              capItems.push('<span class="wiki-stat-cap-item"><strong>Charged</strong> ' + caps.DamageChargedShot + '</span>');
             }
             
             if (capItems.length > 0) {
-              capsCard = `
-                <li class="wiki-stat-card stat-caps">
-                  <div class="wiki-stat-card-label">Damage Caps</div>
-                  <div class="wiki-stat-caps-list">
-                    ${capItems.join("")}
-                  </div>
-                </li>
-              `;
+              capsCard = '<li class="wiki-stat-card stat-caps">' +
+                '<div class="wiki-stat-card-label">Damage Caps</div>' +
+                '<div class="wiki-stat-caps-list">' +
+                  capItems.join("") +
+                '</div>' +
+                '</li>';
             }
           }
 
           const allCards = [...cards, capsCard].filter(Boolean).join("");
 
           if (allCards) {
-            statsBlock = `
-              <div class="wiki-card-section">
-                <div class="wiki-card-section-title">Key Stats</div>
-                <ul class="wiki-stats-grid">
-                  ${allCards}
-                </ul>
-              </div>
-            `;
+            statsBlock = '<div class="wiki-card-section">' +
+              '<div class="wiki-card-section-title">Key Stats</div>' +
+              '<ul class="wiki-stats-grid">' +
+                allCards +
+              '</ul>' +
+              '</div>';
           }
         }
 
-        const rarityClass = rarity ? `wiki-chip--${rarity.toLowerCase()}` : "";
+        const rarityClass = rarity ? "wiki-chip--" + rarity.toLowerCase() : "";
+
+        // Pre-build HTML blocks to avoid nested template literals
+        const iconHtml = icon 
+          ? '<div class="wiki-card-icon"><img src="' + icon + '" alt="' + name + '"></div>'
+          : "";
+        
+        const rarityChipHtml = rarity ? '<span class="wiki-chip ' + rarityClass + '">' + rarity + '</span>' : "";
+        const dmgTypeChipHtml = dmgType ? '<span class="wiki-chip subtle">' + dmgType + '</span>' : "";
+        const artChipHtml = art ? '<span class="wiki-chip subtle">' + art + '</span>' : "";
+        
+        const descHtml = desc ? '<div class="wiki-weapon-card-description">' + desc + '</div>' : "";
+        
+        const virtuesSectionHtml = virtuesBlock
+          ? '<div class="wiki-card-section"><div class="wiki-card-section-title">Virtues & role</div>' + virtuesBlock + '</div>'
+          : "";
+        
+        const linksSectionHtml = linksHtml
+          ? '<div class="wiki-card-section"><div class="wiki-card-section-title">More info</div>' + linksHtml + '</div>'
+          : "";
 
         return `
           <li class="wiki-item wiki-card wiki-weapon-card">
             <div class="wiki-card-header">
-              ${
-                icon
-                  ? `<div class="wiki-card-icon">
-                       <img src="${icon}" alt="${name}">
-                     </div>`
-                  : ""
-              }
+              ${iconHtml}
               <div class="wiki-card-header-text">
                 <div class="wiki-card-title">${name}</div>
                 <div class="wiki-card-subtitle">
-                  ${rarity ? `<span class="wiki-chip ${rarityClass}">${rarity}</span>` : ""}
-                  ${dmgType ? `<span class="wiki-chip subtle">${dmgType}</span>` : ""}
-                  ${art ? `<span class="wiki-chip subtle">${art}</span>` : ""}
+                  ${rarityChipHtml}
+                  ${dmgTypeChipHtml}
+                  ${artChipHtml}
                 </div>
               </div>
             </div>
 
+            ${descHtml}
+
             <div class="wiki-card-body">
-              ${
-                desc
-                  ? `<div class="wiki-card-section">
-                       <div class="wiki-card-section-title">Overview</div>
-                       <p>${desc}</p>
-                     </div>`
-                  : ""
-              }
-
-              <div class="wiki-card-section">
-                <div class="wiki-card-section-title">Virtues & role</div>
-                ${metaGrid}
-              </div>
-
+              ${virtuesSectionHtml}
               ${craftBlock}
               ${statsBlock}
-
-              ${
-                linksHtml
-                  ? `<div class="wiki-card-section">
-                       <div class="wiki-card-section-title">More info</div>
-                       ${linksHtml}
-                     </div>`
-                  : ""
-              }
+              ${linksSectionHtml}
             </div>
           </li>
         `;
       })
       .join("");
+    
+    // Setup expand/collapse functionality after weapons are rendered
+    setupWeaponCardExpansion();
   } catch (err) {
     console.error(err);
     container.innerHTML = `
@@ -847,6 +833,26 @@ function setupWikiAccordions() {
           });
         item.classList.toggle("expanded");
       });
+    });
+  });
+}
+
+// =====================================================
+// WEAPON CARD EXPAND/COLLAPSE
+// =====================================================
+function setupWeaponCardExpansion() {
+  const weaponsContainer = document.getElementById("wikiWeaponsContainer");
+  if (!weaponsContainer) return;
+
+  weaponsContainer.querySelectorAll(".wiki-weapon-card").forEach((card) => {
+    card.addEventListener("click", (e) => {
+      // Don't trigger if clicking on a link or icon
+      if (e.target.closest("a") || e.target.closest(".wiki-card-icon")) {
+        return;
+      }
+      
+      // Toggle expanded state
+      card.classList.toggle("expanded");
     });
   });
 }
