@@ -204,6 +204,36 @@ async function renderWikiItems() {
 
         const linksHtml = buildWikiLinks(item.links);
 
+        // --- Modernize DROPS FROM section with card-based layout ---
+        let dropsFromSection = "";
+        if (dropSource) {
+          // Parse the drop source string (usually semicolon-separated)
+          const sources = dropSource
+            .split(/[;,]/)
+            .map(s => s.trim())
+            .filter(Boolean);
+
+          if (sources.length > 0) {
+            const dropCards = sources.map(source => {
+              return `<li class="wiki-drop-source-card">
+                <div class="wiki-drop-source-name">${source}</div>
+              </li>`;
+            }).join("");
+
+            dropsFromSection = `<div class="wiki-card-section">
+              <div class="wiki-card-section-title">Drops From</div>
+              <ul class="wiki-drop-sources-grid">${dropCards}</ul>
+            </div>`;
+          }
+        }
+
+        const linksSection = linksHtml
+          ? `<div class="wiki-card-section">
+               <div class="wiki-card-section-title">More Info</div>
+               ${linksHtml}
+             </div>`
+          : "";
+
         return `
         <li class="wiki-item wiki-card wiki-item-card">
 
@@ -220,12 +250,8 @@ async function renderWikiItems() {
           </div>
           <div class="wiki-card-body">
             ${description ? `<p>${description}</p>` : ""}
-            ${
-              dropSource
-                ? `<p><strong>Drops from:</strong> ${dropSource}</p>`
-                : ""
-            }
-            ${linksHtml}
+            ${dropsFromSection}
+            ${linksSection}
           </div>
         </li>
       `;
@@ -575,165 +601,190 @@ async function renderWikiPacts() {
         const desc = pact.description || "";
         const bonus = pact.bonus || {};
         const defense = pact.defense || {};
-        const icon = pact.icon || "";   // ✅ icon is a string URL, not an object
+        const icon = pact.icon || "";
+        const craft = pact.craft || null;
 
-        const virtues =
-          bonus.virtueType || pact.virtueOrder || "";
+        const virtues = bonus.virtueType || pact.virtueOrder || "";
 
-        const abilitiesLine =
-          pact.abilities ||
-          (Array.isArray(pact.abilitiesExpanded)
-            ? pact.abilitiesExpanded
-                .map((a) => a.name)
-                .filter(Boolean)
-                .join(", ")
-            : "");
+        // --- Bonuses & Virtues (card-based layout) ---
+        const bonusCards = [];
+        if (bonus.hp != null) {
+          bonusCards.push(`<li class="wiki-virtue-card">
+            <div class="wiki-virtue-card-label">HP Bonus</div>
+            <div class="wiki-virtue-card-value">${bonus.hp}</div>
+          </li>`);
+        }
+        if (bonus.virtueType) {
+          bonusCards.push(`<li class="wiki-virtue-card">
+            <div class="wiki-virtue-card-label">Virtue Type</div>
+            <div class="wiki-virtue-card-value">${bonus.virtueType}</div>
+          </li>`);
+        }
+        if (bonus.virtueValue != null) {
+          bonusCards.push(`<li class="wiki-virtue-card">
+            <div class="wiki-virtue-card-label">Virtue Value</div>
+            <div class="wiki-virtue-card-value">${bonus.virtueValue}</div>
+          </li>`);
+        }
+        if (pact.unarmedDamage != null) {
+          bonusCards.push(`<li class="wiki-virtue-card">
+            <div class="wiki-virtue-card-label">Unarmed Dmg</div>
+            <div class="wiki-virtue-card-value">${pact.unarmedDamage}</div>
+          </li>`);
+        }
 
-        // expanded abilities list (no broken template concatenation)
-        const abilitiesBlock =
-          Array.isArray(pact.abilitiesExpanded) &&
-          pact.abilitiesExpanded.length
-            ? `<ul>
-                ${pact.abilitiesExpanded
-                  .map(
-                    (a) =>
-                      `<li><strong>${a.name}:</strong> ${
-                        a.description || ""
-                      }</li>`
-                  )
-                  .join("")}
-              </ul>`
+        const bonusSection = bonusCards.length
+          ? `<div class="wiki-card-section">
+               <div class="wiki-card-section-title">Bonuses</div>
+               <ul class="wiki-virtue-grid">${bonusCards.join("")}</ul>
+             </div>`
+          : "";
+
+        // --- Defense stats (modernized card grid) ---
+        const defenseCards = [];
+        if (defense.magick != null) {
+          defenseCards.push(`<li class="wiki-stat-card">
+            <div class="wiki-stat-card-label">Magick Def</div>
+            <div class="wiki-stat-card-value">
+              <span class="wiki-stat-single">${defense.magick}</span>
+            </div>
+            <div class="wiki-stat-progress">
+              <div class="wiki-stat-progress-fill" style="width: ${pct(defense.magick, 100)};"></div>
+            </div>
+          </li>`);
+        }
+        if (defense.physical != null) {
+          defenseCards.push(`<li class="wiki-stat-card">
+            <div class="wiki-stat-card-label">Physical Def</div>
+            <div class="wiki-stat-card-value">
+              <span class="wiki-stat-single">${defense.physical}</span>
+            </div>
+            <div class="wiki-stat-progress">
+              <div class="wiki-stat-progress-fill" style="width: ${pct(defense.physical, 100)};"></div>
+            </div>
+          </li>`);
+        }
+        if (defense.stabilityIncrease != null) {
+          defenseCards.push(`<li class="wiki-stat-card">
+            <div class="wiki-stat-card-label">Stability</div>
+            <div class="wiki-stat-card-value">
+              <span class="wiki-stat-single">${defense.stabilityIncrease}</span>
+            </div>
+            <div class="wiki-stat-progress">
+              <div class="wiki-stat-progress-fill" style="width: ${pct(defense.stabilityIncrease, 50)};"></div>
+            </div>
+          </li>`);
+        }
+
+        const defenseSection = defenseCards.length
+          ? `<div class="wiki-card-section">
+               <div class="wiki-card-section-title">Defense Stats</div>
+               <ul class="wiki-stats-grid">${defenseCards.join("")}</ul>
+             </div>`
+          : "";
+
+        // --- Abilities (modern card-based display) ---
+        let abilitiesSection = "";
+        if (Array.isArray(pact.abilitiesExpanded) && pact.abilitiesExpanded.length) {
+          const abilityCards = pact.abilitiesExpanded
+            .map((a) => {
+              const abilityName = a.name || "Unnamed Ability";
+              const abilityDesc = a.description || "";
+              const abilityIcon = a.icon || "";
+
+              return `<li class="wiki-ability-card">
+                ${abilityIcon ? `<div class="wiki-ability-icon"><img src="${abilityIcon}" alt="${abilityName}"></div>` : ""}
+                <div class="wiki-ability-content">
+                  <div class="wiki-ability-name">${abilityName}</div>
+                  ${abilityDesc ? `<div class="wiki-ability-desc">${abilityDesc}</div>` : ""}
+                </div>
+              </li>`;
+            })
+            .join("");
+
+          abilitiesSection = `<div class="wiki-card-section">
+            <div class="wiki-card-section-title">Abilities</div>
+            <ul class="wiki-abilities-grid">${abilityCards}</ul>
+          </div>`;
+        }
+
+        // --- Crafting (card-based layout like weapons) ---
+        let craftBlock = "";
+        if (craft && typeof craft === "object") {
+          const ing = Array.isArray(craft.ingredients) ? craft.ingredients : [];
+          
+          const craftCards = [];
+          if (craft.Fragments) {
+            craftCards.push(`<li class="wiki-crafting-card">
+              <div class="wiki-crafting-card-label">Fragments</div>
+              <div class="wiki-crafting-card-value">${craft.Fragments}</div>
+            </li>`);
+          }
+          if (craft.Time != null) {
+            const timeValue = typeof craft.Time === 'string' && craft.Time.includes('min') 
+              ? craft.Time 
+              : craft.Time + 'min';
+            craftCards.push(`<li class="wiki-crafting-card">
+              <div class="wiki-crafting-card-label">Time</div>
+              <div class="wiki-crafting-card-value">${timeValue}</div>
+            </li>`);
+          }
+          if (craft.Cost != null) {
+            craftCards.push(`<li class="wiki-crafting-card">
+              <div class="wiki-crafting-card-label">Cost</div>
+              <div class="wiki-crafting-card-value">${craft.Cost}</div>
+            </li>`);
+          }
+          if (craft.BondReq && craft.BondReq !== "N/A") {
+            craftCards.push(`<li class="wiki-crafting-card">
+              <div class="wiki-crafting-card-label">Bond Req</div>
+              <div class="wiki-crafting-card-value">${craft.BondReq}</div>
+            </li>`);
+          }
+          
+          const craftCardsHtml = craftCards.length 
+            ? `<ul class="wiki-crafting-grid">${craftCards.join("")}</ul>` 
             : "";
-
-        const metaGrid = `
-          <div class="wiki-item-meta-grid">
-            ${
-              bonus.hp != null
-                ? `<div><strong>HP Bonus:</strong> ${bonus.hp}</div>`
-                : ""
-            }
-            ${
-              bonus.virtueType
-                ? `<div><strong>Virtue:</strong> ${bonus.virtueType}</div>`
-                : ""
-            }
-            ${
-              bonus.virtueValue != null
-                ? `<div><strong>Virtue Value:</strong> ${bonus.virtueValue}</div>`
-                : ""
-            }
-            ${
-              defense.magick != null
-                ? `<div><strong>Magick Def:</strong> ${defense.magick}</div>`
-                : ""
-            }
-            ${
-              defense.physical != null
-                ? `<div><strong>Physical Def:</strong> ${defense.physical}</div>`
-                : ""
-            }
-            ${
-              defense.stabilityIncrease != null
-                ? `<div><strong>Stability:</strong> ${defense.stabilityIncrease}</div>`
-                : ""
-            }
-            ${
-              pact.unarmedDamage != null
-                ? `<div><strong>Unarmed Dmg:</strong> ${pact.unarmedDamage}</div>`
-                : ""
-            }
-          </div>
-        `;
-
-        const statBars = `
-          <div class="wiki-stat-block">
-            <div class="wiki-stat-row">
-              <div class="wiki-stat-label">HP</div>
-              <div class="wiki-stat-track">
-                <div class="wiki-stat-fill" style="width:${pct(
-                  bonus.hp,
-                  100
-                )};"></div>
-              </div>
-              <div class="wiki-stat-value">${bonus.hp ?? "-"}</div>
-            </div>
-            <div class="wiki-stat-row">
-              <div class="wiki-stat-label">Magick Def</div>
-              <div class="wiki-stat-track">
-                <div class="wiki-stat-fill" style="width:${pct(
-                  defense.magick,
-                  100
-                )};"></div>
-              </div>
-              <div class="wiki-stat-value">${defense.magick ?? "-"}</div>
-            </div>
-            <div class="wiki-stat-row">
-              <div class="wiki-stat-label">Physical Def</div>
-              <div class="wiki-stat-track">
-                <div class="wiki-stat-fill" style="width:${pct(
-                  defense.physical,
-                  100
-                )};"></div>
-              </div>
-              <div class="wiki-stat-value">${defense.physical ?? "-"}</div>
-            </div>
-            <div class="wiki-stat-row">
-              <div class="wiki-stat-label">Stability</div>
-              <div class="wiki-stat-track">
-                <div class="wiki-stat-fill" style="width:${pct(
-                  defense.stabilityIncrease,
-                  50
-                )};"></div>
-              </div>
-              <div class="wiki-stat-value">${
-                defense.stabilityIncrease ?? "-"
-              }</div>
-            </div>
-            <div class="wiki-stat-row">
-              <div class="wiki-stat-label">Unarmed</div>
-              <div class="wiki-stat-track">
-                <div class="wiki-stat-fill" style="width:${pct(
-                  pact.unarmedDamage,
-                  100
-                )};"></div>
-              </div>
-              <div class="wiki-stat-value">${pact.unarmedDamage ?? "-"}</div>
-            </div>
-          </div>
-        `;
+          
+          const ingredientsHtml = ing.length
+            ? `<div class="wiki-crafting-ingredients">
+                 <div class="wiki-crafting-ingredients-title">Ingredients</div>
+                 <ul class="wiki-crafting-ingredients-list">
+                   ${ing.map(x => `<li>${x.qty} × ${x.item}</li>`).join("")}
+                 </ul>
+               </div>`
+            : "";
+          
+          craftBlock = `<div class="wiki-card-section">
+            <div class="wiki-card-section-title">Crafting</div>
+            ${craftCardsHtml}${ingredientsHtml}
+          </div>`;
+        }
 
         const linksHtml = buildWikiLinks(pact.links);
+        const linksSection = linksHtml
+          ? `<div class="wiki-card-section">
+               <div class="wiki-card-section-title">More Info</div>
+               ${linksHtml}
+             </div>`
+          : "";
 
         return `
           <li class="wiki-card wiki-item wiki-pact-card">
             <div class="wiki-card-header">
-              ${
-                icon
-                  ? `<div class="wiki-card-icon">
-                       <img src="${icon}" alt="${name}">
-                     </div>`
-                  : ""
-              }
+              ${icon ? `<div class="wiki-card-icon"><img src="${icon}" alt="${name}"></div>` : ""}
               <div>
                 <div class="wiki-card-title">${name}</div>
-                ${
-                  virtues
-                    ? `<div class="wiki-card-subtitle">${virtues}</div>`
-                    : ""
-                }
+                ${virtues ? `<div class="wiki-card-subtitle">${virtues}</div>` : ""}
               </div>
             </div>
             <div class="wiki-card-body">
               ${desc ? `<p>${desc}</p>` : ""}
-              ${metaGrid}
-              ${statBars}
-              ${
-                abilitiesLine
-                  ? `<p><strong>Abilities:</strong> ${abilitiesLine}</p>`
-                  : ""
-              }
-              ${abilitiesBlock}
-              ${linksHtml}
+              ${bonusSection}
+              ${defenseSection}
+              ${abilitiesSection}
+              ${craftBlock}
+              ${linksSection}
             </div>
           </li>
         `;
@@ -851,7 +902,14 @@ function setupWeaponCardExpansion() {
         return;
       }
       
-      // Toggle expanded state
+      // Close all other weapon cards before toggling this one
+      weaponsContainer.querySelectorAll(".wiki-weapon-card").forEach((other) => {
+        if (other !== card) {
+          other.classList.remove("expanded");
+        }
+      });
+      
+      // Toggle expanded state on clicked card
       card.classList.toggle("expanded");
     });
   });
