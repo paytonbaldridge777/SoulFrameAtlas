@@ -1,0 +1,104 @@
+{
+    "categories": [
+      {
+        "categoryName": "Agari",
+        "id": "76bfd32d-faef-45ae-afd9-e38269466d20",
+        "path": "boss/agari"
+      },
+      {
+        "categoryName": "Camps",
+        "id": "6704ae3f-e398-4aa3-9ab1-d4ad610590ec",
+        "path": "misc/camps"
+      },
+      {
+        "categoryName": "Crypt of the Circade",
+        "id": "deef3ff4-e1ed-4893-8b54-dd89f5a945e1",
+        "path": "dungeon/crypt"
+      },
+      {
+        "categoryName": "Day Cycle Boss",
+        "id": "59122166-87eb-48be-a864-424583745236",
+        "path": "boss/d&ncycle"
+      },
+      {
+        "categoryName": "Drop Sources",
+        "id": "e9e9b54f-1ba5-4958-be83-6931b5f1d203",
+        "path": "loot/drops"
+      },
+      {
+        "categoryName": "Dungeon Exits",
+        "id": "64afd75d-43c3-49da-8ba5-fed515e6e45d",
+        "path": "dungeon/exits"
+      },
+      {
+        "categoryName": "Free Standing Bosses",
+        "id": "196def0d-a103-4da3-8fed-026d3228e88a",
+        "path": "boss/freestanding"
+      },
+      {
+        "categoryName": "Friendly Npcs",
+        "id": "cd932e21-5f12-411f-8a33-f7e5c17991be",
+        "path": "npcs/Friendly"
+      },
+      {
+        "categoryName": "Glades of Andurin",
+        "id": "4698566a-98b2-4c7b-b49f-c18c25fe1174",
+        "path": "dungeon/glades"
+      },
+      {
+        "categoryName": "Juniper Statues",
+        "id": "43cfad33-a329-4919-bcd6-f444918b4752",
+        "path": "loot/juniper"
+      },
+      {
+        "categoryName": "Key Locations",
+        "id": "57383771-edbf-4175-a3f1-68b5050f3d61",
+        "path": "locations/key"
+      },
+      {
+        "categoryName": "Neath'uns",
+        "id": "b15457f4-4eed-4673-b65b-d7d742ea2150",
+        "path": "dungeon/neathuns"
+      },
+      {
+        "categoryName": "Notes",
+        "id": "6536b917-e79f-42b2-bdb6-1b1e4b379059",
+        "path": "collectibles/notes"
+      },
+      {
+        "categoryName": "Oro Chests",
+        "id": "2723d783-ec7c-4d0b-b436-cfd112c9a4d7",
+        "path": "loot/oroChests"
+      },
+      {
+        "categoryName": "Points of Interest",
+        "id": "2887ecc2-90db-431d-9972-b3351011b04f",
+        "path": "misc/poi"
+      },
+      {
+        "categoryName": "Quest",
+        "id": "f57db7db-318d-4c5a-a985-f2df46ff7635",
+        "path": "quest"
+      },
+      {
+        "categoryName": "Resources",
+        "id": "c87d992d-833d-47de-8b70-3dd17ee9339f",
+        "path": "loot/resources"
+      },
+      {
+        "categoryName": "Social Spaces",
+        "id": "4ef90a44-a242-4a12-a0bb-32ff0b98f339",
+        "path": "locations/social"
+      },
+      {
+        "categoryName": "Undercity of Dermak",
+        "id": "e69415ce-582d-4412-a8ba-6f598dade92c",
+        "path": "dungeon/dermak"
+      },
+      {
+        "categoryName": "World Trees",
+        "id": "e28cf924-868e-4447-ac83-30842324b03a",
+        "path": "locations/worldtrees"
+      }
+    ]
+}

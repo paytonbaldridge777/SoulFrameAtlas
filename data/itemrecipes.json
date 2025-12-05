@@ -1,0 +1,2859 @@
+{
+    "itemRecipes": [
+      {
+        "BondReq": "",
+        "Cost": null,
+        "DropSource": "Wares of Zenith",
+        "Fragments": "0",
+        "ItemID": "Alora's Royal Dyes",
+        "ItemType": "Palette",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": null,
+        "ingredients": []
+      },
+      {
+        "BondReq": "",
+        "Cost": 3500,
+        "DropSource": "Kabocha",
+        "Fragments": "3",
+        "ItemID": "Arbearer's Braes",
+        "ItemType": "Armor",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "20h",
+        "ingredients": [
+          {
+            "item": "Scrap Iron",
+            "qty": 45
+          },
+          {
+            "item": "Dendrit Weave",
+            "qty": 40
+          },
+          {
+            "item": "Sappheline",
+            "qty": 12
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 3500,
+        "DropSource": "Kabocha",
+        "Fragments": "2",
+        "ItemID": "Arbearer's Mask",
+        "ItemType": "Armor",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "20h",
+        "ingredients": [
+          {
+            "item": "Scrap Iron",
+            "qty": 45
+          },
+          {
+            "item": "Scrap Brass",
+            "qty": 45
+          },
+          {
+            "item": "Sappheline",
+            "qty": 12
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 3500,
+        "DropSource": "Kabocha",
+        "Fragments": "4",
+        "ItemID": "Arbearer's Pauncher",
+        "ItemType": "Armor",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "20h",
+        "ingredients": [
+          {
+            "item": "Scrap Steel",
+            "qty": 45
+          },
+          {
+            "item": "Quenching Acid",
+            "qty": 35
+          },
+          {
+            "item": "Moranite",
+            "qty": 12
+          }
+        ]
+      },
+      {
+        "BondReq": "3",
+        "Cost": 3500,
+        "DropSource": "Alca's Children;Factions#Alca'sT3",
+        "Fragments": "2",
+        "ItemID": "Armet of Orengall",
+        "ItemType": "Armor",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "20h",
+        "ingredients": [
+          {
+            "item": "Scrap Steel",
+            "qty": 45
+          },
+          {
+            "item": "Dendrit Weave",
+            "qty": 40
+          },
+          {
+            "item": "Quenching Acid",
+            "qty": 30
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 3500,
+        "DropSource": "The Mendicant King",
+        "Fragments": "2",
+        "ItemID": "Bascinet of The Mendicant King",
+        "ItemType": "Armor",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "20h",
+        "ingredients": [
+          {
+            "item": "Scrap Iron",
+            "qty": 45
+          },
+          {
+            "item": "Patch Leather",
+            "qty": 40
+          },
+          {
+            "item": "River Pearl",
+            "qty": 12
+          }
+        ]
+      },
+      {
+        "BondReq": "2",
+        "Cost": 2500,
+        "DropSource": "Factions#Alca'sT1;Factions#Alca'sT2;Gruul Seeker Ruthos;Factions#KithT1;Factions#KithT2;Factions#RoseT1;Factions#RoseT2",
+        "Fragments": "2",
+        "ItemID": "Blitzel",
+        "ItemType": "Weapon",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "10h",
+        "ingredients": [
+          {
+            "item": "Scrap Steel",
+            "qty": 25
+          },
+          {
+            "item": "Knotwood",
+            "qty": 25
+          },
+          {
+            "item": "Sappheline",
+            "qty": 8
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 2500,
+        "DropSource": "Silent Rose",
+        "Fragments": "1",
+        "ItemID": "Bloomin' Bodkin",
+        "ItemType": "Talisman",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "1d",
+        "ingredients": [
+          {
+            "item": "Dendrit Weave",
+            "qty": 30
+          },
+          {
+            "item": "Hymn Rose",
+            "qty": 20
+          },
+          {
+            "item": "Sappheline",
+            "qty": 6
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 2500,
+        "DropSource": "Knell Knight;Factions#T1;Factions#T2",
+        "Fragments": "2",
+        "ItemID": "Bog & Myrtle",
+        "ItemType": "Weapon",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "10h",
+        "ingredients": [
+          {
+            "item": "Scrap Iron",
+            "qty": 25
+          },
+          {
+            "item": "Scrap Brass",
+            "qty": 25
+          },
+          {
+            "item": "Moranite",
+            "qty": 8
+          }
+        ]
+      },
+      {
+        "BondReq": "3",
+        "Cost": 5000,
+        "DropSource": "Avakot;The Waste Bear",
+        "Fragments": "1",
+        "ItemID": "Bromius",
+        "ItemType": "Pact",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "27h",
+        "ingredients": [
+          {
+            "item": "Scrap Steel",
+            "qty": 55
+          },
+          {
+            "item": "Moranite",
+            "qty": 15
+          },
+          {
+            "item": "River Pearl",
+            "qty": 15
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": null,
+        "DropSource": "Festival of the Circade",
+        "Fragments": "0",
+        "ItemID": "Circade's Greaves",
+        "ItemType": "Armor",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": null,
+        "ingredients": []
+      },
+      {
+        "BondReq": "",
+        "Cost": null,
+        "DropSource": "Festival of the Circade",
+        "Fragments": "0",
+        "ItemID": "Circade's Gutguard",
+        "ItemType": "Armor",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": null,
+        "ingredients": []
+      },
+      {
+        "BondReq": "",
+        "Cost": null,
+        "DropSource": "Festival of the Circade",
+        "Fragments": "0",
+        "ItemID": "Circade's Helm of Deceit",
+        "ItemType": "Armor",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": null,
+        "ingredients": []
+      },
+      {
+        "BondReq": "1",
+        "Cost": 250,
+        "DropSource": "The Witch Verminia",
+        "Fragments": "0",
+        "ItemID": "Cloudquell",
+        "ItemType": "Consumable",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "Instant",
+        "ingredients": [
+          {
+            "item": "Weepin' Dris",
+            "qty": 10
+          },
+          {
+            "item": "Toe of Ode",
+            "qty": 6
+          },
+          {
+            "item": "Brinefloss",
+            "qty": 10
+          }
+        ]
+      },
+      {
+        "BondReq": "N/A",
+        "Cost": 0,
+        "DropSource": "Wares of Zenith",
+        "Fragments": "0",
+        "ItemID": "Cobladh",
+        "ItemType": "Weapon",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "N/A",
+        "ingredients": []
+      },
+      {
+        "BondReq": "",
+        "Cost": 1500,
+        "DropSource": "Tattie-bogle",
+        "Fragments": "2",
+        "ItemID": "Crone Cucurbita Mask",
+        "ItemType": "Armor",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "4h",
+        "ingredients": [
+          {
+            "item": "Wintersquash Seed",
+            "qty": 50
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 350,
+        "DropSource": "Kith of Kings",
+        "Fragments": "1",
+        "ItemID": "Curaidh's Breath",
+        "ItemType": "Consumable",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "Instant",
+        "ingredients": [
+          {
+            "item": "Mora's Kiss",
+            "qty": 10
+          },
+          {
+            "item": "Fire Fungus",
+            "qty": 6
+          },
+          {
+            "item": "Neathcap",
+            "qty": 6
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 350,
+        "DropSource": "Alca's Children",
+        "Fragments": "1",
+        "ItemID": "Dancing Galdre",
+        "ItemType": "Consumable",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "Instant",
+        "ingredients": [
+          {
+            "item": "Weepin' Dris",
+            "qty": 10
+          },
+          {
+            "item": "Jaden Drop",
+            "qty": 6
+          },
+          {
+            "item": "Lullily",
+            "qty": 10
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": null,
+        "DropSource": "Festival of the Circade",
+        "Fragments": "0",
+        "ItemID": "Dawn Pendant",
+        "ItemType": "Talisman",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": null,
+        "ingredients": []
+      },
+      {
+        "BondReq": "3",
+        "Cost": 3500,
+        "DropSource": "Castellan Malrog ; Collector#Hark, the Collector",
+        "Fragments": "3",
+        "ItemID": "Dewelion",
+        "ItemType": "Weapon",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "20h",
+        "ingredients": [
+          {
+            "item": "Scrap Iron",
+            "qty": 15
+          },
+          {
+            "item": "Gossamer Quartz",
+            "qty": 15
+          },
+          {
+            "item": "Moranite",
+            "qty": 6
+          }
+        ]
+      },
+      {
+        "BondReq": "1",
+        "Cost": 2500,
+        "DropSource": "Dendrit Chest#Midrath",
+        "Fragments": "3",
+        "ItemID": "Direskull",
+        "ItemType": "Talisman",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "1d",
+        "ingredients": [
+          {
+            "item": "Gossamer Quartz",
+            "qty": 20
+          },
+          {
+            "item": "Dendrit Weave",
+            "qty": 35
+          },
+          {
+            "item": "Moranite",
+            "qty": 12
+          }
+        ]
+      },
+      {
+        "BondReq": "h",
+        "Cost": 2500,
+        "DropSource": "World Trees",
+        "Fragments": "1",
+        "ItemID": "Duhk Halic",
+        "ItemType": "Weapon",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "10h",
+        "ingredients": [
+          {
+            "item": "Scrap Iron",
+            "qty": 25
+          },
+          {
+            "item": "Gossamer Quartz",
+            "qty": 20
+          },
+          {
+            "item": "River Pearl",
+            "qty": 8
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": null,
+        "DropSource": "Festival of the Circade",
+        "Fragments": "0",
+        "ItemID": "Dusk Pendant",
+        "ItemType": "Talisman",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": null,
+        "ingredients": []
+      },
+      {
+        "BondReq": "1",
+        "Cost": 10,
+        "DropSource": "Alca's Children",
+        "Fragments": "1",
+        "ItemID": "Epona's Forests",
+        "ItemType": "Palette",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "10s",
+        "ingredients": [
+          {
+            "item": "Will-o-frond",
+            "qty": 25
+          },
+          {
+            "item": "Brinefloss",
+            "qty": 15
+          },
+          {
+            "item": "Wyrmwort",
+            "qty": 15
+          },
+          {
+            "item": "Jaden Drop",
+            "qty": 15
+          }
+        ]
+      },
+      {
+        "BondReq": "N/A",
+        "Cost": 2500,
+        "DropSource": "Wares of Zenith",
+        "Fragments": "0",
+        "ItemID": "Esthelle",
+        "ItemType": "Weapon",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "N/A",
+        "ingredients": []
+      },
+      {
+        "BondReq": "",
+        "Cost": 2500,
+        "DropSource": "Kith of Kings;Factions#KithT3",
+        "Fragments": "3",
+        "ItemID": "Fire King's Kilt",
+        "ItemType": "Armor",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "10h",
+        "ingredients": [
+          {
+            "item": "Scrap Brass",
+            "qty": 45
+          },
+          {
+            "item": "Whisprig",
+            "qty": 40
+          },
+          {
+            "item": "River Pearl",
+            "qty": 12
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 2500,
+        "DropSource": "Kith of Kings;Factions#KithT3",
+        "Fragments": "4",
+        "ItemID": "Fire King's Plackart",
+        "ItemType": "Armor",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "10h",
+        "ingredients": [
+          {
+            "item": "Scrap Iron",
+            "qty": 45
+          },
+          {
+            "item": "Patch Leather",
+            "qty": 40
+          },
+          {
+            "item": "Dendrit Weave",
+            "qty": 40
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 2500,
+        "DropSource": "Factions#T1;Factions#T2",
+        "Fragments": "3",
+        "ItemID": "Forgetfire Braes",
+        "ItemType": "Armor",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "10h",
+        "ingredients": [
+          {
+            "item": "Scrap Brass",
+            "qty": 30
+          },
+          {
+            "item": "Patch Leather",
+            "qty": 30
+          },
+          {
+            "item": "Sproutfolk Frond",
+            "qty": 30
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 2500,
+        "DropSource": "Factions#T1;Factions#T2",
+        "Fragments": "4",
+        "ItemID": "Forgetfire Leathers",
+        "ItemType": "Armor",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "10h",
+        "ingredients": [
+          {
+            "item": "Patch Leather",
+            "qty": 30
+          },
+          {
+            "item": "Dendrit Weave",
+            "qty": 35
+          },
+          {
+            "item": "Sproutfolk Frond",
+            "qty": 25
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 2500,
+        "DropSource": "Factions#T1;Factions#T2",
+        "Fragments": "2",
+        "ItemID": "Forgetfire Visard",
+        "ItemType": "Armor",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "10h",
+        "ingredients": [
+          {
+            "item": "Patch Leather",
+            "qty": 30
+          },
+          {
+            "item": "Sproutfolk Frond",
+            "qty": 30
+          },
+          {
+            "item": "Quenching Acid",
+            "qty": 35
+          }
+        ]
+      },
+      {
+        "BondReq": "3",
+        "Cost": 5000,
+        "DropSource": "Avakot;The Torment Stag",
+        "Fragments": "1",
+        "ItemID": "Garren Rood",
+        "ItemType": "Pact",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "27h",
+        "ingredients": [
+          {
+            "item": "Scrap Iron",
+            "qty": 55
+          },
+          {
+            "item": "Patch Leather",
+            "qty": 50
+          },
+          {
+            "item": "Gossamer Quartz",
+            "qty": 50
+          }
+        ]
+      },
+      {
+        "BondReq": "3",
+        "Cost": 2500,
+        "DropSource": "Vadagar Stag ; Collector#Hark, the Collector",
+        "Fragments": "3",
+        "ItemID": "Garren's Cloven Hosen",
+        "ItemType": "Armor",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "10h",
+        "ingredients": [
+          {
+            "item": "Scrap Iron",
+            "qty": 30
+          },
+          {
+            "item": "Dendrit Weave",
+            "qty": 30
+          },
+          {
+            "item": "Patch Leather",
+            "qty": 30
+          }
+        ]
+      },
+      {
+        "BondReq": "3",
+        "Cost": 2500,
+        "DropSource": "Vadagar Stag ; Collector#Hark, the Collector",
+        "Fragments": "2",
+        "ItemID": "Garren's Crown of Grace",
+        "ItemType": "Armor",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "7h",
+        "ingredients": [
+          {
+            "item": "Scrap Brass",
+            "qty": 30
+          },
+          {
+            "item": "Patch Leather",
+            "qty": 30
+          },
+          {
+            "item": "Sproutfolk Frond",
+            "qty": 30
+          }
+        ]
+      },
+      {
+        "BondReq": "3",
+        "Cost": 2500,
+        "DropSource": "Factions#Alca'sT2;Factions#Alca'sT3",
+        "Fragments": "2",
+        "ItemID": "Gathannan",
+        "ItemType": "Weapon",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "10h",
+        "ingredients": [
+          {
+            "item": "Scrap Brass",
+            "qty": 20
+          },
+          {
+            "item": "Sappheline",
+            "qty": 8
+          },
+          {
+            "item": "Moranite",
+            "qty": 8
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 2500,
+        "DropSource": "Kith of Kings;Factions#KithT3",
+        "Fragments": "2",
+        "ItemID": "Great Helm of The Fire King",
+        "ItemType": "Armor",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "10h",
+        "ingredients": [
+          {
+            "item": "Scrap Iron",
+            "qty": 45
+          },
+          {
+            "item": "Patch Leather",
+            "qty": 40
+          },
+          {
+            "item": "Dendrit Weave",
+            "qty": 40
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 2500,
+        "DropSource": "Banneret;Castellan Malrog;Discharged Nimrod;Etheldred The Weaver;Gruul Seeker Ruthos;Ode Chest",
+        "Fragments": "2",
+        "ItemID": "Grinn",
+        "ItemType": "Weapon",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "10h",
+        "ingredients": [
+          {
+            "item": "Scrap steel",
+            "qty": 25
+          },
+          {
+            "item": "Ichor",
+            "qty": 20
+          },
+          {
+            "item": "Corrupt Onyx",
+            "qty": 20
+          }
+        ]
+      },
+      {
+        "BondReq": "1",
+        "Cost": 1500,
+        "DropSource": "Rise, Envoy; Alca's Children",
+        "Fragments": "1",
+        "ItemID": "Gwylen",
+        "ItemType": "Weapon",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "4h",
+        "ingredients": [
+          {
+            "item": "Scrap Iron",
+            "qty": 15
+          },
+          {
+            "item": "Ode'n Synsylk",
+            "qty": 20
+          },
+          {
+            "item": "Gossamer Quartz",
+            "qty": 15
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 2500,
+        "DropSource": "Kith of Kings;Factions#KithT3",
+        "Fragments": "2",
+        "ItemID": "Igne Mora",
+        "ItemType": "Weapon",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "10h",
+        "ingredients": [
+          {
+            "item": "Scrap Brass",
+            "qty": 20
+          },
+          {
+            "item": "Sappheline",
+            "qty": 8
+          },
+          {
+            "item": "Quenching Acid",
+            "qty": 20
+          }
+        ]
+      },
+      {
+        "BondReq": "2",
+        "Cost": 1500,
+        "DropSource": "Warsongs",
+        "Fragments": "3",
+        "ItemID": "Juniper",
+        "ItemType": "Weapon",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "4h",
+        "ingredients": [
+          {
+            "item": "Scrap Steel",
+            "qty": 15
+          },
+          {
+            "item": "Whisprig",
+            "qty": 25
+          },
+          {
+            "item": "Gossamer Quartz",
+            "qty": 20
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 2500,
+        "DropSource": "Tattie-bogle",
+        "Fragments": "3",
+        "ItemID": "Lil' Zook Mask",
+        "ItemType": "Armor",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "10h",
+        "ingredients": [
+          {
+            "item": "Wintersquash Seed",
+            "qty": 100
+          },
+          {
+            "item": "Rotted Frond",
+            "qty": 30
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 3500,
+        "DropSource": "Kabocha",
+        "Fragments": "3",
+        "ItemID": "Marrow's Bane",
+        "ItemType": "Weapon",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "10h",
+        "ingredients": [
+          {
+            "item": "Scrap Steel",
+            "qty": 15
+          },
+          {
+            "item": "Patch Leather",
+            "qty": 40
+          },
+          {
+            "item": "Moranite",
+            "qty": 6
+          }
+        ]
+      },
+      {
+        "BondReq": "1",
+        "Cost": 2500,
+        "DropSource": "Basic Chest#Undercity",
+        "Fragments": "3",
+        "ItemID": "Medallion of Mora",
+        "ItemType": "Talisman",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "1d",
+        "ingredients": [
+          {
+            "item": "Sacred Shimmer",
+            "qty": 1
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 3500,
+        "DropSource": "The Mendicant King",
+        "Fragments": "3",
+        "ItemID": "Mendicant King's Sabatons",
+        "ItemType": "Armor",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "20h",
+        "ingredients": [
+          {
+            "item": "Scrap Iron",
+            "qty": 45
+          },
+          {
+            "item": "Dendrit Weave",
+            "qty": 40
+          },
+          {
+            "item": "Moranite",
+            "qty": 12
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 3500,
+        "DropSource": "The Mendicant King",
+        "Fragments": "4",
+        "ItemID": "Mendicant King's Suit of Rancor",
+        "ItemType": "Armor",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "20h",
+        "ingredients": [
+          {
+            "item": "Scrap Iron",
+            "qty": 45
+          },
+          {
+            "item": "Sproutfolk Frond",
+            "qty": 40
+          },
+          {
+            "item": "Gossamer Quartz",
+            "qty": 30
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": null,
+        "DropSource": "Festival of the Circade",
+        "Fragments": "0",
+        "ItemID": "Midnight Pendant",
+        "ItemType": "Talisman",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": null,
+        "ingredients": []
+      },
+      {
+        "BondReq": "",
+        "Cost": 3500,
+        "DropSource": "Thrice-bound Impidh",
+        "Fragments": "4",
+        "ItemID": "Mockery Binds",
+        "ItemType": "Armor",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "20h",
+        "ingredients": [
+          {
+            "item": "Dendrit Weave",
+            "qty": 45
+          },
+          {
+            "item": "Petrified Ichor",
+            "qty": 12
+          },
+          {
+            "item": "Sappheline",
+            "qty": 12
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 3500,
+        "DropSource": "Thrice-bound Impidh",
+        "Fragments": "3",
+        "ItemID": "Mockery Douthrot",
+        "ItemType": "Armor",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "20h",
+        "ingredients": [
+          {
+            "item": "Dendrit Weave",
+            "qty": 45
+          },
+          {
+            "item": "Corrupt Onyx",
+            "qty": 25
+          },
+          {
+            "item": "Sappheline",
+            "qty": 12
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 3500,
+        "DropSource": "Thrice-bound Impidh",
+        "Fragments": "2",
+        "ItemID": "Mockery Ilk",
+        "ItemType": "Armor",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "20h",
+        "ingredients": [
+          {
+            "item": "Patch Leather",
+            "qty": 45
+          },
+          {
+            "item": "Corrupt Onyx",
+            "qty": 45
+          },
+          {
+            "item": "Sappheline",
+            "qty": 12
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 2500,
+        "DropSource": "",
+        "Fragments": "1",
+        "ItemID": "Molten Mora",
+        "ItemType": "Talisman",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "1d",
+        "ingredients": [
+          {
+            "item": "Scrap Steel",
+            "qty": 30
+          },
+          {
+            "item": "Mora's Kiss",
+            "qty": 20
+          },
+          {
+            "item": "Moranite",
+            "qty": 6
+          }
+        ]
+      },
+      {
+        "BondReq": "3",
+        "Cost": 5000,
+        "DropSource": "Kith of Kings",
+        "Fragments": "1",
+        "ItemID": "Mora's Hand",
+        "ItemType": "Pact",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "27h",
+        "ingredients": [
+          {
+            "item": "Scrap Brass",
+            "qty": 55
+          },
+          {
+            "item": "Sappheline",
+            "qty": 15
+          },
+          {
+            "item": "Quenching Acid",
+            "qty": 50
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 2500,
+        "DropSource": "Dendrit Chest#Alca's Bounty ; Factions#Glades ; Factions#T2 ; Factions#Alca'sT3 ; Factions#KithT3 ; Factions#RoseT3 ; Collector#Hark, the Collector",
+        "Fragments": "2",
+        "ItemID": "Needleseye",
+        "ItemType": "Weapon",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "10 Hours",
+        "ingredients": [
+          {
+            "item": "Scrap Brass",
+            "qty": 20
+          },
+          {
+            "item": "Scrap Steel",
+            "qty": 20
+          },
+          {
+            "item": "Quenching Acid",
+            "qty": 20
+          }
+        ]
+      },
+      {
+        "BondReq": "1",
+        "Cost": 1500,
+        "DropSource": "The Steelsinger; Knell Knight",
+        "Fragments": "1",
+        "ItemID": "Nettle",
+        "ItemType": "Weapon",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "4h",
+        "ingredients": [
+          {
+            "item": "Scrap Steel",
+            "qty": 25
+          },
+          {
+            "item": "Ode Graphite",
+            "qty": 30
+          },
+          {
+            "item": "Quenching Acid",
+            "qty": 25
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 2500,
+        "DropSource": "Mockery;Impidh Mockery",
+        "Fragments": "2",
+        "ItemID": "Nurash",
+        "ItemType": "Weapon",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "10h",
+        "ingredients": [
+          {
+            "item": "Scrap Brass",
+            "qty": 25
+          },
+          {
+            "item": "Quenching Acid",
+            "qty": 20
+          },
+          {
+            "item": "Ichor",
+            "qty": 20
+          }
+        ]
+      },
+      {
+        "BondReq": "3",
+        "Cost": 5000,
+        "DropSource": "Alca's Children;Silent Rose",
+        "Fragments": "1",
+        "ItemID": "Ode Tempest",
+        "ItemType": "Pact",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "27h",
+        "ingredients": [
+          {
+            "item": "Scrap Brass",
+            "qty": 55
+          },
+          {
+            "item": "Ode Graphite",
+            "qty": 30
+          },
+          {
+            "item": "Sappheline",
+            "qty": 15
+          }
+        ]
+      },
+      {
+        "BondReq": "2",
+        "Cost": 1500,
+        "DropSource": "Discharged Nimrod;Nimrod;War Caster",
+        "Fragments": "2",
+        "ItemID": "Odiac",
+        "ItemType": "Weapon",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "4h",
+        "ingredients": []
+      },
+      {
+        "BondReq": "3",
+        "Cost": 5000,
+        "DropSource": "Avakot;The Shewolf Snared",
+        "Fragments": "1",
+        "ItemID": "Orengall",
+        "ItemType": "Pact",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "27h",
+        "ingredients": [
+          {
+            "item": "Scrap Steel",
+            "qty": 40
+          },
+          {
+            "item": "Patch Leather",
+            "qty": 50
+          },
+          {
+            "item": "River Pearl",
+            "qty": 15
+          }
+        ]
+      },
+      {
+        "BondReq": "3",
+        "Cost": 3500,
+        "DropSource": "Alca's Children;Factions#Alca'sT3",
+        "Fragments": "4",
+        "ItemID": "Orengall's Cuirass",
+        "ItemType": "Armor",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "20h",
+        "ingredients": [
+          {
+            "item": "Scrap Steel",
+            "qty": 45
+          },
+          {
+            "item": "Dendrit Weave",
+            "qty": 40
+          },
+          {
+            "item": "Sproutfolk Frond",
+            "qty": 40
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 2500,
+        "DropSource": "Dendrit Chest#Glades",
+        "Fragments": "3",
+        "ItemID": "Orengall's Fang",
+        "ItemType": "Talisman",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "1d",
+        "ingredients": [
+          {
+            "item": "Soulsbane",
+            "qty": 25
+          },
+          {
+            "item": "Dendrit Weave",
+            "qty": 35
+          },
+          {
+            "item": "Moranite",
+            "qty": 12
+          }
+        ]
+      },
+      {
+        "BondReq": "3",
+        "Cost": 3500,
+        "DropSource": "Alca's Children;Factions#Alca'sT3",
+        "Fragments": "3",
+        "ItemID": "Orengall's Greaves",
+        "ItemType": "Armor",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "20h",
+        "ingredients": [
+          {
+            "item": "Scrap Brass",
+            "qty": 45
+          },
+          {
+            "item": "Knotwood",
+            "qty": 40
+          },
+          {
+            "item": "River Pearl",
+            "qty": 12
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 2500,
+        "DropSource": "Default Droptable",
+        "Fragments": "2",
+        "ItemID": "Oryn-Umbr",
+        "ItemType": "Weapon",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "10h",
+        "ingredients": [
+          {
+            "item": "Scrap Iron",
+            "qty": 25
+          },
+          {
+            "item": "Knotwood",
+            "qty": 25
+          },
+          {
+            "item": "Dendrit Weave",
+            "qty": 25
+          }
+        ]
+      },
+      {
+        "BondReq": "3",
+        "Cost": 5000,
+        "DropSource": "Alca's Children",
+        "Fragments": "1",
+        "ItemID": "Oscelda",
+        "ItemType": "Pact",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "27h",
+        "ingredients": [
+          {
+            "item": "Scrap Brass",
+            "qty": 55
+          },
+          {
+            "item": "Moranite",
+            "qty": 15
+          },
+          {
+            "item": "Dendrit Weave",
+            "qty": 50
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 750,
+        "DropSource": "Kith of Kings;Silent Rose;Rise, Envoy",
+        "Fragments": "1",
+        "ItemID": "Oscelda's Blues",
+        "ItemType": "Armor",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "30m",
+        "ingredients": [
+          {
+            "item": "Scrap Steel",
+            "qty": 15
+          },
+          {
+            "item": "Scrap Iron",
+            "qty": 15
+          },
+          {
+            "item": "Dendrit Weave",
+            "qty": 20
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 750,
+        "DropSource": "Kith of Kings;Silent Rose;Rise, Envoy",
+        "Fragments": "1",
+        "ItemID": "Oscelda's Diadem",
+        "ItemType": "Armor",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "30m",
+        "ingredients": [
+          {
+            "item": "Scrap Steel",
+            "qty": 15
+          },
+          {
+            "item": "Scrap Iron",
+            "qty": 15
+          },
+          {
+            "item": "Dendrit Weave",
+            "qty": 20
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 750,
+        "DropSource": "Kith of Kings;Silent Rose;Rise, Envoy",
+        "Fragments": "1",
+        "ItemID": "Oscelda's Featherbinds",
+        "ItemType": "Armor",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "30m",
+        "ingredients": [
+          {
+            "item": "Scrap Steel",
+            "qty": 15
+          },
+          {
+            "item": "Scrap Iron",
+            "qty": 15
+          },
+          {
+            "item": "Dendrit Weave",
+            "qty": 20
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": null,
+        "DropSource": "Wares of Zenith",
+        "Fragments": "0",
+        "ItemID": "Oscelda's Hope",
+        "ItemType": "Palette",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": null,
+        "ingredients": []
+      },
+      {
+        "BondReq": "",
+        "Cost": null,
+        "DropSource": "Wares of Zenith",
+        "Fragments": "0",
+        "ItemID": "Paragon Periapt",
+        "ItemType": "Talisman",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": null,
+        "ingredients": []
+      },
+      {
+        "BondReq": "",
+        "Cost": 2500,
+        "DropSource": "Tattie-bogle",
+        "Fragments": "2",
+        "ItemID": "Poppa Pepo Mask",
+        "ItemType": "Armor",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "10h",
+        "ingredients": [
+          {
+            "item": "Wintersquash Seed",
+            "qty": 100
+          },
+          {
+            "item": "Spider's Thread",
+            "qty": 30
+          }
+        ]
+      },
+      {
+        "BondReq": "1",
+        "Cost": 1500,
+        "DropSource": "Hunter;Collector#Hark, the Collector",
+        "Fragments": "1",
+        "ItemID": "Precklies",
+        "ItemType": "Weapon",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "4h",
+        "ingredients": [
+          {
+            "item": "Scrap Brass",
+            "qty": 15
+          },
+          {
+            "item": "Scrap Steel",
+            "qty": 15
+          },
+          {
+            "item": "Sproutfolk Frond",
+            "qty": 25
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": null,
+        "DropSource": "",
+        "Fragments": "0",
+        "ItemID": "Preludes Honour",
+        "ItemType": "Talisman",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": null,
+        "ingredients": []
+      },
+      {
+        "BondReq": "2",
+        "Cost": 3500,
+        "DropSource": "The Mendicant King ; Collector#Hark, the Collector",
+        "Fragments": "3",
+        "ItemID": "Purity",
+        "ItemType": "Weapon",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "10h",
+        "ingredients": [
+          {
+            "item": "Scrap Steel",
+            "qty": 45
+          },
+          {
+            "item": "Silistyt",
+            "qty": 15
+          },
+          {
+            "item": "Petrified Ichor",
+            "qty": 6
+          }
+        ]
+      },
+      {
+        "BondReq": "3",
+        "Cost": 2500,
+        "DropSource": "Vadagar Stag ; Collector#Hark, the Collector",
+        "Fragments": "4",
+        "ItemID": "Regalia of Garren Rood",
+        "ItemType": "Armor",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "20h",
+        "ingredients": [
+          {
+            "item": "Scrap Brass",
+            "qty": 30
+          },
+          {
+            "item": "Patch Leather",
+            "qty": 30
+          },
+          {
+            "item": "Dendrit Weave",
+            "qty": 30
+          }
+        ]
+      },
+      {
+        "BondReq": "2",
+        "Cost": 2500,
+        "DropSource": "Silent Rose;Factions#RoseT3",
+        "Fragments": "3",
+        "ItemID": "Regent's Drapery",
+        "ItemType": "Armor",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "10h",
+        "ingredients": [
+          {
+            "item": "Scrap Steel",
+            "qty": 30
+          },
+          {
+            "item": "Sappheline",
+            "qty": 10
+          },
+          {
+            "item": "Ode Graphite",
+            "qty": 25
+          }
+        ]
+      },
+      {
+        "BondReq": "2",
+        "Cost": 2500,
+        "DropSource": "Silent Rose;Factions#RoseT3",
+        "Fragments": "4",
+        "ItemID": "Regent's Shell",
+        "ItemType": "Armor",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "10h",
+        "ingredients": [
+          {
+            "item": "Scrap Steel",
+            "qty": 30
+          },
+          {
+            "item": "Petrified Ichor",
+            "qty": 8
+          },
+          {
+            "item": "Moranite",
+            "qty": 8
+          }
+        ]
+      },
+      {
+        "BondReq": "2",
+        "Cost": 2500,
+        "DropSource": "Silent Rose;Factions#RoseT3",
+        "Fragments": "2",
+        "ItemID": "Regent's Veil",
+        "ItemType": "Armor",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "10h",
+        "ingredients": [
+          {
+            "item": "Scrap Iron",
+            "qty": 30
+          },
+          {
+            "item": "Ode Graphite",
+            "qty": 25
+          },
+          {
+            "item": "Petrified Ichor",
+            "qty": 10
+          }
+        ]
+      },
+      {
+        "BondReq": "1",
+        "Cost": 10,
+        "DropSource": "Kith of Kings",
+        "Fragments": "1",
+        "ItemID": "Rhiannon's Flame",
+        "ItemType": "Palette",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "10s",
+        "ingredients": [
+          {
+            "item": "Mora's Kiss",
+            "qty": 20
+          },
+          {
+            "item": "Synod's Maiden",
+            "qty": 20
+          },
+          {
+            "item": "Fire Fungus",
+            "qty": 15
+          },
+          {
+            "item": "Spider's Thread",
+            "qty": 25
+          }
+        ]
+      },
+      {
+        "BondReq": "1",
+        "Cost": 1500,
+        "DropSource": "Banneret;Discharged Nimrod;Knight;Ode Chest;Factions#RoseT3",
+        "Fragments": "1",
+        "ItemID": "Rivt-II",
+        "ItemType": "Weapon",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "4h",
+        "ingredients": [
+          {
+            "item": "Scrap Steel",
+            "qty": 25
+          },
+          {
+            "item": "Ode Graphite",
+            "qty": 30
+          },
+          {
+            "item": "Corrupt Onyx",
+            "qty": 25
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 2500,
+        "DropSource": "Silent Rose; Factions#RoseT2",
+        "Fragments": "2",
+        "ItemID": "Rook",
+        "ItemType": "Weapon",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "10h",
+        "ingredients": [
+          {
+            "item": "Scrap Iron",
+            "qty": 25
+          },
+          {
+            "item": "Ichor",
+            "qty": 20
+          },
+          {
+            "item": "Silistyt",
+            "qty": 20
+          }
+        ]
+      },
+      {
+        "BondReq": "1",
+        "Cost": 2500,
+        "DropSource": "Ode Strongbox",
+        "Fragments": "3",
+        "ItemID": "Rose's Bodkin",
+        "ItemType": "Talisman",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "1d",
+        "ingredients": [
+          {
+            "item": "Sacred Shimmer",
+            "qty": 1
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 350,
+        "DropSource": "Silent Rose",
+        "Fragments": "1",
+        "ItemID": "Shademaker",
+        "ItemType": "Consumable",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "Instant",
+        "ingredients": [
+          {
+            "item": "Hymn Rose",
+            "qty": 10
+          },
+          {
+            "item": "Grynnetongue",
+            "qty": 6
+          },
+          {
+            "item": "Queen's Folly",
+            "qty": 10
+          }
+        ]
+      },
+      {
+        "BondReq": "1",
+        "Cost": 10,
+        "DropSource": "Silent Rose",
+        "Fragments": "1",
+        "ItemID": "Sigil's Roses",
+        "ItemType": "Palette",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "10s",
+        "ingredients": [
+          {
+            "item": "Hymn Rose",
+            "qty": 20
+          },
+          {
+            "item": "Queen's Folly",
+            "qty": 20
+          },
+          {
+            "item": "Neathcap",
+            "qty": 15
+          },
+          {
+            "item": "Synod's Maiden",
+            "qty": 25
+          }
+        ]
+      },
+      {
+        "BondReq": "3",
+        "Cost": 5000,
+        "DropSource": "Silent Rose",
+        "Fragments": "1",
+        "ItemID": "Sirin",
+        "ItemType": "Pact",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "27h",
+        "ingredients": [
+          {
+            "item": "Scrap Steel",
+            "qty": 55
+          },
+          {
+            "item": "River Pearl",
+            "qty": 15
+          },
+          {
+            "item": "Sproutfolk Frond",
+            "qty": 50
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 750,
+        "DropSource": "Alca's Children ; Kith of Kings ; Rise, Envoy",
+        "Fragments": "1",
+        "ItemID": "Sirin's Plainhide",
+        "ItemType": "Armor",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "30m",
+        "ingredients": [
+          {
+            "item": "Scrap Steel",
+            "qty": 15
+          },
+          {
+            "item": "Scrap Iron",
+            "qty": 15
+          },
+          {
+            "item": "Dendrit Weave",
+            "qty": 20
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 750,
+        "DropSource": "Alca's Children ; Kith of Kings ; Rise, Envoy",
+        "Fragments": "1",
+        "ItemID": "Sirin's Shroud",
+        "ItemType": "Armor",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "30m",
+        "ingredients": [
+          {
+            "item": "Scrap Steel",
+            "qty": 15
+          },
+          {
+            "item": "Scrap Iron",
+            "qty": 15
+          },
+          {
+            "item": "Dendrit Weave",
+            "qty": 20
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": null,
+        "DropSource": "Wares of Zenith",
+        "Fragments": "0",
+        "ItemID": "Sirin's Shroud (Palette)",
+        "ItemType": "Palette",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": null,
+        "ingredients": []
+      },
+      {
+        "BondReq": "",
+        "Cost": 750,
+        "DropSource": "Alca's Children ; Kith of Kings ; Rise, Envoy",
+        "Fragments": "1",
+        "ItemID": "Sirin's Stalks",
+        "ItemType": "Armor",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "30m",
+        "ingredients": [
+          {
+            "item": "Scrap Steel",
+            "qty": 15
+          },
+          {
+            "item": "Scrap Iron",
+            "qty": 15
+          },
+          {
+            "item": "Dendrit Weave",
+            "qty": 20
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 2500,
+        "DropSource": "Ode Chest;Gruul Seeker Ruthos;Sinecure-errant Gawth;Nimrod",
+        "Fragments": "2",
+        "ItemID": "Skílter",
+        "ItemType": "Weapon",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "10h",
+        "ingredients": [
+          {
+            "item": "Scrap Brass",
+            "qty": 25
+          },
+          {
+            "item": "Silistyt",
+            "qty": 20
+          },
+          {
+            "item": "Corrupt Onyx",
+            "qty": 20
+          }
+        ]
+      },
+      {
+        "BondReq": "2",
+        "Cost": 1500,
+        "DropSource": "Default Droptable;Discharged Nimrod;Knight;Nimrod;Sinecure-errant Gawth",
+        "Fragments": "2",
+        "ItemID": "Sollos-I",
+        "ItemType": "Weapon",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "4h",
+        "ingredients": [
+          {
+            "item": "Scrap Steel",
+            "qty": 25
+          },
+          {
+            "item": "Ichor",
+            "qty": 25
+          },
+          {
+            "item": "Ode Graphite",
+            "qty": 30
+          }
+        ]
+      },
+      {
+        "BondReq": "1",
+        "Cost": 2500,
+        "DropSource": "Basic Chest#Glades",
+        "Fragments": "3",
+        "ItemID": "Sproutfolk Seed",
+        "ItemType": "Talisman",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "1d",
+        "ingredients": [
+          {
+            "item": "Sacred Shimmer",
+            "qty": 1
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 2500,
+        "DropSource": "",
+        "Fragments": "1",
+        "ItemID": "Sproutfolk Shoot",
+        "ItemType": "Talisman",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "1d",
+        "ingredients": [
+          {
+            "item": "Sproutfolk Frond",
+            "qty": 30
+          },
+          {
+            "item": "Weepin' Dris",
+            "qty": 20
+          },
+          {
+            "item": "River Pearl",
+            "qty": 6
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 2500,
+        "DropSource": "Avakot's Stocks;Ode'n Bisulcam",
+        "Fragments": "2",
+        "ItemID": "Steelsinger's Circlet",
+        "ItemType": "Armor",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "10h",
+        "ingredients": [
+          {
+            "item": "Scrap Brass",
+            "qty": 30
+          },
+          {
+            "item": "Ode'n Synsylk",
+            "qty": 30
+          },
+          {
+            "item": "Patch Leather",
+            "qty": 30
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 2500,
+        "DropSource": "Avakot's Stocks;Ode'n Bisulcam",
+        "Fragments": "3",
+        "ItemID": "Steelsinger's Shreds",
+        "ItemType": "Armor",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "10h",
+        "ingredients": [
+          {
+            "item": "Scrap Steel",
+            "qty": 30
+          },
+          {
+            "item": "Dendrit Weave",
+            "qty": 30
+          },
+          {
+            "item": "Patch Leather",
+            "qty": 30
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 2500,
+        "DropSource": "Avakot's Stocks;Ode'n Bisulcam",
+        "Fragments": "4",
+        "ItemID": "Steelsinger's Stithywicks",
+        "ItemType": "Armor",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "10h",
+        "ingredients": [
+          {
+            "item": "Scrap Brass",
+            "qty": 30
+          },
+          {
+            "item": "Ode'n Synsylk",
+            "qty": 30
+          },
+          {
+            "item": "Patch Leather",
+            "qty": 30
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 2500,
+        "DropSource": "Mockery;Impidh Mockery",
+        "Fragments": "2",
+        "ItemID": "Stultin",
+        "ItemType": "Weapon",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "10h",
+        "ingredients": [
+          {
+            "item": "Scrap Brass",
+            "qty": 25
+          },
+          {
+            "item": "Ichor",
+            "qty": 20
+          },
+          {
+            "item": "Corrupt Onyx",
+            "qty": 20
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 2500,
+        "DropSource": "Ode Chest",
+        "Fragments": "3",
+        "ItemID": "Synod's Bell Jar",
+        "ItemType": "Talisman",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "1d",
+        "ingredients": [
+          {
+            "item": "Ichor",
+            "qty": 25
+          },
+          {
+            "item": "Dendrit Weave",
+            "qty": 35
+          },
+          {
+            "item": "Petrified Ichor",
+            "qty": 12
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 2500,
+        "DropSource": "Dendrit Chest#Alca's Bounty;Factions#T2;Factions#Alca'sT3;Factions#KithT3;Factions#RoseT3",
+        "Fragments": "3",
+        "ItemID": "Tempest Braes",
+        "ItemType": "Armor",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "10h",
+        "ingredients": [
+          {
+            "item": "Scrap Brass",
+            "qty": 30
+          },
+          {
+            "item": "Knotwood",
+            "qty": 35
+          },
+          {
+            "item": "Gossamer Quartz",
+            "qty": 25
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 2500,
+        "DropSource": "Dendrit Chest#Alca's Bounty;Factions#T2;Factions#Alca'sT3;Factions#KithT3;Factions#RoseT3",
+        "Fragments": "4",
+        "ItemID": "Tempest Leathers",
+        "ItemType": "Armor",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "10h",
+        "ingredients": [
+          {
+            "item": "Patch Leather",
+            "qty": 30
+          },
+          {
+            "item": "Dendrit Weave",
+            "qty": 30
+          },
+          {
+            "item": "Sproutfolk Frond",
+            "qty": 30
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 2500,
+        "DropSource": "Dendrit Chest#Alca's Bounty;Factions#T2;Factions#Alca'sT3;Factions#KithT3;Factions#RoseT3",
+        "Fragments": "2",
+        "ItemID": "Tempest Visard",
+        "ItemType": "Armor",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "10h",
+        "ingredients": [
+          {
+            "item": "Patch Leather",
+            "qty": 30
+          },
+          {
+            "item": "Sproutfolk Frond",
+            "qty": 30
+          },
+          {
+            "item": "Quenching Acid",
+            "qty": 35
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 2500,
+        "DropSource": "Mockery;Impidh Mockery",
+        "Fragments": "2",
+        "ItemID": "Tessard",
+        "ItemType": "Weapon",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "10h",
+        "ingredients": [
+          {
+            "item": "Scrap Brass",
+            "qty": 25
+          },
+          {
+            "item": "Corrupt Onyx",
+            "qty": 20
+          },
+          {
+            "item": "Ichor",
+            "qty": 20
+          }
+        ]
+      },
+      {
+        "BondReq": "3",
+        "Cost": 5000,
+        "DropSource": "Kith of Kings",
+        "Fragments": "1",
+        "ItemID": "Tethren",
+        "ItemType": "Pact",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "27h",
+        "ingredients": [
+          {
+            "item": "Scrap Iron",
+            "qty": 55
+          },
+          {
+            "item": "Whisprig",
+            "qty": 50
+          },
+          {
+            "item": "Patch Leather",
+            "qty": 50
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": null,
+        "DropSource": "Wares of Zenith",
+        "Fragments": "0",
+        "ItemID": "Tethren's Blaze",
+        "ItemType": "Palette",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": null,
+        "ingredients": []
+      },
+      {
+        "BondReq": "",
+        "Cost": 750,
+        "DropSource": "Alca's Children;Silent Rose;Rise, Envoy",
+        "Fragments": "1",
+        "ItemID": "Tethren's Cap",
+        "ItemType": "Armor",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "30m",
+        "ingredients": [
+          {
+            "item": "Scrap Steel",
+            "qty": 15
+          },
+          {
+            "item": "Scrap Iron",
+            "qty": 15
+          },
+          {
+            "item": "Dendrit Weave",
+            "qty": 20
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 750,
+        "DropSource": "Alca's Children;Silent Rose;Rise, Envoy",
+        "Fragments": "1",
+        "ItemID": "Tethren's Roots",
+        "ItemType": "Armor",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "30m",
+        "ingredients": [
+          {
+            "item": "Scrap Steel",
+            "qty": 15
+          },
+          {
+            "item": "Scrap Iron",
+            "qty": 15
+          },
+          {
+            "item": "Dendrit Weave",
+            "qty": 20
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 750,
+        "DropSource": "Alca's Children;Silent Rose;Rise, Envoy",
+        "Fragments": "1",
+        "ItemID": "Tethren's Tunic",
+        "ItemType": "Armor",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "30m",
+        "ingredients": [
+          {
+            "item": "Scrap Steel",
+            "qty": 15
+          },
+          {
+            "item": "Scrap Iron",
+            "qty": 15
+          },
+          {
+            "item": "Dendrit Weave",
+            "qty": 20
+          }
+        ]
+      },
+      {
+        "BondReq": "N/A",
+        "Cost": 0,
+        "DropSource": "Wares of Zenith",
+        "Fragments": "0",
+        "ItemID": "The Alder",
+        "ItemType": "Weapon",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "N/A",
+        "ingredients": []
+      },
+      {
+        "BondReq": "2",
+        "Cost": 500,
+        "DropSource": "The Witch Verminia",
+        "Fragments": "0",
+        "ItemID": "The Cogah (Consumable)",
+        "ItemType": "Consumable",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "2 Hours",
+        "ingredients": [
+          {
+            "item": "Wevetwood Sap",
+            "qty": 10
+          },
+          {
+            "item": "Agaric",
+            "qty": 3
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 2500,
+        "DropSource": "Kabocha#Cogah ; Etheldred The Weaver#Cogah",
+        "Fragments": "3",
+        "ItemID": "The Cogah Creutair",
+        "ItemType": "Talisman",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "1d",
+        "ingredients": [
+          {
+            "item": "Sacred Shimmer",
+            "qty": 1
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 0,
+        "DropSource": "Thrice-bound Impidh#Cogah;Wraith of Wastes#Cogah;Knell Knight#Cogah",
+        "Fragments": "3",
+        "ItemID": "The Cogah Grod",
+        "ItemType": "Talisman",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "1d",
+        "ingredients": [
+          {
+            "item": "Sacred Shimmer",
+            "qty": 1
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 2500,
+        "DropSource": "Discharged Nimrod#Cogah ; Gruul Seeker Ruthos#Cogah ; Sinecure-errant Gawth#Cogah",
+        "Fragments": "3",
+        "ItemID": "The Cogah Lorcaan",
+        "ItemType": "Talisman",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "1d",
+        "ingredients": [
+          {
+            "item": "Sacred Shimmer",
+            "qty": 1
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 2500,
+        "DropSource": "Wraith of Wastes ; Collector#Hark, the Collector",
+        "Fragments": "2",
+        "ItemID": "The Erstroot",
+        "ItemType": "Weapon",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "10h",
+        "ingredients": [
+          {
+            "item": "Corrupt Onyx",
+            "qty": 20
+          },
+          {
+            "item": "Silistyt",
+            "qty": 20
+          },
+          {
+            "item": "Petrified Ichor",
+            "qty": 8
+          }
+        ]
+      },
+      {
+        "BondReq": "N/A",
+        "Cost": 0,
+        "DropSource": "Wares of Zenith",
+        "Fragments": "0",
+        "ItemID": "The Ivor",
+        "ItemType": "Weapon",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "N/A",
+        "ingredients": []
+      },
+      {
+        "BondReq": "N/A",
+        "Cost": 0,
+        "DropSource": "Wares of Zenith",
+        "Fragments": "0",
+        "ItemID": "The Paragon",
+        "ItemType": "Weapon",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "N/A",
+        "ingredients": []
+      },
+      {
+        "BondReq": "3",
+        "Cost": 3500,
+        "DropSource": "Vadagar Stag ; Collector#Hark, the Collector",
+        "Fragments": "1",
+        "ItemID": "The Royal Tines",
+        "ItemType": "Weapon",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "10h",
+        "ingredients": [
+          {
+            "item": "Scrap Brass",
+            "qty": 15
+          },
+          {
+            "item": "Knotwood",
+            "qty": 20
+          },
+          {
+            "item": "River Pearl",
+            "qty": 6
+          }
+        ]
+      },
+      {
+        "BondReq": "N/A",
+        "Cost": 0,
+        "DropSource": "Wares of Zenith",
+        "Fragments": "0",
+        "ItemID": "The Starling",
+        "ItemType": "Weapon",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "N/A",
+        "ingredients": []
+      },
+      {
+        "BondReq": "",
+        "Cost": 1500,
+        "DropSource": "Rise, Envoy ; Silent Rose",
+        "Fragments": "1",
+        "ItemID": "Thistle",
+        "ItemType": "Weapon",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "4h",
+        "ingredients": [
+          {
+            "item": "Scrap Iron",
+            "qty": 15
+          },
+          {
+            "item": "Dendrit Weave",
+            "qty": 20
+          },
+          {
+            "item": "Knotwood",
+            "qty": 15
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 0,
+        "DropSource": "Wares of Zenith",
+        "Fragments": "0",
+        "ItemID": "Thrice Spurns",
+        "ItemType": "Weapon",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "N/A",
+        "ingredients": []
+      },
+      {
+        "BondReq": "",
+        "Cost": 2500,
+        "DropSource": "Festival of the Circade",
+        "Fragments": "3",
+        "ItemID": "Triune Talisman",
+        "ItemType": "Talisman",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "1d",
+        "ingredients": [
+          {
+            "item": "Dawn Pendant",
+            "qty": 1
+          },
+          {
+            "item": "Dusk Pendant",
+            "qty": 1
+          },
+          {
+            "item": "Midnight Pendant",
+            "qty": 1
+          }
+        ]
+      },
+      {
+        "BondReq": "2",
+        "Cost": 2500,
+        "DropSource": "Banneret;Castellan Malrog;Discharged Nimrod;Gruul Seeker Ruthos;Ode Chest",
+        "Fragments": "2",
+        "ItemID": "Unsula",
+        "ItemType": "Weapon",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "10h",
+        "ingredients": [
+          {
+            "item": "Scrap Steel",
+            "qty": 25
+          },
+          {
+            "item": "Silistyt",
+            "qty": 20
+          },
+          {
+            "item": "Petrified Ichor",
+            "qty": 8
+          }
+        ]
+      },
+      {
+        "BondReq": "1",
+        "Cost": 1500,
+        "DropSource": "Banneret;Corrupted Ode'n Dog;Discharged Nimrod;Knight;Ode Chest;Sinecure-errant Gawth",
+        "Fragments": "1",
+        "ItemID": "Vasp-IV",
+        "ItemType": "Weapon",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "4h",
+        "ingredients": [
+          {
+            "item": "Scrap Steel",
+            "qty": 25
+          },
+          {
+            "item": "Corrupt Onyx",
+            "qty": 25
+          },
+          {
+            "item": "Quenching Acid",
+            "qty": 25
+          }
+        ]
+      },
+      {
+        "BondReq": "2",
+        "Cost": 2500,
+        "DropSource": "Factions#T1;Factions#T2;Etheldred The Weaver",
+        "Fragments": "2",
+        "ItemID": "Vetch",
+        "ItemType": "Weapon",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "10h",
+        "ingredients": [
+          {
+            "item": "Scrap Steel",
+            "qty": 25
+          },
+          {
+            "item": "Silistyt",
+            "qty": 20
+          },
+          {
+            "item": "Petrified Ichor",
+            "qty": 8
+          }
+        ]
+      },
+      {
+        "BondReq": "2",
+        "Cost": 2500,
+        "DropSource": "Etheldred The Weaver;Factions#T1;Factions#T2;Silent Rose",
+        "Fragments": "2",
+        "ItemID": "Virdigris",
+        "ItemType": "Weapon",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "10h",
+        "ingredients": [
+          {
+            "item": "Scrap Steel",
+            "qty": 25
+          },
+          {
+            "item": "Dendrit Weave",
+            "qty": 25
+          },
+          {
+            "item": "Sappheline",
+            "qty": 8
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 2500,
+        "DropSource": "Wraith of Wastes",
+        "Fragments": "2",
+        "ItemID": "Wazzard's Wish",
+        "ItemType": "Talisman",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "24h",
+        "ingredients": [
+          {
+            "item": "Corrupt Onyx",
+            "qty": 20
+          },
+          {
+            "item": "Ichor",
+            "qty": 20
+          },
+          {
+            "item": "Petrified Ichor",
+            "qty": 6
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 2500,
+        "DropSource": "Etheldred The Weaver;Knell Knight",
+        "Fragments": "2",
+        "ItemID": "Witan",
+        "ItemType": "Weapon",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "10h",
+        "ingredients": [
+          {
+            "item": "Scrap Iron",
+            "qty": 25
+          },
+          {
+            "item": "Sappheline",
+            "qty": 8
+          },
+          {
+            "item": "River Pearl",
+            "qty": 8
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": 1500,
+        "DropSource": "Rise, Envoy; Kith of Kings",
+        "Fragments": "1",
+        "ItemID": "Wulder",
+        "ItemType": "Weapon",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": "4h",
+        "ingredients": [
+          {
+            "item": "Scrap Iron",
+            "qty": 15
+          },
+          {
+            "item": "Sproutfolk Frond",
+            "qty": 20
+          },
+          {
+            "item": "Quenching Acid",
+            "qty": 25
+          }
+        ]
+      },
+      {
+        "BondReq": "",
+        "Cost": null,
+        "DropSource": "Wares of Zenith",
+        "Fragments": "0",
+        "ItemID": "Wyld Oscelda Beltolls",
+        "ItemType": "Armor",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": null,
+        "ingredients": []
+      },
+      {
+        "BondReq": "",
+        "Cost": null,
+        "DropSource": "Wares of Zenith",
+        "Fragments": "0",
+        "ItemID": "Wyld Oscelda Pendelveil",
+        "ItemType": "Armor",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": null,
+        "ingredients": []
+      },
+      {
+        "BondReq": "",
+        "Cost": null,
+        "DropSource": "Wares of Zenith",
+        "Fragments": "0",
+        "ItemID": "Wyld Oscelda's Exhalt",
+        "ItemType": "Armor",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": null,
+        "ingredients": []
+      },
+      {
+        "BondReq": "",
+        "Cost": null,
+        "DropSource": "Wares of Zenith",
+        "Fragments": "0",
+        "ItemID": "Wyld Sirin Finery",
+        "ItemType": "Cuirass",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": null,
+        "ingredients": []
+      },
+      {
+        "BondReq": "",
+        "Cost": null,
+        "DropSource": "Wares of Zenith",
+        "Fragments": "0",
+        "ItemID": "Wyld Tethren Solist Shield",
+        "ItemType": "Armor",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": null,
+        "ingredients": []
+      },
+      {
+        "BondReq": "",
+        "Cost": null,
+        "DropSource": "Wares of Zenith",
+        "Fragments": "0",
+        "ItemID": "Wylding's Heart",
+        "ItemType": "Talisman",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": null,
+        "ingredients": []
+      },
+      {
+        "BondReq": "",
+        "Cost": null,
+        "DropSource": "Wares of Zenith",
+        "Fragments": "0",
+        "ItemID": "Wylding's Hilt",
+        "ItemType": "Talisman",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": null,
+        "ingredients": []
+      },
+      {
+        "BondReq": "",
+        "Cost": null,
+        "DropSource": "Wares of Zenith",
+        "Fragments": "0",
+        "ItemID": "Wylding's Hush",
+        "ItemType": "Talisman",
+        "JoineryCost": null,
+        "JoineryType": null,
+        "Time": null,
+        "ingredients": []
+      }
+    ]
+}

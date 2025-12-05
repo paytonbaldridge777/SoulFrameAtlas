@@ -1,0 +1,189 @@
+{
+"armorGrouped": [
+  {
+	"ArmorSet": "Arbearer",
+	"ItemIDs": [
+	  "Arbearer's Braes",
+	  "Arbearer's Mask",
+	  "Arbearer's Pauncher"
+	]
+  },
+  {
+	"ArmorSet": "Orengall",
+	"ItemIDs": [
+	  "Armet of Orengall",
+	  "Direskull",
+	  "Orengall's Cuirass",
+	  "Orengall's Fang",
+	  "Orengall's Greaves"
+	]
+  },
+  {
+	"ArmorSet": "Mendicant King",
+	"ItemIDs": [
+	  "Bascinet of The Mendicant King",
+	  "Mendicant King's Sabatons",
+	  "Mendicant King's Suit of Rancor"
+	]
+  },
+  {
+	"ArmorSet": "Uncategorised",
+	"ItemIDs": [
+	  "Bloomin' Bodkin",
+	  "Molten Mora",
+	  "Paragon Periapt",
+	  "Prelude Honour",
+	  "Sproutfolk Shoot",
+	  "Synod's Bell Jar",
+	  "Wazzard's Wish"
+	]
+  },
+  {
+	"ArmorSet": "Tempest",
+	"ItemIDs": [
+	  "Brazen Lung",
+	  "Tempest Braes",
+	  "Tempest Leathers",
+	  "Tempest Visard"
+	]
+  },
+  {
+	"ArmorSet": "Circade",
+	"ItemIDs": [
+	  "Circade's Greaves",
+	  "Circade's Gutguard",
+	  "Circade's Helm of Deceit",
+	  "Dawn Pendant",
+	  "Dusk Pendant",
+	  "Midnight Pendant",
+	  "Triune Talisman"
+	]
+  },
+  {
+	"ArmorSet": "Cucurbita",
+	"ItemIDs": [
+	  "Crone Cucurbita Mask",
+	  "Lil' Zook Mask",
+	  "Poppa Pepo Mask"
+	]
+  },
+  {
+	"ArmorSet": "Fire King",
+	"ItemIDs": [
+	  "Fire King's Kilt",
+	  "Fire King's Plackart",
+	  "Great Helm of The Fire King"
+	]
+  },
+  {
+	"ArmorSet": "Forgetfire",
+	"ItemIDs": [
+	  "Forgetfire Braes",
+	  "Forgetfire Leathers",
+	  "Forgetfire Visard"
+	]
+  },
+  {
+	"ArmorSet": "Underwear",
+	"ItemIDs": [
+	  "Forsaken Rags",
+	  "Helmless",
+	  "Laid Bare"
+	]
+  },
+  {
+	"ArmorSet": "Garren",
+	"ItemIDs": [
+	  "Garren's Cloven Hosen",
+	  "Garren's Crown of Grace",
+	  "Regalia of Garren Rood"
+	]
+  },
+  {
+	"ArmorSet": "Tethren",
+	"ItemIDs": [
+	  "Medallion of Mora",
+	  "Tethren's Cap",
+	  "Tethren's Roots",
+	  "Tethren's Tunic"
+	]
+  },
+  {
+	"ArmorSet": "Mockery",
+	"ItemIDs": [
+	  "Mockery Binds",
+	  "Mockery Douthrot",
+	  "Mockery Ilk"
+	]
+  },
+  {
+	"ArmorSet": "Oscelda",
+	"ItemIDs": [
+	  "Oscelda's Blues",
+	  "Oscelda's Diadem",
+	  "Oscelda's Featherbinds",
+	  "Sproutfolk Seed"
+	]
+  },
+  {
+	"ArmorSet": "Regent",
+	"ItemIDs": [
+	  "Regent's Drapery",
+	  "Regent's Shell",
+	  "Regent's Veil"
+	]
+  },
+  {
+	"ArmorSet": "Sirin",
+	"ItemIDs": [
+	  "Rose's Bodkin",
+	  "Sirin's Plainhide",
+	  "Sirin's Shroud",
+	  "Sirin's Stalks"
+	]
+  },
+  {
+	"ArmorSet": "Steelsinger",
+	"ItemIDs": [
+	  "Steelsinger's Circlet",
+	  "Steelsinger's Shreds",
+	  "Steelsinger's Stithywicks"
+	]
+  },
+  {
+	"ArmorSet": "Cogah",
+	"ItemIDs": [
+	  "The Cogah Creutair",
+	  "The Cogah Grod",
+	  "The Cogah Lorcaan"
+	]
+  },
+  {
+	"ArmorSet": "Wyld Oscelda",
+	"ItemIDs": [
+	  "Wyld Oscelda Beltolls",
+	  "Wyld Oscelda Pendelveil",
+	  "Wyld Oscelda's Exhalt",
+	  "Wylding's Heart"
+	]
+  },
+  {
+	"ArmorSet": "Wyld Sirin",
+	"ItemIDs": [
+	  "Wyld Sirin Finery",
+	  "Wyld Sirin Wevetbelt",
+	  "Wyld Sirin's Feignmask",
+	  "Wylding's Hush"
+	]
+  },
+  {
+	"ArmorSet": "Wyld Tethren",
+	"ItemIDs": [
+	  "Wyld Tethren Flamefoot",
+	  "Wyld Tethren Solist Shield",
+	  "Wyld Tethren's Hornhelm",
+	  "Wylding's Hilt"
+	]
+  }
+]
+}

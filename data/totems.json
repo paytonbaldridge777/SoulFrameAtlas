@@ -1,0 +1,231 @@
+{
+    "totems": [
+      {
+        "Bonuses": null,
+        "Description": "Capable and determined.",
+        "DropSource": "",
+        "Icon": "https://api.avakot.org/v1/I/BeaverSpirit.png",
+        "ItemID": "Beaver Totem",
+        "Stats": null
+      },
+      {
+        "Bonuses": null,
+        "Description": "Docile yet armed by bone.",
+        "DropSource": "",
+        "Icon": "https://api.avakot.org/v1/I/FawnSpirit.png",
+        "ItemID": "Deer Totem",
+        "Stats": null
+      },
+      {
+        "Bonuses": null,
+        "Description": "Slick and playful as water itself.",
+        "DropSource": "",
+        "Icon": "https://api.avakot.org/v1/I/DuckSpirit.png",
+        "ItemID": "Duck Totem",
+        "Stats": null
+      },
+      {
+        "Bonuses": null,
+        "Description": "A symbol of health and luck.",
+        "DropSource": "",
+        "Icon": "https://api.avakot.org/v1/I/RabbitSpirit.png",
+        "ItemID": "Rabbit Totem",
+        "Stats": null
+      },
+      {
+        "Bonuses": null,
+        "Description": "Sharp-toothed and resourceful.",
+        "DropSource": "",
+        "Icon": "https://api.avakot.org/v1/I/RatSpirit.png",
+        "ItemID": "Rat Totem",
+        "Stats": null
+      },
+      {
+        "Bonuses": [
+          "Attack{\n  Default{+$1 Attack Speed},\n  Bow{+$1 Charge Rate}\n}",
+          "Defense{\n  Default{+$1 Parry Window}\n}",
+          "Utility{\n  Default{Additional +$1 Smite Chance}\n}"
+        ],
+        "Description": "Alca's nimblest courier.",
+        "DropSource": "",
+        "Icon": "https://api.avakot.org/v1/I/SquirrelSpirit.png",
+        "ItemID": "Squirrel Totem",
+        "Stats": {
+          "Attack": {
+            "Bow": [
+              [
+                "9%",
+                "11%",
+                "13%",
+                "15%"
+              ]
+            ],
+            "Flyblade": [
+              [
+                "4%",
+                "6%",
+                "8%",
+                "10%"
+              ]
+            ],
+            "Longblade": [
+              [
+                "4%",
+                "6%",
+                "8%",
+                "10%"
+              ]
+            ],
+            "Magick": [
+              [
+                "9%",
+                "11%",
+                "13%",
+                "15%"
+              ]
+            ],
+            "Polearm": [
+              [
+                "4%",
+                "6%",
+                "8%",
+                "10%"
+              ]
+            ],
+            "Shield": [
+              [
+                "4%",
+                "6%",
+                "8%",
+                "10%"
+              ]
+            ],
+            "Shortblade": [
+              [
+                "4%",
+                "6%",
+                "8%",
+                "10%"
+              ]
+            ]
+          },
+          "Defense": {
+            "Bow": [
+              [
+                "15%",
+                "17%",
+                "19%",
+                "21%"
+              ]
+            ],
+            "Flyblade": [
+              [
+                "10%",
+                "12%",
+                "14%",
+                "16%"
+              ]
+            ],
+            "Longblade": [
+              [
+                "10%",
+                "12%",
+                "14%",
+                "16%"
+              ]
+            ],
+            "Magick": [
+              [
+                "20%",
+                "22%",
+                "24%",
+                "26%"
+              ]
+            ],
+            "Polearm": [
+              [
+                "10%",
+                "12%",
+                "14%",
+                "16%"
+              ]
+            ],
+            "Shield": [
+              [
+                "10%",
+                "12%",
+                "14%",
+                "16%"
+              ]
+            ],
+            "Shortblade": [
+              [
+                "10%",
+                "12%",
+                "14%",
+                "16%"
+              ]
+            ]
+          },
+          "Utility": {
+            "Bow": [
+              [
+                "5%",
+                "5.9%",
+                "7.1%",
+                "7.7%"
+              ]
+            ],
+            "Flyblade": [
+              [
+                "2%",
+                "3%",
+                "4%",
+                "5%"
+              ]
+            ],
+            "Longblade": [
+              [
+                "2%",
+                "3%",
+                "4%",
+                "5%"
+              ]
+            ],
+            "Magick": [
+              [
+                "5%",
+                "5.9%",
+                "7.1%",
+                "7.7%"
+              ]
+            ],
+            "Polearm": [
+              [
+                "2%",
+                "3%",
+                "4%",
+                "5%"
+              ]
+            ],
+            "Shield": [
+              [
+                "2%",
+                "3%",
+                "4%",
+                "5%"
+              ]
+            ],
+            "Shortblade": [
+              [
+                "2%",
+                "3%",
+                "4%",
+                "5%"
+              ]
+            ]
+          }
+        }
+      }
+    ]
+}

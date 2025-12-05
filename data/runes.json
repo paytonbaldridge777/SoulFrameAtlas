@@ -1,0 +1,220 @@
+{
+    "runes": [
+      {
+        "AddedSlot": "1:Utility",
+        "Description": "The rune of the wind and the magicks it carries.",
+        "DropSource": "Gruul Seeker Ruthos",
+        "Functionality": "Enemies will occasionally be afflicted by a \"bullet attraction\" field when hit by a weapon affected by Alca's Breath. Projectiles will be redirected to affected targets within the field's range, dealing full damage.",
+        "ImgIcon": "https://api.avakot.org/v1/I/AlcaCourage005.png",
+        "Introduced": "P11",
+        "ItemID": "Alca's Breath",
+        "Name": "Alca's Breath",
+        "Rarity": "Common",
+        "Stats": {
+          "Effect": "$1 Arcanic Damage Bonus",
+          "Ranks": "100%/125%/150%/175%",
+          "Duration": "15s/20s/25s/30s"
+        },
+        "WeaponArt": "Bow"
+      },
+      {
+        "AddedSlot": "1:Defence",
+        "Description": "The rune of the erst storm, the root of all rain.",
+        "DropSource": "Wraith of Wastes",
+        "Functionality": "Damaging an enemy using a weapon with Archstorm active will trigger a delayed lightning strike on the target, dealing bonus Voltaic damage. The bonus Voltaic damage does not modify the weapon's base damage.",
+        "ImgIcon": "https://api.avakot.org/v1/I/AlcaCourage002.png",
+        "Introduced": "P11",
+        "ItemID": "Archstorm",
+        "Name": "Archstorm",
+        "Rarity": "Common",
+        "Stats": {
+          "Effect": "$1 Voltaic Damage Bonus",
+          "Ranks": "50%/75%/100%/125%",
+          "Duration": "15s/20s/25s/30s"
+        },
+        "WeaponArt": "Magick"
+      },
+      {
+        "AddedSlot": "1:Attack",
+        "Description": "The rune of the ember, ready to be stoked.",
+        "DropSource": "Etheldred The Weaver",
+        "Functionality": "Imbues the weapon and transforms its damage type to Flame damage. Attacks gain the listed Flame Damage Bonus and cause an explosion on hit.",
+        "ImgIcon": "https://api.avakot.org/v1/I/AlcaCourage011.png",
+        "Introduced": "P12",
+        "ItemID": "Emberaught",
+        "Name": "Emberaught",
+        "Rarity": "Common",
+        "Stats": {
+          "Effect": "$1 Flame Damage Bonus",
+          "Ranks": "40%/60%/80%/100%",
+          "Duration": "12s/15s/18s/20s"
+        },
+        "WeaponArt": "Short Blade"
+      },
+      {
+        "AddedSlot": "1:Attack",
+        "Description": "The rune of the eternal flame, never to be stifled.",
+        "DropSource": "Castellan Malrog;Castellan Huthra;Mendicant King",
+        "Functionality": "Imbues the weapon and transforms its damage type to Flame damage. Attacks gain the listed Flame Damage Bonus and cause an explosion on hit.",
+        "ImgIcon": "https://api.avakot.org/v1/I/AlcaCourage010.png",
+        "Introduced": "P12",
+        "ItemID": "Everflame (Greatsword)",
+        "Name": "Everflame (Greatsword)",
+        "Rarity": "Common",
+        "Stats": {
+          "Effect": "$1 Flame Damage Bonus",
+          "Ranks": "40%/60%/80%/100%",
+          "Duration": "12s/15s/18s/20s"
+        },
+        "WeaponArt": "Greatsword"
+      },
+      {
+        "AddedSlot": "1:Attack",
+        "Description": "The rune of the eternal flame, never to be stifled.",
+        "DropSource": "Knell Knight",
+        "Functionality": "Imbues the weapon and transforms its damage type to Flame damage. Attacks gain the listed Flame Damage Bonus and cause an explosion on hit.",
+        "ImgIcon": "https://api.avakot.org/v1/I/AlcaCourage006.png",
+        "Introduced": "P11",
+        "ItemID": "Everflame (Long Blade)",
+        "Name": "Everflame (Long Blade)",
+        "Rarity": "Common",
+        "Stats": {
+          "Effect": "$1 Flame Damage Bonus",
+          "Ranks": "40%/60%/80%/100%",
+          "Duration": "12s/15s/18s/20s"
+        },
+        "WeaponArt": "Long Blade"
+      },
+      {
+        "AddedSlot": "1:Attack",
+        "Description": "The rune of the Fey Torch, alight 'yond the veil.",
+        "DropSource": "Sinecure-Errant Gawth;Thrice-bound Impidh",
+        "Functionality": "Imbues the weapon and transforms its damage type to Flame damage. Attacks gain the listed Flame Damage Bonus and cause an explosion on hit.",
+        "ImgIcon": "https://api.avakot.org/v1/I/AlcaCourage012.png",
+        "Introduced": "P12",
+        "ItemID": "Forburn",
+        "Name": "Forburn",
+        "Rarity": "Common",
+        "Stats": {
+          "Effect": "$1 Flame Damage Bonus",
+          "Ranks": "40%/60%/80%/100%",
+          "Duration": "12s/15s/18s/20s"
+        },
+        "WeaponArt": "Shield"
+      },
+      {
+        "AddedSlot": "1:Defence",
+        "Description": "The rune of the gusts ever-whirling.",
+        "DropSource": "Discharged Nimrod",
+        "Functionality": "Damaging an enemy using a weapon with Hurlwind active will trigger a delayed lightning strike on the target, dealing bonus Voltaic damage. The bonus Voltaic damage does not modify the weapon's base damage.",
+        "ImgIcon": "https://api.avakot.org/v1/I/AlcaCourage013.png",
+        "Introduced": "P12",
+        "ItemID": "Hurlwind",
+        "Name": "Hurlwind",
+        "Rarity": "Common",
+        "Stats": {
+          "Effect": "$1 Voltaic Damage Bonus",
+          "Ranks": "50%/75%/100%/125%",
+          "Duration": "15s/20s/25s/30s"
+        },
+        "WeaponArt": "Flyblade"
+      },
+      {
+        "AddedSlot": "1:Defence",
+        "Description": "The rune of sharp reflections.",
+        "DropSource": "Sinecure-errant Gawth#Cogah;Gruul Seeker Sontaro#Cogah;Fore-Feller Hewyl#Cogah",
+        "Functionality": "Grants bonus damage when parrying attacks.",
+        "ImgIcon": "https://api.avakot.org/v1/I/AlcaGrace008.png",
+        "Introduced": "P12",
+        "ItemID": "The Durglint",
+        "Name": "The Durglint",
+        "Rarity": "Common",
+        "Stats": {
+          "Effect": "Parry Damage",
+          "Ranks": "50/75/100/100"
+        },
+        "WeaponArt": "Shield"
+      },
+      {
+        "AddedSlot": "1:Utility",
+        "Description": "The rune of smoke ephemeral.",
+        "DropSource": "Etheldred The Weaver#Cogah;Seachnall The Widower#Cogah",
+        "Functionality": "Grants invisibility on activation. Stealth kills while active extend the duration.",
+        "ImgIcon": "https://api.avakot.org/v1/I/AlcaGrace001.png",
+        "Introduced": "P12",
+        "ItemID": "The Flitsmoke",
+        "Name": "The Flitsmoke",
+        "Rarity": "Common",
+        "Stats": {
+          "Effect": "Duration",
+          "Duration": "15s/20s/25s/25s"
+        },
+        "WeaponArt": "Short Blade"
+      },
+      {
+        "AddedSlot": "1:Attack",
+        "Description": "The rune of held breath bursting free.",
+        "DropSource": "Wraith of Wastes#Cogah",
+        "Functionality": "Marks enemies on hit; when marked enemies die, they trigger a radial explosion dealing damage to nearby enemies. The mark and blast persist after deactivation. Does not explode if the initial hit kills the target.",
+        "ImgIcon": "https://api.avakot.org/v1/I/AlcaCourage004.png",
+        "Introduced": "P12",
+        "ItemID": "The Hollowing",
+        "Name": "The Hollowing",
+        "Rarity": "Common",
+        "Stats": {
+          "Effect": "Explosion Damage",
+          "Ranks": "50/75/100/125"
+        },
+        "WeaponArt": "Magick"
+      },
+      {
+        "AddedSlot": "1:Utility",
+        "Description": "The rune of the phantoms formed in mist",
+        "DropSource": "Knell Knight#Cogah",
+        "Functionality": "Turns melee attacks into ranged projectiles on activation.",
+        "ImgIcon": "https://api.avakot.org/v1/I/AlcaCourage008.png",
+        "Introduced": "P12",
+        "ItemID": "The Mistgale",
+        "Name": "The Mistgale",
+        "Rarity": "Common",
+        "Stats": {
+          "Effect": "Projectile Damage",
+          "Ranks": "75/100/125/150"
+        },
+        "WeaponArt": "Long Blade"
+      },
+      {
+        "AddedSlot": "1:Attack",
+        "Description": "The rune of the mighty hail.",
+        "DropSource": "Gruul Seeker Ruthos#Cogah",
+        "Functionality": "Summons an Arrow Hail on activation.",
+        "ImgIcon": "https://api.avakot.org/v1/I/AlcaSpirit008.png",
+        "Introduced": "P12",
+        "ItemID": "The Torrent",
+        "Name": "The Torrent",
+        "Rarity": "Common",
+        "Stats": {
+          "Effect": "Damage",
+          "Ranks": "30/30/30/30"
+        },
+        "WeaponArt": "Bow"
+      },
+      {
+        "AddedSlot": "1:Attack",
+        "Description": "The rune of the Fey Torch, alight 'yond the veil.",
+        "DropSource": "Gourdo#Cogah;Kabocha",
+        "Functionality": "Imbues the weapon and transforms its damage type to Flame damage. Attacks gain the listed Flame Damage Bonus and cause an explosion on hit.",
+        "ImgIcon": "https://api.avakot.org/v1/I/AlcaCourage014.png",
+        "Introduced": "P12",
+        "ItemID": "Torcheternal",
+        "Name": "Torcheternal",
+        "Rarity": "Common",
+        "Stats": {
+          "Effect": "$1 Flame Damage Bonus",
+          "Ranks": "40%/60%/80%/100%",
+          "Duration": "12s/15s/18s/20s"
+        },
+        "WeaponArt": "Polearm"
+      }
+    ]
+}

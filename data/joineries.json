@@ -1,0 +1,298 @@
+{
+    "joineries": [
+      {
+        "Description": "A dull ore with a reddish tint. A fine metal, traditionally used in the art of Steelsinging. Verite was a favourite medium for talisman makers of the Quiet Years, as it was thought to bring stability in turbulent times. Today, it remains a reliable joinery for mending melee weapons.",
+        "ImgIcon": "https://api.avakot.org/v1/I/Verite.png",
+        "InternalID": null,
+        "ItemID": "Verite",
+        "Name": "Verite",
+        "Rarity": null,
+        "Stats": null,
+        "Tier": {
+          "Rusted": {
+            "InternalID": "KintsugiUpgradeMeleeC",
+            "Stats": [
+              "+15 Damage"
+            ],
+            "Rarity": "Common",
+            "DropSource": ""
+          },
+          "Tempered": {
+            "InternalID": "KintsugiUpgradeMeleeUC",
+            "Stats": [
+              "+20 Damage",
+              "-10% Parry stability cost"
+            ],
+            "Rarity": "Uncommon",
+            "DropSource": ""
+          },
+          "Polished": {
+            "InternalID": "KintsugiUpgradeMeleeR",
+            "Stats": [
+              "+25 Damage",
+              "-15% Parry stability cost",
+              "+25 Perfect Throw damage"
+            ],
+            "Rarity": "Rare",
+            "DropSource": ""
+          },
+          "Blessed": {
+            "InternalID": "KintsugiUpgradeMeleeSR",
+            "Stats": [
+              "+25 Damage",
+              "-15% Parry stability cost",
+              "+25 Perfect Throw damage"
+            ],
+            "Rarity": "Rare",
+            "DropSource": ""
+          }
+        },
+        "Tiers": null,
+        "Type": [
+          "Short Blade",
+          "Long Blade",
+          "Polearm",
+          "Shield",
+          "Greatsword"
+        ]
+      },
+      {
+        "Description": "A metal with blueish iridescence, traditionally used in the art of Steelsinging. Though its melting point is remarkably low, Feybalt is a powerful conductor for magicks- fey and otherwise. Sure to be the perfect joinery for mending magick weapons.",
+        "ImgIcon": "https://api.avakot.org/v1/I/Feybalt.png",
+        "InternalID": null,
+        "ItemID": "Feybalt",
+        "Name": "Feybalt",
+        "Rarity": null,
+        "Stats": null,
+        "Tier": {
+          "Rusted": {
+            "InternalID": "KintsugiUpgradeCasterC",
+            "Stats": [
+              "+10 Consecutive damage"
+            ],
+            "Rarity": "Common",
+            "DropSource": ""
+          },
+          "Tempered": {
+            "InternalID": "KintsugiUpgradeCasterUC",
+            "Stats": [
+              "+15 Consecutive damage",
+              "-20% Parry stability cost"
+            ],
+            "Rarity": "Uncommon",
+            "DropSource": ""
+          },
+          "Polished": {
+            "InternalID": "KintsugiUpgradeCasterR",
+            "Stats": [
+              "+20 Consecutive damage",
+              "-25% Parry stability cost",
+              "+5 Throw distance"
+            ],
+            "Rarity": "Rare",
+            "DropSource": ""
+          },
+          "Blessed": {
+            "InternalID": "KintsugiUpgradeCasterSR",
+            "Stats": [
+              "+20 Consecutive damage",
+              "-25% Parry stability cost",
+              "+5 Throw distance"
+            ],
+            "Rarity": "Rare",
+            "DropSource": ""
+          }
+        },
+        "Tiers": null,
+        "Type": [
+          "Magick"
+        ]
+      },
+      {
+        "Description": "An incredibly smooth ball of silvern metal, traditionally used in the art of Steelsinging. Once thought to be stray bubbles, floated 'way from the silvern sea. Though this theory is disregarded by most Pensive's today, it would explain this ore's unnatural lightness. The ideal joinery for mending ranged weapons.",
+        "ImgIcon": "https://api.avakot.org/v1/I/Quicksilver.png",
+        "InternalID": null,
+        "ItemID": "Quicksilver",
+        "Name": "Quicksilver",
+        "Rarity": null,
+        "Stats": null,
+        "Tier": {
+          "Rusted": {
+            "InternalID": "KintsugiUpgradeRangedC",
+            "Stats": [
+              "+10 Damage"
+            ],
+            "Rarity": "Common",
+            "DropSource": ""
+          },
+          "Tempered": {
+            "InternalID": "KintsugiUpgradeRangedUC",
+            "Stats": [
+              "+15 Damage",
+              "+10% Weapon charge rate"
+            ],
+            "Rarity": "Uncommon",
+            "DropSource": ""
+          },
+          "Polished": {
+            "InternalID": "KintsugiUpgradeRangedR",
+            "Stats": [
+              "+20 Damage",
+              "+20% Weapon charge rate",
+              "+25% Headshot multiplier"
+            ],
+            "Rarity": "Rare",
+            "DropSource": ""
+          },
+          "Blessed": {
+            "InternalID": "KintsugiUpgradeRangedSR",
+            "Stats": [
+              "+20 Damage",
+              "+20% Weapon charge rate",
+              "+25% Headshot multiplier"
+            ],
+            "Rarity": "Rare",
+            "DropSource": ""
+          }
+        },
+        "Tiers": null,
+        "Type": [
+          "Bow",
+          "Flyblade"
+        ]
+      },
+      {
+        "Description": "A warm-gold metal, traditionally used in the art of Steelsinging. Found most frequently in the coffers of Aureli traders, Gildaur is a rare import. For good reason. It is flexible, lightweight and strong in equal measures, a fine joinery for anything that needs mending.",
+        "ImgIcon": "https://api.avakot.org/v1/I/Gildaur.png",
+        "InternalID": null,
+        "ItemID": "Gildaur",
+        "Name": "Gildaur",
+        "Rarity": null,
+        "Stats": null,
+        "Tier": null,
+        "Tiers": {
+          "Rusted": {
+            "InternalID": "KintsugiUpgradeDefenseC",
+            "Stats": [
+              "+10 Damage",
+              "-20% Parry stability cost"
+            ],
+            "Rarity": "Common",
+            "DropSource": ""
+          },
+          "Tempered": {
+            "InternalID": "KintsugiUpgradeDefenseUC",
+            "Stats": [
+              "+15 Damage",
+              "-40% Parry stability cost"
+            ],
+            "Rarity": "Uncommon",
+            "DropSource": ""
+          },
+          "Polished": {
+            "InternalID": "KintsugiUpgradeDefenseR",
+            "Stats": [
+              "+20 Damage",
+              "-50% Parry stability cost",
+              "+4% Life steal"
+            ],
+            "Rarity": "Rare",
+            "DropSource": ""
+          },
+          "Blessed": {
+            "InternalID": "KintsugiUpgradeDefenseSR",
+            "Stats": [
+              "+20 Damage",
+              "-50% Parry stability cost",
+              "+4% Life steal"
+            ],
+            "Rarity": "Rare",
+            "DropSource": ""
+          }
+        },
+        "Type": [
+          "All Weapons"
+        ]
+      },
+      {
+        "Description": "A dull gold tinged with smoke. A fine metal, traditionally used in the art of Steelsinging. Once mined plentifully in the Mines of Borro, Grey Gold is a reliable joinery for broken weapons.",
+        "ImgIcon": "https://api.avakot.org/v1/I/Kintsugi.png",
+        "InternalID": "KintsugiUpgradeA",
+        "ItemID": "Grey Gold",
+        "Name": "Grey Gold",
+        "Rarity": "Common",
+        "Stats": [
+          "None"
+        ],
+        "Tier": null,
+        "Tiers": null,
+        "Type": [
+          "Weapon"
+        ]
+      },
+      {
+        "Description": "A vibrant golden ore, traditionally used in the art of Steelsinging. So named for its bright reddish glint, Sun Gold grants broken weapons the luck of the stars when used as a joinery.",
+        "ImgIcon": "https://api.avakot.org/v1/I/Kintsugi.png",
+        "InternalID": "KintsugiUpgradeB",
+        "ItemID": "Sun Gold",
+        "Name": "Sun Gold",
+        "Rarity": "Common",
+        "Stats": [
+          "+1 Damage"
+        ],
+        "Tier": null,
+        "Tiers": null,
+        "Type": [
+          "Weapon"
+        ]
+      },
+      {
+        "Description": "A silver-white metal of great value, traditionally used in the art of Steelsinging. Forming a seamless fusion twixt shattered parts, Palladium fortifies broken weapons when used as a joinery.",
+        "ImgIcon": "https://api.avakot.org/v1/I/Kintsugi.png",
+        "InternalID": "KintsugiUpgradeC",
+        "ItemID": "Palladium",
+        "Name": "Palladium",
+        "Rarity": "Common",
+        "Stats": [
+          "+2 Damage"
+        ],
+        "Tier": null,
+        "Tiers": null,
+        "Type": [
+          "Weapon"
+        ]
+      },
+      {
+        "Description": "An iridescent metal, traditionally used in the art of Steelsinging. Thought to be the currency of the Fey. When used as a joinery, Eldore fastens severed weapons with the strength of bound realms.",
+        "ImgIcon": "https://api.avakot.org/v1/I/Kintsugi.png",
+        "InternalID": "KintsugiUpgradeD",
+        "ItemID": "Eldore",
+        "Name": "Eldore",
+        "Rarity": "Common",
+        "Stats": [
+          "+3 Damage"
+        ],
+        "Tier": null,
+        "Tiers": null,
+        "Type": [
+          "Weapon"
+        ]
+      },
+      {
+        "Description": "A blue-tinged metal, traditionally used in the art of Steelsinging. It is an unusually flexible joinery, making it a perfect binder for broken armour.",
+        "ImgIcon": "https://api.avakot.org/v1/I/Kintsugi.png",
+        "InternalID": "KintsugiUpgradeArmourA",
+        "ItemID": "Tribalt",
+        "Name": "Tribalt",
+        "Rarity": "Common",
+        "Stats": [
+          "None"
+        ],
+        "Tier": null,
+        "Tiers": null,
+        "Type": [
+          "Armour"
+        ]
+      }
+    ]
+}
