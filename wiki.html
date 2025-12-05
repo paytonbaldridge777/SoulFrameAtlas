@@ -50,8 +50,8 @@
             placeholder="Search items, enemies, weapons, pacts, and locations (e.g., 'Sproutfolk', 'Ode', 'Defender Pact', 'Fore-Feller')"
             class="wiki-search-input"
           />
-
-          <div class="wiki-tabs" role="tablist">
+     	<!--
+		<div class="wiki-tabs" role="tablist">
             <button class="wiki-tab active" data-target="all" type="button">All</button>
             <button class="wiki-tab" data-target="items" type="button">Items</button>
 			<button class="wiki-tab" data-target="weapons" type="button">Weapons</button>
@@ -59,7 +59,8 @@
             <button class="wiki-tab" data-target="pacts" type="button">Pacts</button>
             <button class="wiki-tab" data-target="locations" type="button">Locations</button>
           </div>
-        </div>
+		  -->
+        </div>	
       </section>
 
       <!-- Category Cards (Landing View) -->
@@ -67,7 +68,7 @@
         <div class="wiki-category-grid">
           <!-- Items Category Card -->
           <div class="wiki-category-card" data-category="items">
-            <div class="wiki-category-card-icon">📦</div>
+            <div class="wiki-category-card-icon"><img src="icons/materials.png" alt="Materials"></div>
             <h3 class="wiki-category-card-title">Items & Crafting Materials</h3>
             <p class="wiki-category-card-desc">Resources, ingredients, and crafting materials found throughout Midrath</p>
             <div class="wiki-category-card-count" id="itemsCount">Loading...</div>
@@ -75,7 +76,7 @@
 
           <!-- Weapons Category Card -->
           <div class="wiki-category-card" data-category="weapons">
-            <div class="wiki-category-card-icon">⚔️</div>
+            <div class="wiki-category-card-icon"><img src="icons/weapons.png" alt="Weapons"></div>
             <h3 class="wiki-category-card-title">Weapons</h3>
             <p class="wiki-category-card-desc">Melee, ranged, and spirit weapons with full stats and crafting info</p>
             <div class="wiki-category-card-count" id="weaponsCount">Loading...</div>
@@ -83,7 +84,7 @@
 
           <!-- Enemies Category Card -->
           <div class="wiki-category-card" data-category="enemies">
-            <div class="wiki-category-card-icon">👹</div>
+            <div class="wiki-category-card-icon"><img src="icons/enemies.png" alt="Enemies"></div>
             <h3 class="wiki-category-card-title">Enemies & World Bosses</h3>
             <p class="wiki-category-card-desc">Creatures, bosses, and threats across all regions</p>
             <div class="wiki-category-card-count" id="enemiesCount">Loading...</div>
@@ -91,7 +92,7 @@
 
           <!-- Pacts Category Card -->
           <div class="wiki-category-card" data-category="pacts">
-            <div class="wiki-category-card-icon">🛡️</div>
+            <div class="wiki-category-card-icon"><img src="icons/pacts.png" alt="Pacts"></div>
             <h3 class="wiki-category-card-title">Pacts & Roles</h3>
             <p class="wiki-category-card-desc">Combat styles, virtues, and defensive strategies</p>
             <div class="wiki-category-card-count" id="pactsCount">Loading...</div>
@@ -99,7 +100,7 @@
 
           <!-- Locations Category Card -->
           <div class="wiki-category-card" data-category="locations">
-            <div class="wiki-category-card-icon">🗺️</div>
+            <div class="wiki-category-card-icon"><img src="icons/locations.png" alt="Locations"></div>
             <h3 class="wiki-category-card-title">Locations</h3>
             <p class="wiki-category-card-desc">Key areas, dungeons, and points of interest</p>
             <div class="wiki-category-card-count" id="locationsCount">Loading...</div>
@@ -284,4 +285,5 @@
 
   <script src="assets/js/main.js"></script>
 </body>
+
 </html>
