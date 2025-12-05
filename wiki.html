@@ -23,24 +23,27 @@
       transition: all 0.3s ease;
     }
     
-    .wiki-circle-icon {
-	  display:inline-block;
-	  width:72px; height:72px;
-	  border-radius:50%;
-	  padding:6px;
-	  background: linear-gradient(180deg,#ffffff, #f0f4ff);
-	  box-shadow: 0 6px 20px rgba(16,24,40,0.08);
-	  align-items:center;
-	  justify-content:center;
-	  display:flex;
+    .wiki-category-card-icon {
+	  display: inline-block;
+	  padding: 8px;                    /* space around the image */
+	  background: linear-gradient(180deg,#fff,#f5f7fb);
+	  border-radius: 12px;             /* rounded card container */
+	  box-shadow: 0 4px 10px rgba(15,23,42,0.08);
 	}
 	
-	.wiki-circle-icon img {
-	  width:56px; height:56px;
-	  border-radius:50%;
-	  object-fit:cover;
-	  display:block;
-	  border:1px solid rgba(255,255,255,0.4); /* subtle highlight */
+	.wiki-category-card-icon img {
+	  display: block;
+	  width: 48px;
+	  height: 48px;
+	  object-fit: cover;               /* crop/fit nicely */
+	  border-radius: 10px;             /* rounded icon corners */
+	  transition: transform .18s ease, box-shadow .18s ease;
+	}
+	
+	/* hover micro interaction */
+	.wiki-category-card-icon:hover img {
+	  transform: translateY(-3px) scale(1.04);
+	  box-shadow: 0 6px 18px rgba(15,23,42,0.12);
 	}
     
     /* Enhanced glow on hover 
