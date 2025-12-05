@@ -2115,3 +2115,146 @@ footer {
     height: 35px;
   }
 }
+
+/* =====================================================
+   WIKI CATEGORY CARDS (LANDING PAGE)
+   ===================================================== */
+
+.wiki-category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin: 1rem 0;
+}
+
+.wiki-category-card {
+  position: relative;
+  padding: 1.75rem 1.5rem;
+  border-radius: var(--radius-lg);
+  background: radial-gradient(
+      circle at top left,
+      rgba(184, 242, 139, 0.06),
+      transparent 70%
+    ),
+    linear-gradient(160deg, #0a0f16, #05070c);
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+/* Left accent bar for category cards */
+.wiki-category-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    var(--accent-alt),
+    rgba(134, 216, 255, 0.8)
+  );
+  transition: all 0.3s ease;
+  opacity: 0.6;
+}
+
+.wiki-category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+  border-color: rgba(184, 242, 139, 0.4);
+}
+
+.wiki-category-card:hover::before {
+  opacity: 1;
+  width: 6px;
+  background: linear-gradient(
+    to bottom,
+    var(--accent),
+    var(--accent-alt)
+  );
+  filter: drop-shadow(0 0 8px var(--accent-alt));
+}
+
+.wiki-category-card-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+  transition: transform 0.3s ease;
+}
+
+.wiki-category-card:hover .wiki-category-card-icon {
+  transform: scale(1.1);
+}
+
+.wiki-category-card-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+  letter-spacing: 0.02em;
+}
+
+.wiki-category-card-desc {
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.wiki-category-card-count {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(184, 242, 139, 0.1);
+  border: 1px solid var(--accent-alt);
+  color: var(--accent-alt);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+/* Back button */
+.wiki-back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: var(--muted);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 1.5rem;
+}
+
+.wiki-back-button:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--accent);
+  color: var(--accent-alt);
+  transform: translateX(-2px);
+}
+
+/* Responsive category grid */
+@media (max-width: 900px) {
+  .wiki-category-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .wiki-category-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .wiki-category-card {
+    padding: 1.5rem 1.25rem;
+  }
+}

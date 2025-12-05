@@ -62,8 +62,55 @@
         </div>
       </section>
 
-      <section class="section">
-        <!-- Tab panels -->
+      <!-- Category Cards (Landing View) -->
+      <section class="section" id="categoryCardsSection">
+        <div class="wiki-category-grid">
+          <!-- Items Category Card -->
+          <div class="wiki-category-card" data-category="items">
+            <div class="wiki-category-card-icon">📦</div>
+            <h3 class="wiki-category-card-title">Items & Crafting Materials</h3>
+            <p class="wiki-category-card-desc">Resources, ingredients, and crafting materials found throughout Midrath</p>
+            <div class="wiki-category-card-count" id="itemsCount">Loading...</div>
+          </div>
+
+          <!-- Weapons Category Card -->
+          <div class="wiki-category-card" data-category="weapons">
+            <div class="wiki-category-card-icon">⚔️</div>
+            <h3 class="wiki-category-card-title">Weapons</h3>
+            <p class="wiki-category-card-desc">Melee, ranged, and spirit weapons with full stats and crafting info</p>
+            <div class="wiki-category-card-count" id="weaponsCount">Loading...</div>
+          </div>
+
+          <!-- Enemies Category Card -->
+          <div class="wiki-category-card" data-category="enemies">
+            <div class="wiki-category-card-icon">👹</div>
+            <h3 class="wiki-category-card-title">Enemies & World Bosses</h3>
+            <p class="wiki-category-card-desc">Creatures, bosses, and threats across all regions</p>
+            <div class="wiki-category-card-count" id="enemiesCount">Loading...</div>
+          </div>
+
+          <!-- Pacts Category Card -->
+          <div class="wiki-category-card" data-category="pacts">
+            <div class="wiki-category-card-icon">🛡️</div>
+            <h3 class="wiki-category-card-title">Pacts & Roles</h3>
+            <p class="wiki-category-card-desc">Combat styles, virtues, and defensive strategies</p>
+            <div class="wiki-category-card-count" id="pactsCount">Loading...</div>
+          </div>
+
+          <!-- Locations Category Card -->
+          <div class="wiki-category-card" data-category="locations">
+            <div class="wiki-category-card-icon">🗺️</div>
+            <h3 class="wiki-category-card-title">Locations</h3>
+            <p class="wiki-category-card-desc">Key areas, dungeons, and points of interest</p>
+            <div class="wiki-category-card-count" id="locationsCount">Loading...</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Category Content Section (Hidden by default, shown when category selected) -->
+      <section class="section" id="categoryContentSection" style="display: none;">
+        <button class="wiki-back-button" id="backToCategoriesBtn">← Back to Categories</button>
+        
         <div class="wiki-panels">
           <section
             class="wiki-panel"
@@ -149,6 +196,9 @@
             </ul>
           </section>
         </div>
+      </section>
+
+      <!-- Keep the external wikis section below -->
 
         <!-- External wikis / how-to block -->
         <div class="section" style="padding-left:0;padding-right:0;margin-top:1.5rem;">
