@@ -25,20 +25,20 @@
     
     .icon-card.feather-tint img {
       /* Radial gradient mask for feathered edges */
-      -webkit-mask-image: radial-gradient(circle, black 80%, transparent 90%);
-      mask-image: radial-gradient(circle, black 80%, transparent 90%);
+      -webkit-mask-image: radial-gradient(circle, black 50%, transparent 80%);
+      mask-image: radial-gradient(circle, black 50%, transparent 80%);
       filter: drop-shadow(0 0 12px var(--accent)) 
               drop-shadow(0 0 24px var(--accent))
-              brightness(2)
-              saturate(2);
+              brightness(1.5)
+              saturate(1.5);
     }
     
     /* Enhanced glow on hover */
     .wiki-category-card:hover .icon-card.feather-tint img {
       filter: drop-shadow(0 0 16px var(--accent)) 
               drop-shadow(0 0 32px var(--accent))
-              brightness(2.2)
-              saturate(2.2);
+              brightness(1.7)
+              saturate(1.7);
     }
   </style>
 </head>
@@ -319,6 +319,7 @@
 </body>
 
 </html>
+
 
 
 
