@@ -23,22 +23,20 @@
       transition: all 0.3s ease;
     }
     
-    .feather-tint .icon-card img,
     .icon-card.feather-tint img {
       /* Radial gradient mask for feathered edges */
       -webkit-mask-image: radial-gradient(circle, black 40%, transparent 70%);
       mask-image: radial-gradient(circle, black 40%, transparent 70%);
       filter: drop-shadow(0 0 12px var(--accent)) 
-              drop-shadow(0 0 24px rgba(184, 242, 139, 0.4))
+              drop-shadow(0 0 24px var(--accent))
               brightness(1.1)
               saturate(1.2);
     }
     
     /* Enhanced glow on hover */
-    .wiki-category-card:hover .feather-tint img,
     .wiki-category-card:hover .icon-card.feather-tint img {
       filter: drop-shadow(0 0 16px var(--accent)) 
-              drop-shadow(0 0 32px rgba(184, 242, 139, 0.6))
+              drop-shadow(0 0 32px var(--accent))
               brightness(1.2)
               saturate(1.3);
     }
