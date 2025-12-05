@@ -1122,8 +1122,8 @@ function setupWikiCategoryNavigation() {
     backButton.addEventListener('click', showCategoryCards);
   }
 
-  // Update counts after data loads
-  updateCategoryCounts();
+  // This will be called after data loads to update counts
+  return updateCategoryCounts;
 }
 
 // =====================================================
@@ -1780,10 +1780,15 @@ let buildDataLoaded = false;
 
   setupGuideFilters();
   setupGuideSearch();
-  setupWikiCategoryNavigation();
+  const updateCategoryCounts = setupWikiCategoryNavigation();
   setupWikiTabs();
   setupWikiSearch();
   setupWikiImageModal();
+  
+  // Update category counts after all data is loaded
+  if (updateCategoryCounts) {
+    updateCategoryCounts();
+  }
 })();
 
 
