@@ -9,6 +9,38 @@
     content="Soulframe Atlas mini-wiki index for items, enemies, pacts, and resources, with links to full community wikis."
   />
   <link rel="stylesheet" href="assets/css/styles.css" />
+  
+  <!-- Icon feathered-edge and glow effect styles -->
+  <style>
+    /* Feathered-edge mask and colored glow/tint for icons */
+    .icon-card {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .icon-card img {
+      display: block;
+      transition: all 0.3s ease;
+    }
+    
+    .icon-card.feather-tint img {
+      /* Radial gradient mask for feathered edges */
+      -webkit-mask-image: radial-gradient(circle, black 40%, transparent 70%);
+      mask-image: radial-gradient(circle, black 40%, transparent 70%);
+      filter: drop-shadow(0 0 12px var(--accent)) 
+              drop-shadow(0 0 24px var(--accent))
+              brightness(1.1)
+              saturate(1.2);
+    }
+    
+    /* Enhanced glow on hover */
+    .wiki-category-card:hover .icon-card.feather-tint img {
+      filter: drop-shadow(0 0 16px var(--accent)) 
+              drop-shadow(0 0 32px var(--accent))
+              brightness(1.2)
+              saturate(1.3);
+    }
+  </style>
 </head>
 <body>
   <div class="page">
@@ -68,7 +100,7 @@
         <div class="wiki-category-grid">
           <!-- Items Category Card -->
           <div class="wiki-category-card" data-category="items">
-            <div class="wiki-category-card-icon"><img src="icons/materials.png" alt="Materials"></div>
+            <div class="wiki-category-card-icon icon-card feather-tint"><img src="./icons/materials.png" alt="Materials" width="64" height="64" loading="lazy"></div>
             <h3 class="wiki-category-card-title">Items & Crafting Materials</h3>
             <p class="wiki-category-card-desc">Resources, ingredients, and crafting materials found throughout Midrath</p>
             <div class="wiki-category-card-count" id="itemsCount">Loading...</div>
@@ -76,7 +108,7 @@
 
           <!-- Weapons Category Card -->
           <div class="wiki-category-card" data-category="weapons">
-            <div class="wiki-category-card-icon"><img src="icons/weapons.png" alt="Weapons"></div>
+            <div class="wiki-category-card-icon icon-card feather-tint"><img src="./icons/weapons.png" alt="Weapons" width="64" height="64" loading="lazy"></div>
             <h3 class="wiki-category-card-title">Weapons</h3>
             <p class="wiki-category-card-desc">Melee, ranged, and spirit weapons with full stats and crafting info</p>
             <div class="wiki-category-card-count" id="weaponsCount">Loading...</div>
@@ -84,7 +116,7 @@
 
           <!-- Enemies Category Card -->
           <div class="wiki-category-card" data-category="enemies">
-            <div class="wiki-category-card-icon"><img src="icons/enemies.png" alt="Enemies"></div>
+            <div class="wiki-category-card-icon icon-card feather-tint"><img src="./icons/enemies.png" alt="Enemies" width="64" height="64" loading="lazy"></div>
             <h3 class="wiki-category-card-title">Enemies & World Bosses</h3>
             <p class="wiki-category-card-desc">Creatures, bosses, and threats across all regions</p>
             <div class="wiki-category-card-count" id="enemiesCount">Loading...</div>
@@ -92,7 +124,7 @@
 
           <!-- Pacts Category Card -->
           <div class="wiki-category-card" data-category="pacts">
-            <div class="wiki-category-card-icon"><img src="icons/pacts.png" alt="Pacts"></div>
+            <div class="wiki-category-card-icon icon-card feather-tint"><img src="./icons/pacts.png" alt="Pacts" width="64" height="64" loading="lazy"></div>
             <h3 class="wiki-category-card-title">Pacts & Roles</h3>
             <p class="wiki-category-card-desc">Combat styles, virtues, and defensive strategies</p>
             <div class="wiki-category-card-count" id="pactsCount">Loading...</div>
@@ -100,7 +132,7 @@
 
           <!-- Locations Category Card -->
           <div class="wiki-category-card" data-category="locations">
-            <div class="wiki-category-card-icon"><img src="icons/locations.png" alt="Locations"></div>
+            <div class="wiki-category-card-icon icon-card feather-tint"><img src="./icons/locations.png" alt="Locations" width="64" height="64" loading="lazy"></div>
             <h3 class="wiki-category-card-title">Locations</h3>
             <p class="wiki-category-card-desc">Key areas, dungeons, and points of interest</p>
             <div class="wiki-category-card-count" id="locationsCount">Loading...</div>
