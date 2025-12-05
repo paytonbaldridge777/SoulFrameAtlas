@@ -176,6 +176,9 @@ async function renderWikiItems() {
     const data = await loadJSON("data/items.json");
     const items = Array.isArray(data) ? data : (data?.items || []);
 
+    // Update count for category card
+    wikiItemCounts.items = items.length;
+
     container.innerHTML = items
       .map((item) => {
         const name =
@@ -285,6 +288,9 @@ async function renderWikiEnemies() {
     const data = await loadJSON("data/enemies.json");
     const enemies = Array.isArray(data) ? data : data?.enemies || [];
 
+    // Update count for category card
+    wikiItemCounts.enemies = enemies.length;
+
     container.innerHTML = enemies
       .map((enemy) => {
         const name = enemy.name || enemy.id || "Unknown Enemy";
@@ -354,6 +360,9 @@ async function renderWikiWeapons() {
   try {
     const data = await loadJSON("data/weapons.json");
     const weapons = Array.isArray(data) ? data : data?.weapons || [];
+
+    // Update count for category card
+    wikiItemCounts.weapons = weapons.length;
 
     container.innerHTML = weapons
       .map((w) => {
@@ -601,6 +610,9 @@ async function renderWikiPacts() {
     const data = await loadJSON("data/pacts.json");
     const pacts = Array.isArray(data) ? data : data?.pacts || [];
 
+    // Update count for category card
+    wikiItemCounts.pacts = pacts.length;
+
     container.innerHTML = pacts
       .map((pact) => {
         const name = pact.name || pact.id || "Unknown Pact";
@@ -816,6 +828,9 @@ async function renderWikiLocations() {
     const data = await loadJSON("data/locations.json");
     const locations = Array.isArray(data) ? data : data?.locations || [];
 
+    // Update count for category card
+    wikiItemCounts.locations = locations.length;
+
     container.innerHTML = locations
       .map((location) => {
         const name = location.name || location.locationName || "Unknown Location";
@@ -1018,6 +1033,100 @@ function setupLocationCardExpansion() {
 }
 
 // =====================================================
+// WIKI CATEGORY NAVIGATION
+// =====================================================
+let wikiItemCounts = {
+  items: 0,
+  weapons: 0,
+  enemies: 0,
+  pacts: 0,
+  locations: 0
+};
+
+function setupWikiCategoryNavigation() {
+  const categoryCards = document.querySelectorAll('.wiki-category-card');
+  const categoryCardsSection = document.getElementById('categoryCardsSection');
+  const categoryContentSection = document.getElementById('categoryContentSection');
+  const backButton = document.getElementById('backToCategoriesBtn');
+  const searchInput = document.getElementById('wikiSearch');
+  const tabsContainer = document.querySelector('.wiki-tabs');
+  const panels = document.querySelectorAll('.wiki-panel');
+
+  if (!categoryCards.length || !categoryCardsSection || !categoryContentSection) return;
+
+  // Update category counts
+  function updateCategoryCounts() {
+    Object.keys(wikiItemCounts).forEach(category => {
+      const countEl = document.getElementById(`${category}Count`);
+      if (countEl) {
+        const count = wikiItemCounts[category];
+        countEl.textContent = `${count} ${count === 1 ? 'item' : 'items'}`;
+      }
+    });
+  }
+
+  // Show a specific category
+  function showCategory(categoryKey) {
+    // Hide category cards, show content section
+    categoryCardsSection.style.display = 'none';
+    categoryContentSection.style.display = 'block';
+    
+    // Hide tabs (we're showing one category only)
+    if (tabsContainer) {
+      tabsContainer.style.display = 'none';
+    }
+
+    // Show only the selected panel
+    panels.forEach((panel) => {
+      const panelKey = panel.dataset.panel;
+      const shouldShow = panelKey === categoryKey;
+      panel.dataset.hidden = shouldShow ? "false" : "true";
+      panel.style.display = shouldShow ? "" : "none";
+    });
+
+    // Scroll to top
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // Return to category cards view
+  function showCategoryCards() {
+    categoryCardsSection.style.display = 'block';
+    categoryContentSection.style.display = 'none';
+    
+    // Show tabs again
+    if (tabsContainer) {
+      tabsContainer.style.display = 'inline-flex';
+    }
+
+    // Clear search
+    if (searchInput) {
+      searchInput.value = '';
+    }
+
+    // Scroll to top
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // Category card click handlers
+  categoryCards.forEach(card => {
+    card.addEventListener('click', () => {
+      const category = card.dataset.category;
+      if (category) {
+        showCategory(category);
+      }
+    });
+  });
+
+  // Back button handler
+  if (backButton) {
+    backButton.addEventListener('click', showCategoryCards);
+  }
+
+  // Update counts after data loads
+  updateCategoryCounts();
+}
+
+// =====================================================
 // WIKI TABS (All / Items / Enemies / Pacts)
 // =====================================================
 function setupWikiTabs() {
@@ -1057,6 +1166,10 @@ function setupWikiSearch() {
   const searchInput = document.getElementById("wikiSearch");
   if (!searchInput) return;
 
+  const categoryCardsSection = document.getElementById('categoryCardsSection');
+  const categoryContentSection = document.getElementById('categoryContentSection');
+  const tabsContainer = document.querySelector('.wiki-tabs');
+
   searchInput.addEventListener("input", () => {
     const query = searchInput.value.toLowerCase().trim();
 
@@ -1067,20 +1180,14 @@ function setupWikiSearch() {
     const tabs = document.querySelectorAll(".wiki-tab");
     const allTab = document.querySelector('.wiki-tab[data-target="all"]');
 
-    // --- No query: restore normal tab behavior ---
+    // --- No query: restore category cards view ---
     if (!query) {
-      // Which tab is currently active?
-      const activeTab = document.querySelector(".wiki-tab.active");
-      const key = activeTab ? (activeTab.dataset.target || "all") : "items";
+      // Return to category cards view
+      if (categoryCardsSection) categoryCardsSection.style.display = 'block';
+      if (categoryContentSection) categoryContentSection.style.display = 'none';
+      if (tabsContainer) tabsContainer.style.display = 'inline-flex';
 
-      panels.forEach((panel) => {
-        const panelKey = panel.dataset.panel;
-        const hide = key !== "all" && panelKey !== key;
-        panel.dataset.hidden = hide ? "true" : "false";
-        panel.style.display = hide ? "none" : "";
-      });
-
-      // Show all items inside the visible panels
+      // Show all items inside panels (for when user navigates to a category)
       allItems.forEach((item) => {
         item.style.display = "";
       });
@@ -1088,7 +1195,12 @@ function setupWikiSearch() {
       return;
     }
 
-    // --- With a query: behave like the "All" tab ---
+    // --- With a query: show content section with all panels and filtered results ---
+    
+    // Hide category cards, show content
+    if (categoryCardsSection) categoryCardsSection.style.display = 'none';
+    if (categoryContentSection) categoryContentSection.style.display = 'block';
+    if (tabsContainer) tabsContainer.style.display = 'inline-flex';
 
     // Visually set the All tab active
     tabs.forEach((tab) => {
@@ -1668,6 +1780,7 @@ let buildDataLoaded = false;
 
   setupGuideFilters();
   setupGuideSearch();
+  setupWikiCategoryNavigation();
   setupWikiTabs();
   setupWikiSearch();
   setupWikiImageModal();
