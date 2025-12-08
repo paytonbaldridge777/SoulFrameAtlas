@@ -20,20 +20,8 @@
     "express": "^4.18.2",
     "express-rate-limit": "^8.2.1",
     "multer": "^2.0.0"
-  }
-  "name": "soulframe-atlas-admin",
-  "version": "1.0.0",
-  "description": "Admin interface and API for SoulFrame Atlas wiki data",
-  "type": "module",
-  "scripts": {
-    "test": "node workers/helpers/tests/validateFilename.test.js && node workers/helpers/tests/jsonValidation.test.js",
-    "deploy": "wrangler deploy",
-    "dev": "wrangler dev"
   },
   "devDependencies": {
     "wrangler": "^3.0.0"
-  },
-  "keywords": ["cloudflare", "workers", "admin", "api"],
-  "author": "",
-  "license": "MIT"
+  }
 }
