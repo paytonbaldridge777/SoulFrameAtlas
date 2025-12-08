@@ -14,7 +14,29 @@ const DATA_PATH = 'data';
 const BACKUP_PATH = 'data/backups';
 
 /**
+ * Modern base64 encoding for Cloudflare Workers
+ */
+function base64Encode(str) {
+  // Use btoa for now as it's still supported in Cloudflare Workers
+  // Future: migrate to TextEncoder when Cloudflare Workers fully deprecates btoa
+  return btoa(str);
+}
+
+/**
+ * Modern base64 decoding for Cloudflare Workers
+ */
+function base64Decode(str) {
+  // Use atob for now as it's still supported in Cloudflare Workers
+  // Future: migrate to TextDecoder when Cloudflare Workers fully deprecates atob
+  return atob(str);
+}
+
+/**
  * Check Cloudflare Access authentication if enabled
+ * 
+ * SECURITY WARNING: This implementation only checks for token presence.
+ * For production use, implement proper JWT signature verification.
+ * See docs/CLOUDFLARE_ACCESS.md for enhanced security recommendations.
  */
 function checkCloudflareAccess(request, env) {
   const enabled = env.ENABLE_CLOUDFLARE_ACCESS_CHECK === 'true';
@@ -33,9 +55,10 @@ function checkCloudflareAccess(request, env) {
     };
   }
 
-  // If we get here, the token exists
-  // In a real implementation, you'd verify the JWT signature
-  // For now, we just check presence
+  // TODO: Implement JWT signature verification for production
+  // Example: Use @cloudflare/workers-jwt or similar library
+  // to verify the JWT token against Cloudflare's public keys
+  
   return { authorized: true };
 }
 
@@ -142,7 +165,7 @@ async function readDataFile(filename, env) {
     }
 
     // Decode base64 content
-    const content = atob(fileData.content);
+    const content = base64Decode(fileData.content);
     const jsonValidation = validateJSON(content);
 
     if (!jsonValidation.valid) {
@@ -181,7 +204,7 @@ async function createBackup(filename, content, env) {
   
   const body = {
     message: `Backup: ${filename} at ${new Date().toISOString()}`,
-    content: btoa(content),
+    content: base64Encode(content),
     branch: GITHUB_BRANCH
   };
 
@@ -233,7 +256,7 @@ async function saveDataFile(filename, content, env) {
 
     // Create backup if updating existing file
     if (isUpdate) {
-      const currentContent = atob(existingFile.content);
+      const currentContent = base64Decode(existingFile.content);
       await createBackup(validation.sanitized, currentContent, env);
     }
 
@@ -244,7 +267,7 @@ async function saveDataFile(filename, content, env) {
       message: isUpdate 
         ? `Update ${validation.sanitized} via admin API`
         : `Create ${validation.sanitized} via admin API`,
-      content: btoa(content),
+      content: base64Encode(content),
       branch: GITHUB_BRANCH
     };
 
@@ -310,7 +333,7 @@ async function deleteDataFile(filename, env) {
     }
 
     // Create backup before deleting
-    const currentContent = atob(existingFile.content);
+    const currentContent = base64Decode(existingFile.content);
     await createBackup(validation.sanitized, currentContent, env);
 
     // Delete file

@@ -3,8 +3,10 @@
  * Client-side JavaScript for managing wiki JSON files
  */
 
-// Configuration - Update this with your Cloudflare Worker URL
-const API_BASE_URL = '/api/admin'; // Update to your actual worker URL
+// Configuration
+// You can override this by setting window.WIKI_ADMIN_API_URL before loading this script
+// Example in HTML: <script>window.WIKI_ADMIN_API_URL = 'https://your-worker.workers.dev/api/admin';</script>
+const API_BASE_URL = window.WIKI_ADMIN_API_URL || '/api/admin';
 
 // State
 let currentFile = null;

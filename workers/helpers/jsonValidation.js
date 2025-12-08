@@ -48,6 +48,9 @@ export function validateJSON(content) {
   } else if (parsed.items && Array.isArray(parsed.items)) {
     // Handle objects with an "items" array property
     itemCount = parsed.items.length;
+  } else {
+    // For plain objects, count top-level keys
+    itemCount = Object.keys(parsed).length;
   }
 
   return {

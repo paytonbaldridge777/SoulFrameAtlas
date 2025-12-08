@@ -130,7 +130,7 @@ Read operations (GET) are not protected by default but can be configured separat
 
 ### Custom JWT Validation
 
-For enhanced security, you can validate the JWT signature in the worker:
+**IMPORTANT:** The default implementation only checks for token presence. For production use, implement proper JWT signature verification:
 
 ```javascript
 import { verifyJwt } from '@cloudflare/workers-jwt';
@@ -143,18 +143,30 @@ async function validateAccessToken(request, env) {
   }
 
   try {
-    // Get your team domain from Cloudflare
+    // Get your team domain from Cloudflare Zero Trust dashboard
     const teamDomain = 'yourteam.cloudflareaccess.com';
     const certsUrl = `https://${teamDomain}/cdn-cgi/access/certs`;
     
-    // Verify JWT (requires additional implementation)
-    const decoded = await verifyJwt(token, certsUrl);
+    // Fetch Cloudflare's public keys
+    const response = await fetch(certsUrl);
+    const keys = await response.json();
+    
+    // Verify JWT signature (requires @cloudflare/workers-jwt or similar)
+    const decoded = await verifyJwt(token, keys);
+    
+    // Optionally validate claims
+    if (decoded.exp < Date.now() / 1000) {
+      return { authorized: false, error: 'Token expired' };
+    }
+    
     return { authorized: true, user: decoded };
   } catch (e) {
     return { authorized: false, error: 'Invalid token' };
   }
 }
 ```
+
+**Note:** Until JWT validation is implemented, ensure Cloudflare Access is your primary security layer and the admin page itself is protected.
 
 ### Service Tokens
 
