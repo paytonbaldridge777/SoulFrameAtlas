@@ -33,7 +33,7 @@ The `wrangler.toml` file is already configured. Review and update if needed:
 ```toml
 name = "soulframe-atlas-admin-api"
 main = "workers/wiki-data/worker.js"
-compatibility_date = "2024-01-01"
+compatibility_date = "2024-12-01"
 
 [env.production]
 vars = { 
@@ -266,7 +266,7 @@ Using Cloudflare Dashboard:
 **Error: "Failed to publish"**
 - Check `wrangler.toml` syntax
 - Verify you're authenticated: `wrangler whoami`
-- Try: `wrangler deploy --compatibility-date=2024-01-01`
+- Try: `wrangler deploy --compatibility-date=2024-12-01`
 
 **Error: "Module not found"**
 - Verify file paths in `wrangler.toml`
