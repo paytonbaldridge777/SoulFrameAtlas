@@ -1,0 +1,26 @@
+name = "soulframe-atlas-admin-api"
+main = "workers/wiki-data/worker.js"
+compatibility_date = "2024-12-01"
+
+# Environment variables (set these via Wrangler or Cloudflare dashboard)
+[env.production]
+# vars are non-sensitive environment variables
+vars = { 
+  ENABLE_CLOUDFLARE_ACCESS_CHECK = "false",
+  CLOUDFLARE_ACCESS_HEADER_NAME = "CF-Access-Jwt-Assertion"
+}
+
+# Secrets (set via: wrangler secret put GITHUB_TOKEN)
+# GITHUB_TOKEN - Personal access token with repo permissions
+
+# For local development
+[env.dev]
+vars = { 
+  ENABLE_CLOUDFLARE_ACCESS_CHECK = "false",
+  CLOUDFLARE_ACCESS_HEADER_NAME = "CF-Access-Jwt-Assertion"
+}
+
+# Routes configuration example (update with your domain)
+# [[routes]]
+# pattern = "yourdomain.com/api/admin/*"
+# zone_name = "yourdomain.com"
