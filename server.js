@@ -122,7 +122,7 @@ function atomicWrite(filePath, content) {
 }
 
 // Helper: Validate JSON content
-function validateJSON(content, filename) {
+function validateJSON(content) {
   try {
     const parsed = JSON.parse(content);
     
@@ -195,7 +195,7 @@ app.get('/api/admin/data/read', adminLimiter, (req, res) => {
     }
     
     const content = fs.readFileSync(filePath, 'utf8');
-    const parsed = validateJSON(content, filename);
+    const parsed = validateJSON(content);
     
     res.json({ 
       name: filename,
@@ -220,7 +220,7 @@ app.post('/api/admin/data/save', adminLimiter, validateCloudflareAccess, (req, r
     
     // Validate JSON
     const jsonContent = typeof content === 'string' ? content : JSON.stringify(content, null, 2);
-    validateJSON(jsonContent, filename);
+    validateJSON(jsonContent);
     
     // Create backup if file exists
     let backupName = null;
@@ -272,7 +272,7 @@ app.post('/api/admin/data/upload', adminLimiter, validateCloudflareAccess, uploa
     }
     
     // Validate JSON
-    validateJSON(content, filename);
+    validateJSON(content);
     
     // Atomic write
     atomicWrite(filePath, content);
