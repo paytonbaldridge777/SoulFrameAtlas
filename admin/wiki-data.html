@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Soulframe Atlas – Admin: Wiki Data</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <style>
+    /* Admin-specific styles */
+    .admin-container {
+      max-width: var(--max-width);
+      margin: 2rem auto;
+      padding: 1.25rem;
+    }
+
+    .admin-header {
+      padding: 1.5rem;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(145deg, #101721, #060911);
+      border: 1px solid rgba(184, 242, 139, 0.2);
+      margin-bottom: 2rem;
+    }
+
+    .admin-header h1 {
+      color: var(--accent);
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .admin-header p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .admin-grid {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .file-list {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.25rem;
+      max-height: 70vh;
+      overflow-y: auto;
+    }
+
+    .file-list h2 {
+      color: var(--accent-alt);
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .file-item {
+      padding: 0.75rem;
+      margin-bottom: 0.5rem;
+      background: var(--surface-alt);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .file-item:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(184, 242, 139, 0.15);
+    }
+
+    .file-item.active {
+      border-color: var(--accent);
+      background: rgba(184, 242, 139, 0.08);
+    }
+
+    .file-item-name {
+      color: var(--text);
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .file-item-meta {
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    .editor-panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .editor-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .editor-header h2 {
+      color: var(--accent-alt);
+      font-size: 1.1rem;
+    }
+
+    .editor-actions {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .btn {
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--surface-alt);
+      color: var(--text);
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: all 0.2s ease;
+    }
+
+    .btn:hover {
+      background: var(--surface);
+      border-color: var(--accent);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-alt));
+      color: #111;
+      border: none;
+      font-weight: 600;
+    }
+
+    .btn-primary:hover {
+      filter: brightness(1.1);
+      transform: translateY(-1px);
+    }
+
+    .btn-danger {
+      background: var(--danger);
+      color: white;
+      border: none;
+    }
+
+    .btn-danger:hover {
+      filter: brightness(1.1);
+    }
+
+    .json-editor {
+      min-height: 400px;
+      max-height: 60vh;
+      overflow-y: auto;
+      background: #0a0e14;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem;
+      font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+      font-size: 0.9rem;
+      color: var(--text);
+      resize: vertical;
+    }
+
+    .upload-area {
+      border: 2px dashed var(--border);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      text-align: center;
+      background: var(--surface-alt);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .upload-area:hover,
+    .upload-area.dragover {
+      border-color: var(--accent);
+      background: rgba(184, 242, 139, 0.05);
+    }
+
+    .upload-area-text {
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      padding: 1rem 1.5rem;
+      border-radius: var(--radius-lg);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      display: none;
+      animation: slideIn 0.3s ease;
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .toast.success {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .toast.error {
+      border-color: var(--danger);
+      color: var(--danger);
+    }
+
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.8);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+    }
+
+    .modal.active {
+      display: flex;
+    }
+
+    .modal-content {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      max-width: 500px;
+      width: 90%;
+    }
+
+    .modal-header {
+      color: var(--accent-alt);
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+
+    .modal-body {
+      color: var(--text);
+      margin-bottom: 1.5rem;
+    }
+
+    .modal-actions {
+      display: flex;
+      gap: 0.75rem;
+      justify-content: flex-end;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .form-label {
+      display: block;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 0.75rem;
+      background: var(--surface-alt);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text);
+      font-size: 0.95rem;
+    }
+
+    .form-input:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 3rem;
+      color: var(--muted);
+    }
+
+    .empty-state-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .admin-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <nav class="nav">
+        <div class="nav-brand">
+          <div class="nav-logo">SF</div>
+          <div class="nav-title">Soulframe Atlas</div>
+        </div>
+        <button class="nav-toggle" id="navToggle">Menu ▾</button>
+        <div class="nav-links" id="navLinks">
+          <a href="../index.html">Home</a>
+          <a href="../guides.html">Guides</a>
+          <a href="../wiki.html">Wiki</a>
+          <a href="../build-lab.html">Build Lab</a>
+          <a href="../maps.html">Maps & Tools</a>
+          <a href="../updates.html">Updates</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="admin-container">
+        <div class="admin-header">
+          <h1>🔐 Wiki Data Administration</h1>
+          <p>Manage JSON data files for the Soulframe Atlas wiki. Protected by Cloudflare Access.</p>
+        </div>
+
+        <div style="margin-bottom: 1.5rem;">
+          <button class="btn btn-primary" onclick="showNewCategoryModal()">
+            ✨ Create New Category
+          </button>
+        </div>
+
+        <div class="admin-grid">
+          <div class="file-list">
+            <h2>📁 Data Files</h2>
+            <div id="fileListContainer">
+              <div class="empty-state">
+                <div class="empty-state-icon">⏳</div>
+                <p>Loading files...</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="editor-panel">
+            <div class="editor-header">
+              <h2 id="editorTitle">Select a file to edit</h2>
+              <div class="editor-actions" id="editorActions" style="display: none;">
+                <button class="btn btn-primary" onclick="saveCurrentFile()">💾 Save</button>
+                <button class="btn btn-danger" onclick="deleteCurrentFile()">🗑️ Delete File</button>
+              </div>
+            </div>
+            <div id="editorContent">
+              <div class="empty-state">
+                <div class="empty-state-icon">📝</div>
+                <p>Select a data file from the list to begin editing</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- New Category Modal -->
+  <div class="modal" id="newCategoryModal">
+    <div class="modal-content">
+      <h2 class="modal-header">Create New Category</h2>
+      <div class="modal-body">
+        <div class="form-group">
+          <label class="form-label">Category Name</label>
+          <input type="text" class="form-input" id="newCategoryName" placeholder="e.g., consumables">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Initial Data</label>
+          <select class="form-input" id="newCategoryType" onchange="toggleUploadArea()">
+            <option value="empty">Start with empty array</option>
+            <option value="upload">Upload JSON file</option>
+          </select>
+        </div>
+        <div class="form-group" id="uploadAreaContainer" style="display: none;">
+          <div class="upload-area" id="uploadArea">
+            <div class="upload-area-text">
+              📎 Drop JSON file here or click to browse
+            </div>
+            <input type="file" id="fileInput" accept=".json" style="display: none;" onchange="handleFileSelect(event)">
+          </div>
+          <div id="uploadFileName" style="color: var(--accent); margin-top: 0.5rem; display: none;"></div>
+        </div>
+      </div>
+      <div class="modal-actions">
+        <button class="btn" onclick="closeNewCategoryModal()">Cancel</button>
+        <button class="btn btn-primary" onclick="createNewCategory()">Create</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Confirm Delete Modal -->
+  <div class="modal" id="confirmDeleteModal">
+    <div class="modal-content">
+      <h2 class="modal-header">⚠️ Confirm Delete</h2>
+      <div class="modal-body">
+        <p>Are you sure you want to delete <strong id="deleteFileName"></strong>?</p>
+        <p style="color: var(--muted); font-size: 0.9rem; margin-top: 0.5rem;">
+          A backup will be created before deletion.
+        </p>
+      </div>
+      <div class="modal-actions">
+        <button class="btn" onclick="closeDeleteModal()">Cancel</button>
+        <button class="btn btn-danger" onclick="confirmDelete()">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast"></div>
+
+  <script src="../main.js"></script>
+  <script>
+    // API Configuration
+    const API_BASE = window.location.hostname === 'localhost' 
+      ? 'http://localhost:3000/api/admin/data'
+      : '/api/admin/data';
+
+    let currentFile = null;
+    let currentData = null;
+    let uploadedFile = null;
+
+    // Load file list on page load
+    loadFileList();
+
+    async function loadFileList() {
+      try {
+        const response = await fetch(`${API_BASE}/list`);
+        const data = await response.json();
+        
+        if (data.error) {
+          showToast(data.error, 'error');
+          return;
+        }
+
+        displayFileList(data.files);
+      } catch (err) {
+        showToast('Failed to load file list: ' + err.message, 'error');
+      }
+    }
+
+    function displayFileList(files) {
+      const container = document.getElementById('fileListContainer');
+      
+      if (files.length === 0) {
+        container.innerHTML = `
+          <div class="empty-state">
+            <div class="empty-state-icon">📭</div>
+            <p>No data files found</p>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = files.map(file => `
+        <div class="file-item" onclick="loadFile('${file.name}')">
+          <div class="file-item-name">${file.name}</div>
+          <div class="file-item-meta">
+            ${file.recordCount} records · ${(file.size / 1024).toFixed(1)} KB
+          </div>
+        </div>
+      `).join('');
+    }
+
+    async function loadFile(filename) {
+      try {
+        const response = await fetch(`${API_BASE}/read?name=${encodeURIComponent(filename)}`);
+        const data = await response.json();
+        
+        if (data.error) {
+          showToast(data.error, 'error');
+          return;
+        }
+
+        currentFile = filename;
+        currentData = data.content;
+        
+        // Update UI
+        document.getElementById('editorTitle').textContent = `Editing: ${filename}`;
+        document.getElementById('editorActions').style.display = 'flex';
+        
+        // Highlight selected file
+        document.querySelectorAll('.file-item').forEach(item => {
+          item.classList.remove('active');
+          if (item.textContent.includes(filename)) {
+            item.classList.add('active');
+          }
+        });
+
+        displayEditor(data.content);
+      } catch (err) {
+        showToast('Failed to load file: ' + err.message, 'error');
+      }
+    }
+
+    function displayEditor(content) {
+      const container = document.getElementById('editorContent');
+      
+      // Display as formatted JSON in a textarea
+      container.innerHTML = `
+        <textarea class="json-editor" id="jsonEditor">${JSON.stringify(content, null, 2)}</textarea>
+      `;
+    }
+
+    async function saveCurrentFile() {
+      if (!currentFile) return;
+
+      try {
+        const editor = document.getElementById('jsonEditor');
+        const content = editor.value;
+        
+        // Validate JSON
+        let parsed;
+        try {
+          parsed = JSON.parse(content);
+        } catch (err) {
+          showToast('Invalid JSON: ' + err.message, 'error');
+          return;
+        }
+
+        const response = await fetch(`${API_BASE}/save`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: currentFile,
+            content: parsed
+          })
+        });
+
+        const data = await response.json();
+        
+        if (data.error) {
+          showToast(data.error, 'error');
+          return;
+        }
+
+        showToast(data.message, 'success');
+        currentData = parsed;
+        
+        // Reload file list to update metadata
+        loadFileList();
+      } catch (err) {
+        showToast('Failed to save file: ' + err.message, 'error');
+      }
+    }
+
+    function deleteCurrentFile() {
+      if (!currentFile) return;
+      
+      document.getElementById('deleteFileName').textContent = currentFile;
+      document.getElementById('confirmDeleteModal').classList.add('active');
+    }
+
+    async function confirmDelete() {
+      if (!currentFile) return;
+
+      try {
+        const response = await fetch(`${API_BASE}/delete?name=${encodeURIComponent(currentFile)}`, {
+          method: 'DELETE'
+        });
+
+        const data = await response.json();
+        
+        if (data.error) {
+          showToast(data.error, 'error');
+          return;
+        }
+
+        showToast(data.message, 'success');
+        closeDeleteModal();
+        
+        // Reset editor
+        currentFile = null;
+        currentData = null;
+        document.getElementById('editorTitle').textContent = 'Select a file to edit';
+        document.getElementById('editorActions').style.display = 'none';
+        document.getElementById('editorContent').innerHTML = `
+          <div class="empty-state">
+            <div class="empty-state-icon">📝</div>
+            <p>Select a data file from the list to begin editing</p>
+          </div>
+        `;
+        
+        // Reload file list
+        loadFileList();
+      } catch (err) {
+        showToast('Failed to delete file: ' + err.message, 'error');
+      }
+    }
+
+    function closeDeleteModal() {
+      document.getElementById('confirmDeleteModal').classList.remove('active');
+    }
+
+    function showNewCategoryModal() {
+      document.getElementById('newCategoryModal').classList.add('active');
+      document.getElementById('newCategoryName').value = '';
+      document.getElementById('newCategoryType').value = 'empty';
+      uploadedFile = null;
+      toggleUploadArea();
+    }
+
+    function closeNewCategoryModal() {
+      document.getElementById('newCategoryModal').classList.remove('active');
+    }
+
+    function toggleUploadArea() {
+      const type = document.getElementById('newCategoryType').value;
+      const uploadContainer = document.getElementById('uploadAreaContainer');
+      uploadContainer.style.display = type === 'upload' ? 'block' : 'none';
+    }
+
+    // Drag and drop handlers
+    const uploadArea = document.getElementById('uploadArea');
+    if (uploadArea) {
+      uploadArea.addEventListener('click', () => {
+        document.getElementById('fileInput').click();
+      });
+
+      uploadArea.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        uploadArea.classList.add('dragover');
+      });
+
+      uploadArea.addEventListener('dragleave', () => {
+        uploadArea.classList.remove('dragover');
+      });
+
+      uploadArea.addEventListener('drop', (e) => {
+        e.preventDefault();
+        uploadArea.classList.remove('dragover');
+        
+        const files = e.dataTransfer.files;
+        if (files.length > 0) {
+          handleFileSelect({ target: { files } });
+        }
+      });
+    }
+
+    function handleFileSelect(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+
+      if (!file.name.endsWith('.json')) {
+        showToast('Please select a JSON file', 'error');
+        return;
+      }
+
+      uploadedFile = file;
+      document.getElementById('uploadFileName').textContent = `Selected: ${file.name}`;
+      document.getElementById('uploadFileName').style.display = 'block';
+    }
+
+    async function createNewCategory() {
+      const name = document.getElementById('newCategoryName').value.trim();
+      const type = document.getElementById('newCategoryType').value;
+
+      if (!name) {
+        showToast('Please enter a category name', 'error');
+        return;
+      }
+
+      try {
+        let content;
+        
+        if (type === 'upload') {
+          if (!uploadedFile) {
+            showToast('Please select a file to upload', 'error');
+            return;
+          }
+
+          const fileContent = await uploadedFile.text();
+          content = JSON.parse(fileContent);
+        } else {
+          content = [];
+        }
+
+        const filename = name.endsWith('.json') ? name : `${name}.json`;
+
+        const response = await fetch(`${API_BASE}/upload`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: filename,
+            content: content
+          })
+        });
+
+        const data = await response.json();
+        
+        if (data.error) {
+          showToast(data.error, 'error');
+          return;
+        }
+
+        showToast(data.message, 'success');
+        closeNewCategoryModal();
+        loadFileList();
+        
+        // Auto-load the new file
+        setTimeout(() => loadFile(filename), 500);
+      } catch (err) {
+        showToast('Failed to create category: ' + err.message, 'error');
+      }
+    }
+
+    function showToast(message, type = 'success') {
+      const toast = document.getElementById('toast');
+      toast.textContent = message;
+      toast.className = `toast ${type}`;
+      toast.style.display = 'block';
+
+      setTimeout(() => {
+        toast.style.display = 'none';
+      }, 4000);
+    }
+  </script>
+</body>
+</html>
