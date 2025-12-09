@@ -1,6 +1,11 @@
-name = "soulframe-atlas-admin-api"
-main = "workers/wiki-data/worker.js"
-compatibility_date = "2024-12-01"
+name = "soulframe-atlas"
+compatibility_date = "2025-12-09"
+
+[pages]
+# This tells Pages to serve the static files from the root of your repo
+build_output_dir = "."
+# This is the crucial line: it tells Pages where to find your functions
+build_output_functions_dir = "/functions"
 
 # Environment variables (set these via Wrangler or Cloudflare dashboard)
 [env.production]
