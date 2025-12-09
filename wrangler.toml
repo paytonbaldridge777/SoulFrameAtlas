@@ -5,7 +5,7 @@ compatibility_date = "2025-12-09"
 # This tells Pages to serve the static files from the root of your repo
 build_output_dir = "."
 # This is the crucial line: it tells Pages where to find your functions
-build_output_functions_dir = "/functions"
+build_output_functions_dir = "/workers/wiki-data"
 
 # Environment variables (set these via Wrangler or Cloudflare dashboard)
 [env.production]
