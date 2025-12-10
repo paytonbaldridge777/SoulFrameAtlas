@@ -359,6 +359,26 @@
         "wiki": "https://wiki.avakot.org/Thrice-bound_Impidh",
         "externalGuide": ""
       }
+    },
+    {
+      "id": "19",
+      "name": "Ethan The Destroyer(of common sense)",
+      "type": "World Boss",
+      "faction": "",
+      "threatTier": "",
+      "primaryRegion": "",
+      "summary": "",
+      "notableTraits": [],
+      "notableDrops": [],
+      "icon": "https://static.wikitide.net/soulframewiki/5/52/ThriceboundImpidh.jpg",
+      "cooldown": 180,
+      "hash": "aa559ed5aa871b9aedc86ccbee97f9c684c68a109f8e005539181fe1e133522d",
+      "onClick": "",
+      "links": {
+        "map": "https://soulmap.avakot.org/P12?loc=glades-of-andurin&index=4",
+        "wiki": "https://wiki.avakot.org/Thrice-bound_Impidh",
+        "externalGuide": ""
+      }
     }
   ]
 }
