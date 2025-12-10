@@ -258,41 +258,58 @@ function renderEditor(filename, data, meta) {
 /**
  * Render list of records
  */
+/**
+ * Render list of records
+ */
 function renderRecordList(items) {
   if (!Array.isArray(items) || items.length === 0) {
     return '<div class="empty-state"><p>No records found</p></div>';
   }
 
   return items.map((item, index) => {
-    const displayName = item.name || item.id || item.title || `Record ${index + 1}`;
+    // Prefer Soulframe-ish keys first, then generic
+    const displayName =
+      item.ItemID ||
+      item.Name ||
+      item.name ||
+      item.id ||
+      item.title ||
+      `Record ${index + 1}`;
+
     const details = [];
-    
-    if (item.id) details.push(`ID: ${item.id}`);
-    if (item.rarity) details.push(item.rarity);
-    if (item.type) details.push(item.type);
-    
+
+    // Soulframe-style fields
+    if (item.ArmorSet) details.push(item.ArmorSet);
+    if (item.Slot) details.push(item.Slot);
+    if (item.BuildName) details.push(item.BuildName);
+    if (item.Category) details.push(item.Category);
+    if (item.Pact) details.push(item.Pact);
+
+    const rarity = item.Rarity || item.rarity;
+    if (rarity) details.push(rarity);
+
+    const detailsText = details.join(' · ');
+
     return `
       <div class="record-item">
         <div class="record-info">
           <div class="record-name">${escapeHtml(displayName)}</div>
-          <div class="record-details">${details.join(' · ')}</div>
+          <div class="record-details">${escapeHtml(detailsText)}</div>
         </div>
         <div class="record-actions">
           <button class="btn btn-secondary btn-sm" onclick="editRecord(${index})">Edit</button>
-          <button class="btn btn-danger btn-sm" onclick="confirmDeleteRecord(${index})">Delete</button>
+          <button class="btn btn-secondary btn-sm" onclick="confirmDeleteRecord(${index})">Delete</button>
         </div>
       </div>
     `;
   }).join('');
 }
 
+
 /**
  * Add new record
  */
 function addNewRecord() {
-/**  const isArray = Array.isArray(currentData);
-  const items = isArray ? currentData : (currentData.items || []);
-*/
   showEditModal(-1, {});
 }
 
@@ -300,10 +317,9 @@ function addNewRecord() {
  * Edit existing record
  */
 function editRecord(index) {
-  const isArray = Array.isArray(currentData);
-  const items = isArray ? currentData : (currentData.items || []);
+  const { items } = getDataItemsInfo(currentData);
   const record = items[index];
-  
+
   showEditModal(index, record);
 }
 
@@ -312,10 +328,14 @@ function editRecord(index) {
  */
 function showEditModal(index, record) {
   const isNew = index === -1;
-  const jsonStr = JSON.stringify(record, null, 2);
-  
+
+  // Make sure we always have an object to edit
+  const safeRecord = (record && typeof record === 'object') ? record : {};
+  const jsonStr = JSON.stringify(safeRecord, null, 2);
+
   const modal = document.createElement('div');
-  modal.className = 'modal';
+  // NOTE: add "active" so CSS uses fixed overlay
+  modal.className = 'modal active';
   modal.innerHTML = `
     <div class="modal-content">
       <div class="modal-title">${isNew ? 'Add New Record' : 'Edit Record'}</div>
@@ -326,18 +346,41 @@ function showEditModal(index, record) {
         </div>
       </div>
       <div class="modal-actions">
-        <button class="btn btn-secondary" onclick="closeModal()">Cancel</button>
-        <button class="btn btn-primary" onclick="saveRecord(${index})">Save</button>
+        <button class="btn btn-secondary" id="cancelModalBtn">Cancel</button>
+        <button class="btn btn-primary" id="saveModalBtn">Save</button>
       </div>
     </div>
   `;
-  
+
   document.body.appendChild(modal);
+
+  const editor = modal.querySelector('#recordEditor');
+  if (editor) editor.focus();
+
+  // Wire up buttons
+  modal.querySelector('#cancelModalBtn').addEventListener('click', () => {
+    closeModal();
+  });
+
+  modal.querySelector('#saveModalBtn').addEventListener('click', () => {
+    saveRecord(index);
+  });
+
+  // Close on outside click
   modal.addEventListener('click', (e) => {
     if (e.target === modal) {
       closeModal();
     }
   });
+
+  // Close on ESC
+  const handleKeyDown = (e) => {
+    if (e.key === 'Escape') {
+      closeModal();
+      document.removeEventListener('keydown', handleKeyDown);
+    }
+  };
+  document.addEventListener('keydown', handleKeyDown);
 }
 
 /**
