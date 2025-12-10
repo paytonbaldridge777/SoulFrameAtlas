@@ -1,0 +1,1309 @@
+{
+    "characters": [
+      {
+        "affiliation": "The Silent Rose",
+        "description": "A member of the Silent Rose with an attitude.",
+        "image": "https://api.avakot.org/v1/I/Aileas.png",
+        "location": "Silent Rose Enclave",
+        "name": "Aileas",
+        "npc_type": null,
+        "quest": "An Invitation..."
+      },
+      {
+        "affiliation": "Fey",
+        "description": "'''Alora, the Empress of Eldveil.''' Fey Empress of the Sproutfolk, she has seemingly abandoned her wards. They patiently await her return.",
+        "image": "https://api.avakot.org/v1/I/AuroraConcept.png",
+        "location": "",
+        "name": "Alora",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Sproutfolk",
+        "description": "A Sproutfolk hidden underground, waiting for the Ode to leave.",
+        "image": "https://api.avakot.org/v1/I/AlcasChildrenFactionIcon.png",
+        "location": "Dermak Undercity",
+        "name": "Artacho",
+        "npc_type": null,
+        "quest": "A Hidden Harvest"
+      },
+      {
+        "affiliation": "Spectres",
+        "description": "The restless spirit of a collaborator put to pyre during the reign of the Fire King Fenn Jotar.",
+        "image": "https://api.avakot.org/v1/I/GhostKnight.png",
+        "location": "Kith of Kings Enclave",
+        "name": "Ashen Spirit",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Ode",
+        "description": "A Sinecure mercenary wielding the Unsula. At level 10 and higher, they are replaced by Elite variants and wield a pair of axes.",
+        "image": "https://api.avakot.org/v1/I/AssassinRender.png",
+        "location": "",
+        "name": "Assassin",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Unknown",
+        "description": "Cycle and tide was the chain he opt 'bide... In death, 'round his neck a callous ring chews hide.",
+        "image": "https://api.avakot.org/v1/I/Atajan.jpg",
+        "location": "Nightfold",
+        "name": "Atajan",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Sproutfolk",
+        "description": "Story? No story really. Avakot is a Sproutfolk: a stout and stalky breed of living-plant native to Midrath. Though unaffected by the Spellsong, Avakot has a painfully persistent sneeze to which he credits the stodgy air expelled by the Ode'n Mistrels.",
+        "image": "https://api.avakot.org/v1/I/AvakotLeader.png",
+        "location": "Hilly-Den",
+        "name": "Avakot",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Ode",
+        "description": "A powerful Sinecure Officer.",
+        "image": "https://api.avakot.org/v1/I/BanneretAsetlla.png",
+        "location": "",
+        "name": "Axe Banneret",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Ode",
+        "description": "A heavy Sinecure mercenary.",
+        "image": "https://api.avakot.org/v1/I/KnightAxe.png",
+        "location": "",
+        "name": "Axe Knight",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Ode",
+        "description": "",
+        "image": "https://api.avakot.org/v1/I/GladesLogger.png",
+        "location": "",
+        "name": "Axe Soldier",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Corrupted",
+        "description": "A flying, shrimp-like creature carrying an explosive lantern.",
+        "image": "https://api.avakot.org/v1/I/BaliqRender.png",
+        "location": "",
+        "name": "Baliq",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Order of the Pensives",
+        "description": "A sage in the Order of the Pensives.",
+        "image": "https://api.avakot.org/v1/I/MoteSlot.png",
+        "location": "",
+        "name": "Balmus",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Ode",
+        "description": "A powerful Sinecure Officer.",
+        "image": "https://api.avakot.org/v1/I/BanneretAsetlla.png",
+        "location": "",
+        "name": "Banneret Anara",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Ode",
+        "description": "A powerful Sinecure Officer.",
+        "image": "https://api.avakot.org/v1/I/BanneretAsetlla.png",
+        "location": "",
+        "name": "Banneret Kylst",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Ode",
+        "description": "A powerful Sinecure Officer.",
+        "image": "https://api.avakot.org/v1/I/BanneretAsetlla.png",
+        "location": "",
+        "name": "Banneret Toshtan",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Ode",
+        "description": "A hound under Ode'n spell.",
+        "image": "https://api.avakot.org/v1/I/Ode'nDog.png",
+        "location": "",
+        "name": "Battle Dog",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Unknown",
+        "description": "A queen of Aurel, a land outside of Midrath. Gifted Midrath with the seed of the Grimpante Tree by dropping it into a bottle and casting it into the ocean Salz.",
+        "image": "https://api.avakot.org/v1/I/MoteSlot.png",
+        "location": "",
+        "name": "Bernadette",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Omen Beasts",
+        "description": "Ward of the Wevetwood, his roar be their defender. Arbearer to the voicing trees, his soft paws be their mender. Through bark and bud, The Omen Bear, Bromius.",
+        "image": "https://api.avakot.org/v1/I/Bromius.png",
+        "location": "",
+        "name": "Bromius (Character)",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "The Silent Rose",
+        "description": "A member of the Silent Rose, eager to prove herself.",
+        "image": "https://api.avakot.org/v1/I/BugImg.png",
+        "location": "Silent Rose Enclave",
+        "name": "Bug",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Ode",
+        "description": "The acting Castellan of Fort Curlail, this bow-wielding Sinecure trickster is loyal to the Ode'n ways and outwits Envoys with devious teleportation and ranged attacks.",
+        "image": "",
+        "location": "Fort Curlail",
+        "name": "Castellan Huthra",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Ode",
+        "description": "The acting Castellan of Fort Kearnhold, this greatsword-wielding Sinecure warrior is loyal to the Ode'n ways and clad in plate of gold. Though some whisper that he may fear the flame...",
+        "image": "https://api.avakot.org/v1/I/Castellan_Malrog.png",
+        "location": "Fort Kearnhold",
+        "name": "Castellan Malrog",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Omen Beasts",
+        "description": "'''Cathal''', Son of the Packhunt. One of the four cubs of the Omen Wolf, Orengall.",
+        "image": "https://api.avakot.org/v1/I/Cathal.jpg",
+        "location": "Nightfold",
+        "name": "Cathal",
+        "npc_type": null,
+        "quest": "The Shewolf Snared"
+      },
+      {
+        "affiliation": "Omen Beasts",
+        "description": "'''Ciar''', Daughter of the Dusk. One of the four cubs of the Omen Wolf, Orengall.",
+        "image": "https://api.avakot.org/v1/I/Ciar.jpg",
+        "location": "Nightfold",
+        "name": "Ciar",
+        "npc_type": null,
+        "quest": "The Shewolf Snared"
+      },
+      {
+        "affiliation": "Mendicant",
+        "description": "A creeper now slithers through Alca’s swamps. This armoured foe takes reduced damage while on the move, protected by a hardened shell. But when it stops and exposes its vulnerable flesh, strike quickly. Beware its volley of spikes!",
+        "image": "https://api.avakot.org/v1/I/CorruptedSlug.png",
+        "location": "",
+        "name": "Corrupted Slug",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Corrupted",
+        "description": "A Soterian corrupted by Ichor exposure.",
+        "image": "https://api.avakot.org/v1/I/MoteSlot.png",
+        "location": "",
+        "name": "Corrupted Soterian",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Corrupted",
+        "description": "A Sproutfolk corrupted by Ichor exposure.",
+        "image": "https://api.avakot.org/v1/I/CorruptedSproutfolk.jpg",
+        "location": "",
+        "name": "Corrupted Spear Sproutfolk",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Corrupted",
+        "description": "A Sproutfolk corrupted by Ichor exposure.",
+        "image": "https://api.avakot.org/v1/I/CorruptedSproutfolk.jpg",
+        "location": "",
+        "name": "Corrupted Sproutfolk",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Corrupted",
+        "description": "A powerful Sproutfolk corrupted by Ichor exposure.",
+        "image": "https://api.avakot.org/v1/I/CorruptedSproutBrute.jpg",
+        "location": "",
+        "name": "Corrupted Sproutfolk Brute",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Omen Beasts",
+        "description": "'''Cuan''', Son of the Dreamer's Moon. One of the four cubs of the Omen Wolf, Orengall.",
+        "image": "https://api.avakot.org/v1/I/Cuan.jpg",
+        "location": "Nightfold",
+        "name": "Cuan",
+        "npc_type": null,
+        "quest": "The Shewolf Snared"
+      },
+      {
+        "affiliation": "Deities",
+        "description": "The Ode'n constellation of destruction.",
+        "image": "https://api.avakot.org/v1/I/OdeCenter.png",
+        "location": "",
+        "name": "Culveer",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Omen Beasts",
+        "description": "A blind Omen Moose; the first beast encountered by the Envoy. It was she who pulled the Envoy from the shore after their banishment.",
+        "image": "https://api.avakot.org/v1/I/DaleSeer.jpg",
+        "location": "",
+        "name": "Dale Seer",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Ode",
+        "description": "A cast-out Ode who hits hard and roams open ground, tuned as a fast, punishing duel.",
+        "image": "https://api.avakot.org/v1/I/DischargedNimrod.jpg",
+        "location": "https://soulmap.avakot.org/?loc=discharged-nimrod Map Link",
+        "name": "Discharged Nimrod",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Envoy",
+        "description": "Grandfather of the Envoy, and resides within Rivernest. He once wielded the Juniper bow.",
+        "image": "https://api.avakot.org/v1/I/DoyenImage.png",
+        "location": "",
+        "name": "Doyen",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Ode",
+        "description": "A stronger Sinecure mercenary wielding the Unsula.",
+        "image": "https://api.avakot.org/v1/I/EliteAssassinRender.png",
+        "location": "",
+        "name": "Elite Assassin",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Ode",
+        "description": "A stronger Sinecure mercenary wielding a mace and shield.",
+        "image": "https://api.avakot.org/v1/I/EliteGuardRender.png",
+        "location": "",
+        "name": "Elite Guard",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Ode",
+        "description": "A stronger Sinecure mercenary wielding a Vasp-IV.",
+        "image": "https://api.avakot.org/v1/I/MoteSlot.png",
+        "location": "",
+        "name": "Elite Halberdier",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Ode",
+        "description": "A stronger light Sinecure mercenary wielding a Blitzel.",
+        "image": "https://api.avakot.org/v1/I/EliteHunterRender.png",
+        "location": "",
+        "name": "Elite Hunter",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Ode",
+        "description": "",
+        "image": "https://api.avakot.org/v1/I/EliteSoldierRender.png",
+        "location": "",
+        "name": "Elite Soldier",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Ode",
+        "description": "A stronger light Sinecure mercenary wielding an Odiac.",
+        "image": "https://api.avakot.org/v1/I/EliteCasterRender.png",
+        "location": "",
+        "name": "Elite War Caster",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Corrupted",
+        "description": "A small, spider-like creature found infesting the Neath'uns.",
+        "image": "https://api.avakot.org/v1/I/Weaver.png",
+        "location": "",
+        "name": "Elite Weaver",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Corrupted",
+        "description": "A brood-queen that webs the arena and calls lesser scuttlers to overwhelm you.",
+        "image": "https://api.avakot.org/v1/I/EtheldredTheWeaver.png",
+        "location": "https://soulmap.avakot.org/?loc=etheldred-the-weaver Map Link",
+        "name": "Etheldred The Weaver",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Clan Jotar",
+        "description": "The Fire King, Fenn Jotar. Wild wielder of the flaming sword Igne Mora. Reckoner of the legendary Cassid general \"Napo 'Fair Neck' Agnes.\" 'Twas this fiery duel that won the freedom of the Dendrit people. A hero immortal, quelled only by grief.",
+        "image": "https://api.avakot.org/v1/I/FennJotar.jpg",
+        "location": "",
+        "name": "Fenn Jotar",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "The Silent Rose",
+        "description": "A prolific drunk and member of the Silent Rose.",
+        "image": "https://api.avakot.org/v1/I/Filib.png",
+        "location": "Silent Rose Enclave",
+        "name": "Filib",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Unknown",
+        "description": "A Midrathian queen who resided within the seaside castle of Mirifuir.",
+        "image": "https://api.avakot.org/v1/I/MoteSlot.png",
+        "location": "",
+        "name": "Finngualla",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Ode",
+        "description": "A new Agari added in Preludes 12.",
+        "image": "https://api.avakot.org/v1/I/MoteSlot.png",
+        "location": "Dermak Undercity",
+        "name": "Fore-Feller Hewyl",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Omen Beasts",
+        "description": "The legendary Omen Stag of oral fables, who resides within the secluded and secretive Glades of Andurin.",
+        "image": "https://api.avakot.org/v1/I/Garren_Rood.png",
+        "location": "Glades of Andurin",
+        "name": "Garren Rood (Character)",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Spectres",
+        "description": "The spirit of a warrior of Clan Jotar.",
+        "image": "https://api.avakot.org/v1/I/GhostKnight.png",
+        "location": "Crypt of the Circade",
+        "name": "Ghost Knight",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Sproutfolk",
+        "description": "A Sproutfolk hidden underground, waiting for the Ode to leave.",
+        "image": "https://api.avakot.org/v1/I/AlcasChildrenFactionIcon.png",
+        "location": "Dermak Undercity",
+        "name": "Ginsy",
+        "npc_type": null,
+        "quest": "A Hidden Harvest"
+      },
+      {
+        "affiliation": "Ode",
+        "description": "",
+        "image": "https://api.avakot.org/v1/I/LoggerAssassinRender.png",
+        "location": "",
+        "name": "Glades Assassin",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Corrupted",
+        "description": "A flying, shrimp-like creature carrying an explosive lantern.",
+        "image": "https://api.avakot.org/v1/I/GladesBaliqRender.png",
+        "location": "",
+        "name": "Glades Baliq",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Ode",
+        "description": "",
+        "image": "https://wiki.avakot.org/File:Ode'nAssassin.png",
+        "location": "",
+        "name": "Glades Hunter",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Ode",
+        "description": "The most common of Sinecure mercenaries. Most Soldiers are replaced by Elite variants at level 10 and above.",
+        "image": "https://api.avakot.org/v1/I/GladesSoldierRender.png",
+        "location": "",
+        "name": "Glades Soldier",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Corrupted",
+        "description": "Once soulful Sproutfolk turned corrupted commander, this Sproutfolk Agari stalks the Neath'uns.",
+        "image": "https://api.avakot.org/v1/I/CorruptedSproutBrute.jpg",
+        "location": "Neath'uns",
+        "name": "Gourdo",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "The Silent Rose",
+        "description": "An aging member of the Silent Rose.",
+        "image": "https://api.avakot.org/v1/I/Griogair.png",
+        "location": "Silent Rose Enclave",
+        "name": "Griogair",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Ode",
+        "description": "A stalking hunter, seeking Gruul and blood.",
+        "image": "https://api.avakot.org/v1/I/GruulSeekerRuthos.jpg",
+        "location": "https://soulmap.avakot.org/?loc=gruul-seeker-ruthos Map Link",
+        "name": "Gruul Seeker Ruthos",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Ode",
+        "description": "A new Agari added in Preludes 12.",
+        "image": "https://api.avakot.org/v1/I/SinecureerrantGawth.jpg",
+        "location": "Dermak Undercity",
+        "name": "Gruul Seeker Sontaro",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Ode",
+        "description": "A Sinecure mercenary wielding a mace and shield. At level 10 and higher they are replaced by Elite variants.",
+        "image": "https://api.avakot.org/v1/I/GuardRender.png",
+        "location": "",
+        "name": "Guard",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Ode",
+        "description": "A Sinecure mercenary wielding a Vasp-IV. At level 10 and higher they are replaced by Elite variants.",
+        "image": "https://api.avakot.org/v1/I/MoteSlot.png",
+        "location": "",
+        "name": "Halberdier",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Ode",
+        "description": "",
+        "image": "https://api.avakot.org/v1/I/MoteSlot.png",
+        "location": "",
+        "name": "Heavy Torch Soldier",
+        "npc_type": null,
+        "quest": "The Waste Bear"
+      },
+      {
+        "affiliation": "Ode",
+        "description": "A light Sinecure mercenary wielding a Blitzel. At level 10 and higher they are replaced by Elite variants.",
+        "image": "https://api.avakot.org/v1/I/HunterRender.png",
+        "location": "",
+        "name": "Hunter",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Mockery",
+        "description": "A roaming spirit inhabiting a humanoid husk. Lays in wait to ambush the living.",
+        "image": "https://api.avakot.org/v1/I/ThriceboundImpidh.jpg",
+        "location": "Glades of Andurin",
+        "name": "Impidh Mockery",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Deities",
+        "description": "By Iridis we knew empathy, imagination, arcanics.",
+        "image": "https://api.avakot.org/v1/I/Iridis.png",
+        "location": "",
+        "name": "Iridis",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Envoy",
+        "description": "A Primordial Envoy, and Paragon of the Virtue of Grace.",
+        "image": "https://api.avakot.org/v1/I/MoteSlot.png",
+        "location": "",
+        "name": "Josalfar",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Corrupted",
+        "description": "Once soulful Sproutfolk turned corrupted commander, be wary of its minions.",
+        "image": "https://api.avakot.org/v1/I/Kabocha.jpg",
+        "location": "Wevetwood",
+        "name": "Kabocha",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Clan Jotar",
+        "description": "Royal blacksmith of Fenn Jotar.",
+        "image": "https://api.avakot.org/v1/I/ChampionFaction.png",
+        "location": "",
+        "name": "Karlik the Torrid",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Mendicant",
+        "description": "A relentless Mendicant enforcer clad in heavy armor.",
+        "image": "https://api.avakot.org/v1/I/KnellKnight.jpg",
+        "location": "Galvinar Wastes",
+        "name": "Knell Knight",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "The Silent Rose",
+        "description": "Once heir to the Knightmaidens in a time before the Ode, Lady Deora currently serves as Regent of Dendria turned spy to assist the envoy in sabotaging Lord Synod's plans.",
+        "image": "https://api.avakot.org/v1/I/Deora.png",
+        "location": "Silent Rose Enclave",
+        "name": "Lady Deora",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Ode",
+        "description": "By Ode'n reign... this beast, we claim! - ''Spell-sung Deora''",
+        "image": "https://api.avakot.org/v1/I/LadyDeora.png",
+        "location": "",
+        "name": "Lady Deora (Boss)",
+        "npc_type": null,
+        "quest": "The Torment Stag"
+      },
+      {
+        "affiliation": "The Silent Rose",
+        "description": "",
+        "image": "https://api.avakot.org/v1/I/SilentRoseFactionIcon.png",
+        "location": "",
+        "name": "Lady Sigil",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "The Silent Rose",
+        "description": "",
+        "image": "https://api.avakot.org/v1/I/SilentRoseFactionIcon.png",
+        "location": "",
+        "name": "Lady Soarise",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Ode",
+        "description": "'''Lord Synod''' is the High Sovereign of the Ode, leading his armies on a conquest across Alca. He desires to capture the Omen Beasts for his own cause, and aims to burn all traces of history from Midrath - taking anything of value as tribute.",
+        "image": "https://api.avakot.org/v1/I/Synod.png",
+        "location": "",
+        "name": "Lord Synod",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Unknown",
+        "description": "Converted the region of Dendria into a fiefdom.",
+        "image": "https://api.avakot.org/v1/I/MoteSlot.png",
+        "location": "",
+        "name": "Lost King",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Order of the Pensives",
+        "description": "A Foresage in the Order of the Pensives.",
+        "image": "https://api.avakot.org/v1/I/MoteSlot.png",
+        "location": "",
+        "name": "Luitfrid",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Ode",
+        "description": "A powerful Sinecure Officer.",
+        "image": "https://api.avakot.org/v1/I/BanneretAsetlla.png",
+        "location": "",
+        "name": "Mace Banneret",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Ode",
+        "description": "A heavy Sinecure mercenary.",
+        "image": "https://api.avakot.org/v1/I/Ode'nKnight.png",
+        "location": "",
+        "name": "Mace Knight",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Ode",
+        "description": "",
+        "image": "https://api.avakot.org/v1/I/GladesMace.png",
+        "location": "",
+        "name": "Mace Soldier",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Ode",
+        "description": "A bored Inquisitor of Lord Synod who oversees the collection of earthling resources. Takes pleasure in seeing the Envoy attempt to thwart her plans, but the mood is short lived.",
+        "image": "https://api.avakot.org/v1/I/MadaImage.png",
+        "location": "",
+        "name": "Mada",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Order of the Pensives",
+        "description": "A Prentice in the Order of the Pensives.",
+        "image": "https://api.avakot.org/v1/I/MoteSlot.png",
+        "location": "",
+        "name": "Mathilde",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Mendicant",
+        "description": "An undead knight of the implacable Mendicant legion.",
+        "image": "https://api.avakot.org/v1/I/MendicantKnight.png",
+        "location": "",
+        "name": "Mendicant Caster Knight",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Mendicant",
+        "description": "An undead knight of the implacable Mendicant legion.",
+        "image": "https://api.avakot.org/v1/I/MendicantKnight.png",
+        "location": "",
+        "name": "Mendicant Knight",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Mendicant",
+        "description": "An undead knight of the implacable Mendicant legion.",
+        "image": "https://api.avakot.org/v1/I/MendicantKnight.png",
+        "location": "",
+        "name": "Mendicant Mace Knight",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Mendicant",
+        "description": "An undead knight of the implacable Mendicant legion.",
+        "image": "https://api.avakot.org/v1/I/MendicantKnight.png",
+        "location": "",
+        "name": "Mendicant Sword Knight",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Mendicant",
+        "description": "An undead knight of the implacable Mendicant legion.",
+        "image": "https://api.avakot.org/v1/I/MendicantKnight.png",
+        "location": "",
+        "name": "Mendicant Thrall Knight",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Ode",
+        "description": "A Sinecure Officer carrying Ode'n intel. Found only during Faction Tales.",
+        "image": "https://api.avakot.org/v1/I/IntelCarrierRender.png",
+        "location": "",
+        "name": "Messenger",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Mockery",
+        "description": "A roaming spirit inhabiting a humanoid husk. Lays in wait to ambush the living.",
+        "image": "https://api.avakot.org/v1/I/Mockery.png",
+        "location": "",
+        "name": "Mockery",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Deities",
+        "description": "From Mora came strength, bravery, resolve.",
+        "image": "https://api.avakot.org/v1/I/MoraSaphene.png",
+        "location": "",
+        "name": "Mora",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Unknown",
+        "description": "The mother of the Envoy. Saved them the night the Ode fell upon Alca.",
+        "image": "https://api.avakot.org/v1/I/MoteSlot.png",
+        "location": "",
+        "name": "Mother",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Clan Jotar",
+        "description": "Wrote the nine laws of her reign at age nine. A legislation she upheld when she was crowned Queen of Midrath in the year 680.",
+        "image": "https://api.avakot.org/v1/I/ChampionFaction.png",
+        "location": "",
+        "name": "Muireall Jotar",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Cassid",
+        "description": "A legendary Cassid general who once marched against the Fire King, Fenn Jotar.",
+        "image": "https://api.avakot.org/v1/I/MoteSlot.png",
+        "location": "",
+        "name": "Napo Agnes",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Omen Beasts",
+        "description": "Orengall's stolen daughter. Runt of the pack, though cunning. Held captive by Tempest Bayor.",
+        "image": "https://api.avakot.org/v1/I/Nightling.png",
+        "location": "",
+        "name": "Nightling",
+        "npc_type": null,
+        "quest": "The Shewolf Snared"
+      },
+      {
+        "affiliation": "Ode",
+        "description": "The Sinecure's \"big brother\". A brute of an opponent wielding Duhk Halic... And the tempest itself.",
+        "image": "https://api.avakot.org/v1/I/NimrodBoss.png",
+        "location": "",
+        "name": "Nimrod",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Ode",
+        "description": "A stationary cannon emplacement that will detect and fire on Envoys from long range.",
+        "image": "https://api.avakot.org/v1/I/BisulcamRender.png",
+        "location": "",
+        "name": "Ode'n Bisulcam",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Hazards",
+        "description": "An Ode'n area denial device.",
+        "image": "https://api.avakot.org/v1/I/Odenmine.png",
+        "location": "",
+        "name": "Ode'n Mine",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Hazards",
+        "description": "A small pedestal of Ode'n technology. Terraforms the air around it, making it breathable for the Ode.",
+        "image": "https://api.avakot.org/v1/I/mistrel.png",
+        "location": "",
+        "name": "Ode'n Mistrel",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Hazards",
+        "description": "A tower of Ode'n technology. Spews Ichor into the waterways, rendering it drinkable for the Ode.",
+        "image": "https://api.avakot.org/v1/I/MoanerRender.png",
+        "location": "",
+        "name": "Ode'n Moaner",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Omen Beasts",
+        "description": "Ancestor of Garren Rood. The Dendrit people of old crafted the Stag Shrine in his honor in the year 310. It is said that Odulf's three-pronged antlers parted the canopy of the Andurin Glades.",
+        "image": "https://api.avakot.org/v1/I/MoteSlot.png",
+        "location": "",
+        "name": "Odulf Rood",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Unknown",
+        "description": "According to legend, Rauthard was said to have filled Oro's Well with ale during a dry spell.",
+        "image": "https://api.avakot.org/v1/I/MoteSlot.png",
+        "location": "",
+        "name": "Old King Rauthard",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Omen Beasts",
+        "description": "Ichor creeps through fen and fog... An Omen croaker’s curse.",
+        "image": "https://api.avakot.org/v1/I/OmenCroaker.jpg",
+        "location": "",
+        "name": "Omen Croaker",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Omen Beasts",
+        "description": "Fender of the Furthing packlands. The silver tooth of Iridis. Orengall, The Omen Shewolf. She is the spirit of feral freedom with a soft belly only for her pups.",
+        "image": "https://api.avakot.org/v1/I/Orengall.png",
+        "location": "",
+        "name": "Orengall (Character)",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Order of the Pensives",
+        "description": "A lifelong member of the College of Pensives, now your personal scribe. Orlick the Bicameral is so named for the infant upon his shoulder, his 'Little Genius'. Mayhaps, in his endless afterlife, Orlick will finally find the time to finish his book…",
+        "image": "https://api.avakot.org/v1/I/Orlick.png",
+        "location": "Nightfold",
+        "name": "Orlick",
+        "npc_type": null,
+        "quest": "The Last Pensive"
+      },
+      {
+        "affiliation": "Deities",
+        "description": "Oro is said to be the son of Iridis, according to the lore of Oro's Well.",
+        "image": "https://api.avakot.org/v1/I/Oro'sWell.png",
+        "location": "",
+        "name": "Oro",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Fey",
+        "description": "An ancient Fey healer and witch. Roused by rain, was she, a new witch abloom in the garden of Eldveil.",
+        "image": "https://api.avakot.org/v1/I/Oscelda.png",
+        "location": "",
+        "name": "Oscelda (Character)",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Spectres",
+        "description": "A ghostly body inhabiting a knight's helm.",
+        "image": "https://api.avakot.org/v1/I/PhantomSprouts.jpg",
+        "location": "Crypt of the Circade",
+        "name": "Phantom Sprout",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Order of the Pensives",
+        "description": "A Prentice in the Order of the Pensives.",
+        "image": "https://api.avakot.org/v1/I/MoteSlot.png",
+        "location": "",
+        "name": "Pieitre",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Envoy",
+        "description": "The main playable character of Soulframe; once an Ode conscript, now returned to Alca to begin anew.",
+        "image": "https://static.wikitide.net/soulframewiki/1/1e/PlayerEnvoyConcept.png",
+        "location": "",
+        "name": "Player Envoy",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Cassid",
+        "description": "A miner sent to Midrath with Napo Agnes.",
+        "image": "https://api.avakot.org/v1/I/CurlailMines.png",
+        "location": "",
+        "name": "Poppy",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Envoy",
+        "description": "A Primordial Envoy, and Paragon of the Virtue of Courage.",
+        "image": "https://api.avakot.org/v1/I/Pothia.png",
+        "location": "",
+        "name": "Pothia",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Order of the Pensives",
+        "description": "An Aftsage in the Order of the Pensives.",
+        "image": "https://api.avakot.org/v1/I/MoteSlot.png",
+        "location": "",
+        "name": "Proctor",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Mendicant",
+        "description": "A heavily corrupted Ode'n Battle Dog.",
+        "image": "https://api.avakot.org/v1/I/CorruptedOde'nDog.png",
+        "location": "Glades of Andurin",
+        "name": "Reaper",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Order of the Pensives",
+        "description": "A Sage in the Order of the Pensives.",
+        "image": "https://api.avakot.org/v1/I/MoteSlot.png",
+        "location": "",
+        "name": "Rodrich",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Sproutfolk",
+        "description": "A Sproutfolk hidden underground, waiting for the Ode to leave.",
+        "image": "https://api.avakot.org/v1/I/AlcasChildrenFactionIcon.png",
+        "location": "Dermak Undercity",
+        "name": "Rootabag",
+        "npc_type": null,
+        "quest": "A Hidden Harvest"
+      },
+      {
+        "affiliation": "Deities",
+        "description": "Saphene bestowed cunning, agility, insight.",
+        "image": "https://api.avakot.org/v1/I/MoraSaphene.png",
+        "location": "",
+        "name": "Saphene",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Unknown",
+        "description": "A new Agari added in Preludes 12.",
+        "image": "https://api.avakot.org/v1/I/EtheldredTheWeaver.png",
+        "location": "Unknown",
+        "name": "Seachnall The Widower",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Ode",
+        "description": "A heavy Sinecure mercenary.",
+        "image": "https://api.avakot.org/v1/I/KnightShield.png",
+        "location": "",
+        "name": "Shield Knight",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Deities",
+        "description": "The Ode'n constellation of natural order; the Ode'n star of justice.",
+        "image": "https://api.avakot.org/v1/I/OdeCenter.png",
+        "location": "",
+        "name": "Sidae",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Ode",
+        "description": "A mace-wielding foe loyal to the Banneret ways.",
+        "image": "https://api.avakot.org/v1/I/SinecureerrantGawth.jpg",
+        "location": "https://soulmap.avakot.org/?loc=sinecureerrant-gawth Map Link",
+        "name": "Sinecure-errant Gawth",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Ode",
+        "description": "A new Agari added in Preludes 12.",
+        "image": "https://api.avakot.org/v1/I/Castellan_Malrog.png",
+        "location": "Dermak Undercity",
+        "name": "Sinecure-errant Vella",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Fey",
+        "description": "An ancient Fey archer and assassin. Borne of a moonlight pond, was he, with an arrow ready-nocked.",
+        "image": "https://api.avakot.org/v1/I/Sirin.png",
+        "location": "",
+        "name": "Sirin (Character)",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Ode",
+        "description": "The most common of Sinecure mercenaries. Most Soldiers are replaced by Elite variants at level 10 and above.",
+        "image": "https://api.avakot.org/v1/I/SoldierRender.png",
+        "location": "",
+        "name": "Soldier",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Spectres",
+        "description": "A ghostly body inhabiting a knight's helm.",
+        "image": "https://api.avakot.org/v1/I/HallowSpirit.png",
+        "location": "Crypt of the Circade",
+        "name": "Spirit",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Steelsingers Guild",
+        "description": "A legendary blacksmith of the Steelsinger's Guild.",
+        "image": "https://api.avakot.org/v1/I/KaneHelm.png",
+        "location": "",
+        "name": "Steelsinger Kane",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Ode",
+        "description": "A powerful Sinecure Officer.",
+        "image": "https://api.avakot.org/v1/I/BanneretAsetlla.png",
+        "location": "",
+        "name": "Sword Banneret",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Ode",
+        "description": "A heavy Sinecure mercenary.",
+        "image": "https://api.avakot.org/v1/I/KnightSword.png",
+        "location": "",
+        "name": "Sword Knight",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Ode",
+        "description": "An Envoy servant of the Ode, responsible for capturing the player Envoy as a child.",
+        "image": "https://api.avakot.org/v1/I/Bayor.png",
+        "location": "",
+        "name": "Tempest Bayor",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Fey",
+        "description": "An ancient Fey champion. Chief of the Solist Warriors, was she, wreathed in flame and fury.",
+        "image": "https://api.avakot.org/v1/I/Tethren.png",
+        "location": "",
+        "name": "Tethren (Character)",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Spectres",
+        "description": "Descend into the Crypt of the Circade, a haunted dungeon where the noble once known as The Circade stirs again.<br>His three souls fractured, Circade's restless echoes now haunt a dungeon beneath Midrath.",
+        "image": "https://api.avakot.org/v1/I/Circade.png",
+        "location": "Crypt of the Circade",
+        "name": "The Circade",
+        "npc_type": null,
+        "quest": "Festival of the Circade"
+      },
+      {
+        "affiliation": "Mendicant",
+        "description": "From the depths of the Ichor-grave, he rises. Crowned and seated upon a corrupted throne, the Mendicant King commands the battlefield with slow, deliberate cruelty.",
+        "image": "https://api.avakot.org/v1/I/MendicantKingSquare.png",
+        "location": "Stroaic",
+        "name": "The Mendicant King",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Corrupted",
+        "description": "The Omen Beast Bromius, corrupted by Ichor exposure.",
+        "image": "https://api.avakot.org/v1/I/WasteBear.jpg",
+        "location": "",
+        "name": "The Waste Bear (Boss)",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Mockery",
+        "description": "Clad in ancient armour and speaking in twisted tongues, this challenger haunts Alca’s lands.",
+        "image": "https://api.avakot.org/v1/I/ThriceboundImpidh.jpg",
+        "location": "",
+        "name": "Thrice-bound Impidh",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Ode",
+        "description": "",
+        "image": "https://api.avakot.org/v1/I/TorchSoldier.png",
+        "location": "",
+        "name": "Torch Soldier",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Corrupted",
+        "description": "The Omen Beast Garren Rood, corrupted by Duhk Halic.",
+        "image": "https://api.avakot.org/v1/I/TheTormentStag.png",
+        "location": "",
+        "name": "Torment Stag",
+        "npc_type": null,
+        "quest": "The Torment Stag"
+      },
+      {
+        "affiliation": "Ode",
+        "description": "An Ode'n Inquisitor who appears in the opening of Soulframe. It is she who sends the Envoy back down to Alca's surface.",
+        "image": "https://api.avakot.org/v1/I/Torque Inquisitor.png",
+        "location": "",
+        "name": "Torque Inquisitor",
+        "npc_type": null,
+        "quest": "Warsongs"
+      },
+      {
+        "affiliation": "Steelsingers Guild",
+        "description": "Successor to Kane, the Steelsinger of legend. Tuvalkane toiled under master's tutelage until the very moment of her untimely death. Days of hammering. Nights of sharpening. All to reach an eternal afterlife... Back in the bellows.",
+        "image": "https://api.avakot.org/v1/I/Tuvalkane.png",
+        "location": "Nightfold",
+        "name": "Tuvalkane",
+        "npc_type": null,
+        "quest": "The Steelsinger"
+      },
+      {
+        "affiliation": "Ode",
+        "description": "",
+        "image": "https://api.avakot.org/v1/I/DermakSoldierRender.png",
+        "location": "",
+        "name": "Undercity Soldier",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Ode",
+        "description": "",
+        "image": "https://api.avakot.org/v1/I/DermakTorch.png",
+        "location": "",
+        "name": "Undercity Torch Soldier",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Corrupted",
+        "description": "A spirit of Ichor attempting to mimic the Omen Beast Garren Rood.",
+        "image": "https://api.avakot.org/v1/I/VadagarStag.png",
+        "location": "",
+        "name": "Vadagar Stag",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Unknown",
+        "description": "The Brewer of Hues, the master of Poppets; she is the Witch Verminia. Seemingly rendered colourblind by death, Verminia relies on the auras of the afterlife to sniff her way around. Assuredly, this hinders not her impeccable taste in fashion.",
+        "image": "https://api.avakot.org/v1/I/Verminia.png",
+        "location": "Nightfold",
+        "name": "Verminia",
+        "npc_type": null,
+        "quest": "Brewer of Hues"
+      },
+      {
+        "affiliation": "Hazards",
+        "description": "A Gruul trap, meant to contain the Ode's enemies for more convenient execution",
+        "image": "https://api.avakot.org/v1/I/Voltaicsnare.png",
+        "location": "",
+        "name": "Voltaic Snare",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Ode",
+        "description": "A light Sinecure mercenary wielding an Odiac. At level 10 and higher they are replaced by Elite variants.",
+        "image": "https://api.avakot.org/v1/I/WarCasterRender.png",
+        "location": "",
+        "name": "War Caster",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Mendicant",
+        "description": "A Mendicant caster from the Wastes. Face the Wazzard, a mendicant trickster who steals your Pact and splits into skittering horrors.",
+        "image": "https://api.avakot.org/v1/I/WraithofWastes.jpg",
+        "location": "Galvinar Wastes",
+        "name": "Wazzard of Wastes",
+        "npc_type": null,
+        "quest": "The Waste Bear"
+      },
+      {
+        "affiliation": "Mendicant",
+        "description": "",
+        "image": "https://api.avakot.org/v1/I/Weaver.png",
+        "location": "",
+        "name": "Wazzard Weaver",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Corrupted",
+        "description": "A small, spider-like creature found infesting the Neath'uns.",
+        "image": "https://api.avakot.org/v1/I/Weaver.png",
+        "location": "",
+        "name": "Weaver",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Flora",
+        "description": "Carried by wind and whimsy, this sprightly plant drifts through Alca’s wilds. Approach with care! If startled, it explodes in a burst of pollen. But sneak close enough, and you may pluck a reward without waking it.",
+        "image": "https://api.avakot.org/v1/I/Will-o-wing.png",
+        "location": "",
+        "name": "Will-o-wing",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Mendicant",
+        "description": "A Mendicant caster from the Wastes, rumoured to carry a special Talisman and Staff.",
+        "image": "https://api.avakot.org/v1/I/WraithofWastes.jpg",
+        "location": "Sidae's Stake",
+        "name": "Wraith of Wastes",
+        "npc_type": null,
+        "quest": ""
+      },
+      {
+        "affiliation": "Unknown",
+        "description": "A Dale Seer camel, and merchant within the Nightfold. A member of the otherwise-enslaved Arid Caravan. Zenith allows Envoys to access the '''Wares of Zenith''', Soulframe's in-game market.",
+        "image": "https://api.avakot.org/v1/I/Zenith.png",
+        "location": "Nightfold",
+        "name": "Zenith",
+        "npc_type": null,
+        "quest": ""
+      }
+    ] 
+}
