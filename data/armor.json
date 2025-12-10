@@ -1,2737 +1,2737 @@
 {
-	"armor": [
-	  {
-		"ArmorSet": "Arbearer",
-		"Craft": {
-		  "Fragments": "3",
-		  "Time": 20,
-		  "Cost": 3500,
-		  "BondReq": null,
-		  "ingredients": [
-			{
-			  "item": "Scrap Iron",
-			  "qty": 45
-			},
-			{
-			  "item": "Dendrit Weave",
-			  "qty": 40
-			},
-			{
-			  "item": "Sappheline",
-			  "qty": 12
-			}
-		  ]
-		},
-		"Description": "'''The Arbearer's laden boots. As thick as Wevetroots.''' A bastion of straps support poleyns and mail. Heavy iron plates guard each and every toe. Though the Arbearer's soles are sewn in soft leather. Gentle. So as not to disturb the tender sprouts underfoot.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/BromiusLeggings.png",
-		"InternalID": "",
-		"ItemID": "Arbearer's Braes",
-		"Rarity": "Rare",
-		"Slot": "Leggings",
-		"Stats": {
-		  "PhysicalDefence": 7,
-		  "MagickDefence": 0,
-		  "StabilityIncrease": 3,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Arbearer",
-		"Craft": {
-		  "Fragments": "2",
-		  "Time": 20,
-		  "Cost": 3500,
-		  "BondReq": null,
-		  "ingredients": [
-			{
-			  "item": "Scrap Iron",
-			  "qty": 45
-			},
-			{
-			  "item": "Scrap Brass",
-			  "qty": 45
-			},
-			{
-			  "item": "Sappheline",
-			  "qty": 12
-			}
-		  ]
-		},
-		"Description": "'''The hulking helm of the Wevetwood's ward.''' Narrowed eyes, heavy with sap. Jagged jaw, bared to snap. The Arbearer's Mask is a wordless threat, a promise of death to those who would harm his forest. Though... It may be lifted just a quick to show the lazy smile beneath.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/BromiusHelmetClosed.png",
-		"InternalID": "",
-		"ItemID": "Arbearer's Mask",
-		"Rarity": "Rare",
-		"Slot": "Helm",
-		"Stats": {
-		  "PhysicalDefence": 7,
-		  "MagickDefence": 0,
-		  "StabilityIncrease": 3,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Arbearer",
-		"Craft": {
-		  "Fragments": "4",
-		  "Time": 20,
-		  "Cost": 3500,
-		  "BondReq": null,
-		  "ingredients": [
-			{
-			  "item": "Scrap Steel",
-			  "qty": 45
-			},
-			{
-			  "item": "Quenching Acid",
-			  "qty": 35
-			},
-			{
-			  "item": "Moranite",
-			  "qty": 12
-			}
-		  ]
-		},
-		"Description": "'''A wrought iron pauncher of unfathomable heft.''' This armour is to Arbearer as bark is to tree. An assault of scratches cover its surface, though no weapon has ever pierced through to the soft belly it guards. Surely, one never will.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/BromiusCuirass.png",
-		"InternalID": "",
-		"ItemID": "Arbearer's Pauncher",
-		"Rarity": "Rare",
-		"Slot": "Cuirass",
-		"Stats": {
-		  "PhysicalDefence": 10,
-		  "MagickDefence": 0,
-		  "StabilityIncrease": 4,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Orengall",
-		"Craft": {
-		  "Fragments": "2",
-		  "Time": 20,
-		  "Cost": 3500,
-		  "BondReq": "3",
-		  "ingredients": [
-			{
-			  "item": "Scrap Steel",
-			  "qty": 45
-			},
-			{
-			  "item": "Dendrit Weave",
-			  "qty": 40
-			},
-			{
-			  "item": "Quenching Acid",
-			  "qty": 30
-			}
-		  ]
-		},
-		"Description": "",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/OrengallHelmClosed.png",
-		"InternalID": "",
-		"ItemID": "Armet of Orengall",
-		"Rarity": "Rare",
-		"Slot": "Helm",
-		"Stats": {
-		  "PhysicalDefence": 4,
-		  "MagickDefence": 1,
-		  "StabilityIncrease": 4,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Mendicant King",
-		"Craft": {
-		  "Fragments": "2",
-		  "Time": 20,
-		  "Cost": 3500,
-		  "BondReq": null,
-		  "ingredients": [
-			{
-			  "item": "Scrap Iron",
-			  "qty": 45
-			},
-			{
-			  "item": "Patch Leather",
-			  "qty": 40
-			},
-			{
-			  "item": "River Pearl",
-			  "qty": 12
-			}
-		  ]
-		},
-		"Description": "'''The heavy helm of the Mendicant King.''' Once a glowing symbol of Midrathian power. Now, whether by form or by memory, corrupted. The noble mask contorts into toothed maw. Tuvalkane seems hesitant to steelsing his crown.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/MendicantKingHelmet.png",
-		"InternalID": "",
-		"ItemID": "Bascinet of The Mendicant King",
-		"Rarity": "Rare",
-		"Slot": "Helm",
-		"Stats": {
-		  "PhysicalDefence": 6,
-		  "MagickDefence": 1,
-		  "StabilityIncrease": 2,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Uncategorised",
-		"Craft": {
-		  "Fragments": "1",
-		  "Time": 1,
-		  "Cost": 2,
-		  "BondReq": null,
-		  "ingredients": [
-			{
-			  "item": "Knotwood",
-			  "qty": 30
-			},
-			{
-			  "item": "Hymn Rose",
-			  "qty": 20
-			},
-			{
-			  "item": "Sappheline",
-			  "qty": 6
-			}
-		  ]
-		},
-		"Description": "An insignia of sword-sharp petals. With a flick, its retracted blades uncoil like a rose in full bloom.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/SilentRoseTotem.png",
-		"InternalID": "",
-		"ItemID": "Bloomin' Bodkin",
-		"Rarity": "Uncommon",
-		"Slot": "Talisman",
-		"Stats": {
-		  "PhysicalDefence": null,
-		  "MagickDefence": null,
-		  "StabilityIncrease": null,
-		  "VirtueType": "Grace",
-		  "VirtueValue": "+6"
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Tempest",
-		"Craft": null,
-		"Description": "A scarf of Dendrit weave wraps tightly round the neck. A brass apparatus latches to the mouth like a parasite. An Ode'n design for Alcan bodies. The Brazen Lung filters the air of the Ode'n Skytower, making it breathable for humans. Barely.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/ForgetFireAltMask.png",
-		"InternalID": "",
-		"ItemID": "Brazen Lung",
-		"Rarity": "Common",
-		"Slot": "Helm",
-		"Stats": {
-		  "PhysicalDefence": 0,
-		  "MagickDefence": 3,
-		  "StabilityIncrease": 0,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Circade",
-		"Craft": {
-		  "Fragments": null,
-		  "Time": null,
-		  "Cost": null,
-		  "BondReq": null,
-		  "ingredients": []
-		},
-		"Description": "'''The swift-stalking greaves of The Circade.''' An inconspicious set of armour, standard issue for nobles of clan Jotar. Though, to an eye trained in Spectral Sight, they shimmer with feyish enchantments.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/CircadeGreaves.png",
-		"InternalID": "",
-		"ItemID": "Circade's Greaves",
-		"Rarity": "Rare",
-		"Slot": "Leggings",
-		"Stats": {
-		  "PhysicalDefence": 4,
-		  "MagickDefence": 0,
-		  "StabilityIncrease": 2,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Circade",
-		"Craft": {
-		  "Fragments": null,
-		  "Time": null,
-		  "Cost": null,
-		  "BondReq": null,
-		  "ingredients": []
-		},
-		"Description": "'''The leather-bound plackart of The Circade.''' A sturdy shield for the dusk soul's precious gut. Heavy as a slurring tongue, round as a barrel, the ancient armour creaks in combat... Though it glides as freshly oiled when the great arm raises a toast.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/CircadeCuirass.png",
-		"InternalID": "",
-		"ItemID": "Circade's Gutguard",
-		"Rarity": "Rare",
-		"Slot": "Cuirass",
-		"Stats": {
-		  "PhysicalDefence": 7,
-		  "MagickDefence": 2,
-		  "StabilityIncrease": 2,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Circade",
-		"Craft": {
-		  "Fragments": null,
-		  "Time": null,
-		  "Cost": null,
-		  "BondReq": null,
-		  "ingredients": []
-		},
-		"Description": "'''The weathered helm of The Circade.''' Preserved in tomb for centuries, the Helm of Deceit holds still the air of its former wearer. Slippery. Cool. Imposing. The metal shell echoes when worn like the inside of Kearnhold bells.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/CircadeHelmetClosed.png",
-		"InternalID": "",
-		"ItemID": "Circade's Helm of Deceit",
-		"Rarity": "Rare",
-		"Slot": "Helm",
-		"Stats": {
-		  "PhysicalDefence": 5,
-		  "MagickDefence": 0,
-		  "StabilityIncrease": 0,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Cucurbita",
-		"Craft": {
-		  "Fragments": "2",
-		  "Time": 4,
-		  "Cost": 1,
-		  "BondReq": null,
-		  "ingredients": [
-			{
-			  "item": "Wintersquash Seed",
-			  "qty": 50
-			}
-		  ]
-		},
-		"Description": "'''An homage to a sinister Sproutfolk legend.''' The Crone Cucurbita's mask is a mark of harvest tradition. Most often worn by patch sages, harvest oracles and parents who resent their children.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/CroneCucurbitaMask.png",
-		"InternalID": "",
-		"ItemID": "Crone Cucurbita Mask",
-		"Rarity": "Common",
-		"Slot": "Helm",
-		"Stats": {
-		  "PhysicalDefence": 1,
-		  "MagickDefence": 4,
-		  "StabilityIncrease": 0,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Circade",
-		"Craft": {
-		  "Fragments": null,
-		  "Time": null,
-		  "Cost": null,
-		  "BondReq": null,
-		  "ingredients": []
-		},
-		"Description": "Alight with the silent flame of the blue sun. When shaken, the pendant so faintly chimes. As though filled cut diamonds.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/GhostofCircadeBlue.png",
-		"InternalID": "",
-		"ItemID": "Dawn Pendant",
-		"Rarity": "Common",
-		"Slot": "Talisman",
-		"Stats": {
-		  "PhysicalDefence": null,
-		  "MagickDefence": null,
-		  "StabilityIncrease": null,
-		  "VirtueType": "Grace",
-		  "VirtueValue": "+1"
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Orengall",
-		"Craft": {
-		  "Fragments": "3",
-		  "Time": 1,
-		  "Cost": 2,
-		  "BondReq": "1",
-		  "ingredients": [
-			{
-			  "item": "Gossamer Quartz",
-			  "qty": 20
-			},
-			{
-			  "item": "Dendrit Weave",
-			  "qty": 35
-			},
-			{
-			  "item": "Moranite",
-			  "qty": 12
-			}
-		  ]
-		},
-		"Description": "A Moonsteel brooch in the likeness of a lycan skull. A warning snarl upon your chest.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/OrengallTotem.png",
-		"InternalID": "",
-		"ItemID": "Direskull",
-		"Rarity": "Common",
-		"Slot": "Talisman",
-		"Stats": {
-		  "PhysicalDefence": null,
-		  "MagickDefence": null,
-		  "StabilityIncrease": null,
-		  "VirtueType": "Grace",
-		  "VirtueValue": "+5"
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Circade",
-		"Craft": {
-		  "Fragments": null,
-		  "Time": null,
-		  "Cost": null,
-		  "BondReq": null,
-		  "ingredients": []
-		},
-		"Description": "Burning with the warm glow of the red sun. The pendant is unreasonably heavy, and somehow, still tacky with the residue of ancient ale.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/GhostofCircadeRed.png",
-		"InternalID": "",
-		"ItemID": "Dusk Pendant",
-		"Rarity": "Common",
-		"Slot": "Talisman",
-		"Stats": {
-		  "PhysicalDefence": null,
-		  "MagickDefence": null,
-		  "StabilityIncrease": null,
-		  "VirtueType": "Courage",
-		  "VirtueValue": "+1"
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Fire King",
-		"Craft": {
-		  "Fragments": "3",
-		  "Time": 10,
-		  "Cost": 2,
-		  "BondReq": null,
-		  "ingredients": [
-			{
-			  "item": "Scrap Brass",
-			  "qty": 45
-			},
-			{
-			  "item": "Whisprig",
-			  "qty": 40
-			},
-			{
-			  "item": "River Pearl",
-			  "qty": 12
-			}
-		  ]
-		},
-		"Description": "'''Below his Flamekin Kilt, Fenn Jotar brandished a gilded poleyn over his right knee.''' Lined by soft gold, the King wore this polyen as a mark of pride, that it would never be dented not tarnished by a knee bent to the Cassid invader, Napo Agnes.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/FireKingsKilt.png",
-		"InternalID": "",
-		"ItemID": "Fire King's Kilt",
-		"Rarity": "Uncommon",
-		"Slot": "Leggings",
-		"Stats": {
-		  "PhysicalDefence": 3,
-		  "MagickDefence": 0,
-		  "StabilityIncrease": 3,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Fire King",
-		"Craft": {
-		  "Fragments": "4",
-		  "Time": 10,
-		  "Cost": 2,
-		  "BondReq": null,
-		  "ingredients": [
-			{
-			  "item": "Scrap Iron",
-			  "qty": 45
-			},
-			{
-			  "item": "Patch Leather",
-			  "qty": 40
-			},
-			{
-			  "item": "Dendrit Weave",
-			  "qty": 40
-			}
-		  ]
-		},
-		"Description": "The gilded plackart of Fenn Jotar is wrought of a once heat-resistant alloy devised by the Fire King's own royal smith, Karlik the Torrid. Though many years branded beside Fenn Jotar's legendary flaming sword diminished these properties, the armour remains cool to touch.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/FireKingsPlackart.png",
-		"InternalID": "",
-		"ItemID": "Fire King's Plackart",
-		"Rarity": "Uncommon",
-		"Slot": "Cuirass",
-		"Stats": {
-		  "PhysicalDefence": 5,
-		  "MagickDefence": 0,
-		  "StabilityIncrease": 6,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Forgetfire",
-		"Craft": {
-		  "Fragments": "3",
-		  "Time": 10,
-		  "Cost": 2500,
-		  "BondReq": null,
-		  "ingredients": [
-			{
-			  "item": "Scrap Brass",
-			  "qty": 30
-			},
-			{
-			  "item": "Patch Leather",
-			  "qty": 30
-			},
-			{
-			  "item": "Sproutfolk Frond",
-			  "qty": 30
-			}
-		  ]
-		},
-		"Description": "'''Worn by the legion of Forgetfire.''' Elk-hide straps are wrapped tightly about the legs to prevent Smogswell: Swelling of feet and legs of one who travels often through varying atmosphere. Though effective, they are notoriously uncomfortable.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/ForgetfireBraes.png",
-		"InternalID": "",
-		"ItemID": "Forgetfire Braes",
-		"Rarity": "Common",
-		"Slot": "Leggings",
-		"Stats": {
-		  "PhysicalDefence": 3,
-		  "MagickDefence": 0,
-		  "StabilityIncrease": 2,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Forgetfire",
-		"Craft": {
-		  "Fragments": "4",
-		  "Time": 10,
-		  "Cost": 2500,
-		  "BondReq": null,
-		  "ingredients": [
-			{
-			  "item": "Patch Leather",
-			  "qty": 30
-			},
-			{
-			  "item": "Dendrit Weave",
-			  "qty": 35
-			},
-			{
-			  "item": "Sproutfolk Frond",
-			  "qty": 25
-			}
-		  ]
-		},
-		"Description": "'''A standard issue brigandine for Forgetfire conscripts.''' The finest leathers of Alcan bounty are sent skywards to be crafted into this lightweight armour. Only Ode'n clothiers understand the mechanism which so acutely splices and stitches the garment to standardized perfection.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/ForgetfireLeathers.png",
-		"InternalID": "",
-		"ItemID": "Forgetfire Leathers",
-		"Rarity": "Common",
-		"Slot": "Cuirass",
-		"Stats": {
-		  "PhysicalDefence": 5,
-		  "MagickDefence": 0,
-		  "StabilityIncrease": 5,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Forgetfire",
-		"Craft": {
-		  "Fragments": "2",
-		  "Time": 10,
-		  "Cost": 2500,
-		  "BondReq": null,
-		  "ingredients": [
-			{
-			  "item": "Patch Leather",
-			  "qty": 30
-			},
-			{
-			  "item": "Sproutfolk Frond",
-			  "qty": 30
-			},
-			{
-			  "item": "Quenching Acid",
-			  "qty": 35
-			}
-		  ]
-		},
-		"Description": "A lightweight cervelliere is cloaked beneath a tight Dendrit weave to protect human skin from the harsh UV rays outside Alca's atmosphere. The heavy brass apparatus makes Ode'n Skytower atmospheres tolerable to humans. Barely.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/ForgetfireVisard.png",
-		"InternalID": "",
-		"ItemID": "Forgetfire Visard",
-		"Rarity": "Common",
-		"Slot": "Helm",
-		"Stats": {
-		  "PhysicalDefence": 2,
-		  "MagickDefence": 0,
-		  "StabilityIncrease": 3,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Underwear",
-		"Craft": null,
-		"Description": "'''The sea-soaked underags of the deserted.''' Cast from the sky and washed up on shore, you've been stripped of everything. Your Tempest title, your indentured armour, even your name. You are a shivering nothing. It is time to start anew.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/ForsakenRags.png",
-		"InternalID": "",
-		"ItemID": "Forsaken Rags",
-		"Rarity": "Common",
-		"Slot": "Leggings",
-		"Stats": {
-		  "PhysicalDefence": null,
-		  "MagickDefence": null,
-		  "StabilityIncrease": null,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Garren",
-		"Craft": {
-		  "Fragments": "3",
-		  "Time": 10,
-		  "Cost": 2500,
-		  "BondReq": "3",
-		  "ingredients": [
-			{
-			  "item": "Scrap Iron",
-			  "qty": 30
-			},
-			{
-			  "item": "Dendrit Weave",
-			  "qty": 30
-			},
-			{
-			  "item": "Patch Leather",
-			  "qty": 30
-			}
-		  ]
-		},
-		"Description": "Split as the stag's own cloven hooves, the arming doublet of Garren Rood hangs low over knightly boots, struck too up the center by cleft of gold. Enchanted by alloys of bone trace and bark, these Cloven Hosen hold firm as the forests' deepest roots.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/GarrensClovenHose.png",
-		"InternalID": "",
-		"ItemID": "Garren's Cloven Hosen",
-		"Rarity": "Uncommon",
-		"Slot": "Leggings",
-		"Stats": {
-		  "PhysicalDefence": 2,
-		  "MagickDefence": 2,
-		  "StabilityIncrease": 2,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Garren",
-		"Craft": {
-		  "Fragments": "2",
-		  "Time": 7,
-		  "Cost": 2500,
-		  "BondReq": "3",
-		  "ingredients": [
-			{
-			  "item": "Scrap Brass",
-			  "qty": 30
-			},
-			{
-			  "item": "Patch Leather",
-			  "qty": 30
-			},
-			{
-			  "item": "Sproutfolk Frond",
-			  "qty": 30
-			}
-		  ]
-		},
-		"Description": "'''The kettle helm of Garren Rood is blessed by grace of the Omen Beast's own crown.''' Glowing tips of the iron antler reach skyward to Mora's divine power, while the sculpted cap points forward, a weapon of focused will. By the stag's wreath of bone, wield your will with pride.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/GarrensCrownofGrace.png",
-		"InternalID": "",
-		"ItemID": "Garren's Crown of Grace",
-		"Rarity": "Uncommon",
-		"Slot": "Helm",
-		"Stats": {
-		  "PhysicalDefence": 2,
-		  "MagickDefence": 2,
-		  "StabilityIncrease": 3,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Fire King",
-		"Craft": {
-		  "Fragments": "2",
-		  "Time": 10,
-		  "Cost": 2,
-		  "BondReq": null,
-		  "ingredients": [
-			{
-			  "item": "Scrap Iron",
-			  "qty": 45
-			},
-			{
-			  "item": "Patch Leather",
-			  "qty": 40
-			},
-			{
-			  "item": "Dendrit Weave",
-			  "qty": 40
-			}
-		  ]
-		},
-		"Description": "'''A Great Helm cast tall as a pillar of flame.''' Oft worn in place of the Midrathian crown, Fenn Jotar's beloved helmet marked the Fire King's devotion to the sun goddesses Mora and Saphene. Pilfered from the Undercity catacombs during his kingdom's Lightless Era, Fenn Jotar himself affixed fish and flame motifs to mark this antique by the House of Jotar.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/GreatHelmofTheFireKing.png",
-		"InternalID": "",
-		"ItemID": "Great Helm of The Fire King",
-		"Rarity": "Uncommon",
-		"Slot": "Helm",
-		"Stats": {
-		  "PhysicalDefence": 3,
-		  "MagickDefence": 0,
-		  "StabilityIncrease": 2,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Underwear",
-		"Craft": null,
-		"Description": "You've naught but the salt and sand in your hair. Vulnerable... but unburdened. Bare your face to twin suns and Ode'n shadows. It is time to start anew.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/Helmless.png",
-		"InternalID": "",
-		"ItemID": "Helmless",
-		"Rarity": "Common",
-		"Slot": "Helm",
-		"Stats": {
-		  "PhysicalDefence": null,
-		  "MagickDefence": null,
-		  "StabilityIncrease": null,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Underwear",
-		"Craft": null,
-		"Description": "'''The sea-soaked underags of the deserted.''' Your freeborn clothing was burnt when you were captured. Regardless, you have long outgrown it. Stripped bare before the lonely world, you've all but forgotten how to be free. It is time to start anew.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/LaidBare.png",
-		"InternalID": "",
-		"ItemID": "Laid Bare",
-		"Rarity": "Common",
-		"Slot": "Cuirass",
-		"Stats": {
-		  "PhysicalDefence": null,
-		  "MagickDefence": null,
-		  "StabilityIncrease": null,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Cucurbita",
-		"Craft": {
-		  "Fragments": "3",
-		  "Time": 10,
-		  "Cost": 2,
-		  "BondReq": null,
-		  "ingredients": [
-			{
-			  "item": "Wintersquash Seed",
-			  "qty": 100
-			},
-			{
-			  "item": "Rotted Frond",
-			  "qty": 30
-			}
-		  ]
-		},
-		"Description": "'''An homage to a sinister Sproutfolk legend.''' The hallowed face of Crone Curcubita's undead child. Each Bita's Eve, she digs Lil' Zook from his cursed field. For one night, he roams from patch to patch, seeking a Sproutling out past bedtime to take his place... Lest moonset strikes and she buries him once more.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/LilZookMask.png",
-		"InternalID": "",
-		"ItemID": "Lil' Zook Mask",
-		"Rarity": "Common",
-		"Slot": "Helm",
-		"Stats": {
-		  "PhysicalDefence": 2,
-		  "MagickDefence": 0,
-		  "StabilityIncrease": 6,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Tethren",
-		"Craft": {
-		  "Fragments": "3",
-		  "Time": 1,
-		  "Cost": 2500,
-		  "BondReq": "1",
-		  "ingredients": [
-			{
-			  "item": "Sacred Shimmer",
-			  "qty": 1
-			}
-		  ]
-		},
-		"Description": "A golden medal, emblazoned with the face of the red sun. ’Tis almost too hot to touch. Almost.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/MedallionofMora.png",
-		"InternalID": "",
-		"ItemID": "Medallion of Mora",
-		"Rarity": "Common",
-		"Slot": "Talisman",
-		"Stats": {
-		  "PhysicalDefence": null,
-		  "MagickDefence": null,
-		  "StabilityIncrease": null,
-		  "VirtueType": "Courage",
-		  "VirtueValue": "+1"
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Mendicant King",
-		"Craft": {
-		  "Fragments": "3",
-		  "Time": 20,
-		  "Cost": 3500,
-		  "BondReq": null,
-		  "ingredients": [
-			{
-			  "item": "Scrap Iron",
-			  "qty": 45
-			},
-			{
-			  "item": "Dendrit Weave",
-			  "qty": 40
-			},
-			{
-			  "item": "Moranite",
-			  "qty": 12
-			}
-		  ]
-		},
-		"Description": "'''The sabatons that lead the final march of old Midrath.''' Carnelian gems trail down the greaves like beads of blood. A warning, an omen of the ruin that would come. In its afterlife, the metal has taken on a strange fluidity. Ichorous, even without its corrupted host.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/MendicantKingLeggings.png",
-		"InternalID": "",
-		"ItemID": "Mendicant King's Sabatons",
-		"Rarity": "Rare",
-		"Slot": "Leggings",
-		"Stats": {
-		  "PhysicalDefence": 6,
-		  "MagickDefence": 2,
-		  "StabilityIncrease": 2,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Mendicant King",
-		"Craft": {
-		  "Fragments": "4",
-		  "Time": 20,
-		  "Cost": 3500,
-		  "BondReq": null,
-		  "ingredients": [
-			{
-			  "item": "Scrap Iron",
-			  "qty": 45
-			},
-			{
-			  "item": "Sproutfolk Frond",
-			  "qty": 40
-			},
-			{
-			  "item": "Gossamer Quartz",
-			  "qty": 30
-			}
-		  ]
-		},
-		"Description": "'''A long-buried tunic. A breastplate forlorn.''' Buried on the battlefield of The Fonnish Charge, the armour of the Mendicant King rises once more. 'Round his waist, the insignia of the old Kingdom. 'Round his wrist, a gauntlet ne'er thrown down.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/MendicantKingCuirass.png",
-		"InternalID": "",
-		"ItemID": "Mendicant King's Suit of Rancor",
-		"Rarity": "Rare",
-		"Slot": "Cuirass",
-		"Stats": {
-		  "PhysicalDefence": 9,
-		  "MagickDefence": 2,
-		  "StabilityIncrease": 4,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Circade",
-		"Craft": {
-		  "Fragments": null,
-		  "Time": null,
-		  "Cost": null,
-		  "BondReq": null,
-		  "ingredients": []
-		},
-		"Description": "Shimmering with the feyish gleam of the green moon. Though it has not eyes, the pendant seems to see you. Like a glare. Like a wink.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/GhostofCircadeGreen.png",
-		"InternalID": "",
-		"ItemID": "Midnight Pendant",
-		"Rarity": "Common",
-		"Slot": "Talisman",
-		"Stats": {
-		  "PhysicalDefence": null,
-		  "MagickDefence": null,
-		  "StabilityIncrease": null,
-		  "VirtueType": "Spirit",
-		  "VirtueValue": "+1"
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Mockery",
-		"Craft": {
-		  "Fragments": "4",
-		  "Time": 20,
-		  "Cost": 3500,
-		  "BondReq": null,
-		  "ingredients": [
-			{
-			  "item": "Dendrit Weave",
-			  "qty": 45
-			},
-			{
-			  "item": "Petrified Ichor",
-			  "qty": 12
-			},
-			{
-			  "item": "Sappheline",
-			  "qty": 12
-			}
-		  ]
-		},
-		"Description": "'''A Mockery carapace forged by bark.''' Bones be a puzzle of ancient iron. Muscle be arcs of bark held taught. Tissue be insignia scrawled, but not glowing. Blood be the soul cast 'way once more.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/MockeryBinds.png",
-		"InternalID": "",
-		"ItemID": "Mockery Binds",
-		"Rarity": "Rare",
-		"Slot": "Cuirass",
-		"Stats": {
-		  "PhysicalDefence": 5,
-		  "MagickDefence": 5,
-		  "StabilityIncrease": 6,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Mockery",
-		"Craft": {
-		  "Fragments": "3",
-		  "Time": 20,
-		  "Cost": 3500,
-		  "BondReq": null,
-		  "ingredients": [
-			{
-			  "item": "Dendrit Weave",
-			  "qty": 45
-			},
-			{
-			  "item": "Corrupt Onyx",
-			  "qty": 25
-			},
-			{
-			  "item": "Sappheline",
-			  "qty": 12
-			}
-		  ]
-		},
-		"Description": "'''Leg braces fashioned of Mockery husk.''' What markings are these upon the knees? A runic spell broken by Envoy sword? Standing in the grievous greaves of this lost soul, you've the sense that it too was human, once...",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/MockeryDouthrot.png",
-		"InternalID": "",
-		"ItemID": "Mockery Douthrot",
-		"Rarity": "Rare",
-		"Slot": "Leggings",
-		"Stats": {
-		  "PhysicalDefence": 3,
-		  "MagickDefence": 3,
-		  "StabilityIncrease": 4,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Mockery",
-		"Craft": {
-		  "Fragments": "2",
-		  "Time": 20,
-		  "Cost": 3500,
-		  "BondReq": null,
-		  "ingredients": [
-			{
-			  "item": "Patch Leather",
-			  "qty": 45
-			},
-			{
-			  "item": "Corrupt Onyx",
-			  "qty": 45
-			},
-			{
-			  "item": "Sappheline",
-			  "qty": 12
-			}
-		  ]
-		},
-		"Description": "'''Deadwood bound to a creaking iron helm.''' Eedred Ilk. The name comes to you in whispers. An ancient voice echoes in these rotted craigs. The Mockery is surely purged from this armour... But its memory persists in phantom aches.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/MockeryIlk.png",
-		"InternalID": "",
-		"ItemID": "Mockery Ilk",
-		"Rarity": "Rare",
-		"Slot": "Helm",
-		"Stats": {
-		  "PhysicalDefence": 3,
-		  "MagickDefence": 2,
-		  "StabilityIncrease": 3,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Uncategorised",
-		"Craft": {
-		  "Fragments": "1",
-		  "Time": 1,
-		  "Cost": 2,
-		  "BondReq": null,
-		  "ingredients": [
-			{
-			  "item": "Scrap Steel",
-			  "qty": 30
-			},
-			{
-			  "item": "Mora's Kiss",
-			  "qty": 20
-			},
-			{
-			  "item": "Moranite",
-			  "qty": 6
-			}
-		  ]
-		},
-		"Description": "A fiery amber honour, emblazoned with the face of the red sun. Plunged into the everflame, she emerged, smiling.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/KithOfKingsTotem.png",
-		"InternalID": "",
-		"ItemID": "Molten Mora",
-		"Rarity": "Uncommon",
-		"Slot": "Talisman",
-		"Stats": {
-		  "PhysicalDefence": null,
-		  "MagickDefence": null,
-		  "StabilityIncrease": null,
-		  "VirtueType": "Courage",
-		  "VirtueValue": "+6"
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Orengall",
-		"Craft": {
-		  "Fragments": "4",
-		  "Time": 20,
-		  "Cost": 3,
-		  "BondReq": "3",
-		  "ingredients": [
-			{
-			  "item": "Scrap Steel",
-			  "qty": 45
-			},
-			{
-			  "item": "Dendrit Weave",
-			  "qty": 40
-			},
-			{
-			  "item": "Sproutfolk Frond",
-			  "qty": 40
-			}
-		  ]
-		},
-		"Description": "Cast beneath the winter solstice, Orengall's Lycansteel Cuirass holds the quiet dark of the longest night. Adorned with a Viridian Vine talisman to match the Omen Beast's own, the wolf's pact is sealed twixt servant and steed.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/OrengalCuirass.png",
-		"InternalID": "",
-		"ItemID": "Orengall's Cuirass",
-		"Rarity": "Rare",
-		"Slot": "Cuirass",
-		"Stats": {
-		  "PhysicalDefence": 7,
-		  "MagickDefence": 3,
-		  "StabilityIncrease": 6,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Orengall",
-		"Craft": {
-		  "Fragments": "3",
-		  "Time": 1,
-		  "Cost": 2,
-		  "BondReq": null,
-		  "ingredients": [
-			{
-			  "item": "Soulsbane",
-			  "qty": 25
-			},
-			{
-			  "item": "Dendrit Weave",
-			  "qty": 35
-			},
-			{
-			  "item": "Moranite",
-			  "qty": 12
-			}
-		  ]
-		},
-		"Description": "A single pointed canine carved in Omen runes. Dripping red in the paint of her zealots? Or the blood of her foes?",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/OrengallSoulBoon.png",
-		"InternalID": "",
-		"ItemID": "Orengall's Fang",
-		"Rarity": "Common",
-		"Slot": "Talisman",
-		"Stats": {
-		  "PhysicalDefence": null,
-		  "MagickDefence": null,
-		  "StabilityIncrease": null,
-		  "VirtueType": "Grace;Spirit",
-		  "VirtueValue": "+3;+2"
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Orengall",
-		"Craft": {
-		  "Fragments": "3",
-		  "Time": 20,
-		  "Cost": 3,
-		  "BondReq": "3",
-		  "ingredients": [
-			{
-			  "item": "Scrap Brass",
-			  "qty": 45
-			},
-			{
-			  "item": "Knotwood",
-			  "qty": 40
-			},
-			{
-			  "item": "River Pearl",
-			  "qty": 12
-			}
-		  ]
-		},
-		"Description": "Though the forelegs cast claw to prey, 'tis the wolf's hindlegs that pound power to earth. Orengall's Greaves holster the ritual dagger Fang. The wild wind blows her scarf, threaded through by the hairs of Omen Beast's own silvernpelt tail.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/OrengallGreaves.png",
-		"InternalID": "",
-		"ItemID": "Orengall's Greaves",
-		"Rarity": "Rare",
-		"Slot": "Leggings",
-		"Stats": {
-		  "PhysicalDefence": 4,
-		  "MagickDefence": 1,
-		  "StabilityIncrease": 4,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Oscelda",
-		"Craft": {
-		  "Fragments": "0",
-		  "Time": null,
-		  "Cost": null,
-		  "BondReq": null,
-		  "ingredients": []
-		},
-		"Description": "'''A slender sleeve of feyish blue to match your magick arm.''' Humble as these clothes may be, they feel petal-soft on the skin. It is the way of witches to dress lightly. Flowing fabrics such as these keep one close as can be to the magicks, ever-floating, on the wind.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/OsceldasBlues.png",
-		"InternalID": "",
-		"ItemID": "Oscelda's Blues",
-		"Rarity": "Common",
-		"Slot": "Cuirass",
-		"Stats": {
-		  "PhysicalDefence": 1,
-		  "MagickDefence": 4,
-		  "StabilityIncrease": 0,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Oscelda",
-		"Craft": {
-		  "Fragments": "0",
-		  "Time": null,
-		  "Cost": null,
-		  "BondReq": null,
-		  "ingredients": []
-		},
-		"Description": "'''A brazen diadem forged in the style of the healer Oscelda.''' When placed upon your head, you see her face. But for a moment, the wide blue eyes of The Feyish Witch of Legend. They say her diadem of thorns was a gift from Empress herself.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/OsceldasDiadem.png",
-		"InternalID": "",
-		"ItemID": "Oscelda's Diadem",
-		"Rarity": "Common",
-		"Slot": "Helm",
-		"Stats": {
-		  "PhysicalDefence": 0,
-		  "MagickDefence": 3,
-		  "StabilityIncrease": 0,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Oscelda",
-		"Craft": {
-		  "Fragments": "0",
-		  "Time": null,
-		  "Cost": null,
-		  "BondReq": null,
-		  "ingredients": []
-		},
-		"Description": "'''A long-as-life strip of fine-woven fabric.''' You start wrapping at your toes, then the arch, then your heel... You blink and the binds are suddenly tied above your knee! You feel grounded yet light. As though wearing nothing at all.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/OsceldasFeatherbinds.png",
-		"InternalID": "",
-		"ItemID": "Oscelda's Featherbinds",
-		"Rarity": "Common",
-		"Slot": "Leggings",
-		"Stats": {
-		  "PhysicalDefence": 1,
-		  "MagickDefence": 2,
-		  "StabilityIncrease": 0,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Uncategorised",
-		"Craft": {
-		  "Fragments": null,
-		  "Time": null,
-		  "Cost": null,
-		  "BondReq": null,
-		  "ingredients": []
-		},
-		"Description": "Bound together, the pendants of Wyldings three. The sum of all virtues, the Empress' love. Your hilt, your hush, your heart, your Paragon Periapt.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/PrimordialTalisman.png",
-		"InternalID": "",
-		"ItemID": "Paragon Periapt",
-		"Rarity": "Common",
-		"Slot": "Talisman",
-		"Stats": {
-		  "PhysicalDefence": null,
-		  "MagickDefence": null,
-		  "StabilityIncrease": null,
-		  "VirtueType": "Courage;Grace;Spirit",
-		  "VirtueValue": "+3;+3;+3"
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Cucurbita",
-		"Craft": {
-		  "Fragments": "2",
-		  "Time": 10,
-		  "Cost": 2,
-		  "BondReq": null,
-		  "ingredients": [
-			{
-			  "item": "Wintersquash Seed",
-			  "qty": 100
-			},
-			{
-			  "item": "Spider's Thread",
-			  "qty": 30
-			}
-		  ]
-		},
-		"Description": "'''An homage to a sinister Sproutfolk legend.''' The warty mask of Poppa Pepo, husband to The Crone, bringer of the blight. Each Bita's Eve, Sproutfolk rush to harvest the last of their crops before moonrise draws the fog tides in. For that is when Poppa Pepo makes his great sigh. Any stalk that feels his blighted breath will be rotted 'way by morning.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/PoppaPepoMask.png",
-		"InternalID": "",
-		"ItemID": "Poppa Pepo Mask",
-		"Rarity": "Common",
-		"Slot": "Helm",
-		"Stats": {
-		  "PhysicalDefence": 3,
-		  "MagickDefence": 0,
-		  "StabilityIncrease": 0,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Uncategorised",
-		"Craft": null,
-		"Description": "Lost everything but this lousy Mote... or Talisman, rather.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/SparrowTalisman.png",
-		"InternalID": "",
-		"ItemID": "Prelude Honour",
-		"Rarity": "Common",
-		"Slot": "Talisman",
-		"Stats": {
-		  "PhysicalDefence": null,
-		  "MagickDefence": null,
-		  "StabilityIncrease": null,
-		  "VirtueType": "Courage;Grace;Spirit",
-		  "VirtueValue": "+3;+3;+3"
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Garren",
-		"Craft": {
-		  "Fragments": "4",
-		  "Time": 20,
-		  "Cost": 2500,
-		  "BondReq": "3",
-		  "ingredients": [
-			{
-			  "item": "Scrap Brass",
-			  "qty": 30
-			},
-			{
-			  "item": "Patch Leather",
-			  "qty": 30
-			},
-			{
-			  "item": "Dendrit Weave",
-			  "qty": 30
-			}
-		  ]
-		},
-		"Description": "'''The noble pact-holder to Garren Rood must be decorated as a true Knight of Grace.''' Cast in careful faulds of oak-infused iron, this armour bestows upon the wearer the will of the stag. Careful prints of antlers span like shadows from elbow to shoulder; a mark of pride withstanding darkness and light.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/RegaliaofGarrenRood.png",
-		"InternalID": "",
-		"ItemID": "Regalia of Garren Rood",
-		"Rarity": "Uncommon",
-		"Slot": "Cuirass",
-		"Stats": {
-		  "PhysicalDefence": 5,
-		  "MagickDefence": 4,
-		  "StabilityIncrease": 3,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Regent",
-		"Craft": {
-		  "Fragments": "3",
-		  "Time": 10,
-		  "Cost": 2500,
-		  "BondReq": "2",
-		  "ingredients": [
-			{
-			  "item": "Scrap Steel",
-			  "qty": 30
-			},
-			{
-			  "item": "Sappheline",
-			  "qty": 10
-			},
-			{
-			  "item": "Ode Graphite",
-			  "qty": 25
-			}
-		  ]
-		},
-		"Description": "'''Flowing skirts and capes are intricately woven by Dendria's master webbers.''' Though each weave is completely unique, they all share a single flaw. The Silvernslip. An intentionally skipped stitch, a silent rebellion, of which the Ode know not.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/RegentsDrapery.png",
-		"InternalID": "",
-		"ItemID": "Regent's Drapery",
-		"Rarity": "Uncommon",
-		"Slot": "Leggings",
-		"Stats": {
-		  "PhysicalDefence": 4,
-		  "MagickDefence": 1,
-		  "StabilityIncrease": 2,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Regent",
-		"Craft": {
-		  "Fragments": "4",
-		  "Time": 10,
-		  "Cost": 2500,
-		  "BondReq": "2",
-		  "ingredients": [
-			{
-			  "item": "Scrap Steel",
-			  "qty": 30
-			},
-			{
-			  "item": "Petrified Ichor",
-			  "qty": 8
-			},
-			{
-			  "item": "Moranite",
-			  "qty": 8
-			}
-		  ]
-		},
-		"Description": "Gauntlets of swirling ore honour Mora and Saphene entwined. An emblem broach of flaxen wheat honours the fields of home, graced by twin suns to cultivate growths. Relics all from the Knightmaidens' noble age.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/RegentsShell.png",
-		"InternalID": "",
-		"ItemID": "Regent's Shell",
-		"Rarity": "Uncommon",
-		"Slot": "Cuirass",
-		"Stats": {
-		  "PhysicalDefence": 7,
-		  "MagickDefence": 1,
-		  "StabilityIncrease": 2,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Regent",
-		"Craft": {
-		  "Fragments": "2",
-		  "Time": 10,
-		  "Cost": 2500,
-		  "BondReq": "2",
-		  "ingredients": [
-			{
-			  "item": "Scrap Iron",
-			  "qty": 30
-			},
-			{
-			  "item": "Ode Graphite",
-			  "qty": 25
-			},
-			{
-			  "item": "Petrified Ichor",
-			  "qty": 10
-			}
-		  ]
-		},
-		"Description": "A barbette of Dendrit wyrmsylk flows lighter than a baron's beard. A steel fillet atop the head sits stiffer than helm and prouder than crown. Not Sinecure nor Tempest, Gruul nor Thrall, the Regent treads a balance betwixt all.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/RegentsVeil.png",
-		"InternalID": "",
-		"ItemID": "Regent's Veil",
-		"Rarity": "Uncommon",
-		"Slot": "Helm",
-		"Stats": {
-		  "PhysicalDefence": 4,
-		  "MagickDefence": 1,
-		  "StabilityIncrease": 0,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Sirin",
-		"Craft": {
-		  "Fragments": "3",
-		  "Time": 1,
-		  "Cost": 2,
-		  "BondReq": "1",
-		  "ingredients": [
-			{
-			  "item": "Sacred Shimmer",
-			  "qty": 1
-			}
-		  ]
-		},
-		"Description": "A brooch of sword-sharp petals. Though delicate, it is strong. One wonders how it’d fare when thrown.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/RosesBodkin.png",
-		"InternalID": "",
-		"ItemID": "Rose's Bodkin",
-		"Rarity": "Common",
-		"Slot": "Talisman",
-		"Stats": {
-		  "PhysicalDefence": null,
-		  "MagickDefence": null,
-		  "StabilityIncrease": null,
-		  "VirtueType": "Grace",
-		  "VirtueValue": "+1"
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Sirin",
-		"Craft": {
-		  "Fragments": "0",
-		  "Time": null,
-		  "Cost": null,
-		  "BondReq": null,
-		  "ingredients": []
-		},
-		"Description": "'''A hide of plain-sight.''' Not conspicuously fine clothing, nor noticeably impoverished. No notable insignia to be picked out of a crowd. This traveller's garb is utterly unremarkable, and purposefully so. To hide in the dark is easy. Only Sirin's truest zealots can vanish into the day.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/SirinsPlainhide.png",
-		"InternalID": "",
-		"ItemID": "Sirin's Plainhide",
-		"Rarity": "Common",
-		"Slot": "Cuirass",
-		"Stats": {
-		  "PhysicalDefence": 3,
-		  "MagickDefence": 1,
-		  "StabilityIncrease": 2,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Sirin",
-		"Craft": {
-		  "Fragments": "0",
-		  "Time": null,
-		  "Cost": null,
-		  "BondReq": null,
-		  "ingredients": []
-		},
-		"Description": "'''A loose leather hood in the shape of a sickle.''' A shadow cast just over the face. Though it would not lend much protection in battle, this shroud aims to keep its wearer from conflict entirely. Stay hooded, o graceful one.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/SirinsShroud.png",
-		"InternalID": "",
-		"ItemID": "Sirin's Shroud",
-		"Rarity": "Common",
-		"Slot": "Helm",
-		"Stats": {
-		  "PhysicalDefence": 1,
-		  "MagickDefence": 1,
-		  "StabilityIncrease": 2,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Sirin",
-		"Craft": {
-		  "Fragments": "0",
-		  "Time": null,
-		  "Cost": null,
-		  "BondReq": null,
-		  "ingredients": []
-		},
-		"Description": "'''Typical trousers lined in lowry leaves.''' Each step you take falls silent. These trousers do not rustle as you move, nor sound when brushed against a branch, a stalk. A trick of the old Fey trickster himself. Such shadow imbued lowry leaves leave you utterly quiet.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/SirinsStalks.png",
-		"InternalID": "",
-		"ItemID": "Sirin's Stalks",
-		"Rarity": "Common",
-		"Slot": "Leggings",
-		"Stats": {
-		  "PhysicalDefence": 1,
-		  "MagickDefence": 0,
-		  "StabilityIncrease": 2,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Oscelda",
-		"Craft": {
-		  "Fragments": "3",
-		  "Time": 1,
-		  "Cost": 2,
-		  "BondReq": "1",
-		  "ingredients": [
-			{
-			  "item": "Sacred Shimmer",
-			  "qty": 1
-			}
-		  ]
-		},
-		"Description": "A large seed, smoothed and worn by the passing of many hands. Held to the ear, one may hear a gentle heartbeat.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/SproutfolkSeed.png",
-		"InternalID": "",
-		"ItemID": "Sproutfolk Seed",
-		"Rarity": "Common",
-		"Slot": "Talisman",
-		"Stats": {
-		  "PhysicalDefence": null,
-		  "MagickDefence": null,
-		  "StabilityIncrease": null,
-		  "VirtueType": "Spirit",
-		  "VirtueValue": "+1"
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Uncategorised",
-		"Craft": {
-		  "Fragments": "1",
-		  "Time": 1,
-		  "Cost": 2,
-		  "BondReq": null,
-		  "ingredients": [
-			{
-			  "item": "Sproutfolk Frond",
-			  "qty": 30
-			},
-			{
-			  "item": "Weepin' Dris",
-			  "qty": 20
-			},
-			{
-			  "item": "River Pearl",
-			  "qty": 6
-			}
-		  ]
-		},
-		"Description": "A germinated seed, blessed by many clasped hands. A heartbeat, once faint, thrums with anticipation. A green shoot seems to dance.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/AlcasChildrenTotem.png",
-		"InternalID": "",
-		"ItemID": "Sproutfolk Shoot",
-		"Rarity": "Uncommon",
-		"Slot": "Talisman",
-		"Stats": {
-		  "PhysicalDefence": null,
-		  "MagickDefence": null,
-		  "StabilityIncrease": null,
-		  "VirtueType": "Spirit",
-		  "VirtueValue": "+6"
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Steelsinger",
-		"Craft": {
-		  "Fragments": "2",
-		  "Time": 10,
-		  "Cost": 2,
-		  "BondReq": null,
-		  "ingredients": [
-			{
-			  "item": "Scrap Brass",
-			  "qty": 30
-			},
-			{
-			  "item": "Ode'n Synsylk",
-			  "qty": 30
-			},
-			{
-			  "item": "Patch Leather",
-			  "qty": 30
-			}
-		  ]
-		},
-		"Description": "'''A brass circlet branded by the rising sun.''' 'Tis the symbol of the prentice, the lowest rank of the Steelsinger's Guild. Malleable, and apt for resmelting, the brass circlet is often forged by the prentice themself as a first test of skill. This one is exceptionally crafted.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/SteelsingersCirclet.png",
-		"InternalID": "",
-		"ItemID": "Steelsinger's Circlet",
-		"Rarity": "Uncommon",
-		"Slot": "Helm",
-		"Stats": {
-		  "PhysicalDefence": 0,
-		  "MagickDefence": 5,
-		  "StabilityIncrease": 2,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Steelsinger",
-		"Craft": {
-		  "Fragments": "3",
-		  "Time": 10,
-		  "Cost": 2,
-		  "BondReq": null,
-		  "ingredients": [
-			{
-			  "item": "Scrap Steel",
-			  "qty": 30
-			},
-			{
-			  "item": "Dendrit Weave",
-			  "qty": 30
-			},
-			{
-			  "item": "Patch Leather",
-			  "qty": 30
-			}
-		  ]
-		},
-		"Description": "'''A tattered old apron fashioned of scrap leather.''' Good for catching stray sparks and not much else. Rough and ragged as it is, this belted balm-cloth is a testament to the Steelsinger's code; To make what one needs, and naught more, from what one has, and naught less.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/SteelsingersShreds.png",
-		"InternalID": "",
-		"ItemID": "Steelsinger's Shreds",
-		"Rarity": "Uncommon",
-		"Slot": "Leggings",
-		"Stats": {
-		  "PhysicalDefence": 5,
-		  "MagickDefence": 0,
-		  "StabilityIncrease": 0,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Steelsinger",
-		"Craft": {
-		  "Fragments": "4",
-		  "Time": 10,
-		  "Cost": 2,
-		  "BondReq": null,
-		  "ingredients": [
-			{
-			  "item": "Scrap Brass",
-			  "qty": 30
-			},
-			{
-			  "item": "Ode'n Synsylk",
-			  "qty": 30
-			},
-			{
-			  "item": "Patch Leather",
-			  "qty": 30
-			}
-		  ]
-		},
-		"Description": "'''A clothen scarf for wicking sweat, lest if fall upon a fresh tempered blade.''' A length of arm-glove for grazing flame, lest a hammered hilt slip into the forge. Each piece of the Steelsinger's armour is worn not for the protection of the wearer, but for the protection of their precious craft.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/SteelsingersStithywicks.png",
-		"InternalID": "",
-		"ItemID": "Steelsinger's Stithywicks",
-		"Rarity": "Uncommon",
-		"Slot": "Cuirass",
-		"Stats": {
-		  "PhysicalDefence": 3,
-		  "MagickDefence": 6,
-		  "StabilityIncrease": 1,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Uncategorised",
-		"Craft": {
-		  "Fragments": "3",
-		  "Time": 1,
-		  "Cost": 2,
-		  "BondReq": null,
-		  "ingredients": [
-			{
-			  "item": "Ichor",
-			  "qty": 25
-			},
-			{
-			  "item": "Dendrit Weave",
-			  "qty": 35
-			},
-			{
-			  "item": "Petrified Ichor",
-			  "qty": 12
-			}
-		  ]
-		},
-		"Description": "Bottled starshine. Lightning in a bell jar. A tiny souvenir of Synod's grand menagerie, far away in castles loft.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/SynodsBellJar.png",
-		"InternalID": "",
-		"ItemID": "Synod's Bell Jar",
-		"Rarity": "Common",
-		"Slot": "Talisman",
-		"Stats": {
-		  "PhysicalDefence": null,
-		  "MagickDefence": null,
-		  "StabilityIncrease": null,
-		  "VirtueType": "Courage;Grace;Spirit",
-		  "VirtueValue": "+4;+1;+1"
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Tempest",
-		"Craft": {
-		  "Fragments": "3",
-		  "Time": 10,
-		  "Cost": 2,
-		  "BondReq": null,
-		  "ingredients": [
-			{
-			  "item": "Scrap Brass",
-			  "qty": 30
-			},
-			{
-			  "item": "Knotwood",
-			  "qty": 35
-			},
-			{
-			  "item": "Gossamer Quartz",
-			  "qty": 25
-			}
-		  ]
-		},
-		"Description": "'''Worn by Tempest Extractors.''' Tall gartered stockings are designed to protect human skin from long shifts trudging through Ichor wastes. The extraction of resources for Synod's collector is the least desirable of Ode'n labour, reserved for human conscripts alone.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/ForgetFireAltLeggings.png",
-		"InternalID": "",
-		"ItemID": "Tempest Braes",
-		"Rarity": "Common",
-		"Slot": "Leggings",
-		"Stats": {
-		  "PhysicalDefence": 3,
-		  "MagickDefence": 0,
-		  "StabilityIncrease": 2,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Tempest",
-		"Craft": {
-		  "Fragments": "4",
-		  "Time": 10,
-		  "Cost": 2,
-		  "BondReq": null,
-		  "ingredients": [
-			{
-			  "item": "Patch Leather",
-			  "qty": 30
-			},
-			{
-			  "item": "Dendrit Weave",
-			  "qty": 30
-			},
-			{
-			  "item": "Sproutfolk Frond",
-			  "qty": 30
-			}
-		  ]
-		},
-		"Description": "'''Infamously adorned by a variety of buckles and straps, the Tempest brigandine is designed to fit every shape of Ode conscript.''' From the statuesque Knightmaidens of Dendria to the diminutive farmfolk of the lowlands, Ode'n leathers may be fit and refit to any of the Thrall as many times as casualties call.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/ForgetFireAltCuirass.png",
-		"InternalID": "",
-		"ItemID": "Tempest Leathers",
-		"Rarity": "Common",
-		"Slot": "Cuirass",
-		"Stats": {
-		  "PhysicalDefence": 5,
-		  "MagickDefence": 2,
-		  "StabilityIncrease": 4,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Tempest",
-		"Craft": {
-		  "Fragments": "2",
-		  "Time": 10,
-		  "Cost": 2,
-		  "BondReq": null,
-		  "ingredients": [
-			{
-			  "item": "Patch Leather",
-			  "qty": 30
-			},
-			{
-			  "item": "Sproutfolk Frond",
-			  "qty": 30
-			},
-			{
-			  "item": "Quenching Acid",
-			  "qty": 35
-			}
-		  ]
-		},
-		"Description": "'''Draped dendrit fabric cloaks a cervelliere of Ode Graphite.''' Over the Tempest conscript's eyes hangs an intricately embroidered symbol of Sidea, the Ode'n constellation of natural order. As are the planets bound to cycle 'round stars, so are all living things bound to order.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/ForgetFireAltHelmet.png",
-		"InternalID": "",
-		"ItemID": "Tempest Visard",
-		"Rarity": "Common",
-		"Slot": "Helm",
-		"Stats": {
-		  "PhysicalDefence": 2,
-		  "MagickDefence": 0,
-		  "StabilityIncrease": 2,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Tethren",
-		"Craft": {
-		  "Fragments": "0",
-		  "Time": null,
-		  "Cost": null,
-		  "BondReq": null,
-		  "ingredients": []
-		},
-		"Description": "'''The feather-light leather cap of a Solist Warrior.''' Though traditionally worn to pad a heavy metal helm, this braveling's cap will grant light protection in a pinch. Flowing red drapes brush your cheeks like Mora's sunning rays.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/TethrensCap.png",
-		"InternalID": "",
-		"ItemID": "Tethren's Cap",
-		"Rarity": "Common",
-		"Slot": "Helm",
-		"Stats": {
-		  "PhysicalDefence": 1,
-		  "MagickDefence": 0,
-		  "StabilityIncrease": 1,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Tethren",
-		"Craft": {
-		  "Fragments": "0",
-		  "Time": null,
-		  "Cost": null,
-		  "BondReq": null,
-		  "ingredients": []
-		},
-		"Description": "'''Proud-footed boots with upturned toes.''' The yellow enamel poleyns shine with the symbol of the Solist. March forth, warrior, in the name of the mighty Fey fleet. On each fair footfall, hear the tapping heels of the many lost who march beside you.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/TethrensRoots.png",
-		"InternalID": "",
-		"ItemID": "Tethren's Roots",
-		"Rarity": "Common",
-		"Slot": "Leggings",
-		"Stats": {
-		  "PhysicalDefence": 3,
-		  "MagickDefence": 0,
-		  "StabilityIncrease": 0,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Tethren",
-		"Craft": {
-		  "Fragments": "0",
-		  "Time": null,
-		  "Cost": null,
-		  "BondReq": null,
-		  "ingredients": []
-		},
-		"Description": "'''A light tunic of soft-brushed deer hide.''' Despite its levity, you feel strengthened. As though a spark has been kindled within. A warrior you will be, smelling of wet stone and old smoke. Of a fire, long burned out.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/TethrensTunic.png",
-		"InternalID": "",
-		"ItemID": "Tethren's Tunic",
-		"Rarity": "Common",
-		"Slot": "Cuirass",
-		"Stats": {
-		  "PhysicalDefence": 5,
-		  "MagickDefence": 0,
-		  "StabilityIncrease": 1,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Cogah",
-		"Craft": {
-		  "Fragments": "3",
-		  "Time": 1,
-		  "Cost": 2,
-		  "BondReq": null,
-		  "ingredients": [
-			{
-			  "item": "Sacred Shimmer",
-			  "qty": 1
-			}
-		  ]
-		},
-		"Description": "A beastly talisman, a feyish gift for an Agari well-fell. This Creutair carries the blessings of grateful Fey... and a bond, a promise, made blindly.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/CreatureTalisman.png",
-		"InternalID": "",
-		"ItemID": "The Cogah Creutair",
-		"Rarity": "Common",
-		"Slot": "Talisman",
-		"Stats": {
-		  "PhysicalDefence": 0,
-		  "MagickDefence": 0,
-		  "StabilityIncrease": 2,
-		  "VirtueType": "Grace",
-		  "VirtueValue": "+2"
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Cogah",
-		"Craft": {
-		  "Fragments": "3",
-		  "Time": 1,
-		  "Cost": 2,
-		  "BondReq": null,
-		  "ingredients": [
-			{
-			  "item": "Sacred Shimmer",
-			  "qty": 1
-			}
-		  ]
-		},
-		"Description": "A tiny carved replica of the blighted Agari you defeated. Marked for death by the fey... and now killed by devoted Envoy. A rite, an offering, repaid by blessed talisman.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/CorruptedTalisman.png",
-		"InternalID": "",
-		"ItemID": "The Cogah Grod",
-		"Rarity": "Common",
-		"Slot": "Talisman",
-		"Stats": {
-		  "PhysicalDefence": 0,
-		  "MagickDefence": 2,
-		  "StabilityIncrease": 0,
-		  "VirtueType": "Spirit",
-		  "VirtueValue": "+2"
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Cogah",
-		"Craft": {
-		  "Fragments": "3",
-		  "Time": 1,
-		  "Cost": 2,
-		  "BondReq": null,
-		  "ingredients": [
-			{
-			  "item": "Sacred Shimmer",
-			  "qty": 1
-			}
-		  ]
-		},
-		"Description": "Where fell the Agari moments ago... now lies this little Lorcaan. A thank you from 'yond the veil? What gift you gave in exchange, what meaning had The Cogah rite, you know not.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/HumanoidTalisman.png",
-		"InternalID": "",
-		"ItemID": "The Cogah Lorcaan",
-		"Rarity": "Common",
-		"Slot": "Talisman",
-		"Stats": {
-		  "PhysicalDefence": 2,
-		  "MagickDefence": 0,
-		  "StabilityIncrease": 0,
-		  "VirtueType": "Courage",
-		  "VirtueValue": "+2"
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Circade",
-		"Craft": {
-		  "Fragments": "3",
-		  "Time": 1,
-		  "Cost": 2500,
-		  "BondReq": null,
-		  "ingredients": [
-			{
-			  "item": "Dawn Pendant",
-			  "qty": 1
-			},
-			{
-			  "item": "Dusk Pendant",
-			  "qty": 1
-			},
-			{
-			  "item": "Midnight Pendant",
-			  "qty": 1
-			}
-		  ]
-		},
-		"Description": "Forged in the wake of the death of The Circade. In the year 639, when at last his body ceased to rise, The Circade was sealed 'way by command of the True Heir Jotar. The Elder Aithbhreac bound the three souls of The Circade to rest within the Triune Talisman. As long as these three Pendants remain intertwined, may his souls remain bound till end of time.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/GhostofCircadeCombined.png",
-		"InternalID": "",
-		"ItemID": "Triune Talisman",
-		"Rarity": "Common",
-		"Slot": "Talisman",
-		"Stats": {
-		  "PhysicalDefence": null,
-		  "MagickDefence": null,
-		  "StabilityIncrease": null,
-		  "VirtueType": "Courage;Grace;Spirit",
-		  "VirtueValue": "+3;+3;+3"
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Uncategorised",
-		"Craft": {
-		  "Fragments": null,
-		  "Time": 24,
-		  "Cost": 2500,
-		  "BondReq": null,
-		  "ingredients": [
-			{
-			  "item": "Corrupt Onyx",
-			  "qty": 20
-			},
-			{
-			  "item": "Ichor",
-			  "qty": 20
-			},
-			{
-			  "item": "Petrified Ichor",
-			  "qty": 6
-			}
-		  ]
-		},
-		"Description": "A faint sloshing within this fastened corruption. Be it ichor blood or something sweeter?",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/IchorousTotem.png",
-		"InternalID": "",
-		"ItemID": "Wazzard's Wish",
-		"Rarity": "Common",
-		"Slot": "Talisman",
-		"Stats": {
-		  "PhysicalDefence": 1,
-		  "MagickDefence": 2,
-		  "StabilityIncrease": 0,
-		  "VirtueType": "Spirit",
-		  "VirtueValue": "+1"
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Wyld Oscelda",
-		"Craft": {
-		  "Fragments": null,
-		  "Time": null,
-		  "Cost": null,
-		  "BondReq": null,
-		  "ingredients": []
-		},
-		"Description": "'''Wyld Oscelda's Beltolls ring for all, though not all can hear them.''' Wevetroots wind their way across the armour, an enchanted embrace. From the draping cape hangs countless silver bells, ringing in a pitch only the rivers can hear.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/OsceldaLeggings.png",
-		"InternalID": "",
-		"ItemID": "Wyld Oscelda Beltolls",
-		"Rarity": "Uncommon",
-		"Slot": "Leggings",
-		"Stats": {
-		  "PhysicalDefence": 1,
-		  "MagickDefence": 6,
-		  "StabilityIncrease": 0,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Wyld Oscelda",
-		"Craft": {
-		  "Fragments": null,
-		  "Time": null,
-		  "Cost": null,
-		  "BondReq": null,
-		  "ingredients": []
-		},
-		"Description": "'''Soft as moonlight, light as stars, the flowing pendelveil of Wyld Oscelda.''' Woven entirely of Moonsteel Thread, the veil feels silky upon the skin while providing the protection of a very fine chainmail. A blessing bell hangs from the end of the long wrapping fabric.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/OsceldaCuirass.png",
-		"InternalID": "",
-		"ItemID": "Wyld Oscelda Pendelveil",
-		"Rarity": "Uncommon",
-		"Slot": "Cuirass",
-		"Stats": {
-		  "PhysicalDefence": 2,
-		  "MagickDefence": 9,
-		  "StabilityIncrease": 0,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Wyld Oscelda",
-		"Craft": {
-		  "Fragments": null,
-		  "Time": null,
-		  "Cost": null,
-		  "BondReq": null,
-		  "ingredients": []
-		},
-		"Description": "'''The blessed mask of Wyld Oscelda.''' Sheets of Moonsteel pour across the visor like silvern waves. So many tiny bells tinkle just over the wearer's brow. The Exhalt helm is enchented by something near forgotten- ancient and pure.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/OsceldaHelmet.png",
-		"InternalID": "",
-		"ItemID": "Wyld Oscelda's Exhalt",
-		"Rarity": "Uncommon",
-		"Slot": "Helm",
-		"Stats": {
-		  "PhysicalDefence": 1,
-		  "MagickDefence": 4,
-		  "StabilityIncrease": 0,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Wyld Sirin",
-		"Craft": {
-		  "Fragments": null,
-		  "Time": null,
-		  "Cost": null,
-		  "BondReq": null,
-		  "ingredients": []
-		},
-		"Description": "'''The fine tunic of Wyld Sirin.''' The silver pauldron is polished well by the constant brush of arrow fletching. A naive eye may mistake this for the regalia of a soft noble. But beneath these cobalt leathers hide armour plates, sleek and silent as their wearer.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/SirinCuirass.png",
-		"InternalID": "",
-		"ItemID": "Wyld Sirin Finery",
-		"Rarity": "Uncommon",
-		"Slot": "Cuirass",
-		"Stats": {
-		  "PhysicalDefence": 4,
-		  "MagickDefence": 0,
-		  "StabilityIncrease": 7,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Wyld Sirin",
-		"Craft": null,
-		"Description": "'''The rich leathers of Wyld Sirin, wrapped in wevetroot.''' The well-fitted boots move soft and swift, the hanging shroud, a shadow. Yet a wevetbelt coaxed round the waist feels out of place...  A gift from Wyld Oscelda? Or more likely a tricker's spoils.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/SirinLeggings.png",
-		"InternalID": "",
-		"ItemID": "Wyld Sirin Wevetbelt",
-		"Rarity": "Uncommon",
-		"Slot": "Leggings",
-		"Stats": {
-		  "PhysicalDefence": 3,
-		  "MagickDefence": 0,
-		  "StabilityIncrease": 4,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Wyld Sirin",
-		"Craft": null,
-		"Description": "'''The trickster's shroud, the fallow feignmask of Wyld Sirin.''' The flat bronze visage, the wide and rounded eyes. Every aspect of the Feignmask is a facade of unfeeling neutrality, designed to hide the cunning archer beneath. 'For oft, a disguise is the strongest protection.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/SirinHelmet.png",
-		"InternalID": "",
-		"ItemID": "Wyld Sirin's Feignmask",
-		"Rarity": "Uncommon",
-		"Slot": "Helm",
-		"Stats": {
-		  "PhysicalDefence": 1,
-		  "MagickDefence": 0,
-		  "StabilityIncrease": 4,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Wyld Tethren",
-		"Craft": null,
-		"Description": "'''The same sabatons that marched those flaming fields so many ages ago.''' The spurning knees, the proud-tipped toes, the armour of Wyld Tethren steelsung back to life. Even now, it carries the worth of a battle won... and the weight of war's cost.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/TethrenLeggings.png",
-		"InternalID": "",
-		"ItemID": "Wyld Tethren Flamefoot",
-		"Rarity": "Uncommon",
-		"Slot": "Leggings",
-		"Stats": {
-		  "PhysicalDefence": 6,
-		  "MagickDefence": 0,
-		  "StabilityIncrease": 2,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Wyld Tethren",
-		"Craft": {
-		  "Fragments": null,
-		  "Time": null,
-		  "Cost": null,
-		  "BondReq": null,
-		  "ingredients": []
-		},
-		"Description": "'''The heavy armour of the Solist Warriors.''' The folded regalia marks a lifetime of training. So too does the iron breastplate, shaped in perfect form of the muscled frame underneath. The battalion of the Fey, riders of the suns. Betrayed by their own commanding Chief.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/TethrenCuirass.png",
-		"InternalID": "",
-		"ItemID": "Wyld Tethren Solist Shield",
-		"Rarity": "",
-		"Slot": "Cuirass",
-		"Stats": {
-		  "PhysicalDefence": 8,
-		  "MagickDefence": 0,
-		  "StabilityIncrease": 2,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Wyld Tethren",
-		"Craft": null,
-		"Description": "'''The mighty hornhelm of Wyld Tethren.''' 'Twas these bullish horns that she wore upon her head in the final hours of The Felling. A Wyld ox charging through the flame. These blunted spurs be a weapon in their own right.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/TethrenHelmet.png",
-		"InternalID": "",
-		"ItemID": "Wyld Tethren's Hornhelm",
-		"Rarity": "Uncommon",
-		"Slot": "Helm",
-		"Stats": {
-		  "PhysicalDefence": 4,
-		  "MagickDefence": 0,
-		  "StabilityIncrease": 1,
-		  "VirtueType": null,
-		  "VirtueValue": null
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Wyld Oscelda",
-		"Craft": {
-		  "Fragments": null,
-		  "Time": null,
-		  "Cost": null,
-		  "BondReq": null,
-		  "ingredients": []
-		},
-		"Description": "A pendant of oak and alder, blooming afresh after so many years. May it fill you with Oscelda's spirit.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/GaleneTalisman.png",
-		"InternalID": "",
-		"ItemID": "Wylding's Heart",
-		"Rarity": "Uncommon",
-		"Slot": "Talisman",
-		"Stats": {
-		  "PhysicalDefence": null,
-		  "MagickDefence": null,
-		  "StabilityIncrease": null,
-		  "VirtueType": "Spirit",
-		  "VirtueValue": "+3"
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Wyld Tethren",
-		"Craft": {
-		  "Fragments": null,
-		  "Time": null,
-		  "Cost": null,
-		  "BondReq": null,
-		  "ingredients": []
-		},
-		"Description": "A pendant forged in the likeness of The Ivor Blade's hilt. May it grant you the courage of Tethren.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/PothiaTalisman.png",
-		"InternalID": "",
-		"ItemID": "Wylding's Hilt",
-		"Rarity": "Uncommon",
-		"Slot": "Talisman",
-		"Stats": {
-		  "PhysicalDefence": null,
-		  "MagickDefence": null,
-		  "StabilityIncrease": null,
-		  "VirtueType": "Courage",
-		  "VirtueValue": "+3"
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  },
-	  {
-		"ArmorSet": "Wyld Sirin",
-		"Craft": {
-		  "Fragments": null,
-		  "Time": null,
-		  "Cost": null,
-		  "BondReq": null,
-		  "ingredients": []
-		},
-		"Description": "A pendant of golden finery, like arrow fletching, like fair eyelashes. May you find the grace of Sirin within.",
-		"ImgAltIngame": "",
-		"ImgAltPreview": "",
-		"ImgIngame": "",
-		"ImgPreview": "https://api.avakot.org/v1/I/JosalfarTalisman.png",
-		"InternalID": "",
-		"ItemID": "Wylding's Hush",
-		"Rarity": "Uncommon",
-		"Slot": "Talisman",
-		"Stats": {
-		  "PhysicalDefence": null,
-		  "MagickDefence": null,
-		  "StabilityIncrease": null,
-		  "VirtueType": "Grace",
-		  "VirtueValue": "+3"
-		},
-		"Tags": "",
-		"lastUpdated": ""
-	  }
-	]
+  "armor": [
+    {
+      "ArmorSet": "Arbearer",
+      "Craft": {
+        "Fragments": "3",
+        "Time": 20,
+        "Cost": 3500,
+        "BondReq": null,
+        "ingredients": [
+          {
+            "item": "Scrap Iron",
+            "qty": 45
+          },
+          {
+            "item": "Dendrit Weave",
+            "qty": 40
+          },
+          {
+            "item": "Sappheline",
+            "qty": 12
+          }
+        ]
+      },
+      "Description": "'''The Arbearer's laden boots. As thick as Wevetroots.''' A bastion of straps support Poleyns and mail. Heavy iron plates guard each and every toe. Though the Arbearer's soles are sewn in soft leather. Gentle. So as not to disturb the tender sprouts underfoot.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/BromiusLeggings.png",
+      "InternalID": "",
+      "ItemID": "Arbearer's Braes",
+      "Rarity": "Rare",
+      "Slot": "Leggings",
+      "Stats": {
+        "PhysicalDefence": 7,
+        "MagickDefence": 0,
+        "StabilityIncrease": 3,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Arbearer",
+      "Craft": {
+        "Fragments": "2",
+        "Time": 20,
+        "Cost": 3500,
+        "BondReq": null,
+        "ingredients": [
+          {
+            "item": "Scrap Iron",
+            "qty": 45
+          },
+          {
+            "item": "Scrap Brass",
+            "qty": 45
+          },
+          {
+            "item": "Sappheline",
+            "qty": 12
+          }
+        ]
+      },
+      "Description": "'''The hulking helm of the Wevetwood's ward.''' Narrowed eyes, heavy with sap. Jagged jaw, bared to snap. The Arbearer's Mask is a wordless threat, a promise of death to those who would harm his forest. Though... It may be lifted just a quick to show the lazy smile beneath.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/BromiusHelmetClosed.png",
+      "InternalID": "",
+      "ItemID": "Arbearer's Mask",
+      "Rarity": "Rare",
+      "Slot": "Helm",
+      "Stats": {
+        "PhysicalDefence": 7,
+        "MagickDefence": 0,
+        "StabilityIncrease": 3,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Arbearer",
+      "Craft": {
+        "Fragments": "4",
+        "Time": 20,
+        "Cost": 3500,
+        "BondReq": null,
+        "ingredients": [
+          {
+            "item": "Scrap Steel",
+            "qty": 45
+          },
+          {
+            "item": "Quenching Acid",
+            "qty": 35
+          },
+          {
+            "item": "Moranite",
+            "qty": 12
+          }
+        ]
+      },
+      "Description": "'''A wrought iron pauncher of unfathomable heft.''' This armour is to Arbearer as bark is to tree. An assault of scratches cover its surface, though no weapon has ever pierced through to the soft belly it guards. Surely, one never will.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/BromiusCuirass.png",
+      "InternalID": "",
+      "ItemID": "Arbearer's Pauncher",
+      "Rarity": "Rare",
+      "Slot": "Cuirass",
+      "Stats": {
+        "PhysicalDefence": 10,
+        "MagickDefence": 0,
+        "StabilityIncrease": 4,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Orengall",
+      "Craft": {
+        "Fragments": "2",
+        "Time": 20,
+        "Cost": 3500,
+        "BondReq": "3",
+        "ingredients": [
+          {
+            "item": "Scrap Steel",
+            "qty": 45
+          },
+          {
+            "item": "Dendrit Weave",
+            "qty": 40
+          },
+          {
+            "item": "Quenching Acid",
+            "qty": 30
+          }
+        ]
+      },
+      "Description": "",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/OrengallHelmClosed.png",
+      "InternalID": "",
+      "ItemID": "Armet of Orengall",
+      "Rarity": "Rare",
+      "Slot": "Helm",
+      "Stats": {
+        "PhysicalDefence": 4,
+        "MagickDefence": 1,
+        "StabilityIncrease": 4,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Mendicant King",
+      "Craft": {
+        "Fragments": "2",
+        "Time": 20,
+        "Cost": 3500,
+        "BondReq": null,
+        "ingredients": [
+          {
+            "item": "Scrap Iron",
+            "qty": 45
+          },
+          {
+            "item": "Patch Leather",
+            "qty": 40
+          },
+          {
+            "item": "River Pearl",
+            "qty": 12
+          }
+        ]
+      },
+      "Description": "'''The heavy helm of the Mendicant King.''' Once a glowing symbol of Midrathian power. Now, whether by form or by memory, corrupted. The noble mask contorts into toothed maw. Tuvalkane seems hesitant to steelsing his crown.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/MendicantKingHelmet.png",
+      "InternalID": "",
+      "ItemID": "Bascinet of The Mendicant King",
+      "Rarity": "Rare",
+      "Slot": "Helm",
+      "Stats": {
+        "PhysicalDefence": 6,
+        "MagickDefence": 1,
+        "StabilityIncrease": 2,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Uncategorised",
+      "Craft": {
+        "Fragments": "1",
+        "Time": 1,
+        "Cost": 2,
+        "BondReq": null,
+        "ingredients": [
+          {
+            "item": "Knotwood",
+            "qty": 30
+          },
+          {
+            "item": "Hymn Rose",
+            "qty": 20
+          },
+          {
+            "item": "Sappheline",
+            "qty": 6
+          }
+        ]
+      },
+      "Description": "An insignia of sword-sharp petals. With a flick, its retracted blades uncoil like a rose in full bloom.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/SilentRoseTotem.png",
+      "InternalID": "",
+      "ItemID": "Bloomin' Bodkin",
+      "Rarity": "Uncommon",
+      "Slot": "Talisman",
+      "Stats": {
+        "PhysicalDefence": null,
+        "MagickDefence": null,
+        "StabilityIncrease": null,
+        "VirtueType": "Grace",
+        "VirtueValue": "+6"
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Tempest",
+      "Craft": null,
+      "Description": "A scarf of Dendrit weave wraps tightly round the neck. A brass apparatus latches to the mouth like a parasite. An Ode'n design for Alcan bodies. The Brazen Lung filters the air of the Ode'n Skytower, making it breathable for humans. Barely.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/ForgetFireAltMask.png",
+      "InternalID": "",
+      "ItemID": "Brazen Lung",
+      "Rarity": "Common",
+      "Slot": "Helm",
+      "Stats": {
+        "PhysicalDefence": 0,
+        "MagickDefence": 3,
+        "StabilityIncrease": 0,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Circade",
+      "Craft": {
+        "Fragments": null,
+        "Time": null,
+        "Cost": null,
+        "BondReq": null,
+        "ingredients": []
+      },
+      "Description": "'''The swift-stalking greaves of The Circade.''' An inconspicious set of armour, standard issue for nobles of clan Jotar. Though, to an eye trained in Spectral Sight, they shimmer with feyish enchantments.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/CircadeGreaves.png",
+      "InternalID": "",
+      "ItemID": "Circade's Greaves",
+      "Rarity": "Rare",
+      "Slot": "Leggings",
+      "Stats": {
+        "PhysicalDefence": 4,
+        "MagickDefence": 0,
+        "StabilityIncrease": 2,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Circade",
+      "Craft": {
+        "Fragments": null,
+        "Time": null,
+        "Cost": null,
+        "BondReq": null,
+        "ingredients": []
+      },
+      "Description": "'''The leather-bound plackart of The Circade.''' A sturdy shield for the dusk soul's precious gut. Heavy as a slurring tongue, round as a barrel, the ancient armour creaks in combat... Though it glides as freshly oiled when the great arm raises a toast.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/CircadeCuirass.png",
+      "InternalID": "",
+      "ItemID": "Circade's Gutguard",
+      "Rarity": "Rare",
+      "Slot": "Cuirass",
+      "Stats": {
+        "PhysicalDefence": 7,
+        "MagickDefence": 2,
+        "StabilityIncrease": 2,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Circade",
+      "Craft": {
+        "Fragments": null,
+        "Time": null,
+        "Cost": null,
+        "BondReq": null,
+        "ingredients": []
+      },
+      "Description": "'''The weathered helm of The Circade.''' Preserved in tomb for centuries, the Helm of Deceit holds still the air of its former wearer. Slippery. Cool. Imposing. The metal shell echoes when worn like the inside of Kearnhold bells.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/CircadeHelmetClosed.png",
+      "InternalID": "",
+      "ItemID": "Circade's Helm of Deceit",
+      "Rarity": "Rare",
+      "Slot": "Helm",
+      "Stats": {
+        "PhysicalDefence": 5,
+        "MagickDefence": 0,
+        "StabilityIncrease": 0,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Cucurbita",
+      "Craft": {
+        "Fragments": "2",
+        "Time": 4,
+        "Cost": 1,
+        "BondReq": null,
+        "ingredients": [
+          {
+            "item": "Wintersquash Seed",
+            "qty": 50
+          }
+        ]
+      },
+      "Description": "'''An homage to a sinister Sproutfolk legend.''' The Crone Cucurbita's mask is a mark of harvest tradition. Most often worn by patch sages, harvest oracles and parents who resent their children.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/CroneCucurbitaMask.png",
+      "InternalID": "",
+      "ItemID": "Crone Cucurbita Mask",
+      "Rarity": "Common",
+      "Slot": "Helm",
+      "Stats": {
+        "PhysicalDefence": 1,
+        "MagickDefence": 4,
+        "StabilityIncrease": 0,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Circade",
+      "Craft": {
+        "Fragments": null,
+        "Time": null,
+        "Cost": null,
+        "BondReq": null,
+        "ingredients": []
+      },
+      "Description": "Alight with the silent flame of the blue sun. When shaken, the pendant so faintly chimes. As though filled cut diamonds.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/GhostofCircadeBlue.png",
+      "InternalID": "",
+      "ItemID": "Dawn Pendant",
+      "Rarity": "Common",
+      "Slot": "Talisman",
+      "Stats": {
+        "PhysicalDefence": null,
+        "MagickDefence": null,
+        "StabilityIncrease": null,
+        "VirtueType": "Grace",
+        "VirtueValue": "+1"
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Orengall",
+      "Craft": {
+        "Fragments": "3",
+        "Time": 1,
+        "Cost": 2,
+        "BondReq": "1",
+        "ingredients": [
+          {
+            "item": "Gossamer Quartz",
+            "qty": 20
+          },
+          {
+            "item": "Dendrit Weave",
+            "qty": 35
+          },
+          {
+            "item": "Moranite",
+            "qty": 12
+          }
+        ]
+      },
+      "Description": "A Moonsteel brooch in the likeness of a lycan skull. A warning snarl upon your chest.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/OrengallTotem.png",
+      "InternalID": "",
+      "ItemID": "Direskull",
+      "Rarity": "Common",
+      "Slot": "Talisman",
+      "Stats": {
+        "PhysicalDefence": null,
+        "MagickDefence": null,
+        "StabilityIncrease": null,
+        "VirtueType": "Grace",
+        "VirtueValue": "+5"
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Circade",
+      "Craft": {
+        "Fragments": null,
+        "Time": null,
+        "Cost": null,
+        "BondReq": null,
+        "ingredients": []
+      },
+      "Description": "Burning with the warm glow of the red sun. The pendant is unreasonably heavy, and somehow, still tacky with the residue of ancient ale.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/GhostofCircadeRed.png",
+      "InternalID": "",
+      "ItemID": "Dusk Pendant",
+      "Rarity": "Common",
+      "Slot": "Talisman",
+      "Stats": {
+        "PhysicalDefence": null,
+        "MagickDefence": null,
+        "StabilityIncrease": null,
+        "VirtueType": "Courage",
+        "VirtueValue": "+1"
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Fire King",
+      "Craft": {
+        "Fragments": "3",
+        "Time": 10,
+        "Cost": 2,
+        "BondReq": null,
+        "ingredients": [
+          {
+            "item": "Scrap Brass",
+            "qty": 45
+          },
+          {
+            "item": "Whisprig",
+            "qty": 40
+          },
+          {
+            "item": "River Pearl",
+            "qty": 12
+          }
+        ]
+      },
+      "Description": "'''Below his Flamekin Kilt, Fenn Jotar brandished a gilded poleyn over his right knee.''' Lined by soft gold, the King wore this polyen as a mark of pride, that it would never be dented not tarnished by a knee bent to the Cassid invader, Napo Agnes.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/FireKingsKilt.png",
+      "InternalID": "",
+      "ItemID": "Fire King's Kilt",
+      "Rarity": "Uncommon",
+      "Slot": "Leggings",
+      "Stats": {
+        "PhysicalDefence": 3,
+        "MagickDefence": 0,
+        "StabilityIncrease": 3,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Fire King",
+      "Craft": {
+        "Fragments": "4",
+        "Time": 10,
+        "Cost": 2,
+        "BondReq": null,
+        "ingredients": [
+          {
+            "item": "Scrap Iron",
+            "qty": 45
+          },
+          {
+            "item": "Patch Leather",
+            "qty": 40
+          },
+          {
+            "item": "Dendrit Weave",
+            "qty": 40
+          }
+        ]
+      },
+      "Description": "The gilded plackart of Fenn Jotar is wrought of a once heat-resistant alloy devised by the Fire King's own royal smith, Karlik the Torrid. Though many years branded beside Fenn Jotar's legendary flaming sword diminished these properties, the armour remains cool to touch.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/FireKingsPlackart.png",
+      "InternalID": "",
+      "ItemID": "Fire King's Plackart",
+      "Rarity": "Uncommon",
+      "Slot": "Cuirass",
+      "Stats": {
+        "PhysicalDefence": 5,
+        "MagickDefence": 0,
+        "StabilityIncrease": 6,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Forgetfire",
+      "Craft": {
+        "Fragments": "3",
+        "Time": 10,
+        "Cost": 2500,
+        "BondReq": null,
+        "ingredients": [
+          {
+            "item": "Scrap Brass",
+            "qty": 30
+          },
+          {
+            "item": "Patch Leather",
+            "qty": 30
+          },
+          {
+            "item": "Sproutfolk Frond",
+            "qty": 30
+          }
+        ]
+      },
+      "Description": "'''Worn by the legion of Forgetfire.''' Elk-hide straps are wrapped tightly about the legs to prevent Smogswell: Swelling of feet and legs of one who travels often through varying atmosphere. Though effective, they are notoriously uncomfortable.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/ForgetfireBraes.png",
+      "InternalID": "",
+      "ItemID": "Forgetfire Braes",
+      "Rarity": "Common",
+      "Slot": "Leggings",
+      "Stats": {
+        "PhysicalDefence": 3,
+        "MagickDefence": 0,
+        "StabilityIncrease": 2,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Forgetfire",
+      "Craft": {
+        "Fragments": "4",
+        "Time": 10,
+        "Cost": 2500,
+        "BondReq": null,
+        "ingredients": [
+          {
+            "item": "Patch Leather",
+            "qty": 30
+          },
+          {
+            "item": "Dendrit Weave",
+            "qty": 35
+          },
+          {
+            "item": "Sproutfolk Frond",
+            "qty": 25
+          }
+        ]
+      },
+      "Description": "'''A standard issue brigandine for Forgetfire conscripts.''' The finest leathers of Alcan bounty are sent skywards to be crafted into this lightweight armour. Only Ode'n clothiers understand the mechanism which so acutely splices and stitches the garment to standardized perfection.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/ForgetfireLeathers.png",
+      "InternalID": "",
+      "ItemID": "Forgetfire Leathers",
+      "Rarity": "Common",
+      "Slot": "Cuirass",
+      "Stats": {
+        "PhysicalDefence": 5,
+        "MagickDefence": 0,
+        "StabilityIncrease": 5,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Forgetfire",
+      "Craft": {
+        "Fragments": "2",
+        "Time": 10,
+        "Cost": 2500,
+        "BondReq": null,
+        "ingredients": [
+          {
+            "item": "Patch Leather",
+            "qty": 30
+          },
+          {
+            "item": "Sproutfolk Frond",
+            "qty": 30
+          },
+          {
+            "item": "Quenching Acid",
+            "qty": 35
+          }
+        ]
+      },
+      "Description": "A lightweight cervelliere is cloaked beneath a tight Dendrit weave to protect human skin from the harsh UV rays outside Alca's atmosphere. The heavy brass apparatus makes Ode'n Skytower atmospheres tolerable to humans. Barely.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/ForgetfireVisard.png",
+      "InternalID": "",
+      "ItemID": "Forgetfire Visard",
+      "Rarity": "Common",
+      "Slot": "Helm",
+      "Stats": {
+        "PhysicalDefence": 2,
+        "MagickDefence": 0,
+        "StabilityIncrease": 3,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Underwear",
+      "Craft": null,
+      "Description": "'''The sea-soaked underags of the deserted.''' Cast from the sky and washed up on shore, you've been stripped of everything. Your Tempest title, your indentured armour, even your name. You are a shivering nothing. It is time to start anew.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/ForsakenRags.png",
+      "InternalID": "",
+      "ItemID": "Forsaken Rags",
+      "Rarity": "Common",
+      "Slot": "Leggings",
+      "Stats": {
+        "PhysicalDefence": null,
+        "MagickDefence": null,
+        "StabilityIncrease": null,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Garren",
+      "Craft": {
+        "Fragments": "3",
+        "Time": 10,
+        "Cost": 2500,
+        "BondReq": "3",
+        "ingredients": [
+          {
+            "item": "Scrap Iron",
+            "qty": 30
+          },
+          {
+            "item": "Dendrit Weave",
+            "qty": 30
+          },
+          {
+            "item": "Patch Leather",
+            "qty": 30
+          }
+        ]
+      },
+      "Description": "Split as the stag's own cloven hooves, the arming doublet of Garren Rood hangs low over knightly boots, struck too up the center by cleft of gold. Enchanted by alloys of bone trace and bark, these Cloven Hosen hold firm as the forests' deepest roots.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/GarrensClovenHose.png",
+      "InternalID": "",
+      "ItemID": "Garren's Cloven Hosen",
+      "Rarity": "Uncommon",
+      "Slot": "Leggings",
+      "Stats": {
+        "PhysicalDefence": 2,
+        "MagickDefence": 2,
+        "StabilityIncrease": 2,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Garren",
+      "Craft": {
+        "Fragments": "2",
+        "Time": 7,
+        "Cost": 2500,
+        "BondReq": "3",
+        "ingredients": [
+          {
+            "item": "Scrap Brass",
+            "qty": 30
+          },
+          {
+            "item": "Patch Leather",
+            "qty": 30
+          },
+          {
+            "item": "Sproutfolk Frond",
+            "qty": 30
+          }
+        ]
+      },
+      "Description": "'''The kettle helm of Garren Rood is blessed by grace of the Omen Beast's own crown.''' Glowing tips of the iron antler reach skyward to Mora's divine power, while the sculpted cap points forward, a weapon of focused will. By the stag's wreath of bone, wield your will with pride.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/GarrensCrownofGrace.png",
+      "InternalID": "",
+      "ItemID": "Garren's Crown of Grace",
+      "Rarity": "Uncommon",
+      "Slot": "Helm",
+      "Stats": {
+        "PhysicalDefence": 2,
+        "MagickDefence": 2,
+        "StabilityIncrease": 3,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Fire King",
+      "Craft": {
+        "Fragments": "2",
+        "Time": 10,
+        "Cost": 2,
+        "BondReq": null,
+        "ingredients": [
+          {
+            "item": "Scrap Iron",
+            "qty": 45
+          },
+          {
+            "item": "Patch Leather",
+            "qty": 40
+          },
+          {
+            "item": "Dendrit Weave",
+            "qty": 40
+          }
+        ]
+      },
+      "Description": "'''A Great Helm cast tall as a pillar of flame.''' Oft worn in place of the Midrathian crown, Fenn Jotar's beloved helmet marked the Fire King's devotion to the sun goddesses Mora and Saphene. Pilfered from the Undercity catacombs during his kingdom's Lightless Era, Fenn Jotar himself affixed fish and flame motifs to mark this antique by the House of Jotar.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/GreatHelmofTheFireKing.png",
+      "InternalID": "",
+      "ItemID": "Great Helm of The Fire King",
+      "Rarity": "Uncommon",
+      "Slot": "Helm",
+      "Stats": {
+        "PhysicalDefence": 3,
+        "MagickDefence": 0,
+        "StabilityIncrease": 2,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Underwear",
+      "Craft": null,
+      "Description": "You've naught but the salt and sand in your hair. Vulnerable... but unburdened. Bare your face to twin suns and Ode'n shadows. It is time to start anew.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/Helmless.png",
+      "InternalID": "",
+      "ItemID": "Helmless",
+      "Rarity": "Common",
+      "Slot": "Helm",
+      "Stats": {
+        "PhysicalDefence": null,
+        "MagickDefence": null,
+        "StabilityIncrease": null,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Underwear",
+      "Craft": null,
+      "Description": "'''The sea-soaked underags of the deserted.''' Your freeborn clothing was burnt when you were captured. Regardless, you have long outgrown it. Stripped bare before the lonely world, you've all but forgotten how to be free. It is time to start anew.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/LaidBare.png",
+      "InternalID": "",
+      "ItemID": "Laid Bare",
+      "Rarity": "Common",
+      "Slot": "Cuirass",
+      "Stats": {
+        "PhysicalDefence": null,
+        "MagickDefence": null,
+        "StabilityIncrease": null,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Cucurbita",
+      "Craft": {
+        "Fragments": "3",
+        "Time": 10,
+        "Cost": 2,
+        "BondReq": null,
+        "ingredients": [
+          {
+            "item": "Wintersquash Seed",
+            "qty": 100
+          },
+          {
+            "item": "Rotted Frond",
+            "qty": 30
+          }
+        ]
+      },
+      "Description": "'''An homage to a sinister Sproutfolk legend.''' The hallowed face of Crone Curcubita's undead child. Each Bita's Eve, she digs Lil' Zook from his cursed field. For one night, he roams from patch to patch, seeking a Sproutling out past bedtime to take his place... Lest moonset strikes and she buries him once more.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/LilZookMask.png",
+      "InternalID": "",
+      "ItemID": "Lil' Zook Mask",
+      "Rarity": "Common",
+      "Slot": "Helm",
+      "Stats": {
+        "PhysicalDefence": 2,
+        "MagickDefence": 0,
+        "StabilityIncrease": 6,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Tethren",
+      "Craft": {
+        "Fragments": "3",
+        "Time": 1,
+        "Cost": 2500,
+        "BondReq": "1",
+        "ingredients": [
+          {
+            "item": "Sacred Shimmer",
+            "qty": 1
+          }
+        ]
+      },
+      "Description": "A golden medal, emblazoned with the face of the red sun. ’Tis almost too hot to touch. Almost.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/MedallionofMora.png",
+      "InternalID": "",
+      "ItemID": "Medallion of Mora",
+      "Rarity": "Common",
+      "Slot": "Talisman",
+      "Stats": {
+        "PhysicalDefence": null,
+        "MagickDefence": null,
+        "StabilityIncrease": null,
+        "VirtueType": "Courage",
+        "VirtueValue": "+1"
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Mendicant King",
+      "Craft": {
+        "Fragments": "3",
+        "Time": 20,
+        "Cost": 3500,
+        "BondReq": null,
+        "ingredients": [
+          {
+            "item": "Scrap Iron",
+            "qty": 45
+          },
+          {
+            "item": "Dendrit Weave",
+            "qty": 40
+          },
+          {
+            "item": "Moranite",
+            "qty": 12
+          }
+        ]
+      },
+      "Description": "'''The sabatons that lead the final march of old Midrath.''' Carnelian gems trail down the greaves like beads of blood. A warning, an omen of the ruin that would come. In its afterlife, the metal has taken on a strange fluidity. Ichorous, even without its corrupted host.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/MendicantKingLeggings.png",
+      "InternalID": "",
+      "ItemID": "Mendicant King's Sabatons",
+      "Rarity": "Rare",
+      "Slot": "Leggings",
+      "Stats": {
+        "PhysicalDefence": 6,
+        "MagickDefence": 2,
+        "StabilityIncrease": 2,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Mendicant King",
+      "Craft": {
+        "Fragments": "4",
+        "Time": 20,
+        "Cost": 3500,
+        "BondReq": null,
+        "ingredients": [
+          {
+            "item": "Scrap Iron",
+            "qty": 45
+          },
+          {
+            "item": "Sproutfolk Frond",
+            "qty": 40
+          },
+          {
+            "item": "Gossamer Quartz",
+            "qty": 30
+          }
+        ]
+      },
+      "Description": "'''A long-buried tunic. A breastplate forlorn.''' Buried on the battlefield of The Fonnish Charge, the armour of the Mendicant King rises once more. 'Round his waist, the insignia of the old Kingdom. 'Round his wrist, a gauntlet ne'er thrown down.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/MendicantKingCuirass.png",
+      "InternalID": "",
+      "ItemID": "Mendicant King's Suit of Rancor",
+      "Rarity": "Rare",
+      "Slot": "Cuirass",
+      "Stats": {
+        "PhysicalDefence": 9,
+        "MagickDefence": 2,
+        "StabilityIncrease": 4,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Circade",
+      "Craft": {
+        "Fragments": null,
+        "Time": null,
+        "Cost": null,
+        "BondReq": null,
+        "ingredients": []
+      },
+      "Description": "Shimmering with the feyish gleam of the green moon. Though it has not eyes, the pendant seems to see you. Like a glare. Like a wink.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/GhostofCircadeGreen.png",
+      "InternalID": "",
+      "ItemID": "Midnight Pendant",
+      "Rarity": "Common",
+      "Slot": "Talisman",
+      "Stats": {
+        "PhysicalDefence": null,
+        "MagickDefence": null,
+        "StabilityIncrease": null,
+        "VirtueType": "Spirit",
+        "VirtueValue": "+1"
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Mockery",
+      "Craft": {
+        "Fragments": "4",
+        "Time": 20,
+        "Cost": 3500,
+        "BondReq": null,
+        "ingredients": [
+          {
+            "item": "Dendrit Weave",
+            "qty": 45
+          },
+          {
+            "item": "Petrified Ichor",
+            "qty": 12
+          },
+          {
+            "item": "Sappheline",
+            "qty": 12
+          }
+        ]
+      },
+      "Description": "'''A Mockery carapace forged by bark.''' Bones be a puzzle of ancient iron. Muscle be arcs of bark held taught. Tissue be insignia scrawled, but not glowing. Blood be the soul cast 'way once more.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/MockeryBinds.png",
+      "InternalID": "",
+      "ItemID": "Mockery Binds",
+      "Rarity": "Rare",
+      "Slot": "Cuirass",
+      "Stats": {
+        "PhysicalDefence": 5,
+        "MagickDefence": 5,
+        "StabilityIncrease": 6,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Mockery",
+      "Craft": {
+        "Fragments": "3",
+        "Time": 20,
+        "Cost": 3500,
+        "BondReq": null,
+        "ingredients": [
+          {
+            "item": "Dendrit Weave",
+            "qty": 45
+          },
+          {
+            "item": "Corrupt Onyx",
+            "qty": 25
+          },
+          {
+            "item": "Sappheline",
+            "qty": 12
+          }
+        ]
+      },
+      "Description": "'''Leg braces fashioned of Mockery husk.''' What markings are these upon the knees? A runic spell broken by Envoy sword? Standing in the grievous greaves of this lost soul, you've the sense that it too was human, once...",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/MockeryDouthrot.png",
+      "InternalID": "",
+      "ItemID": "Mockery Douthrot",
+      "Rarity": "Rare",
+      "Slot": "Leggings",
+      "Stats": {
+        "PhysicalDefence": 3,
+        "MagickDefence": 3,
+        "StabilityIncrease": 4,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Mockery",
+      "Craft": {
+        "Fragments": "2",
+        "Time": 20,
+        "Cost": 3500,
+        "BondReq": null,
+        "ingredients": [
+          {
+            "item": "Patch Leather",
+            "qty": 45
+          },
+          {
+            "item": "Corrupt Onyx",
+            "qty": 45
+          },
+          {
+            "item": "Sappheline",
+            "qty": 12
+          }
+        ]
+      },
+      "Description": "'''Deadwood bound to a creaking iron helm.''' Eedred Ilk. The name comes to you in whispers. An ancient voice echoes in these rotted craigs. The Mockery is surely purged from this armour... But its memory persists in phantom aches.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/MockeryIlk.png",
+      "InternalID": "",
+      "ItemID": "Mockery Ilk",
+      "Rarity": "Rare",
+      "Slot": "Helm",
+      "Stats": {
+        "PhysicalDefence": 3,
+        "MagickDefence": 2,
+        "StabilityIncrease": 3,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Uncategorised",
+      "Craft": {
+        "Fragments": "1",
+        "Time": 1,
+        "Cost": 2,
+        "BondReq": null,
+        "ingredients": [
+          {
+            "item": "Scrap Steel",
+            "qty": 30
+          },
+          {
+            "item": "Mora's Kiss",
+            "qty": 20
+          },
+          {
+            "item": "Moranite",
+            "qty": 6
+          }
+        ]
+      },
+      "Description": "A fiery amber honour, emblazoned with the face of the red sun. Plunged into the everflame, she emerged, smiling.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/KithOfKingsTotem.png",
+      "InternalID": "",
+      "ItemID": "Molten Mora",
+      "Rarity": "Uncommon",
+      "Slot": "Talisman",
+      "Stats": {
+        "PhysicalDefence": null,
+        "MagickDefence": null,
+        "StabilityIncrease": null,
+        "VirtueType": "Courage",
+        "VirtueValue": "+6"
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Orengall",
+      "Craft": {
+        "Fragments": "4",
+        "Time": 20,
+        "Cost": 3,
+        "BondReq": "3",
+        "ingredients": [
+          {
+            "item": "Scrap Steel",
+            "qty": 45
+          },
+          {
+            "item": "Dendrit Weave",
+            "qty": 40
+          },
+          {
+            "item": "Sproutfolk Frond",
+            "qty": 40
+          }
+        ]
+      },
+      "Description": "Cast beneath the winter solstice, Orengall's Lycansteel Cuirass holds the quiet dark of the longest night. Adorned with a Viridian Vine talisman to match the Omen Beast's own, the wolf's pact is sealed twixt servant and steed.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/OrengalCuirass.png",
+      "InternalID": "",
+      "ItemID": "Orengall's Cuirass",
+      "Rarity": "Rare",
+      "Slot": "Cuirass",
+      "Stats": {
+        "PhysicalDefence": 7,
+        "MagickDefence": 3,
+        "StabilityIncrease": 6,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Orengall",
+      "Craft": {
+        "Fragments": "3",
+        "Time": 1,
+        "Cost": 2,
+        "BondReq": null,
+        "ingredients": [
+          {
+            "item": "Soulsbane",
+            "qty": 25
+          },
+          {
+            "item": "Dendrit Weave",
+            "qty": 35
+          },
+          {
+            "item": "Moranite",
+            "qty": 12
+          }
+        ]
+      },
+      "Description": "A single pointed canine carved in Omen runes. Dripping red in the paint of her zealots? Or the blood of her foes?",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/OrengallSoulBoon.png",
+      "InternalID": "",
+      "ItemID": "Orengall's Fang",
+      "Rarity": "Common",
+      "Slot": "Talisman",
+      "Stats": {
+        "PhysicalDefence": null,
+        "MagickDefence": null,
+        "StabilityIncrease": null,
+        "VirtueType": "Grace;Spirit",
+        "VirtueValue": "+3;+2"
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Orengall",
+      "Craft": {
+        "Fragments": "3",
+        "Time": 20,
+        "Cost": 3,
+        "BondReq": "3",
+        "ingredients": [
+          {
+            "item": "Scrap Brass",
+            "qty": 45
+          },
+          {
+            "item": "Knotwood",
+            "qty": 40
+          },
+          {
+            "item": "River Pearl",
+            "qty": 12
+          }
+        ]
+      },
+      "Description": "Though the forelegs cast claw to prey, 'tis the wolf's hindlegs that pound power to earth. Orengall's Greaves holster the ritual dagger Fang. The wild wind blows her scarf, threaded through by the hairs of Omen Beast's own silvernpelt tail.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/OrengallGreaves.png",
+      "InternalID": "",
+      "ItemID": "Orengall's Greaves",
+      "Rarity": "Rare",
+      "Slot": "Leggings",
+      "Stats": {
+        "PhysicalDefence": 4,
+        "MagickDefence": 1,
+        "StabilityIncrease": 4,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Oscelda",
+      "Craft": {
+        "Fragments": "0",
+        "Time": null,
+        "Cost": null,
+        "BondReq": null,
+        "ingredients": []
+      },
+      "Description": "'''A slender sleeve of feyish blue to match your magick arm.''' Humble as these clothes may be, they feel petal-soft on the skin. It is the way of witches to dress lightly. Flowing fabrics such as these keep one close as can be to the magicks, ever-floating, on the wind.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/OsceldasBlues.png",
+      "InternalID": "",
+      "ItemID": "Oscelda's Blues",
+      "Rarity": "Common",
+      "Slot": "Cuirass",
+      "Stats": {
+        "PhysicalDefence": 1,
+        "MagickDefence": 4,
+        "StabilityIncrease": 0,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Oscelda",
+      "Craft": {
+        "Fragments": "0",
+        "Time": null,
+        "Cost": null,
+        "BondReq": null,
+        "ingredients": []
+      },
+      "Description": "'''A brazen diadem forged in the style of the healer Oscelda.''' When placed upon your head, you see her face. But for a moment, the wide blue eyes of The Feyish Witch of Legend. They say her diadem of thorns was a gift from Empress herself.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/OsceldasDiadem.png",
+      "InternalID": "",
+      "ItemID": "Oscelda's Diadem",
+      "Rarity": "Common",
+      "Slot": "Helm",
+      "Stats": {
+        "PhysicalDefence": 0,
+        "MagickDefence": 3,
+        "StabilityIncrease": 0,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Oscelda",
+      "Craft": {
+        "Fragments": "0",
+        "Time": null,
+        "Cost": null,
+        "BondReq": null,
+        "ingredients": []
+      },
+      "Description": "'''A long-as-life strip of fine-woven fabric.''' You start wrapping at your toes, then the arch, then your heel... You blink and the binds are suddenly tied above your knee! You feel grounded yet light. As though wearing nothing at all.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/OsceldasFeatherbinds.png",
+      "InternalID": "",
+      "ItemID": "Oscelda's Featherbinds",
+      "Rarity": "Common",
+      "Slot": "Leggings",
+      "Stats": {
+        "PhysicalDefence": 1,
+        "MagickDefence": 2,
+        "StabilityIncrease": 0,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Uncategorised",
+      "Craft": {
+        "Fragments": null,
+        "Time": null,
+        "Cost": null,
+        "BondReq": null,
+        "ingredients": []
+      },
+      "Description": "Bound together, the pendants of Wyldings three. The sum of all virtues, the Empress' love. Your hilt, your hush, your heart, your Paragon Periapt.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/PrimordialTalisman.png",
+      "InternalID": "",
+      "ItemID": "Paragon Periapt",
+      "Rarity": "Common",
+      "Slot": "Talisman",
+      "Stats": {
+        "PhysicalDefence": null,
+        "MagickDefence": null,
+        "StabilityIncrease": null,
+        "VirtueType": "Courage;Grace;Spirit",
+        "VirtueValue": "+3;+3;+3"
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Cucurbita",
+      "Craft": {
+        "Fragments": "2",
+        "Time": 10,
+        "Cost": 2,
+        "BondReq": null,
+        "ingredients": [
+          {
+            "item": "Wintersquash Seed",
+            "qty": 100
+          },
+          {
+            "item": "Spider's Thread",
+            "qty": 30
+          }
+        ]
+      },
+      "Description": "'''An homage to a sinister Sproutfolk legend.''' The warty mask of Poppa Pepo, husband to The Crone, bringer of the blight. Each Bita's Eve, Sproutfolk rush to harvest the last of their crops before moonrise draws the fog tides in. For that is when Poppa Pepo makes his great sigh. Any stalk that feels his blighted breath will be rotted 'way by morning.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/PoppaPepoMask.png",
+      "InternalID": "",
+      "ItemID": "Poppa Pepo Mask",
+      "Rarity": "Common",
+      "Slot": "Helm",
+      "Stats": {
+        "PhysicalDefence": 3,
+        "MagickDefence": 0,
+        "StabilityIncrease": 0,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Uncategorised",
+      "Craft": null,
+      "Description": "Lost everything but this lousy Mote... or Talisman, rather.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/SparrowTalisman.png",
+      "InternalID": "",
+      "ItemID": "Prelude Honour",
+      "Rarity": "Common",
+      "Slot": "Talisman",
+      "Stats": {
+        "PhysicalDefence": null,
+        "MagickDefence": null,
+        "StabilityIncrease": null,
+        "VirtueType": "Courage;Grace;Spirit",
+        "VirtueValue": "+3;+3;+3"
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Garren",
+      "Craft": {
+        "Fragments": "4",
+        "Time": 20,
+        "Cost": 2500,
+        "BondReq": "3",
+        "ingredients": [
+          {
+            "item": "Scrap Brass",
+            "qty": 30
+          },
+          {
+            "item": "Patch Leather",
+            "qty": 30
+          },
+          {
+            "item": "Dendrit Weave",
+            "qty": 30
+          }
+        ]
+      },
+      "Description": "'''The noble pact-holder to Garren Rood must be decorated as a true Knight of Grace.''' Cast in careful faulds of oak-infused iron, this armour bestows upon the wearer the will of the stag. Careful prints of antlers span like shadows from elbow to shoulder; a mark of pride withstanding darkness and light.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/RegaliaofGarrenRood.png",
+      "InternalID": "",
+      "ItemID": "Regalia of Garren Rood",
+      "Rarity": "Uncommon",
+      "Slot": "Cuirass",
+      "Stats": {
+        "PhysicalDefence": 5,
+        "MagickDefence": 4,
+        "StabilityIncrease": 3,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Regent",
+      "Craft": {
+        "Fragments": "3",
+        "Time": 10,
+        "Cost": 2500,
+        "BondReq": "2",
+        "ingredients": [
+          {
+            "item": "Scrap Steel",
+            "qty": 30
+          },
+          {
+            "item": "Sappheline",
+            "qty": 10
+          },
+          {
+            "item": "Ode Graphite",
+            "qty": 25
+          }
+        ]
+      },
+      "Description": "'''Flowing skirts and capes are intricately woven by Dendria's master webbers.''' Though each weave is completely unique, they all share a single flaw. The Silvernslip. An intentionally skipped stitch, a silent rebellion, of which the Ode know not.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/RegentsDrapery.png",
+      "InternalID": "",
+      "ItemID": "Regent's Drapery",
+      "Rarity": "Uncommon",
+      "Slot": "Leggings",
+      "Stats": {
+        "PhysicalDefence": 4,
+        "MagickDefence": 1,
+        "StabilityIncrease": 2,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Regent",
+      "Craft": {
+        "Fragments": "4",
+        "Time": 10,
+        "Cost": 2500,
+        "BondReq": "2",
+        "ingredients": [
+          {
+            "item": "Scrap Steel",
+            "qty": 30
+          },
+          {
+            "item": "Petrified Ichor",
+            "qty": 8
+          },
+          {
+            "item": "Moranite",
+            "qty": 8
+          }
+        ]
+      },
+      "Description": "Gauntlets of swirling ore honour Mora and Saphene entwined. An emblem broach of flaxen wheat honours the fields of home, graced by twin suns to cultivate growths. Relics all from the Knightmaidens' noble age.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/RegentsShell.png",
+      "InternalID": "",
+      "ItemID": "Regent's Shell",
+      "Rarity": "Uncommon",
+      "Slot": "Cuirass",
+      "Stats": {
+        "PhysicalDefence": 7,
+        "MagickDefence": 1,
+        "StabilityIncrease": 2,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Regent",
+      "Craft": {
+        "Fragments": "2",
+        "Time": 10,
+        "Cost": 2500,
+        "BondReq": "2",
+        "ingredients": [
+          {
+            "item": "Scrap Iron",
+            "qty": 30
+          },
+          {
+            "item": "Ode Graphite",
+            "qty": 25
+          },
+          {
+            "item": "Petrified Ichor",
+            "qty": 10
+          }
+        ]
+      },
+      "Description": "A barbette of Dendrit wyrmsylk flows lighter than a baron's beard. A steel fillet atop the head sits stiffer than helm and prouder than crown. Not Sinecure nor Tempest, Gruul nor Thrall, the Regent treads a balance betwixt all.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/RegentsVeil.png",
+      "InternalID": "",
+      "ItemID": "Regent's Veil",
+      "Rarity": "Uncommon",
+      "Slot": "Helm",
+      "Stats": {
+        "PhysicalDefence": 4,
+        "MagickDefence": 1,
+        "StabilityIncrease": 0,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Sirin",
+      "Craft": {
+        "Fragments": "3",
+        "Time": 1,
+        "Cost": 2,
+        "BondReq": "1",
+        "ingredients": [
+          {
+            "item": "Sacred Shimmer",
+            "qty": 1
+          }
+        ]
+      },
+      "Description": "A brooch of sword-sharp petals. Though delicate, it is strong. One wonders how it’d fare when thrown.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/RosesBodkin.png",
+      "InternalID": "",
+      "ItemID": "Rose's Bodkin",
+      "Rarity": "Common",
+      "Slot": "Talisman",
+      "Stats": {
+        "PhysicalDefence": null,
+        "MagickDefence": null,
+        "StabilityIncrease": null,
+        "VirtueType": "Grace",
+        "VirtueValue": "+1"
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Sirin",
+      "Craft": {
+        "Fragments": "0",
+        "Time": null,
+        "Cost": null,
+        "BondReq": null,
+        "ingredients": []
+      },
+      "Description": "'''A hide of plain-sight.''' Not conspicuously fine clothing, nor noticeably impoverished. No notable insignia to be picked out of a crowd. This traveller's garb is utterly unremarkable, and purposefully so. To hide in the dark is easy. Only Sirin's truest zealots can vanish into the day.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/SirinsPlainhide.png",
+      "InternalID": "",
+      "ItemID": "Sirin's Plainhide",
+      "Rarity": "Common",
+      "Slot": "Cuirass",
+      "Stats": {
+        "PhysicalDefence": 3,
+        "MagickDefence": 1,
+        "StabilityIncrease": 2,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Sirin",
+      "Craft": {
+        "Fragments": "0",
+        "Time": null,
+        "Cost": null,
+        "BondReq": null,
+        "ingredients": []
+      },
+      "Description": "'''A loose leather hood in the shape of a sickle.''' A shadow cast just over the face. Though it would not lend much protection in battle, this shroud aims to keep its wearer from conflict entirely. Stay hooded, o graceful one.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/SirinsShroud.png",
+      "InternalID": "",
+      "ItemID": "Sirin's Shroud",
+      "Rarity": "Common",
+      "Slot": "Helm",
+      "Stats": {
+        "PhysicalDefence": 1,
+        "MagickDefence": 1,
+        "StabilityIncrease": 2,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Sirin",
+      "Craft": {
+        "Fragments": "0",
+        "Time": null,
+        "Cost": null,
+        "BondReq": null,
+        "ingredients": []
+      },
+      "Description": "'''Typical trousers lined in lowry leaves.''' Each step you take falls silent. These trousers do not rustle as you move, nor sound when brushed against a branch, a stalk. A trick of the old Fey trickster himself. Such shadow imbued lowry leaves leave you utterly quiet.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/SirinsStalks.png",
+      "InternalID": "",
+      "ItemID": "Sirin's Stalks",
+      "Rarity": "Common",
+      "Slot": "Leggings",
+      "Stats": {
+        "PhysicalDefence": 1,
+        "MagickDefence": 0,
+        "StabilityIncrease": 2,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Oscelda",
+      "Craft": {
+        "Fragments": "3",
+        "Time": 1,
+        "Cost": 2,
+        "BondReq": "1",
+        "ingredients": [
+          {
+            "item": "Sacred Shimmer",
+            "qty": 1
+          }
+        ]
+      },
+      "Description": "A large seed, smoothed and worn by the passing of many hands. Held to the ear, one may hear a gentle heartbeat.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/SproutfolkSeed.png",
+      "InternalID": "",
+      "ItemID": "Sproutfolk Seed",
+      "Rarity": "Common",
+      "Slot": "Talisman",
+      "Stats": {
+        "PhysicalDefence": null,
+        "MagickDefence": null,
+        "StabilityIncrease": null,
+        "VirtueType": "Spirit",
+        "VirtueValue": "+1"
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Uncategorised",
+      "Craft": {
+        "Fragments": "1",
+        "Time": 1,
+        "Cost": 2,
+        "BondReq": null,
+        "ingredients": [
+          {
+            "item": "Sproutfolk Frond",
+            "qty": 30
+          },
+          {
+            "item": "Weepin' Dris",
+            "qty": 20
+          },
+          {
+            "item": "River Pearl",
+            "qty": 6
+          }
+        ]
+      },
+      "Description": "A germinated seed, blessed by many clasped hands. A heartbeat, once faint, thrums with anticipation. A green shoot seems to dance.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/AlcasChildrenTotem.png",
+      "InternalID": "",
+      "ItemID": "Sproutfolk Shoot",
+      "Rarity": "Uncommon",
+      "Slot": "Talisman",
+      "Stats": {
+        "PhysicalDefence": null,
+        "MagickDefence": null,
+        "StabilityIncrease": null,
+        "VirtueType": "Spirit",
+        "VirtueValue": "+6"
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Steelsinger",
+      "Craft": {
+        "Fragments": "2",
+        "Time": 10,
+        "Cost": 2,
+        "BondReq": null,
+        "ingredients": [
+          {
+            "item": "Scrap Brass",
+            "qty": 30
+          },
+          {
+            "item": "Ode'n Synsylk",
+            "qty": 30
+          },
+          {
+            "item": "Patch Leather",
+            "qty": 30
+          }
+        ]
+      },
+      "Description": "'''A brass circlet branded by the rising sun.''' 'Tis the symbol of the prentice, the lowest rank of the Steelsinger's Guild. Malleable, and apt for resmelting, the brass circlet is often forged by the prentice themself as a first test of skill. This one is exceptionally crafted.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/SteelsingersCirclet.png",
+      "InternalID": "",
+      "ItemID": "Steelsinger's Circlet",
+      "Rarity": "Uncommon",
+      "Slot": "Helm",
+      "Stats": {
+        "PhysicalDefence": 0,
+        "MagickDefence": 5,
+        "StabilityIncrease": 2,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Steelsinger",
+      "Craft": {
+        "Fragments": "3",
+        "Time": 10,
+        "Cost": 2,
+        "BondReq": null,
+        "ingredients": [
+          {
+            "item": "Scrap Steel",
+            "qty": 30
+          },
+          {
+            "item": "Dendrit Weave",
+            "qty": 30
+          },
+          {
+            "item": "Patch Leather",
+            "qty": 30
+          }
+        ]
+      },
+      "Description": "'''A tattered old apron fashioned of scrap leather.''' Good for catching stray sparks and not much else. Rough and ragged as it is, this belted balm-cloth is a testament to the Steelsinger's code; To make what one needs, and naught more, from what one has, and naught less.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/SteelsingersShreds.png",
+      "InternalID": "",
+      "ItemID": "Steelsinger's Shreds",
+      "Rarity": "Uncommon",
+      "Slot": "Leggings",
+      "Stats": {
+        "PhysicalDefence": 5,
+        "MagickDefence": 0,
+        "StabilityIncrease": 0,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Steelsinger",
+      "Craft": {
+        "Fragments": "4",
+        "Time": 10,
+        "Cost": 2,
+        "BondReq": null,
+        "ingredients": [
+          {
+            "item": "Scrap Brass",
+            "qty": 30
+          },
+          {
+            "item": "Ode'n Synsylk",
+            "qty": 30
+          },
+          {
+            "item": "Patch Leather",
+            "qty": 30
+          }
+        ]
+      },
+      "Description": "'''A clothen scarf for wicking sweat, lest if fall upon a fresh tempered blade.''' A length of arm-glove for grazing flame, lest a hammered hilt slip into the forge. Each piece of the Steelsinger's armour is worn not for the protection of the wearer, but for the protection of their precious craft.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/SteelsingersStithywicks.png",
+      "InternalID": "",
+      "ItemID": "Steelsinger's Stithywicks",
+      "Rarity": "Uncommon",
+      "Slot": "Cuirass",
+      "Stats": {
+        "PhysicalDefence": 3,
+        "MagickDefence": 6,
+        "StabilityIncrease": 1,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Uncategorised",
+      "Craft": {
+        "Fragments": "3",
+        "Time": 1,
+        "Cost": 2,
+        "BondReq": null,
+        "ingredients": [
+          {
+            "item": "Ichor",
+            "qty": 25
+          },
+          {
+            "item": "Dendrit Weave",
+            "qty": 35
+          },
+          {
+            "item": "Petrified Ichor",
+            "qty": 12
+          }
+        ]
+      },
+      "Description": "Bottled starshine. Lightning in a bell jar. A tiny souvenir of Synod's grand menagerie, far away in castles loft.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/SynodsBellJar.png",
+      "InternalID": "",
+      "ItemID": "Synod's Bell Jar",
+      "Rarity": "Common",
+      "Slot": "Talisman",
+      "Stats": {
+        "PhysicalDefence": null,
+        "MagickDefence": null,
+        "StabilityIncrease": null,
+        "VirtueType": "Courage;Grace;Spirit",
+        "VirtueValue": "+4;+1;+1"
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Tempest",
+      "Craft": {
+        "Fragments": "3",
+        "Time": 10,
+        "Cost": 2,
+        "BondReq": null,
+        "ingredients": [
+          {
+            "item": "Scrap Brass",
+            "qty": 30
+          },
+          {
+            "item": "Knotwood",
+            "qty": 35
+          },
+          {
+            "item": "Gossamer Quartz",
+            "qty": 25
+          }
+        ]
+      },
+      "Description": "'''Worn by Tempest Extractors.''' Tall gartered stockings are designed to protect human skin from long shifts trudging through Ichor wastes. The extraction of resources for Synod's collector is the least desirable of Ode'n labour, reserved for human conscripts alone.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/ForgetFireAltLeggings.png",
+      "InternalID": "",
+      "ItemID": "Tempest Braes",
+      "Rarity": "Common",
+      "Slot": "Leggings",
+      "Stats": {
+        "PhysicalDefence": 3,
+        "MagickDefence": 0,
+        "StabilityIncrease": 2,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Tempest",
+      "Craft": {
+        "Fragments": "4",
+        "Time": 10,
+        "Cost": 2,
+        "BondReq": null,
+        "ingredients": [
+          {
+            "item": "Patch Leather",
+            "qty": 30
+          },
+          {
+            "item": "Dendrit Weave",
+            "qty": 30
+          },
+          {
+            "item": "Sproutfolk Frond",
+            "qty": 30
+          }
+        ]
+      },
+      "Description": "'''Infamously adorned by a variety of buckles and straps, the Tempest brigandine is designed to fit every shape of Ode conscript.''' From the statuesque Knightmaidens of Dendria to the diminutive farmfolk of the lowlands, Ode'n leathers may be fit and refit to any of the Thrall as many times as casualties call.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/ForgetFireAltCuirass.png",
+      "InternalID": "",
+      "ItemID": "Tempest Leathers",
+      "Rarity": "Common",
+      "Slot": "Cuirass",
+      "Stats": {
+        "PhysicalDefence": 5,
+        "MagickDefence": 2,
+        "StabilityIncrease": 4,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Tempest",
+      "Craft": {
+        "Fragments": "2",
+        "Time": 10,
+        "Cost": 2,
+        "BondReq": null,
+        "ingredients": [
+          {
+            "item": "Patch Leather",
+            "qty": 30
+          },
+          {
+            "item": "Sproutfolk Frond",
+            "qty": 30
+          },
+          {
+            "item": "Quenching Acid",
+            "qty": 35
+          }
+        ]
+      },
+      "Description": "'''Draped dendrit fabric cloaks a cervelliere of Ode Graphite.''' Over the Tempest conscript's eyes hangs an intricately embroidered symbol of Sidea, the Ode'n constellation of natural order. As are the planets bound to cycle 'round stars, so are all living things bound to order.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/ForgetFireAltHelmet.png",
+      "InternalID": "",
+      "ItemID": "Tempest Visard",
+      "Rarity": "Common",
+      "Slot": "Helm",
+      "Stats": {
+        "PhysicalDefence": 2,
+        "MagickDefence": 0,
+        "StabilityIncrease": 2,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Tethren",
+      "Craft": {
+        "Fragments": "0",
+        "Time": null,
+        "Cost": null,
+        "BondReq": null,
+        "ingredients": []
+      },
+      "Description": "'''The feather-light leather cap of a Solist Warrior.''' Though traditionally worn to pad a heavy metal helm, this braveling's cap will grant light protection in a pinch. Flowing red drapes brush your cheeks like Mora's sunning rays.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/TethrensCap.png",
+      "InternalID": "",
+      "ItemID": "Tethren's Cap",
+      "Rarity": "Common",
+      "Slot": "Helm",
+      "Stats": {
+        "PhysicalDefence": 1,
+        "MagickDefence": 0,
+        "StabilityIncrease": 1,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Tethren",
+      "Craft": {
+        "Fragments": "0",
+        "Time": null,
+        "Cost": null,
+        "BondReq": null,
+        "ingredients": []
+      },
+      "Description": "'''Proud-footed boots with upturned toes.''' The yellow enamel poleyns shine with the symbol of the Solist. March forth, warrior, in the name of the mighty Fey fleet. On each fair footfall, hear the tapping heels of the many lost who march beside you.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/TethrensRoots.png",
+      "InternalID": "",
+      "ItemID": "Tethren's Roots",
+      "Rarity": "Common",
+      "Slot": "Leggings",
+      "Stats": {
+        "PhysicalDefence": 3,
+        "MagickDefence": 0,
+        "StabilityIncrease": 0,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Tethren",
+      "Craft": {
+        "Fragments": "0",
+        "Time": null,
+        "Cost": null,
+        "BondReq": null,
+        "ingredients": []
+      },
+      "Description": "'''A light tunic of soft-brushed deer hide.''' Despite its levity, you feel strengthened. As though a spark has been kindled within. A warrior you will be, smelling of wet stone and old smoke. Of a fire, long burned out.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/TethrensTunic.png",
+      "InternalID": "",
+      "ItemID": "Tethren's Tunic",
+      "Rarity": "Common",
+      "Slot": "Cuirass",
+      "Stats": {
+        "PhysicalDefence": 5,
+        "MagickDefence": 0,
+        "StabilityIncrease": 1,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Cogah",
+      "Craft": {
+        "Fragments": "3",
+        "Time": 1,
+        "Cost": 2,
+        "BondReq": null,
+        "ingredients": [
+          {
+            "item": "Sacred Shimmer",
+            "qty": 1
+          }
+        ]
+      },
+      "Description": "A beastly talisman, a feyish gift for an Agari well-fell. This Creutair carries the blessings of grateful Fey... and a bond, a promise, made blindly.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/CreatureTalisman.png",
+      "InternalID": "",
+      "ItemID": "The Cogah Creutair",
+      "Rarity": "Common",
+      "Slot": "Talisman",
+      "Stats": {
+        "PhysicalDefence": 0,
+        "MagickDefence": 0,
+        "StabilityIncrease": 2,
+        "VirtueType": "Grace",
+        "VirtueValue": "+2"
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Cogah",
+      "Craft": {
+        "Fragments": "3",
+        "Time": 1,
+        "Cost": 2,
+        "BondReq": null,
+        "ingredients": [
+          {
+            "item": "Sacred Shimmer",
+            "qty": 1
+          }
+        ]
+      },
+      "Description": "A tiny carved replica of the blighted Agari you defeated. Marked for death by the fey... and now killed by devoted Envoy. A rite, an offering, repaid by blessed talisman.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/CorruptedTalisman.png",
+      "InternalID": "",
+      "ItemID": "The Cogah Grod",
+      "Rarity": "Common",
+      "Slot": "Talisman",
+      "Stats": {
+        "PhysicalDefence": 0,
+        "MagickDefence": 2,
+        "StabilityIncrease": 0,
+        "VirtueType": "Spirit",
+        "VirtueValue": "+2"
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Cogah",
+      "Craft": {
+        "Fragments": "3",
+        "Time": 1,
+        "Cost": 2,
+        "BondReq": null,
+        "ingredients": [
+          {
+            "item": "Sacred Shimmer",
+            "qty": 1
+          }
+        ]
+      },
+      "Description": "Where fell the Agari moments ago... now lies this little Lorcaan. A thank you from 'yond the veil? What gift you gave in exchange, what meaning had The Cogah rite, you know not.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/HumanoidTalisman.png",
+      "InternalID": "",
+      "ItemID": "The Cogah Lorcaan",
+      "Rarity": "Common",
+      "Slot": "Talisman",
+      "Stats": {
+        "PhysicalDefence": 2,
+        "MagickDefence": 0,
+        "StabilityIncrease": 0,
+        "VirtueType": "Courage",
+        "VirtueValue": "+2"
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Circade",
+      "Craft": {
+        "Fragments": "3",
+        "Time": 1,
+        "Cost": 2500,
+        "BondReq": null,
+        "ingredients": [
+          {
+            "item": "Dawn Pendant",
+            "qty": 1
+          },
+          {
+            "item": "Dusk Pendant",
+            "qty": 1
+          },
+          {
+            "item": "Midnight Pendant",
+            "qty": 1
+          }
+        ]
+      },
+      "Description": "Forged in the wake of the death of The Circade. In the year 639, when at last his body ceased to rise, The Circade was sealed 'way by command of the True Heir Jotar. The Elder Aithbhreac bound the three souls of The Circade to rest within the Triune Talisman. As long as these three Pendants remain intertwined, may his souls remain bound till end of time.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/GhostofCircadeCombined.png",
+      "InternalID": "",
+      "ItemID": "Triune Talisman",
+      "Rarity": "Common",
+      "Slot": "Talisman",
+      "Stats": {
+        "PhysicalDefence": null,
+        "MagickDefence": null,
+        "StabilityIncrease": null,
+        "VirtueType": "Courage;Grace;Spirit",
+        "VirtueValue": "+3;+3;+3"
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Uncategorised",
+      "Craft": {
+        "Fragments": null,
+        "Time": 24,
+        "Cost": 2500,
+        "BondReq": null,
+        "ingredients": [
+          {
+            "item": "Corrupt Onyx",
+            "qty": 20
+          },
+          {
+            "item": "Ichor",
+            "qty": 20
+          },
+          {
+            "item": "Petrified Ichor",
+            "qty": 6
+          }
+        ]
+      },
+      "Description": "A faint sloshing within this fastened corruption. Be it ichor blood or something sweeter?",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/IchorousTotem.png",
+      "InternalID": "",
+      "ItemID": "Wazzard's Wish",
+      "Rarity": "Common",
+      "Slot": "Talisman",
+      "Stats": {
+        "PhysicalDefence": 1,
+        "MagickDefence": 2,
+        "StabilityIncrease": 0,
+        "VirtueType": "Spirit",
+        "VirtueValue": "+1"
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Wyld Oscelda",
+      "Craft": {
+        "Fragments": null,
+        "Time": null,
+        "Cost": null,
+        "BondReq": null,
+        "ingredients": []
+      },
+      "Description": "'''Wyld Oscelda's Beltolls ring for all, though not all can hear them.''' Wevetroots wind their way across the armour, an enchanted embrace. From the draping cape hangs countless silver bells, ringing in a pitch only the rivers can hear.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/OsceldaLeggings.png",
+      "InternalID": "",
+      "ItemID": "Wyld Oscelda Beltolls",
+      "Rarity": "Uncommon",
+      "Slot": "Leggings",
+      "Stats": {
+        "PhysicalDefence": 1,
+        "MagickDefence": 6,
+        "StabilityIncrease": 0,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Wyld Oscelda",
+      "Craft": {
+        "Fragments": null,
+        "Time": null,
+        "Cost": null,
+        "BondReq": null,
+        "ingredients": []
+      },
+      "Description": "'''Soft as moonlight, light as stars, the flowing pendelveil of Wyld Oscelda.''' Woven entirely of Moonsteel Thread, the veil feels silky upon the skin while providing the protection of a very fine chainmail. A blessing bell hangs from the end of the long wrapping fabric.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/OsceldaCuirass.png",
+      "InternalID": "",
+      "ItemID": "Wyld Oscelda Pendelveil",
+      "Rarity": "Uncommon",
+      "Slot": "Cuirass",
+      "Stats": {
+        "PhysicalDefence": 2,
+        "MagickDefence": 9,
+        "StabilityIncrease": 0,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Wyld Oscelda",
+      "Craft": {
+        "Fragments": null,
+        "Time": null,
+        "Cost": null,
+        "BondReq": null,
+        "ingredients": []
+      },
+      "Description": "'''The blessed mask of Wyld Oscelda.''' Sheets of Moonsteel pour across the visor like silvern waves. So many tiny bells tinkle just over the wearer's brow. The Exhalt helm is enchented by something near forgotten- ancient and pure.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/OsceldaHelmet.png",
+      "InternalID": "",
+      "ItemID": "Wyld Oscelda's Exhalt",
+      "Rarity": "Uncommon",
+      "Slot": "Helm",
+      "Stats": {
+        "PhysicalDefence": 1,
+        "MagickDefence": 4,
+        "StabilityIncrease": 0,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Wyld Sirin",
+      "Craft": {
+        "Fragments": null,
+        "Time": null,
+        "Cost": null,
+        "BondReq": null,
+        "ingredients": []
+      },
+      "Description": "'''The fine tunic of Wyld Sirin.''' The silver pauldron is polished well by the constant brush of arrow fletching. A naive eye may mistake this for the regalia of a soft noble. But beneath these cobalt leathers hide armour plates, sleek and silent as their wearer.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/SirinCuirass.png",
+      "InternalID": "",
+      "ItemID": "Wyld Sirin Finery",
+      "Rarity": "Uncommon",
+      "Slot": "Cuirass",
+      "Stats": {
+        "PhysicalDefence": 4,
+        "MagickDefence": 0,
+        "StabilityIncrease": 7,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Wyld Sirin",
+      "Craft": null,
+      "Description": "'''The rich leathers of Wyld Sirin, wrapped in wevetroot.''' The well-fitted boots move soft and swift, the hanging shroud, a shadow. Yet a wevetbelt coaxed round the waist feels out of place...  A gift from Wyld Oscelda? Or more likely a tricker's spoils.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/SirinLeggings.png",
+      "InternalID": "",
+      "ItemID": "Wyld Sirin Wevetbelt",
+      "Rarity": "Uncommon",
+      "Slot": "Leggings",
+      "Stats": {
+        "PhysicalDefence": 3,
+        "MagickDefence": 0,
+        "StabilityIncrease": 4,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Wyld Sirin",
+      "Craft": null,
+      "Description": "'''The trickster's shroud, the fallow feignmask of Wyld Sirin.''' The flat bronze visage, the wide and rounded eyes. Every aspect of the Feignmask is a facade of unfeeling neutrality, designed to hide the cunning archer beneath. 'For oft, a disguise is the strongest protection.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/SirinHelmet.png",
+      "InternalID": "",
+      "ItemID": "Wyld Sirin's Feignmask",
+      "Rarity": "Uncommon",
+      "Slot": "Helm",
+      "Stats": {
+        "PhysicalDefence": 1,
+        "MagickDefence": 0,
+        "StabilityIncrease": 4,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Wyld Tethren",
+      "Craft": null,
+      "Description": "'''The same sabatons that marched those flaming fields so many ages ago.''' The spurning knees, the proud-tipped toes, the armour of Wyld Tethren steelsung back to life. Even now, it carries the worth of a battle won... and the weight of war's cost.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/TethrenLeggings.png",
+      "InternalID": "",
+      "ItemID": "Wyld Tethren Flamefoot",
+      "Rarity": "Uncommon",
+      "Slot": "Leggings",
+      "Stats": {
+        "PhysicalDefence": 6,
+        "MagickDefence": 0,
+        "StabilityIncrease": 2,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Wyld Tethren",
+      "Craft": {
+        "Fragments": null,
+        "Time": null,
+        "Cost": null,
+        "BondReq": null,
+        "ingredients": []
+      },
+      "Description": "'''The heavy armour of the Solist Warriors.''' The folded regalia marks a lifetime of training. So too does the iron breastplate, shaped in perfect form of the muscled frame underneath. The battalion of the Fey, riders of the suns. Betrayed by their own commanding Chief.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/TethrenCuirass.png",
+      "InternalID": "",
+      "ItemID": "Wyld Tethren Solist Shield",
+      "Rarity": "",
+      "Slot": "Cuirass",
+      "Stats": {
+        "PhysicalDefence": 8,
+        "MagickDefence": 0,
+        "StabilityIncrease": 2,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Wyld Tethren",
+      "Craft": null,
+      "Description": "'''The mighty hornhelm of Wyld Tethren.''' 'Twas these bullish horns that she wore upon her head in the final hours of The Felling. A Wyld ox charging through the flame. These blunted spurs be a weapon in their own right.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/TethrenHelmet.png",
+      "InternalID": "",
+      "ItemID": "Wyld Tethren's Hornhelm",
+      "Rarity": "Uncommon",
+      "Slot": "Helm",
+      "Stats": {
+        "PhysicalDefence": 4,
+        "MagickDefence": 0,
+        "StabilityIncrease": 1,
+        "VirtueType": null,
+        "VirtueValue": null
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Wyld Oscelda",
+      "Craft": {
+        "Fragments": null,
+        "Time": null,
+        "Cost": null,
+        "BondReq": null,
+        "ingredients": []
+      },
+      "Description": "A pendant of oak and alder, blooming afresh after so many years. May it fill you with Oscelda's spirit.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/GaleneTalisman.png",
+      "InternalID": "",
+      "ItemID": "Wylding's Heart",
+      "Rarity": "Uncommon",
+      "Slot": "Talisman",
+      "Stats": {
+        "PhysicalDefence": null,
+        "MagickDefence": null,
+        "StabilityIncrease": null,
+        "VirtueType": "Spirit",
+        "VirtueValue": "+3"
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Wyld Tethren",
+      "Craft": {
+        "Fragments": null,
+        "Time": null,
+        "Cost": null,
+        "BondReq": null,
+        "ingredients": []
+      },
+      "Description": "A pendant forged in the likeness of The Ivor Blade's hilt. May it grant you the courage of Tethren.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/PothiaTalisman.png",
+      "InternalID": "",
+      "ItemID": "Wylding's Hilt",
+      "Rarity": "Uncommon",
+      "Slot": "Talisman",
+      "Stats": {
+        "PhysicalDefence": null,
+        "MagickDefence": null,
+        "StabilityIncrease": null,
+        "VirtueType": "Courage",
+        "VirtueValue": "+3"
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    },
+    {
+      "ArmorSet": "Wyld Sirin",
+      "Craft": {
+        "Fragments": null,
+        "Time": null,
+        "Cost": null,
+        "BondReq": null,
+        "ingredients": []
+      },
+      "Description": "A pendant of golden finery, like arrow fletching, like fair eyelashes. May you find the grace of Sirin within.",
+      "ImgAltIngame": "",
+      "ImgAltPreview": "",
+      "ImgIngame": "",
+      "ImgPreview": "https://api.avakot.org/v1/I/JosalfarTalisman.png",
+      "InternalID": "",
+      "ItemID": "Wylding's Hush",
+      "Rarity": "Uncommon",
+      "Slot": "Talisman",
+      "Stats": {
+        "PhysicalDefence": null,
+        "MagickDefence": null,
+        "StabilityIncrease": null,
+        "VirtueType": "Grace",
+        "VirtueValue": "+3"
+      },
+      "Tags": "",
+      "lastUpdated": ""
+    }
+  ]
 }
