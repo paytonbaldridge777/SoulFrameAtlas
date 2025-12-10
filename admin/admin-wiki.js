@@ -161,16 +161,81 @@ async function selectFile(filename) {
     showToast('Failed to load file', 'error');
   }
 }
+// Figure out where the "records" actually live in the JSON
+function getDataItemsInfo(data) {
+  const isArray = Array.isArray(data);
+
+  if (isArray) {
+    return {
+      isArray: true,
+      items: data,
+      containerKey: null,
+      itemCount: data.length
+    };
+  }
+
+  if (!data || typeof data !== 'object') {
+    return {
+      isArray: false,
+      items: [],
+      containerKey: null,
+      itemCount: 0
+    };
+  }
+
+  // Standard pattern: { items: [ ... ] }
+  if (Array.isArray(data.items)) {
+    return {
+      isArray: false,
+      items: data.items,
+      containerKey: 'items',
+      itemCount: data.items.length
+    };
+  }
+
+  // Soulframe pattern: { "armor": [ ... ] }, { "pacts": [ ... ] }, { "categories": [ ... ] }, etc.
+  const keys = Object.keys(data);
+  if (keys.length === 1 && Array.isArray(data[keys[0]])) {
+    const arr = data[keys[0]];
+    return {
+      isArray: false,
+      items: arr,
+      containerKey: keys[0],
+      itemCount: arr.length
+    };
+  }
+
+  // Fallback: no obvious collection
+  return {
+    isArray: false,
+    items: [],
+    containerKey: null,
+    itemCount: 0
+  };
+}
+
+// Write modified items back into the right place
+function writeDataItems(data, items, containerKey) {
+  if (Array.isArray(data)) {
+    // items already **is** data
+    return;
+  }
+  if (containerKey && Array.isArray(items)) {
+    data[containerKey] = items;
+  } else {
+    // fallback, keep old behaviour
+    data.items = items;
+  }
+}
 
 /**
  * Render the editor interface
  */
 function renderEditor(filename, data, meta) {
   const editorContent = document.getElementById('editorContent');
-  
-  const isArray = Array.isArray(data);
-  const items = isArray ? data : (data.items || []);
-  
+
+  const { items } = getDataItemsInfo(data);
+
   editorContent.innerHTML = `
     <div class="editor-header">
       <div class="editor-title">${filename}</div>
@@ -225,9 +290,9 @@ function renderRecordList(items) {
  * Add new record
  */
 function addNewRecord() {
-  const isArray = Array.isArray(currentData);
+/**  const isArray = Array.isArray(currentData);
   const items = isArray ? currentData : (currentData.items || []);
-  
+*/
   showEditModal(-1, {});
 }
 
@@ -285,8 +350,9 @@ async function saveRecord(index) {
   try {
     const record = JSON.parse(jsonStr);
     
-    const isArray = Array.isArray(currentData);
-    let items = isArray ? currentData : (currentData.items || []);
+    const info = getDataItemsInfo(currentData);
+    const { isArray, containerKey } = info;
+    let { items } = info;
     
     if (index === -1) {
       items.push(record);
@@ -294,9 +360,7 @@ async function saveRecord(index) {
       items[index] = record;
     }
     
-    if (!isArray) {
-      currentData.items = items;
-    }
+    writeDataItems(currentData, items, containerKey);
     
     await saveCurrentFile();
     closeModal();
@@ -311,8 +375,7 @@ async function saveRecord(index) {
  * Confirm delete record
  */
 function confirmDeleteRecord(index) {
-  const isArray = Array.isArray(currentData);
-  const items = isArray ? currentData : (currentData.items || []);
+  const { items } = getDataItemsInfo(currentData);
   const record = items[index];
   const name = record.name || record.id || `Record ${index + 1}`;
   
@@ -325,15 +388,14 @@ function confirmDeleteRecord(index) {
  * Delete record
  */
 async function deleteRecord(index) {
-  const isArray = Array.isArray(currentData);
-  let items = isArray ? currentData : (currentData.items || []);
-  
+  const info = getDataItemsInfo(currentData);
+  const { isArray, containerKey } = info;
+  let { items } = info;
+
   items.splice(index, 1);
-  
-  if (!isArray) {
-    currentData.items = items;
-  }
-  
+
+  writeDataItems(currentData, items, containerKey);
+
   await saveCurrentFile();
   renderEditor(currentFile, currentData, { isArray, itemCount: items.length });
   showToast('Record deleted successfully', 'success');
@@ -382,9 +444,8 @@ async function saveRawJSON() {
     await saveCurrentFile();
     closeModal();
     
-    const isArray = Array.isArray(data);
-    const itemCount = isArray ? data.length : (data.items ? data.items.length : 0);
-    renderEditor(currentFile, currentData, { isArray, itemCount });
+    const info = getDataItemsInfo(data);
+    renderEditor(currentFile, currentData, { isArray: info.isArray, itemCount: info.itemCount });
     showToast('File saved successfully', 'success');
   } catch (error) {
     showToast(`Invalid JSON: ${error.message}`, 'error');
