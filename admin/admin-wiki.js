@@ -81,21 +81,30 @@ async function loadFileList() {
 
   try {
     const response = await fetch(`${API_BASE_URL}/data/list`);
+
+    if (!response.ok) {
+      const text = await response.text();
+      throw new Error(`HTTP ${response.status}: ${text.slice(0, 200)}`);
+    }
+
     const result = await response.json();
 
     if (!result.success) {
-      throw new Error(result.error || 'Failed to load files');
+      throw new Error(result.error || 'Failed to load file list');
     }
 
     files = result.files || [];
     renderFileList(files);
   } catch (error) {
     console.error('Error loading files:', error);
-    fileListEl.innerHTML = `<div class="error">Error: ${error.message}</div>`;
-    showToast('Failed to load file list', 'error');
+    fileListEl.innerHTML = `
+      <div class="error-state">
+        <p>Failed to load files.</p>
+        <pre>${error.message}</pre>
+      </div>
+    `;
   }
 }
-
 /**
  * Render file list
  */
