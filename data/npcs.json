@@ -1304,6 +1304,15 @@
       "name": "Zenith",
       "npc_type": null,
       "quest": ""
+    },
+    {
+      "affiliation": "Ode",
+      "description": "The goofiest of the goofy...",
+      "image": "https://api.avakot.org/v1/I/SoldierRender.png",
+      "location": "",
+      "name": "EthanDaGoof",
+      "npc_type": null,
+      "quest": "Finding Goobers"
     }
   ]
 }
