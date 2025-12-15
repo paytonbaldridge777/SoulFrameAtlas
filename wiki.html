@@ -201,6 +201,22 @@
             <p class="wiki-category-card-desc">Key areas, dungeons, and points of interest</p>
             <div class="wiki-category-card-count" id="locationsCount">Loading...</div>
           </div>
+
+          <!-- NPCs Category Card -->
+          <div class="wiki-category-card" data-category="npcs">
+            <div class="wiki-category-card-icon.combined icon-card feather-tint"><img src="./icons/npcs.png" alt="NPCs" width="220" height="220" loading="lazy"></div>
+            <h3 class="wiki-category-card-title">NPCs</h3>
+            <p class="wiki-category-card-desc">Characters, merchants, and quest givers throughout Midrath</p>
+            <div class="wiki-category-card-count" id="npcsCount">Loading...</div>
+          </div>
+
+          <!-- Armor Category Card -->
+          <div class="wiki-category-card" data-category="armor">
+            <div class="wiki-category-card-icon.combined icon-card feather-tint"><img src="./icons/armor.png" alt="Armor" width="220" height="220" loading="lazy"></div>
+            <h3 class="wiki-category-card-title">Armor</h3>
+            <p class="wiki-category-card-desc">Helms, cuirasses, leggings, and talismans with stats and crafting</p>
+            <div class="wiki-category-card-count" id="armorCount">Loading...</div>
+          </div>
         </div>
       </section>
 
@@ -288,6 +304,38 @@
                 <div class="wiki-item-header">
                   <div class="wiki-item-name">Loading locations…</div>
                   <div class="wiki-item-meta">Please check data/locations.json</div>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <section
+            class="wiki-panel"
+            data-panel="npcs"
+            aria-label="NPCs panel"
+          >
+            <h2 class="wiki-panel-title">NPCs</h2>
+            <ul class="wiki-list" id="wikiNPCsContainer">
+              <li class="wiki-item">
+                <div class="wiki-item-header">
+                  <div class="wiki-item-name">Loading NPCs…</div>
+                  <div class="wiki-item-meta">Please check data/npcs.json</div>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <section
+            class="wiki-panel"
+            data-panel="armor"
+            aria-label="Armor panel"
+          >
+            <h2 class="wiki-panel-title">Armor</h2>
+            <ul class="wiki-list" id="wikiArmorContainer">
+              <li class="wiki-item">
+                <div class="wiki-item-header">
+                  <div class="wiki-item-name">Loading armor…</div>
+                  <div class="wiki-item-meta">Please check data/armor.json</div>
                 </div>
               </li>
             </ul>
