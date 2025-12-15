@@ -398,8 +398,8 @@ async function renderWikiNPCs() {
               <div class="wiki-card-subtitle">${subtitle}</div>
             </div>
           </div>
+          ${description ? `<div class="wiki-weapon-card-description">${description}</div>` : ""}
           <div class="wiki-card-body">
-            ${description ? `<p>${description}</p>` : ""}
             ${metaGrid}
             ${linksHtml}
           </div>
@@ -816,8 +816,8 @@ async function renderWikiArmor() {
 
             <div class="wiki-card-body">
               ${infoSectionHtml}
-              ${statsBlock}
               ${craftBlock}
+              ${statsBlock}
               ${linksSectionHtml}
             </div>
           </li>
