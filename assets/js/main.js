@@ -347,6 +347,76 @@ async function renderWikiEnemies() {
 }
 
 // =====================================================
+// WIKI — NPCs (CARD GRID LAYOUT)
+// =====================================================
+async function renderWikiNPCs() {
+  const container = document.getElementById("wikiNPCsContainer");
+  if (!container) return;
+
+  try {
+    const data = await loadJSON("data/npcs.json");
+    const npcs = Array.isArray(data) ? data : data?.characters || [];
+
+    // Update count for category card
+    wikiItemCounts.npcs = npcs.length;
+
+    container.innerHTML = npcs
+      .map((npc) => {
+        const name = npc.name || "Unknown NPC";
+        const subtitle = npc.affiliation || "";
+        const description = npc.description || "";
+        const location = npc.location || "";
+        const quest = npc.quest || "";
+
+        const metaGrid = `
+          <div class="wiki-item-meta-grid">
+            ${
+              location
+                ? `<div><strong>Location:</strong> ${location}</div>`
+                : ""
+            }
+            ${
+              quest
+                ? `<div><strong>Quest:</strong> ${quest}</div>`
+                : ""
+            }
+          </div>
+        `;
+
+        const linksHtml = buildWikiLinks(npc.links);
+
+       return `
+        <li class="wiki-item wiki-card wiki-enemy-card">
+          <div class="wiki-card-header">
+            ${
+              npc.image
+                ? `<div class="wiki-card-icon-enemy"><img src="${npc.image}" alt="${name}"></div>`
+                : ""
+            }
+            <div>
+              <div class="wiki-card-title">${name}</div>
+              <div class="wiki-card-subtitle">${subtitle}</div>
+            </div>
+          </div>
+          <div class="wiki-card-body">
+            ${description ? `<p>${description}</p>` : ""}
+            ${metaGrid}
+            ${linksHtml}
+          </div>
+        </li>
+      `;
+      })
+      .join("");
+    
+    // Setup expand/collapse functionality after NPCs are rendered
+    setupEnemyCardExpansion();
+  } catch (err) {
+    console.error(err);
+    container.innerHTML = `<li class="wiki-item">Unable to load npcs.json</li>`;
+  }
+}
+
+// =====================================================
 // WIKI — WEAPONS (ACCORDION LAYOUT + STAT BARS)
 // =====================================================
 async function renderWikiWeapons() {
@@ -587,6 +657,180 @@ async function renderWikiWeapons() {
     console.error(err);
     container.innerHTML = `
       <li class="wiki-item">Unable to load weapons (check data/weapons.json)</li>
+    `;
+  }
+}
+
+// =====================================================
+// WIKI — ARMOR (ACCORDION LAYOUT + STAT BARS)
+// =====================================================
+async function renderWikiArmor() {
+  const container = document.getElementById("wikiArmorContainer");
+  if (!container) return;
+
+  // tiny helper to clean the wiki-style ''' markup
+  const cleanDesc = (txt) =>
+    (txt || "").replace(/'''/g, "").trim();
+
+  try {
+    const data = await loadJSON("data/armor.json");
+    const armor = Array.isArray(data) ? data : data?.armor || [];
+
+    // Update count for category card
+    wikiItemCounts.armor = armor.length;
+
+    container.innerHTML = armor
+      .map((a) => {
+        const name = a.ItemID || a.name || "Unknown Armor";
+        const desc = cleanDesc(a.Description || a.description || "");
+        const rarity = a.Rarity || a.rarity || "";
+        const slot = a.Slot || a.slot || "Armor";
+        const armorSet = a.ArmorSet || a.armorSet || "";
+        const icon = a.ImgPreview || a.imgIcon || a.ImgIcon || "";
+
+        const craft = a.Craft || a.craft || null;
+        const stats = a.Stats || a.stats || null;
+        const linksHtml = buildWikiLinks(a.links);
+
+        // --- Armor info cards ---
+        const infoCards = [];
+        if (armorSet) infoCards.push('<li class="wiki-virtue-card"><div class="wiki-virtue-card-label">Armor Set</div><div class="wiki-virtue-card-value">' + armorSet + '</div></li>');
+        if (slot) infoCards.push('<li class="wiki-virtue-card"><div class="wiki-virtue-card-label">Slot</div><div class="wiki-virtue-card-value">' + slot + '</div></li>');
+        
+        const infoBlock = infoCards.length ? 
+          '<ul class="wiki-virtue-grid">' + infoCards.join("") + '</ul>'
+          : "";
+
+        // --- Crafting cards ---
+        let craftBlock = "";
+        if (craft && typeof craft === "object") {
+          const ing = Array.isArray(craft.ingredients) ? craft.ingredients : [];
+          
+          const craftCards = [];
+          if (craft.Fragments) craftCards.push('<li class="wiki-crafting-card"><div class="wiki-crafting-card-label">Fragments</div><div class="wiki-crafting-card-value">' + craft.Fragments + '</div></li>');
+          if (craft.Time != null) {
+            const timeValue = typeof craft.Time === 'string' && craft.Time.includes('min') ? craft.Time : craft.Time + 'min';
+            craftCards.push('<li class="wiki-crafting-card"><div class="wiki-crafting-card-label">Time</div><div class="wiki-crafting-card-value">' + timeValue + '</div></li>');
+          }
+          if (craft.Cost != null) craftCards.push('<li class="wiki-crafting-card"><div class="wiki-crafting-card-label">Cost</div><div class="wiki-crafting-card-value">' + craft.Cost + '</div></li>');
+          if (craft.BondReq && craft.BondReq !== "N/A") craftCards.push('<li class="wiki-crafting-card"><div class="wiki-crafting-card-label">Bond Req</div><div class="wiki-crafting-card-value">' + craft.BondReq + '</div></li>');
+          
+          const craftCardsHtml = craftCards.length ? '<ul class="wiki-crafting-grid">' + craftCards.join("") + '</ul>' : "";
+          const ingredientsHtml = ing.length 
+            ? '<div class="wiki-crafting-ingredients"><div class="wiki-crafting-ingredients-title">Ingredients</div><ul class="wiki-crafting-ingredients-list">' + 
+              ing.map(x => '<li>' + x.qty + ' × ' + x.item + '</li>').join("") + 
+              '</ul></div>'
+            : "";
+          
+          craftBlock = '<div class="wiki-card-section"><div class="wiki-card-section-title">Crafting</div>' + 
+            craftCardsHtml + ingredientsHtml + '</div>';
+        }
+
+        // --- Stats display with bars ---
+        let statsBlock = "";
+        if (stats && typeof stats === "object") {
+          // Helper to create a single-value stat card with progress bar
+          const createStatCard = (label, value, maxValue = 20) => {
+            if (value == null || value === '') return "";
+            
+            // Calculate progress percentage for visual bar
+            let progressPercent = 0;
+            if (typeof value === 'number' && maxValue > 0) {
+              progressPercent = Math.min(100, (value / maxValue) * 100);
+            }
+            
+            const progressBar = progressPercent > 0 
+              ? '<div class="wiki-stat-progress"><div class="wiki-stat-progress-fill" style="width: ' + progressPercent + '%"></div></div>'
+              : '';
+            
+            return '<li class="wiki-stat-card">' +
+              '<div class="wiki-stat-card-label">' + label + '</div>' +
+              '<div class="wiki-stat-card-value">' +
+                '<span class="wiki-stat-single">' + value + '</span>' +
+              '</div>' +
+              progressBar +
+              '</li>';
+          };
+
+          // Build stat cards
+          const cards = [];
+          
+          if (stats.PhysicalDefence != null) {
+            cards.push(createStatCard("Physical Defence", stats.PhysicalDefence, 20));
+          }
+          
+          if (stats.MagickDefence != null) {
+            cards.push(createStatCard("Magick Defence", stats.MagickDefence, 20));
+          }
+          
+          if (stats.StabilityIncrease != null) {
+            cards.push(createStatCard("Stability Increase", stats.StabilityIncrease, 10));
+          }
+
+          const allCards = cards.filter(Boolean).join("");
+
+          if (allCards) {
+            statsBlock = '<div class="wiki-card-section">' +
+              '<div class="wiki-card-section-title">Stats</div>' +
+              '<ul class="wiki-stats-grid">' +
+                allCards +
+              '</ul>' +
+              '</div>';
+          }
+        }
+
+        const rarityClass = rarity ? "wiki-chip--" + rarity.toLowerCase() : "";
+
+        // Pre-build HTML blocks to avoid nested template literals
+        const iconHtml = icon 
+          ? '<div class="wiki-card-icon"><img src="' + icon + '" alt="' + name + '"></div>'
+          : "";
+        
+        const rarityChipHtml = rarity ? '<span class="wiki-chip ' + rarityClass + '">' + rarity + '</span>' : "";
+        const slotChipHtml = slot ? '<span class="wiki-chip subtle">' + slot + '</span>' : "";
+        
+        const descHtml = desc ? '<div class="wiki-weapon-card-description">' + desc + '</div>' : "";
+        
+        const infoSectionHtml = infoBlock
+          ? '<div class="wiki-card-section"><div class="wiki-card-section-title">Armor Info</div>' + infoBlock + '</div>'
+          : "";
+        
+        const linksSectionHtml = linksHtml
+          ? '<div class="wiki-card-section"><div class="wiki-card-section-title">More info</div>' + linksHtml + '</div>'
+          : "";
+
+        return `
+          <li class="wiki-item wiki-card wiki-weapon-card">
+            <div class="wiki-card-header">
+              ${iconHtml}
+              <div class="wiki-card-header-text">
+                <div class="wiki-card-title">${name}</div>
+                <div class="wiki-card-subtitle">
+                  ${rarityChipHtml}
+                  ${slotChipHtml}
+                </div>
+              </div>
+            </div>
+
+            ${descHtml}
+
+            <div class="wiki-card-body">
+              ${infoSectionHtml}
+              ${statsBlock}
+              ${craftBlock}
+              ${linksSectionHtml}
+            </div>
+          </li>
+        `;
+      })
+      .join("");
+    
+    // Setup expand/collapse functionality after armor is rendered
+    setupWeaponCardExpansion();
+  } catch (err) {
+    console.error(err);
+    container.innerHTML = `
+      <li class="wiki-item">Unable to load armor (check data/armor.json)</li>
     `;
   }
 }
@@ -1040,7 +1284,9 @@ let wikiItemCounts = {
   weapons: 0,
   enemies: 0,
   pacts: 0,
-  locations: 0
+  locations: 0,
+  npcs: 0,
+  armor: 0
 };
 
 function setupWikiCategoryNavigation() {
@@ -1774,6 +2020,8 @@ let buildDataLoaded = false;
     renderWikiEnemies(),
     renderWikiPacts(),
     renderWikiLocations(),
+    renderWikiNPCs(),
+    renderWikiArmor(),
     renderRegions(),
     renderBuildLab()
   ]);
