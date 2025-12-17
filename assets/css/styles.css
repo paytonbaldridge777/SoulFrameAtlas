@@ -1717,7 +1717,9 @@ footer {
 .wiki-item-card .wiki-card-body,
 .wiki-enemy-card .wiki-card-body,
 .wiki-pact-card .wiki-card-body,
-.wiki-location-card .wiki-card-body {
+.wiki-location-card .wiki-card-body,
+.wiki-armor-card .wiki-card-body,
+.wiki-npc-card .wiki-card-body {
   max-height: 0;
   opacity: 0;
   overflow: hidden;
@@ -1729,7 +1731,9 @@ footer {
 .wiki-item-card.expanded .wiki-card-body,
 .wiki-enemy-card.expanded .wiki-card-body,
 .wiki-pact-card.expanded .wiki-card-body,
-.wiki-location-card.expanded .wiki-card-body {
+.wiki-location-card.expanded .wiki-card-body,
+.wiki-armor-card.expanded .wiki-card-body,
+.wiki-npc-card.expanded .wiki-card-body {
   max-height: 2000px;
   opacity: 1;
   margin-top: 0.55rem;
@@ -1739,7 +1743,9 @@ footer {
 .wiki-item-card .wiki-card-header::after,
 .wiki-enemy-card .wiki-card-header::after,
 .wiki-pact-card .wiki-card-header::after,
-.wiki-location-card .wiki-card-header::after {
+.wiki-location-card .wiki-card-header::after,
+.wiki-armor-card .wiki-card-header::after,
+.wiki-npc-card .wiki-card-header::after {
   content: "▼";
   font-size: 0.7rem;
   color: var(--accent);
@@ -1752,7 +1758,9 @@ footer {
 .wiki-item-card.expanded .wiki-card-header::after,
 .wiki-enemy-card.expanded .wiki-card-header::after,
 .wiki-pact-card.expanded .wiki-card-header::after,
-.wiki-location-card.expanded .wiki-card-header::after {
+.wiki-location-card.expanded .wiki-card-header::after,
+.wiki-armor-card.expanded .wiki-card-header::after,
+.wiki-npc-card.expanded .wiki-card-header::after {
   transform: rotate(180deg);
   opacity: 1;
 }

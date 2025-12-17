@@ -386,7 +386,7 @@ async function renderWikiNPCs() {
         const linksHtml = buildWikiLinks(npc.links);
 
        return `
-        <li class="wiki-item wiki-card wiki-enemy-card">
+        <li class="wiki-item wiki-card wiki-npc-card">
           <div class="wiki-card-header">
             ${
               npc.image
@@ -409,7 +409,7 @@ async function renderWikiNPCs() {
       .join("");
     
     // Setup expand/collapse functionality after NPCs are rendered
-    setupEnemyCardExpansion();
+    setupNPCCardExpansion();
   } catch (err) {
     console.error(err);
     container.innerHTML = `<li class="wiki-item">Unable to load npcs.json</li>`;
@@ -800,7 +800,7 @@ async function renderWikiArmor() {
           : "";
 
         return `
-          <li class="wiki-item wiki-card wiki-weapon-card">
+          <li class="wiki-item wiki-card wiki-armor-card">
             <div class="wiki-card-header">
               ${iconHtml}
               <div class="wiki-card-header-text">
@@ -826,7 +826,7 @@ async function renderWikiArmor() {
       .join("");
     
     // Setup expand/collapse functionality after armor is rendered
-    setupWeaponCardExpansion();
+    setupArmorCardExpansion();
   } catch (err) {
     console.error(err);
     container.innerHTML = `
@@ -1152,6 +1152,60 @@ function setupWeaponCardExpansion() {
       
       // Close all other weapon cards before toggling this one
       weaponsContainer.querySelectorAll(".wiki-weapon-card").forEach((other) => {
+        if (other !== card) {
+          other.classList.remove("expanded");
+        }
+      });
+      
+      // Toggle expanded state on clicked card
+      card.classList.toggle("expanded");
+    });
+  });
+}
+
+// =====================================================
+// ARMOR CARD EXPAND/COLLAPSE
+// =====================================================
+function setupArmorCardExpansion() {
+  const armorContainer = document.getElementById("wikiArmorContainer");
+  if (!armorContainer) return;
+
+  armorContainer.querySelectorAll(".wiki-armor-card").forEach((card) => {
+    card.addEventListener("click", (e) => {
+      // Don't trigger if clicking on a link or icon
+      if (e.target.closest("a") || e.target.closest(".wiki-card-icon")) {
+        return;
+      }
+      
+      // Close all other armor cards before toggling this one
+      armorContainer.querySelectorAll(".wiki-armor-card").forEach((other) => {
+        if (other !== card) {
+          other.classList.remove("expanded");
+        }
+      });
+      
+      // Toggle expanded state on clicked card
+      card.classList.toggle("expanded");
+    });
+  });
+}
+
+// =====================================================
+// NPC CARD EXPAND/COLLAPSE
+// =====================================================
+function setupNPCCardExpansion() {
+  const npcsContainer = document.getElementById("wikiNPCsContainer");
+  if (!npcsContainer) return;
+
+  npcsContainer.querySelectorAll(".wiki-npc-card").forEach((card) => {
+    card.addEventListener("click", (e) => {
+      // Don't trigger if clicking on a link or icon
+      if (e.target.closest("a") || e.target.closest(".wiki-card-icon")) {
+        return;
+      }
+      
+      // Close all other NPC cards before toggling this one
+      npcsContainer.querySelectorAll(".wiki-npc-card").forEach((other) => {
         if (other !== card) {
           other.classList.remove("expanded");
         }
